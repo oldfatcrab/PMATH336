@@ -36,20 +36,20 @@
 
 ## 1.1 Definitions and examples:
 
-- Let $G$ be a non-empty set.
-    - Def'n: A binary operation on $G$ is a map.
-    - $G \times G \rightarrow G$
-    - $(a,b) \mapsto a\star b$ or $a\dot b$ or $ab$ (notation)
+- Let $$G$$ be a non-empty set.
+    - Def'n: A binary operation on $$G$$ is a map.
+    - $$G \times G \rightarrow G$$
+    - $$(a,b) \mapsto a\star b$$ or $$a\dot b$$ or $$ab$$ (notation)
     - A binary operation is often called a **product**
 - Ex 1)
-    - $G=\mathbb{Z}$ and
-    - and $+: \mathbb{Z}\times \mathbb{Z} --> \mathbb{Z}, (m,n) \mapsto m+n$
-    - or $\dot: \mathbb{Z}\times \mathbb{Z} --> \mathbb{Z}, (a,b) \mapsto ab$
+    - $$G=\mathbb{Z}$$ and
+    - and $$+: \mathbb{Z}\times \mathbb{Z} --> \mathbb{Z}, (m,n) \mapsto m+n$$
+    - or $$\dot: \mathbb{Z}\times \mathbb{Z} --> \mathbb{Z}, (a,b) \mapsto ab$$
 - Ex 2)
-    - $G=\mathbb{R}^3$
-    - and $+: \mathbb{R}^3 \times \mathbb{R}^3 --> \mathbb{R}^3, ((x_1, y_1, z_1), (x_2, y_2, z_2)) \mapsto (x_1+x_2, y_1+y_2, z_1+z_2)
-    - and $\times: \mathbb{R}^3 \times \mathbb{R}^3 --> \mathbb{R}^3, ((x_1, y_1, z_1), (x_2, y_2, z_2)) \mapsto (x_1, y_1, z_1) \dot (x_2, y_2, z_2)
-    - but $\dot: \mathbb{R}^3 \times \mathbb{R}^3  --> \mathbb{R}, ((x_1, y_1, z_1), (x_2, y_2, z_2)) \mapsto (x_1, y_1, z_1) \dot (x_2, y_2, z_2)$ is **not** a binary operation because the target space is not G=\mathbb{R}3
+    - $$G=\mathbb{R}^3$$
+    - and $$+: \mathbb{R}^3 \times \mathbb{R}^3 --> \mathbb{R}^3, ((x_1, y_1, z_1), (x_2, y_2, z_2)) \mapsto (x_1+x_2, y_1+y_2, z_1+z_2)
+    - and $$\times: \mathbb{R}^3 \times \mathbb{R}^3 --> \mathbb{R}^3, ((x_1, y_1, z_1), (x_2, y_2, z_2)) \mapsto (x_1, y_1, z_1) \dot (x_2, y_2, z_2)
+    - but $$\dot: \mathbb{R}^3 \times \mathbb{R}^3  --> \mathbb{R}, ((x_1, y_1, z_1), (x_2, y_2, z_2)) \mapsto (x_1, y_1, z_1) \dot (x_2, y_2, z_2)$$ is **not** a binary operation because the target space is not G=\mathbb{R}3
 - Def'n (**Groups**): Let G be a non-empty set with a binary operation, GxG-->G, then G is a **group** if the binary operation has the following properties:
     - (i) (**Associativity**): a(bc) = (ab)c, any a,b,c in G
     - (ii) (**Identity**): \exist e \in G such that: ea = ae =a, \any a in G
