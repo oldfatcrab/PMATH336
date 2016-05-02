@@ -1,34 +1,41 @@
-# Chapter 0 Course Administration
-    - Course structure
-        - Group Theory Basics
-            - Examples
-            - Axioms
-            - Subgroups and Lagrange's Theorem
-            - Cyclic groups
-            - Permutation groups
-            - Normal subgroups
-            - quotients
-            - homomorphisms
-            - Isomorphism theorems
-            - automorphism groups and conjugation
-        - Group Actions
-            - The orbit-statiliser theorem
-            - Cauchy's theorem
-            - Burnside's lemma
-            - P&ograve;lya enumeration
-            - the class equation
-        - Other Topics
-            - Platonic solids
-            - classification of finite abelian groups
-            - cryptography
-            - application to physics (if time permitting)
-    - Grading
-        - 6 assignments: 30%
-        - Midterm: 20%
-        - Final: 50%
-    - Office
-        - MC 5427
-        - Monday 14:00-16:00, Thursday 15:00-17:00, or by appointment
+Table of Content
+
+- [Chapter 0: Course Administration](#chapter-0-course-administration)
+- [Chapter 1: Groups](#chapter-1-groups)
+    - [1.1 Definitions and examples](#11-definitions-and-examples)
+
+--------------------------------------------------------------------------------
+# Chapter 0: Course Administration
+- Course structure
+    - Group Theory Basics
+        - Examples
+        - Axioms
+        - Subgroups and Lagrange's Theorem
+        - Cyclic groups
+        - Permutation groups
+        - Normal subgroups
+        - quotients
+        - homomorphisms
+        - Isomorphism theorems
+        - automorphism groups and conjugation
+    - Group Actions
+        - The orbit-statiliser theorem
+        - Cauchy's theorem
+        - Burnside's lemma
+        - P&ograve;lya enumeration
+        - the class equation
+    - Other Topics
+        - Platonic solids
+        - classification of finite abelian groups
+        - cryptography
+        - application to physics (if time permitting)
+- Grading
+    - 6 assignments: 30%
+    - Midterm: 20%
+    - Final: 50%
+- Office
+    - MC 5427
+    - Monday 14:00-16:00, Thursday 15:00-17:00, or by appointment
 
 --------------------------------------------------------------------------------
 
@@ -77,7 +84,7 @@
         - (iii) $\forall m \in \mathbb{Z}$, the inverse of m with respect to multiplication is $\frac{1}{m}$ (if $m \neq 0$), but $\frac{1}{m} \notin \mathbb{Z}$ if $m\neq\pm1$. So property (iii) fails!
         - Thus, $(\mathbb{Z},\cdot)$ is not a group.
 - Ex 3)
-    - G = {1, -1} set of 2 elements with the binary operation given by:
+    - $G = \{1, -1\}$ set of 2 elements with the binary operation given by:
 
 <table border="1">
   <tr>
@@ -117,7 +124,7 @@
 - Ex 7)
     - $(\mathbb{R}^*, \cdot)$ and $(\mathbb{C}^*, \cdot)$ are groups (where $\mathbb{R}^* = \mathbb{R}\setminus\{0\}$ and $\mathbb{C}^* = \mathbb{C}\setminus\{0\})$
 - Ex 8)
-    - $({1, i, -1, -1}, \cdot)$ is a group, where $i \in \mathbb{C}$ such that $i^2 = -1$. Here:
+    - $(\{1, i, -1, -1\}, \cdot)$ is a group, where $i \in \mathbb{C}$ such that $i^2 = -1$. Here:
 <table border="1">
   <tr>
     <td>$\cdot$</td>
@@ -155,5 +162,5 @@
     <td>-1</td>
   </tr>
 </table>
-
+<!-- 2016/05/02 -->
 
