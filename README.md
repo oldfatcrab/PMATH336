@@ -5,6 +5,9 @@ Table of Content
     - [1.1 Definitions and examples](#11-definitions-and-examples)
 
 --------------------------------------------------------------------------------
+
+<!-- 2016/05/04 -->
+
 # Chapter 0: Course Administration
 - Course structure
     - Group Theory Basics
@@ -86,23 +89,10 @@ Table of Content
 - Ex 3)
     - $G = \{1, -1\}$ set of 2 elements with the binary operation given by:
 
-<table border="1">
-  <tr>
-    <td>$\cdot$</td>
-    <td>1</td>
-    <td>-1</td>
-  </tr>
-  <tr>
-    <td>1<br></td>
-    <td>1</td>
-    <td>-1</td>
-  </tr>
-  <tr>
-    <td>-1</td>
-    <td>-1</td>
-    <td>1</td>
-  </tr>
-</table>
+| $\cdot$ | $1$  | $-1$ |
+|---------|----|----|
+| $1$       | $1$  | $-1$ |
+| $-1$      | $-1$ | $1$  |
 
 - (continue)
     - Note that $\cdot$ is just the usual product in $\mathbb{R}$ restricted to element in $G$. Then $G$ is a group because:
@@ -125,42 +115,68 @@ Table of Content
     - $(\mathbb{R}^*, \cdot)$ and $(\mathbb{C}^*, \cdot)$ are groups (where $\mathbb{R}^* = \mathbb{R}\setminus\{0\}$ and $\mathbb{C}^* = \mathbb{C}\setminus\{0\})$
 - Ex 8)
     - $(\{1, i, -1, -1\}, \cdot)$ is a group, where $i \in \mathbb{C}$ such that $i^2 = -1$. Here:
-<table border="1">
-  <tr>
-    <td>$\cdot$</td>
-    <td>1</td>
-    <td>i</td>
-    <td>-1</td>
-    <td>-i</td>
-  </tr>
-  <tr>
-    <td>1<br></td>
-    <td>1</td>
-    <td>i</td>
-    <td>-1<br></td>
-    <td>-i<br></td>
-  </tr>
-  <tr>
-    <td>i</td>
-    <td>i</td>
-    <td>-1</td>
-    <td>-i</td>
-    <td>1<br></td>
-  </tr>
-  <tr>
-    <td>-1</td>
-    <td>-1</td>
-    <td>-i</td>
-    <td>1</td>
-    <td>i</td>
-  </tr>
-  <tr>
-    <td>-i</td>
-    <td>-i</td>
-    <td>1</td>
-    <td>i</td>
-    <td>-1</td>
-  </tr>
-</table>
-<!-- 2016/05/02 -->
 
+| $\cdot$ | $1$  | $i$  | $-1$ | $-i$ |
+|---------|----|----|----|----|
+| $1    $   |$ 1  $|$ i$  | $-1$ | $-i$ |
+| $i   $    |$ i  $|$ -1$ | $-i$ | $1 $ |
+| $-1 $     |$ -1 $|$ -i$ | $1 $ | $i $ |
+| $-i$      |$ -i $|$ 1 $ | $i $ | $1 $ |
+
+<!-- 2016/05/04 -->
+
+- Review from last lecture:
+	- Def'n (**Groups**): Let $G$ be a non-empty set with a binary operation, $G\times G\rightarrow G$, then $G$ is a **group** if the binary operation has the following properties:
+	    - (i) (**Associativity**): $a(bc) = (ab)c$, $\forall a,b,c \in G$
+	    - (ii) (**Identity**): $\exists e \in G$ such that: $ea = ae =a, \forall a$ in $G$
+	    - (iii) (**Inverse**): $\forall a \in G$, $\exists a^{-1} \in G$ such that: $aa^{-1} = a^{-1} a = e$
+    - In this case, $G$ is called a group
+- Note: Properties (i)-(iii) in the def'n are called the **group axioms**
+- Ex 9) **Integer module n**: $\mathbb{Z}_n$
+	- In $\mathbb{Z}_n$, two integer $r$ and $s$ are equivalent if $r = s+an$, for same $a$ in $\mathbb{Z}$, this is written as $r \equiv s$ (mod $n$)
+	- e.g.:
+ 		- $\mathbb{Z}_3 = \{\overline{0}, \overline{1}, \overline{2}\}$
+ 		- $\overline{0} \equiv \{0, 3, -3, 6, \cdots\} \equiv \overline{3}$
+ 		- $\overline{1} \equiv \{1, 4, -2, 7, \cdots\} \equiv \overline{4}$
+ 		- $\overline{2} \equiv \{2, 5, -1, 8, \cdots\} \equiv \overline{5}$
+	- $\forall F, F' \in \mathbb{Z}_n$, we set:
+		- $\overline{r} + \overline{r_1} = \overline{r+r_1}$, and
+		- $\overline{r} \cdot \overline{r_1} = \overline{r \cdot r1}$
+	- $(\mathbb{Z}_n, +)$: since $+$ is associative in $\mathbb{Z}$, it is also associative with $\mathbb{Z}_n$. Moreover, $\overline{0}$ is the identity for $+$. finally, $\overline{-r}$ is **inverse** of $F$ with respect to $+$. We will denote $\overline{-r}$ by $-\overline{r} \Rightarrow (\mathbb{Z}_n, +)$ is a group
+	- $(\mathbb{Z}_n, \cdot)$: Again, since $\cdot$ is associative in $\mathbb{Z}$, it is also associative in $\mathbb{Z}$,. And $\overline{1}$ is the identity for $\cdot$, however, not every element in $\mathbb{Z}_n$ has an inverse with respect to $\cdot$. In fact, recall that $F \in \mathbb{Z}_n$ has a multiplicative inverse iff $gcd(r,n) = 1$. I.e. $\exists \overline s \in \mathbb{Z}_n$ such that $\overline r \cdot \overline s = \overline s \cdot \overline r = \overline 1$ iff $gcd(r, n) = 1$
+	- If an element $\overline r \in \mathbb{Z}_n$ has an inverse in $\mathbb{Z}_n$, it is called a **unit**.
+	- Set $\mathbb{Z}_n^* = \{\text{units in }\mathbb{Z}_n\} = \{F\in \mathbb{Z}_n \mid gcd(r,n)\}$. Then, $(\mathbb{Z}_n*, \cdot)$ is a group
+		- E.g. $\mathbb{Z}_6 = \{\overline 1, \overline 2, \overline 3, \overline 4, \overline 5, \overline 6\}$ and $\mathbb{Z}_6^* = \{\overline 1, \overline 5\}$
+	- The Cayley table for $(\mathbb{Z}_6, \cdot)$ is:
+
+| $\cdot$ | $\overline 1$  | $\overline 5$ |
+|---------|----|----|
+| $\overline 1$ | $\overline 1$ | $\overline 5$ |
+| $\overline 5$ | $\overline 5$  | $\overline 1$ |
+
+- Def'n: Let $(G, \cdot)$ be a group, the **order of the group** G is denoted $\mid G \mid$, is the number of element in the group
+	- Remark: If the binary operation is clear, we write $G$ instead of $(G, \cdot)$
+	- E.g.:
+		- $(\mathbb{Z}, +) \Rightarrow \mid\mathbb{Z}\mid = \infty$
+		- $(\mathbb{Z}_6,+) \Rightarrow \mid\mathbb{Z}_6\mid = 6$
+		- $(\mathbb{Z}_6^*,\cdot) \Rightarrow \mid\mathbb{Z}_6^* \mid = 2$
+- Aside: There is another important set of objets in abstract algebra, which corresponds to rings (with identity):
+	- Def'n: A **ring** (with identity) is a non-empty set $G$ together with **two** binary operations $+$, $\cdot$, such that:
+		- 1) $(G,+)$ is a group (i.e. $+$ satisfies properties (i)-(iii)
+		- 2) $(G,\cdot)$ is such that $\cdot$ satisfies (i) and (iii) 
+		- 3) $+$ and $\cdot$ satisfy the distributive lays: $(a+b)\cdot c = a\cdot c+b\cdot c, \forall a,b,c \in G$
+	- E.g. $(\mathbb{Z}, +, \cdot)$, $(\mathbb{R}, +, \cdot)$, $(\mathbb{C}, +, \cdot)$, $(\mathbb{Q}, +, \cdot)$ , $(\mathbb{Z}_6, +, \cdot)$ etc.
+	- In a ring, the elements that have inverses with respect to multiplication are called **units**
+- Def'n: A group $(G, \cdot)$ is called **abelian** if the binary operation is **commutative**: $a \cdot b = b \cdot a, \forall a,b \in G$
+	- E.g. $(\mathbb{Z}, +)$, $(\mathbb{R}, +)$, $(\mathbb{C}, +)$, $(\mathbb{Q}, +)$ , $(\mathbb{Z}_6, +)$ etc.
+	- However, not every group is abelian!
+		- E.g. Consider $G = GL(n, \mathbb{R}) = \{A\in M_{n\times n}(\mathbb{R}) \mid A\text{ is invertible}\} = \{A\in M_{n\times n}(\mathbb{R}) | \det A \neq 0\} $
+	- Note that $\exists$ natural operations on $n\times n$ matrices: addition and multiplication. Let $A, B \in M_{n\times n}(\mathbb{R})$. Then:
+		- $A+B, AB \in M_{n\times n}(\mathbb{R})$
+		- $\Rightarrow +$, $\cdot$ are binary operations for $M_{n\times n}(\mathbb{R})$
+		- However, if $A, B \in G$, although $A\cdot B \in G$, may not have $A+B \in G$ (e.g. $a\in G$ so that $0\in G$, but $A+(-A)=0 \notin G$) $\Rightarrow$ $+$ is not a binary operation with for $G$
+		- Consider $(G, \cdot)$. Then it is a group (exercise) where the identity is the nxn identity matrix $I_{n\times n}$. But, $(G, \cdot)$ is **not** abelian because $AB \neq BA$ for most $A,B \in G$
+	- A group $(G, \cdot)$ is called **non-abelian** if it is not abelian.
+- **Some basic properties**:
+	- 1) The identity element $e$ in a group $(G, \cdot)$ is unique
+	- 2) The inverse of an element in a group $(G, \cdot)$ is unique
