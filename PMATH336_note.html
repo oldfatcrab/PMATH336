@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<title>README</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+
+<style type="text/css">
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: black;
+	background: none;
+	text-shadow: 0 1px white;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+@media print {
+	code[class*="language-"],
+	pre[class*="language-"] {
+		text-shadow: none;
+	}
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #f5f2f0;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: slategray;
+}
+
+.token.punctuation {
+	color: #999;
+}
+
+.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+	color: #a67f59;
+	background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+	color: #07a;
+}
+
+.token.function {
+	color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+	color: #e90;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<p>Table of Content</p>
+
+<ul>
+<li><a href="#chapter-0-course-administration">Chapter 0: Course Administration</a></li>
+<li><a href="#chapter-1-groups">Chapter 1: Groups</a>
+
+<ul>
+<li><a href="#11-definitions-and-examples">1.1 Definitions and examples</a></li>
+</ul></li>
+</ul>
+
+<hr>
+
+<!-- 2016/05/04 -->
+
+<h1 id="toc_0">Chapter 0: Course Administration</h1>
+
+<ul>
+<li>Course structure
+
+<ul>
+<li>Group Theory Basics
+
+<ul>
+<li>Examples</li>
+<li>Axioms</li>
+<li>Subgroups and Lagrange&#39;s Theorem</li>
+<li>Cyclic groups</li>
+<li>Permutation groups</li>
+<li>Normal subgroups</li>
+<li>quotients</li>
+<li>homomorphisms</li>
+<li>Isomorphism theorems</li>
+<li>automorphism groups and conjugation</li>
+</ul></li>
+<li>Group Actions
+
+<ul>
+<li>The orbit-statiliser theorem</li>
+<li>Cauchy&#39;s theorem</li>
+<li>Burnside&#39;s lemma</li>
+<li>P&ograve;lya enumeration</li>
+<li>the class equation</li>
+</ul></li>
+<li>Other Topics
+
+<ul>
+<li>Platonic solids</li>
+<li>classification of finite abelian groups</li>
+<li>cryptography</li>
+<li>application to physics (if time permitting)</li>
+</ul></li>
+</ul></li>
+<li>Grading
+
+<ul>
+<li>6 assignments: 30%</li>
+<li>Midterm: 20%</li>
+<li>Final: 50%</li>
+</ul></li>
+<li>Office
+
+<ul>
+<li>MC 5427</li>
+<li>Monday 14:00-16:00, Thursday 15:00-17:00, or by appointment</li>
+</ul></li>
+</ul>
+
+<hr>
+
+<h1 id="toc_1">Chapter 1: Groups</h1>
+
+<h2 id="toc_2">1.1 Definitions and examples:</h2>
+
+<ul>
+<li>Let \(G\) be a non-empty set.
+
+<ul>
+<li>Def&#39;n: A binary operation on \(G\) is a map that
+
+<ul>
+<li>\(G \times G \rightarrow G\)</li>
+<li>\((a,b) \mapsto a\star b\) or \(a\cdot b\) or \(ab\) (notation)</li>
+</ul></li>
+<li>A binary operation is often called a <strong>product</strong></li>
+</ul></li>
+<li>Ex 1)
+
+<ul>
+<li>\(G=\mathbb{Z}\) and</li>
+<li>and \(+: \mathbb{Z}\times \mathbb{Z} \rightarrow \mathbb{Z}\), \((m,n) \mapsto m+n\)</li>
+<li>or \(\cdot: \mathbb{Z}\times \mathbb{Z} \rightarrow \mathbb{Z}\), \((a,b) \mapsto ab\)</li>
+</ul></li>
+<li>Ex 2)
+
+<ul>
+<li>\(G=\mathbb{R}^3\)</li>
+<li>and \( +: \mathbb{R}^3 \times \mathbb{R}^3 \rightarrow \mathbb{R}^3, ((x_1, y_1, z_1), (x_2, y_2, z_2)) \mapsto (x_1+x_2, y_1+y_2, z_1+z_2)\)</li>
+<li>and \(\times: \mathbb{R}^3 \times \mathbb{R}^3 \rightarrow \mathbb{R}^3, ((x_1, y_1, z_1), (x_2, y_2, z_2)) \mapsto (x_1, y_1, z_1) \cdot (x_2, y_2, z_2)\)</li>
+<li>but \(\dot: \mathbb{R}^3 \times \mathbb{R}^3  \rightarrow \mathbb{R}, ((x_1, y_1, z_1), (x_2, y_2, z_2)) \mapsto (x_1x_2, y_1y_2, z_1z_2)\) is <strong>not</strong> a binary operation because the target space is not \(G=\mathbb{R}^3\)</li>
+</ul></li>
+<li>Def&#39;n (<strong>Groups</strong>): Let \(G\) be a non-empty set with a binary operation, \(G\times G\rightarrow G\), then \(G\) is a <strong>group</strong> if the binary operation has the following properties:
+
+<ul>
+<li>(i) (<strong>Associativity</strong>): \(a(bc) = (ab)c\), \(\forall a,b,c \in G\)</li>
+<li>(ii) (<strong>Identity</strong>): \(\exists e \in G\) such that: \(ea = ae =a, \forall a\) in \(G\)</li>
+<li>(iii) (<strong>Inverse</strong>): \(\forall a \in G\), \(\exists a^{-1} \in G\) such that: \(aa^{-1} = a^{-1} a = e\)</li>
+</ul></li>
+<li>Ex 1)
+
+<ul>
+<li>The integers: \((\mathbb{Z},+) \rightsquigarrow \) this is a group</li>
+<li><strong>HERE</strong>: \(G = \mathbb{Z}\) and \(+: \mathbb{Z}\times\mathbb{Z} \rightarrow \mathbb{Z}, (m,n) \mapsto m+n\)</li>
+<li>Does \(+\) satisfy properties (i) to (iii)?
+
+<ul>
+<li>(i) Let \(m, n, r \in \mathbb{Z}\), then:
+
+<ul>
+<li>\(m+(n+r) = (m+n)+r\) ? YES!</li>
+</ul></li>
+<li>(ii) Identity of \(+\) is \(0 \in \mathbb{Z}\)
+
+<ul>
+<li>because \(0 + m = m + 0 = m, \forall m \in \mathbb{Z}\)</li>
+</ul></li>
+<li>(iii) \(\forall m \in \mathbb{Z}\), we have that
+
+<ul>
+<li>\(m + (-m) = (-m) + m = 0\)</li>
+<li>\(\Rightarrow -m \in \mathbb{Z}\) is the inverse of \(m \in \mathbb{Z}\)</li>
+</ul></li>
+<li>Thus, \((\mathbb{Z},+)\) is a group.</li>
+</ul></li>
+</ul></li>
+<li>Ex 2)
+
+<ul>
+<li>The integers: \((\mathbb{Z},\cdot)\rightsquigarrow\) this is a group</li>
+<li><strong>HERE</strong>: G = \(\mathbb{Z}\) and \(\cdot: \mathbb{Z}\times\mathbb{Z} \rightarrow \mathbb{Z}, (m,n) \mapsto m\cdot n\)</li>
+<li>Does \(\cdot\) satisfy properties (i) to (iii)?
+
+<ul>
+<li>(i) Let \(m, n, r \in \mathbb{Z}\), then:
+
+<ul>
+<li>\(m\cdot(n\cdot r) = (m\cdot n)\cdot r\) ? YES!</li>
+</ul></li>
+<li>(ii) Identity of \(\cdot\) is \(1 \in \mathbb{Z}\)
+
+<ul>
+<li>because \(1 \cdot m = m \cdot 1 = m\), \(\forall m \in \mathbb{Z}\)</li>
+</ul></li>
+<li>(iii) \(\forall m \in \mathbb{Z}\), the inverse of m with respect to multiplication is \(\frac{1}{m}\) (if \(m \neq 0\)), but \(\frac{1}{m} \notin \mathbb{Z}\) if \(m\neq\pm1\). So property (iii) fails!</li>
+<li>Thus, \((\mathbb{Z},\cdot)\) is not a group.</li>
+</ul></li>
+</ul></li>
+<li>Ex 3)
+
+<ul>
+<li>\(G = \{1, -1\}\) set of 2 elements with the binary operation given by:</li>
+</ul></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th>\(\cdot\)</th>
+<th>\(1\)</th>
+<th>\(-1\)</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>\(1\)</td>
+<td>\(1\)</td>
+<td>\(-1\)</td>
+</tr>
+<tr>
+<td>\(-1\)</td>
+<td>\(-1\)</td>
+<td>\(1\)</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>(continue)
+
+<ul>
+<li>Note that \(\cdot\) is just the usual product in \(\mathbb{R}\) restricted to element in \(G\). Then \(G\) is a group because:
+
+<ul>
+<li>(i) \(\cdot\) is associative because multiplication in \(\mathbb{R}\) is associative</li>
+<li>(ii) \(1\) is the identity.</li>
+<li>(iii) From the table, we see that \(1\) is the inverse of \(1\) and \(-1\) is the inverse of \(-1\rightsquigarrow\) every element in G has an inverse.</li>
+</ul></li>
+</ul></li>
+<li>Ex 4)
+
+<ul>
+<li>\((\mathbb{Q}, +)\) is a group (exercise)</li>
+</ul></li>
+<li>Ex 5)
+-\( (\mathbb{Q}^*, \cdot)\) is a group where \(\mathbb{Q}^* = \mathbb{Q}\setminus\{0\}\)
+
+<ul>
+<li>Indeed:
+
+<ul>
+<li>(i) Multiplication in \(\mathbb{Q}^*\) is associative as in \(\mathbb{Z}\) and \(\mathbb{R}\)</li>
+<li>(ii) \(1 \in \mathbb{Q}^*\) is the identity with respect to \dot.</li>
+<li>(iii) \(\forall \frac{a}{b} \in \mathbb{Q}^*\), we have that \(\frac{b}{a} \in \mathbb{Q}^*\) and \(\frac{a}{b} \cdot \frac{b}{a} = \frac{b}{a}\cdot \frac{a}{b} = 1 \Rightarrow \frac{a}{b}^{-1} = \frac{b}{a} \Rightarrow\) every element in \(\mathbb{Q}^*\) has an inverse</li>
+</ul></li>
+<li>Note:
+
+<ul>
+<li>\((\mathbb{Q}, \cdot)\) is <strong>not</strong> a group because even though (i) and (ii) hold, property (iii) fails for \(0 \in \mathbb{Q}\)</li>
+</ul></li>
+</ul></li>
+<li>Ex 6)
+
+<ul>
+<li>\((\mathbb{R}, +)\) and \((\mathbb{C}, +)\) are groups</li>
+</ul></li>
+<li>Ex 7)
+
+<ul>
+<li>\((\mathbb{R}^*, \cdot)\) and \((\mathbb{C}^*, \cdot)\) are groups (where \(\mathbb{R}^* = \mathbb{R}\setminus\{0\}\) and \(\mathbb{C}^* = \mathbb{C}\setminus\{0\})\)</li>
+</ul></li>
+<li>Ex 8)
+
+<ul>
+<li>\((\{1, i, -1, -1\}, \cdot)\) is a group, where \(i \in \mathbb{C}\) such that \(i^2 = -1\). Here:</li>
+</ul></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th>\(\cdot\)</th>
+<th>\(1\)</th>
+<th>\(i\)</th>
+<th>\(-1\)</th>
+<th>\(-i\)</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>\(1    \)</td>
+<td>\( 1  \)</td>
+<td>\( i\)</td>
+<td>\(-1\)</td>
+<td>\(-i\)</td>
+</tr>
+<tr>
+<td>\(i   \)</td>
+<td>\( i  \)</td>
+<td>\( -1\)</td>
+<td>\(-i\)</td>
+<td>\(1 \)</td>
+</tr>
+<tr>
+<td>\(-1 \)</td>
+<td>\( -1 \)</td>
+<td>\( -i\)</td>
+<td>\(1 \)</td>
+<td>\(i \)</td>
+</tr>
+<tr>
+<td>\(-i\)</td>
+<td>\( -i \)</td>
+<td>\( 1 \)</td>
+<td>\(i \)</td>
+<td>\(1 \)</td>
+</tr>
+</tbody>
+</table>
+
+<!-- 2016/05/04 -->
+
+<ul>
+<li>Review from last lecture:
+
+<ul>
+<li>Def&#39;n (<strong>Groups</strong>): Let \(G\) be a non-empty set with a binary operation, \(G\times G\rightarrow G\), then \(G\) is a <strong>group</strong> if the binary operation has the following properties:
+
+<ul>
+<li>(i) (<strong>Associativity</strong>): \(a(bc) = (ab)c\), \(\forall a,b,c \in G\)</li>
+<li>(ii) (<strong>Identity</strong>): \(\exists e \in G\) such that: \(ea = ae =a, \forall a\) in \(G\)</li>
+<li>(iii) (<strong>Inverse</strong>): \(\forall a \in G\), \(\exists a^{-1} \in G\) such that: \(aa^{-1} = a^{-1} a = e\)</li>
+</ul></li>
+<li>In this case, \(G\) is called a group</li>
+</ul></li>
+<li>Note: Properties (i)-(iii) in the def&#39;n are called the <strong>group axioms</strong></li>
+<li>Ex 9) <strong>Integer module n</strong>: \(\mathbb{Z}_n\)
+
+<ul>
+<li>In \(\mathbb{Z}_n\), two integer \(r\) and \(s\) are equivalent if \(r = s+an\), for same \(a\) in \(\mathbb{Z}\), this is written as \(r \equiv s\) (mod \(n\))</li>
+<li>e.g.:
+
+<ul>
+<li>\(\mathbb{Z}_3 = \{\overline{0}, \overline{1}, \overline{2}\}\)</li>
+<li>\(\overline{0} \equiv \{0, 3, -3, 6, \cdots\} \equiv \overline{3}\)</li>
+<li>\(\overline{1} \equiv \{1, 4, -2, 7, \cdots\} \equiv \overline{4}\)</li>
+<li>\(\overline{2} \equiv \{2, 5, -1, 8, \cdots\} \equiv \overline{5}\)</li>
+</ul></li>
+<li>\(\forall F, F&#39; \in \mathbb{Z}_n\), we set:
+
+<ul>
+<li>\(\overline{r} + \overline{r_1} = \overline{r+r_1}\), and</li>
+<li>\(\overline{r} \cdot \overline{r_1} = \overline{r \cdot r1}\)</li>
+</ul></li>
+<li>\((\mathbb{Z}_n, +)\): since \(+\) is associative in \(\mathbb{Z}\), it is also associative with \(\mathbb{Z}_n\). Moreover, \(\overline{0}\) is the identity for \(+\). finally, \(\overline{-r}\) is <strong>inverse</strong> of \(F\) with respect to \(+\). We will denote \(\overline{-r}\) by \(-\overline{r} \Rightarrow (\mathbb{Z}_n, +)\) is a group</li>
+<li>\((\mathbb{Z}_n, \cdot)\): Again, since \(\cdot\) is associative in \(\mathbb{Z}\), it is also associative in \(\mathbb{Z}\),. And \(\overline{1}\) is the identity for \(\cdot\), however, not every element in \(\mathbb{Z}_n\) has an inverse with respect to \(\cdot\). In fact, recall that \(F \in \mathbb{Z}_n\) has a multiplicative inverse iff \(gcd(r,n) = 1\). I.e. \(\exists \overline s \in \mathbb{Z}_n\) such that \(\overline r \cdot \overline s = \overline s \cdot \overline r = \overline 1\) iff \(gcd(r, n) = 1\)</li>
+<li>If an element \(\overline r \in \mathbb{Z}_n\) has an inverse in \(\mathbb{Z}_n\), it is called a <strong>unit</strong>.</li>
+<li>Set \(\mathbb{Z}_n^* = \{\text{units in }\mathbb{Z}_n\} = \{F\in \mathbb{Z}_n \mid gcd(r,n)=1\}\). Then, \((\mathbb{Z}_n*, \cdot)\) is a group
+
+<ul>
+<li>E.g. \(\mathbb{Z}_6 = \{\overline 1, \overline 2, \overline 3, \overline 4, \overline 5, \overline 6\}\) and \(\mathbb{Z}_6^* = \{\overline 1, \overline 5\}\)</li>
+</ul></li>
+<li>The Cayley table for \((\mathbb{Z}_6, \cdot)\) is:</li>
+</ul></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th>\(\cdot\)</th>
+<th>\(\overline 1\)</th>
+<th>\(\overline 5\)</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>\(\overline 1\)</td>
+<td>\(\overline 1\)</td>
+<td>\(\overline 5\)</td>
+</tr>
+<tr>
+<td>\(\overline 5\)</td>
+<td>\(\overline 5\)</td>
+<td>\(\overline 1\)</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>Def&#39;n: Let \((G, \cdot)\) be a group, the <strong>order of the group</strong> G is denoted \(\mid G \mid\), is the number of element in the group
+
+<ul>
+<li>Remark: If the binary operation is clear, we write \(G\) instead of \((G, \cdot)\)</li>
+<li>E.g.:
+
+<ul>
+<li>\((\mathbb{Z}, +) \Rightarrow \mid\mathbb{Z}\mid = \infty\)</li>
+<li>\((\mathbb{Z}_6,+) \Rightarrow \mid\mathbb{Z}_6\mid = 6\)</li>
+<li>\((\mathbb{Z}_6^*,\cdot) \Rightarrow \mid\mathbb{Z}_6^* \mid = 2\)</li>
+</ul></li>
+</ul></li>
+<li>Aside: There is another important set of objets in abstract algebra, which corresponds to rings (with identity):
+
+<ul>
+<li>Def&#39;n: A <strong>ring</strong> (with identity) is a non-empty set \(G\) together with <strong>two</strong> binary operations \(+\), \(\cdot\), such that:
+
+<ul>
+<li>1) \((G,+)\) is a group (i.e. \(+\) satisfies properties (i)-(iii)</li>
+<li>2) \((G,\cdot)\) is such that \(\cdot\) satisfies (i) and (iii) </li>
+<li>3) \(+\) and \(\cdot\) satisfy the distributive lays: \((a+b)\cdot c = a\cdot c+b\cdot c, \forall a,b,c \in G\)</li>
+</ul></li>
+<li>E.g. \((\mathbb{Z}, +, \cdot)\), \((\mathbb{R}, +, \cdot)\), \((\mathbb{C}, +, \cdot)\), \((\mathbb{Q}, +, \cdot)\) , \((\mathbb{Z}_6, +, \cdot)\) etc.</li>
+<li>In a ring, the elements that have inverses with respect to multiplication are called <strong>units</strong></li>
+</ul></li>
+<li>Def&#39;n: A group \((G, \cdot)\) is called <strong>abelian</strong> if the binary operation is <strong>commutative</strong>: \(a \cdot b = b \cdot a, \forall a,b \in G\)
+
+<ul>
+<li>E.g. \((\mathbb{Z}, +)\), \((\mathbb{R}, +)\), \((\mathbb{C}, +)\), \((\mathbb{Q}, +)\) , \((\mathbb{Z}_6, +)\) etc.</li>
+<li>However, not every group is abelian!
+
+<ul>
+<li>E.g. Consider \(G = GL(n, \mathbb{R}) = \{A\in M_{n\times n}(\mathbb{R}) \mid A\text{ is invertible}\} = \{A\in M_{n\times n}(\mathbb{R}) | \det A \neq 0\} \)</li>
+</ul></li>
+<li>Note that \(\exists\) natural operations on \(n\times n\) matrices: addition and multiplication. Let \(A, B \in M_{n\times n}(\mathbb{R})\). Then:
+
+<ul>
+<li>\(A+B,\, A\cdot B \in M_{n\times n}(\mathbb{R})\)</li>
+<li>\(\Rightarrow +\), \(\cdot\) are binary operations for \(M_{n\times n}(\mathbb{R})\)</li>
+<li>However, if \(A, B \in G\), although \(A\cdot B \in G\), may not have \(A+B \in G\) (e.g. \(a\in G\) so that \(0\in G\), but \(A+(-A)=0 \notin G\)) \(\Rightarrow\) \(+\) is not a binary operation with for \(G\)</li>
+<li>Consider \((G, \cdot)\). Then it is a group (exercise) where the identity is the nxn identity matrix \(I_{n\times n}\). But, \((G, \cdot)\) is <strong>not</strong> abelian because \(AB \neq BA\) for most \(A,B \in G\)</li>
+</ul></li>
+<li>A group \((G, \cdot)\) is called <strong>non-abelian</strong> if it is not abelian.</li>
+</ul></li>
+<li><strong>Some basic properties</strong>:
+
+<ul>
+<li>1) The identity element \(e\) in a group \((G, \cdot)\) is unique</li>
+<li>2) The inverse of an element in a group \((G, \cdot)\) is unique</li>
+</ul></li>
+</ul>
+
+<!-- 2016/05/06 -->
+
+
+
+<script type="text/javascript">
+var _self="undefined"!=typeof window?window:"undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?self:{},Prism=function(){var e=/\blang(?:uage)?-(\w+)\b/i,t=0,n=_self.Prism={util:{encode:function(e){return e instanceof a?new a(e.type,n.util.encode(e.content),e.alias):"Array"===n.util.type(e)?e.map(n.util.encode):e.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/\u00a0/g," ")},type:function(e){return Object.prototype.toString.call(e).match(/\[object (\w+)\]/)[1]},objId:function(e){return e.__id||Object.defineProperty(e,"__id",{value:++t}),e.__id},clone:function(e){var t=n.util.type(e);switch(t){case"Object":var a={};for(var r in e)e.hasOwnProperty(r)&&(a[r]=n.util.clone(e[r]));return a;case"Array":return e.map&&e.map(function(e){return n.util.clone(e)})}return e}},languages:{extend:function(e,t){var a=n.util.clone(n.languages[e]);for(var r in t)a[r]=t[r];return a},insertBefore:function(e,t,a,r){r=r||n.languages;var l=r[e];if(2==arguments.length){a=arguments[1];for(var i in a)a.hasOwnProperty(i)&&(l[i]=a[i]);return l}var o={};for(var s in l)if(l.hasOwnProperty(s)){if(s==t)for(var i in a)a.hasOwnProperty(i)&&(o[i]=a[i]);o[s]=l[s]}return n.languages.DFS(n.languages,function(t,n){n===r[e]&&t!=e&&(this[t]=o)}),r[e]=o},DFS:function(e,t,a,r){r=r||{};for(var l in e)e.hasOwnProperty(l)&&(t.call(e,l,e[l],a||l),"Object"!==n.util.type(e[l])||r[n.util.objId(e[l])]?"Array"!==n.util.type(e[l])||r[n.util.objId(e[l])]||(r[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,l,r)):(r[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,null,r)))}},plugins:{},highlightAll:function(e,t){var a={callback:t,selector:'code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'};n.hooks.run("before-highlightall",a);for(var r,l=a.elements||document.querySelectorAll(a.selector),i=0;r=l[i++];)n.highlightElement(r,e===!0,a.callback)},highlightElement:function(t,a,r){for(var l,i,o=t;o&&!e.test(o.className);)o=o.parentNode;o&&(l=(o.className.match(e)||[,""])[1],i=n.languages[l]),t.className=t.className.replace(e,"").replace(/\s+/g," ")+" language-"+l,o=t.parentNode,/pre/i.test(o.nodeName)&&(o.className=o.className.replace(e,"").replace(/\s+/g," ")+" language-"+l);var s=t.textContent,u={element:t,language:l,grammar:i,code:s};if(!s||!i)return n.hooks.run("complete",u),void 0;if(n.hooks.run("before-highlight",u),a&&_self.Worker){var c=new Worker(n.filename);c.onmessage=function(e){u.highlightedCode=e.data,n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(u.element),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},c.postMessage(JSON.stringify({language:u.language,code:u.code,immediateClose:!0}))}else u.highlightedCode=n.highlight(u.code,u.grammar,u.language),n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(t),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},highlight:function(e,t,r){var l=n.tokenize(e,t);return a.stringify(n.util.encode(l),r)},tokenize:function(e,t){var a=n.Token,r=[e],l=t.rest;if(l){for(var i in l)t[i]=l[i];delete t.rest}e:for(var i in t)if(t.hasOwnProperty(i)&&t[i]){var o=t[i];o="Array"===n.util.type(o)?o:[o];for(var s=0;s<o.length;++s){var u=o[s],c=u.inside,g=!!u.lookbehind,h=!!u.greedy,f=0,d=u.alias;u=u.pattern||u;for(var p=0;p<r.length;p++){var m=r[p];if(r.length>e.length)break e;if(!(m instanceof a)){u.lastIndex=0;var y=u.exec(m),v=1;if(!y&&h&&p!=r.length-1){var b=r[p+1].matchedStr||r[p+1],k=m+b;if(p<r.length-2&&(k+=r[p+2].matchedStr||r[p+2]),u.lastIndex=0,y=u.exec(k),!y)continue;var w=y.index+(g?y[1].length:0);if(w>=m.length)continue;var _=y.index+y[0].length,P=m.length+b.length;if(v=3,P>=_){if(r[p+1].greedy)continue;v=2,k=k.slice(0,P)}m=k}if(y){g&&(f=y[1].length);var w=y.index+f,y=y[0].slice(f),_=w+y.length,S=m.slice(0,w),O=m.slice(_),j=[p,v];S&&j.push(S);var A=new a(i,c?n.tokenize(y,c):y,d,y,h);j.push(A),O&&j.push(O),Array.prototype.splice.apply(r,j)}}}}}return r},hooks:{all:{},add:function(e,t){var a=n.hooks.all;a[e]=a[e]||[],a[e].push(t)},run:function(e,t){var a=n.hooks.all[e];if(a&&a.length)for(var r,l=0;r=a[l++];)r(t)}}},a=n.Token=function(e,t,n,a,r){this.type=e,this.content=t,this.alias=n,this.matchedStr=a||null,this.greedy=!!r};if(a.stringify=function(e,t,r){if("string"==typeof e)return e;if("Array"===n.util.type(e))return e.map(function(n){return a.stringify(n,t,e)}).join("");var l={type:e.type,content:a.stringify(e.content,t,r),tag:"span",classes:["token",e.type],attributes:{},language:t,parent:r};if("comment"==l.type&&(l.attributes.spellcheck="true"),e.alias){var i="Array"===n.util.type(e.alias)?e.alias:[e.alias];Array.prototype.push.apply(l.classes,i)}n.hooks.run("wrap",l);var o="";for(var s in l.attributes)o+=(o?" ":"")+s+'="'+(l.attributes[s]||"")+'"';return"<"+l.tag+' class="'+l.classes.join(" ")+'" '+o+">"+l.content+"</"+l.tag+">"},!_self.document)return _self.addEventListener?(_self.addEventListener("message",function(e){var t=JSON.parse(e.data),a=t.language,r=t.code,l=t.immediateClose;_self.postMessage(n.highlight(r,n.languages[a],a)),l&&_self.close()},!1),_self.Prism):_self.Prism;var r=document.currentScript||[].slice.call(document.getElementsByTagName("script")).pop();return r&&(n.filename=r.src,document.addEventListener&&!r.hasAttribute("data-manual")&&document.addEventListener("DOMContentLoaded",n.highlightAll)),_self.Prism}();"undefined"!=typeof module&&module.exports&&(module.exports=Prism),"undefined"!=typeof global&&(global.Prism=Prism);
+</script>
+
+<script type="text/x-mathjax-config">
+if (typeof MathJaxListener !== 'undefined') {
+  MathJax.Hub.Register.StartupHook('End', function () {
+    MathJaxListener.invokeCallbackForKey_('End');
+  });
+}
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+</body>
+
+</html>
