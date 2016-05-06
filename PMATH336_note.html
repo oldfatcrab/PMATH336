@@ -465,7 +465,7 @@ pre[class*="language-"] {
 
 <hr>
 
-<!-- 2016/05/04 -->
+<p><em>2016/05/04</em></p>
 
 <h1 id="toc_0">Chapter 0: Course Administration</h1>
 
@@ -591,7 +591,7 @@ pre[class*="language-"] {
 
 <ul>
 <li>The integers: \((\mathbb{Z},\cdot)\rightsquigarrow\) this is a group</li>
-<li><strong>HERE</strong>: G = \(\mathbb{Z}\) and \(\cdot: \mathbb{Z}\times\mathbb{Z} \rightarrow \mathbb{Z}, (m,n) \mapsto m\cdot n\)</li>
+<li><strong>HERE</strong>: \(G = \mathbb{Z}\) and \(\cdot: \mathbb{Z}\times\mathbb{Z} \rightarrow \mathbb{Z}, (m,n) \mapsto m\cdot n\)</li>
 <li>Does \(\cdot\) satisfy properties (i) to (iii)?
 
 <ul>
@@ -648,7 +648,7 @@ pre[class*="language-"] {
 <ul>
 <li>(i) \(\cdot\) is associative because multiplication in \(\mathbb{R}\) is associative</li>
 <li>(ii) \(1\) is the identity.</li>
-<li>(iii) From the table, we see that \(1\) is the inverse of \(1\) and \(-1\) is the inverse of \(-1\rightsquigarrow\) every element in G has an inverse.</li>
+<li>(iii) From the table, we see that \(1\) is the inverse of \(1\) and \(-1\) is the inverse of \(-1\rightsquigarrow\) every element in \(G\) has an inverse.</li>
 </ul></li>
 </ul></li>
 <li>Ex 4)
@@ -733,7 +733,7 @@ pre[class*="language-"] {
 </tbody>
 </table>
 
-<!-- 2016/05/04 -->
+<p><em>2016/05/04</em></p>
 
 <ul>
 <li>Review from last lecture:
@@ -746,7 +746,6 @@ pre[class*="language-"] {
 <li>(ii) (<strong>Identity</strong>): \(\exists e \in G\) such that: \(ea = ae =a, \forall a\) in \(G\)</li>
 <li>(iii) (<strong>Inverse</strong>): \(\forall a \in G\), \(\exists a^{-1} \in G\) such that: \(aa^{-1} = a^{-1} a = e\)</li>
 </ul></li>
-<li>In this case, \(G\) is called a group</li>
 </ul></li>
 <li>Note: Properties (i)-(iii) in the def&#39;n are called the <strong>group axioms</strong></li>
 <li>Ex 9) <strong>Integer module n</strong>: \(\mathbb{Z}_n\)
@@ -803,7 +802,7 @@ pre[class*="language-"] {
 </table>
 
 <ul>
-<li>Def&#39;n: Let \((G, \cdot)\) be a group, the <strong>order of the group</strong> G is denoted \(\mid G \mid\), is the number of element in the group
+<li>Def&#39;n: Let \((G, \cdot)\) be a group, the <strong>order of the group</strong> \(G\) is denoted \(\mid G \mid\), is the number of element in the group
 
 <ul>
 <li>Remark: If the binary operation is clear, we write \(G\) instead of \((G, \cdot)\)</li>
@@ -855,7 +854,119 @@ pre[class*="language-"] {
 </ul></li>
 </ul>
 
-<!-- 2016/05/06 -->
+<p><em>2016/05/06</em></p>
+
+<ul>
+<li>Review:
+
+<ul>
+<li>Def&#39;n (<strong>Groups</strong>): Let \(G\) be a non-empty set with a binary operation, \(G\times G\rightarrow G\), then \(G\) is a <strong>group</strong> if the binary operation has the following properties:
+
+<ul>
+<li>(i) (<strong>Associativity</strong>): \(a(bc) = (ab)c\), \(\forall a,b,c \in G\)</li>
+<li>(ii) (<strong>Identity</strong>): \(\exists e \in G\) such that: \(ea = ae =a, \forall a\) in \(G\)</li>
+<li>(iii) (<strong>Inverse</strong>): \(\forall a \in G\), \(\exists a^{-1} \in G\) such that: \(aa^{-1} = a^{-1} a = e\)</li>
+</ul></li>
+<li><strong>Some basic properties</strong>:
+
+<ul>
+<li>1) (<strong>Uniqueness of identity</strong>) The identity element \(e\) in a group \((G, \cdot)\) is unique</li>
+<li>2) (<strong>Uniqueness of inverses</strong>) The inverse of an element in a group \((G, \cdot)\) is unique</li>
+</ul></li>
+</ul></li>
+<li>Proof of above identities:
+
+<ul>
+<li>1) (Uniqueness of identity)
+
+<ul>
+<li>Suppose \(\exists e, f \in G\) such that \(ae = ea = a\) and \(af = fa = a, \forall a \in G\).</li>
+<li>In particular, since  \(f\in G\), we have that \(f = fe\) because \(e\) is an identity</li>
+<li>Similarly, because \(e\in G\) and \(f\) is an identity, \(fe = e\)</li>
+<li>\(\Rightarrow f=fe=e\)</li>
+</ul></li>
+<li>2) (Uniqueness of inverses)
+
+<ul>
+<li>Let \(a\in G\). Suppose that a has <strong>two</strong> inverses in \(G\), say \(a^{-1}\) and \(b\). Therefore, by property (iii), we have: \(aa^{-1} = a^{-1} a = e\) and \(ab = ba = e\)</li>
+<li>Then \(a^{-1} = a^{-1}e = a^{-1}(ab) = (a^{-1}a)b = eb = b\)</li>
+<li>\(\Rightarrow a^{-1}=b\)</li>
+</ul></li>
+</ul></li>
+<li>Using these properties, we obtain:
+
+<ul>
+<li>3) \(e{-1}=e\)</li>
+<li>4) \((ab)^{-1}=b^{-1}a^{-1},\forall a,b \in G\)</li>
+<li>5) \((a^{-1})^{-1}=a,\forall a \in G\)</li>
+<li>6) \((a_1a_2\cdots a_n)^{-1} = a_n^{-1}\cdots a_2^{-1}a_1^{-1}\)</li>
+<li>7) (Cancellation Property) Let \(a,b,c\in G\) with \(G\) a group. If ab = ac, then b=c. If ba=ca, then b = c.</li>
+</ul></li>
+<li>Proof:
+
+<ul>
+<li>3) 
+
+<ul>
+<li>By uniqueness of the inverse, it is enough to check that \(ee = ee = e\) to proof that \(e^{-1}=e\). But this is true by property (ii).</li>
+</ul></li>
+<li>4)
+
+<ul>
+<li>By uniqueness of the inverse, it is enough to check that \(ab(b^{-1}a^{-1}) = (b^{-1}a^{-1})ab = e\)</li>
+<li>By associatitivy, we have that \(ab(b^{-1}a^{-1} = a(bb^{-1})a^{-1} = aea^{-1} = (ae)a^{-1} = aa^{-1} = e\)</li>
+<li>Similarly, \((b^{-1}a^{-1})ab=b^{-1}(a^{-1}a)b=b^{-1}eb=(b^{-1}e)b=b^{-1}b=e\)</li>
+<li>\(\Rightarrow (ab)^{-1}=b^{-1}a^{-1}\)</li>
+<li>Note: 
+
+<ul>
+<li>\(GL(n,\mathbb{R})=\) all general linear group </li>
+<li>One would be tempted to think that \((ab)^{-1}=a^{-1}b^{-1}\) but this is false in general.</li>
+<li>Example:
+
+<ul>
+<li>\((G,\cdot) = (GL(2,\mathbb{R}),\cdot)\)</li>
+<li>A = \(\begin{pmatrix}1&amp;2\\0&amp;1\end{pmatrix}\) and B = \(\begin{pmatrix}2&amp;0\\0&amp;3\end{pmatrix}\)</li>
+<li>\(\Rightarrow AB = \begin{pmatrix}2&amp;6\\0&amp;3\end{pmatrix}\) and \((AB)^{-1}=\begin{pmatrix}\frac{1}{2}&amp;-1\\ 0&amp;\frac{1}{3} \end{pmatrix}\)</li>
+<li>But, \(A^{-1}B^{-1} = \begin{pmatrix}\frac 1 2&amp;-\frac 2 3\\0&amp;\frac 1 3\end{pmatrix} \neq (AB)^{-1}\)</li>
+<li>Nonetheless, \(B^{-1}A^{-1} = \begin{pmatrix}\frac{1}{2}&amp;-1\\ 0&amp;\frac{1}{3} \end{pmatrix} = (AB)^{-1}\)</li>
+</ul></li>
+<li>In fact, one can show that: \((ab)^{-1}=a^{-1}b^{-1},\forall a,b,\in G \Leftrightarrow G\) is abelian (Exercise).</li>
+</ul></li>
+</ul></li>
+<li>5) and 6)
+
+<ul>
+<li>Exercise in assignment 1</li>
+</ul></li>
+<li>7) 
+
+<ul>
+<li>Suppose that \(ab = ac\). Then, since \(G\) is a group, \(\exists a^{-1}\in G\) such that \(aa^{-1}=a^{-1}a=e\)</li>
+<li>Therefore \(a^{-1}(ab)=(a^{-1}a)b=eb=b\)</li>
+<li>Similarly, \(a^{-1}(ac)=c\).</li>
+<li>But, \(ab=ac\), so that \(a^{-1}(ab)=a^{-1}(ac)=c\)</li>
+<li>The proof of 2nd cancellation property is similar</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h2 id="toc_3">1.2 Subgroups</h2>
+
+<ul>
+<li>Def&#39;n: Let \(G\) e a group. If a subset \(H\) of \(G\) is itself a group under the operation of \(G\), we say that H is a <strong>subgroup</strong> of \(G\).</li>
+<li>Note: the definition of a subgroup implies that subset it <strong>is closed under the operation in G</strong>. I.e. \(\forall a,b\in H\), then \(ab\in H\). This ensures that restriction of the binary operation \(G\times G\rightarrow G\) is again a binary operation taking \(H\times H\rightarrow H\). However, a subset of a group of \(G\) may not be closed under the operation on \(G\).
+
+<ul>
+<li>E.g. \((M_{n\times n}(\mathbb{R}), +)\) is a group and \(GL(n,\mathbb R)=\{A\in M_{n\times n}(\mathbb R) \mid \det A\ne 0\} \subset M_{nxn}(\mathbb R)\), but \(GL(n, \mathbb R)\) is not closed under \(+\) (e.g. \(\forall A \in GL(n,\mathbb R), -A \in GL(n,\mathbb R)\)) but \(A+(-A) \notin GL(n,\mathbb R)\)</li>
+</ul></li>
+<li>We use the notation \(H \vartriangleleft G\) (or \(H&lt;G\)) to mean that H is a subgroup of \(G\). (some authors use \(H\trianglelefteq G\) and \(H\vartriangleleft G\) indicates that \(H \leq G\)). If \(H \leq G\), then H is called a <strong>proper subgroup of G</strong>. The singleton \(\{e\}\) is a subgroup of \(G\) called the <strong>trivial subgroup</strong>; a subgroup of \(G\) that is not \(\{e\}\) is called a <strong>non-trivial subtroup of G</strong>.</li>
+<li>How does one determine whether or not a subset \(H\) of \(G\) is a subgroup? There are 2 tests:
+
+<ul>
+<li>Theorem (<strong>One-step subgroup test</strong>): Let \(H\) be a non-empty subset of a group \(G\). If \(ab^{-1}\in H,\forall a,b,\in H\), then \(H\triangleleft G\)</li>
+</ul></li>
+</ul>
 
 
 
