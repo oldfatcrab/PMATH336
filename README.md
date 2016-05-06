@@ -4,10 +4,10 @@
 
 # Table of Content
 
-- [Chapter 0: Course Administration](#toc1) (May 02)
-- [Chapter 1: Groups](#toc2) (May 02)
-    - [1.1 Definitions and examples](#toc3) (May 02)
-    - [1.2 Subgroups](#toc4) (May 06)
+- [Chapter 0: Course Administration](#toc_1) (May 02)
+- [Chapter 1: Groups](#toc_2) (May 02)
+    - [1.1 Definitions and examples](#toc_3) (May 02)
+    - [1.2 Subgroups](#toc_4) (May 06)
 
 --------------------------------------------------------------------------------
 
