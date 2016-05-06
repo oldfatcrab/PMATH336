@@ -6,7 +6,7 @@ Table of Content
 
 --------------------------------------------------------------------------------
 
-<!-- 2016/05/04 -->
+_2016/05/04_
 
 # Chapter 0: Course Administration
 - Course structure
@@ -78,7 +78,7 @@ Table of Content
         - Thus, $(\mathbb{Z},+)$ is a group.
 - Ex 2)
     - The integers: $(\mathbb{Z},\cdot)\rightsquigarrow$ this is a group
-    - **HERE**: G = $\mathbb{Z}$ and $\cdot: \mathbb{Z}\times\mathbb{Z} \rightarrow \mathbb{Z}, (m,n) \mapsto m\cdot n$
+    - **HERE**: $G = \mathbb{Z}$ and $\cdot: \mathbb{Z}\times\mathbb{Z} \rightarrow \mathbb{Z}, (m,n) \mapsto m\cdot n$
     - Does $\cdot$ satisfy properties (i) to (iii)?
         - (i) Let $m, n, r \in \mathbb{Z}$, then:
             - $m\cdot(n\cdot r) = (m\cdot n)\cdot r$ ? YES!
@@ -98,7 +98,7 @@ Table of Content
     - Note that $\cdot$ is just the usual product in $\mathbb{R}$ restricted to element in $G$. Then $G$ is a group because:
         - (i) $\cdot$ is associative because multiplication in $\mathbb{R}$ is associative
         - (ii) $1$ is the identity.
-        - (iii) From the table, we see that $1$ is the inverse of $1$ and $-1$ is the inverse of $-1\rightsquigarrow$ every element in G has an inverse.
+        - (iii) From the table, we see that $1$ is the inverse of $1$ and $-1$ is the inverse of $-1\rightsquigarrow$ every element in $G$ has an inverse.
 - Ex 4)
     - $(\mathbb{Q}, +)$ is a group (exercise)
 - Ex 5)
@@ -123,14 +123,13 @@ Table of Content
 | $-1 $     |$ -1 $|$ -i$ | $1 $ | $i $ |
 | $-i$      |$ -i $|$ 1 $ | $i $ | $1 $ |
 
-<!-- 2016/05/04 -->
+_2016/05/04_
 
 - Review from last lecture:
 	- Def'n (**Groups**): Let $G$ be a non-empty set with a binary operation, $G\times G\rightarrow G$, then $G$ is a **group** if the binary operation has the following properties:
 	    - (i) (**Associativity**): $a(bc) = (ab)c$, $\forall a,b,c \in G$
 	    - (ii) (**Identity**): $\exists e \in G$ such that: $ea = ae =a, \forall a$ in $G$
 	    - (iii) (**Inverse**): $\forall a \in G$, $\exists a^{-1} \in G$ such that: $aa^{-1} = a^{-1} a = e$
-    - In this case, $G$ is called a group
 - Note: Properties (i)-(iii) in the def'n are called the **group axioms**
 - Ex 9) **Integer module n**: $\mathbb{Z}_n$
 	- In $\mathbb{Z}_n$, two integer $r$ and $s$ are equivalent if $r = s+an$, for same $a$ in $\mathbb{Z}$, this is written as $r \equiv s$ (mod $n$)
@@ -154,7 +153,7 @@ Table of Content
 | $\overline 1$ | $\overline 1$ | $\overline 5$ |
 | $\overline 5$ | $\overline 5$  | $\overline 1$ |
 
-- Def'n: Let $(G, \cdot)$ be a group, the **order of the group** G is denoted $\mid G \mid$, is the number of element in the group
+- Def'n: Let $(G, \cdot)$ be a group, the **order of the group** $G$ is denoted $\mid G \mid$, is the number of element in the group
 	- Remark: If the binary operation is clear, we write $G$ instead of $(G, \cdot)$
 	- E.g.:
 		- $(\mathbb{Z}, +) \Rightarrow \mid\mathbb{Z}\mid = \infty$
@@ -181,4 +180,64 @@ Table of Content
 	- 1) The identity element $e$ in a group $(G, \cdot)$ is unique
 	- 2) The inverse of an element in a group $(G, \cdot)$ is unique
 
-<!-- 2016/05/06 -->
+_2016/05/06_
+
+- Review:
+	- Def'n (**Groups**): Let $G$ be a non-empty set with a binary operation, $G\times G\rightarrow G$, then $G$ is a **group** if the binary operation has the following properties:
+	    - (i) (**Associativity**): $a(bc) = (ab)c$, $\forall a,b,c \in G$
+	    - (ii) (**Identity**): $\exists e \in G$ such that: $ea = ae =a, \forall a$ in $G$
+	    - (iii) (**Inverse**): $\forall a \in G$, $\exists a^{-1} \in G$ such that: $aa^{-1} = a^{-1} a = e$
+	- **Some basic properties**:
+		- 1) (**Uniqueness of identity**) The identity element $e$ in a group $(G, \cdot)$ is unique
+		- 2) (**Uniqueness of inverses**) The inverse of an element in a group $(G, \cdot)$ is unique
+- Proof of above identities:
+	- 1) (Uniqueness of identity)
+		- Suppose $\exists e, f \in G$ such that $ae = ea = a$ and $af = fa = a, \forall a \in G$.
+		- In particular, since  $f\in G$, we have that $f = fe$ because $e$ is an identity
+		- Similarly, because $e\in G$ and $f$ is an identity, $fe = e$
+		- $\Rightarrow f=fe=e$
+	- 2) (Uniqueness of inverses)
+		- Let $a\in G$. Suppose that a has **two** inverses in $G$, say $a^{-1}$ and $b$. Therefore, by property (iii), we have: $aa^{-1} = a^{-1} a = e$ and $ab = ba = e$
+		- Then $a^{-1} = a^{-1}e = a^{-1}(ab) = (a^{-1}a)b = eb = b$
+		- $\Rightarrow a^{-1}=b$
+- Using these properties, we obtain:
+	- 3) $e{-1}=e$
+	- 4) $(ab)^{-1}=b^{-1}a^{-1},\forall a,b \in G$
+	- 5) $(a^{-1})^{-1}=a,\forall a \in G$
+	- 6) $(a_1a_2\cdots a_n)^{-1} = a_n^{-1}\cdots a_2^{-1}a_1^{-1}$
+	- 7) (Cancellation Property) Let $a,b,c\in G$ with $G$ a group. If ab = ac, then b=c. If ba=ca, then b = c.
+- Proof:
+	- 3) 
+		- By uniqueness of the inverse, it is enough to check that $ee = ee = e$ to proof that $e^{-1}=e$. But this is true by property (ii).
+	- 4)
+		- By uniqueness of the inverse, it is enough to check that $ab(b^{-1}a^{-1}) = (b^{-1}a^{-1})ab = e$
+		- By associatitivy, we have that $ab(b^{-1}a^{-1} = a(bb^{-1})a^{-1} = aea^{-1} = (ae)a^{-1} = aa^{-1} = e$
+		- Similarly, $(b^{-1}a^{-1})ab=b^{-1}(a^{-1}a)b=b^{-1}eb=(b^{-1}e)b=b^{-1}b=e$
+		- $\Rightarrow (ab)^{-1}=b^{-1}a^{-1}$
+		- Note: 
+			- $GL(n,\mathbb{R})=$ all general linear group 
+			- One would be tempted to think that $(ab)^{-1}=a^{-1}b^{-1}$ but this is false in general.
+			- Example:
+				- $(G,\cdot) = (GL(2,\mathbb{R}),\cdot)$
+				- A = $\begin{pmatrix}1&2\\0&1\end{pmatrix}$ and B = $\begin{pmatrix}2&0\\0&3\end{pmatrix}$
+				- $\Rightarrow AB = \begin{pmatrix}2&6\\0&3\end{pmatrix}$ and $(AB)^{-1}=\begin{pmatrix}\frac{1}{2}&-1\\ 0&\frac{1}{3} \end{pmatrix}$
+				- But, $A^{-1}B^{-1} = \begin{pmatrix}\frac 1 2&-\frac 2 3\\0&\frac 1 3\end{pmatrix} \neq (AB)^{-1}$
+				- Nonetheless, $B^{-1}A^{-1} = \begin{pmatrix}\frac{1}{2}&-1\\ 0&\frac{1}{3} \end{pmatrix} = (AB)^{-1}$
+			- In fact, one can show that: $(ab)^{-1}=a^{-1}b^{-1},\forall a,b,\in G \Leftrightarrow G$ is abelian (Exercise).
+	- 5) and 6)
+		- Exercise in assignment 1
+	- 7) 
+		- Suppose that $ab = ac$. Then, since $G$ is a group, $\exists a^{-1}\in G$ such that $aa^{-1}=a^{-1}a=e$
+		- Therefore $a^{-1}(ab)=(a^{-1}a)b=eb=b$
+		- Similarly, $a^{-1}(ac)=c$.
+		- But, $ab=ac$, so that $a^{-1}(ab)=a^{-1}(ac)=c$
+		- The proof of 2nd cancellation property is similar
+
+## 1.2 Subgroups
+
+- Def'n: Let $G$ e a group. If a subset $H$ of $G$ is itself a group under the operation of $G$, we say that H is a **subgroup** of $G$.
+- Note: the definition of a subgroup implies that subset it **is closed under the operation in G**. I.e. $\forall a,b\in H$, then $ab\in H$. This ensures that restriction of the binary operation $G\times G\rightarrow G$ is again a binary operation taking $H\times H\rightarrow H$. However, a subset of a group of $G$ may not be closed under the operation on $G$.
+	- E.g. $(M_{n\times n}(\mathbb{R}), +)$ is a group and $GL(n,\mathbb R)=\{A\in M_{n\times n}(\mathbb R) \mid \det A\ne 0\} \subset M_{nxn}(\mathbb R)$, but $GL(n, \mathbb R)$ is not closed under $+$ (e.g. $\forall A \in GL(n,\mathbb R), -A \in GL(n,\mathbb R)$) but $A+(-A) \notin GL(n,\mathbb R)$
+- We use the notation $H \vartriangleleft G$ (or $H<G$) to mean that H is a subgroup of $G$. (some authors use $H\trianglelefteq G$ and $H\vartriangleleft G$ indicates that $H \leq G$). If $H \leq G$, then H is called a **proper subgroup of G**. The singleton $\{e\}$ is a subgroup of $G$ called the **trivial subgroup**; a subgroup of $G$ that is not $\{e\}$ is called a **non-trivial subtroup of G**.
+- How does one determine whether or not a subset $H$ of $G$ is a subgroup? There are 2 tests:
+	- Theorem (**One-step subgroup test**): Let $H$ be a non-empty subset of a group $G$. If $ab^{-1}\in H,\forall a,b,\in H$, then $H\triangleleft G$
