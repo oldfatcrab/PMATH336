@@ -1,12 +1,17 @@
-Table of Content
-
-- [Chapter 0: Course Administration](#chapter-0-course-administration)
-- [Chapter 1: Groups](#chapter-1-groups)
-    - [1.1 Definitions and examples](#11-definitions-and-examples)
+**Important**: since github markdown don't support LaTeX, download the html file in repo instead!
 
 --------------------------------------------------------------------------------
 
-_2016/05/04_
+# Table of Content
+
+- [Chapter 0: Course Administration](#toc1) (May 02)
+- [Chapter 1: Groups](#toc2) (May 02)
+    - [1.1 Definitions and examples](#toc3) (May 02)
+    - [1.2 Subgroups](#toc4) (May 06)
+
+--------------------------------------------------------------------------------
+
+_2016/05/02_
 
 # Chapter 0: Course Administration
 - Course structure
