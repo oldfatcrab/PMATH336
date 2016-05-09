@@ -452,7 +452,7 @@ pre[class*="language-"] {
 
 <body>
 
-<p><strong>Important</strong>: since github markdown don&#39;t support LaTeX, download the html file in repo instead!</p>
+<p><strong>Important</strong>: since github markdown doesn&#39;t support LaTeX, download the html file in repo instead!</p>
 
 <hr>
 
@@ -969,7 +969,148 @@ pre[class*="language-"] {
 <li>How does one determine whether or not a subset \(H\) of \(G\) is a subgroup? There are 2 tests:
 
 <ul>
-<li>Theorem (<strong>One-step subgroup test</strong>): Let \(H\) be a non-empty subset of a group \(G\). If \(ab^{-1}\in H,\forall a,b,\in H\), then \(H\triangleleft G\)</li>
+<li>Theorem (<strong>One-step subgroup test</strong>): Let \(H\) be a non-empty subset of a group \(G\). If \(ab^{-1}\in H,\forall a,b\in H\), then \(H\vartriangleleft G\).</li>
+</ul></li>
+</ul>
+
+<p><em>2016/05/09</em></p>
+
+<ul>
+<li><p>Review from previous lectures:</p>
+
+<ul>
+<li>\((G,\cdot)\) is a group if:
+
+<ul>
+<li>operation is associative</li>
+<li>(<strong>Identity</strong>): \(\exists e\in G\) such that \(ae = ea = a, \forall a\in G\)</li>
+<li>(<strong>Inverses</strong>): \(\forall a \in G, \exists a^{-1} \in G\) such that \(aa^{-1}=a^{-1}a=e\).</li>
+</ul></li>
+<li>Subgroup: let \(0\neq H\subset G\) such that \(H\) itself is a group under the same operation as G</li>
+<li>Note: It is implicit in the definition that \(H\) is closed under the operation of \(G\) (i.e., \(\forall a,b \in H\), then \(ab\in H\)).</li>
+<li>Theorem (<strong>One-step subgroup test</strong>): Let \(G\) be a group and \(H\) be a non-empty subset of \(G\). Then, \(H\) is a subgroup of \(G\) if \([ab^{-1}\in H,\forall a,b\in H]\quad(*)\)</li>
+</ul></li>
+<li><p>Proof of one-step subgroup test:</p>
+
+<ul>
+<li>We first need to check that H is closed under the operation in G. Given then property that \(ab^{-1} \in H, \forall a,b\in H \) if we can prove that, \(\forall a,b \in H, b^{-1}\in H\), then \(ab=a(b^{-1})_{-1}\in H\).</li>
+<li>We first notice that \(e\in H\), because \(H\) has at least one element, say a, so that \(e=aa^{-1}\in H\) (by \((*)\)).</li>
+<li>Also, \(e^{-1} = e\). Thus, \(\forall a \in H\), we have that \(a^{-1} = ea^{-1}\in H\) (by \((*)\)).</li>
+<li>Finally, \(\forall a,b\in H\), since \(b^{-1}\in H\), we get that \(ab=a(b^{-1})^{-1}\in H\) by \((*)\)</li>
+<li>\(\Rightarrow H\) is closed under the operation</li>
+<li>Note: we still to check that the restriction of the operation on \(G\) satisfies the 3 group axioms. Since the operation is associative on \(G\), it is also associative on \(H\). And we have already seen that the identity and inverse axioms hold.</li>
+</ul></li>
+<li><p>Theorem (<strong>Two-step subgroup test</strong>) Let \(G\) be a group and \(H\) be a non-empty subset of \(G\). Then \(H\) is a subgroup of \(G\) if \(ab\in H \forall a,b\in H\) (H is closed under the operation on G), and \(a^{-1} \in H, \forall a \in H\) (H is closed under inverse).</p>
+
+<ul>
+<li>Proof: Let \(a,b\in H\). Then \(b^{-1} \in H\) so that \(ab^{-1} \in H\). Thus, by one-step subgroup test, H is a subgroup.</li>
+<li>Remark: The two-step subgroup test is useful if one already knows that <strong>the subset \(H\) of \(G\) is clsed under the operation or clsed under inverses</strong>, so that there then is only one thing left to check.</li>
+</ul></li>
+<li><p>Ex 1)</p>
+
+<ul>
+<li>\((\mathbb C, +) \rightsquigarrow (\mathbb Z^*, +) \vartriangleleft (\mathbb Q^*,+)\vartriangleleft (\mathbb R^*,+)\vartriangleleft (\mathbb C^*,+)\)</li>
+<li>\((\mathbb C, \cdot) \rightsquigarrow (\mathbb Q^*,\cdot)\vartriangleleft (\mathbb R^*,\cdot)\vartriangleleft (\mathbb C^*,\cdot)\)</li>
+<li>Note: \(^*\) means without zero</li>
+</ul></li>
+<li><p>Ex 2)</p>
+
+<ul>
+<li>\((\{1,-1\}, \cdot)\) group with \(\cdot\) the usual multiplication in \(\mathbb C\)</li>
+<li>\((\{1,-1\}, \cdot)\vartriangleleft(\mathbb Q^*, \cdot)\vartriangleleft(\mathbb R^*, \cdot)\vartriangleleft(\mathbb C^*, \cdot)\)</li>
+</ul></li>
+<li><p>Ex 3)</p>
+
+<ul>
+<li>\((\mathbb Z, +)\)</li>
+<li>\(H=\{2m\mid m\in \mathbb Z\} \Rightarrow \) H is closed under \(+\) since the sum of 2 even integers is even</li>
+<li>Also, \(\forall 2m \in H\), its inverse - \(2m\in H \Rightarrow H\) is closed under inverse. Thus, \(H \vartriangleleft (\mathbb Z,+)\) by the two-step subgroup test</li>
+</ul></li>
+<li><p>Ex 4)</p>
+
+<ul>
+<li>\((\mathbb Z_6,+) =\{\overline 0, \overline 1, \overline 2, \overline 3, \overline 4, \overline 5\}\)</li>
+<li>Then, \(H = \{\overline 0, \overline 2, \overline 4\} \vartriangleleft \mathbb Z_6\)</li>
+<li>\((Z_6^*, \cdot) = {\overline 1, \overline 5} \rightsquigarrow \) the only proper subgroup of \(Z_6^*\) is the trivial subgroup \(H=\{\overline 1\}\)</li>
+<li>\((Z_{12}^*, \cdot) =\{\overline 1,\overline 5,\overline 7,\overline{11}\}\)</li>
+</ul></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th>\(\cdot\)</th>
+<th>\(\overline 1\)</th>
+<th>\(\overline 5\)</th>
+<th>\(\overline 7\)</th>
+<th>\(\overline {11}\)</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>\(\overline 1\)</td>
+<td>\(\overline 1\)</td>
+<td>\(\overline 5\)</td>
+<td>\(\overline 7\)</td>
+<td>\(\overline{11} \)</td>
+</tr>
+<tr>
+<td>\(\overline 5\)</td>
+<td>\(\overline 5\)</td>
+<td>\(\overline 1\)</td>
+<td>\(\overline{11}\)</td>
+<td>\(\overline 7\)</td>
+</tr>
+<tr>
+<td>\(\overline 7\)</td>
+<td>\(\overline 7\)</td>
+<td>\(\overline{11}\)</td>
+<td>\(\overline 1\)</td>
+<td>\(\overline 5\)</td>
+</tr>
+<tr>
+<td>\(\overline{11}\)</td>
+<td>\(\overline{11}\)</td>
+<td>\(\overline 1\)</td>
+<td>\(\overline 5\)</td>
+<td>\(\overline 1\)</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>(Continue)
+
+<ul>
+<li>Every element is inverse itself</li>
+<li>\((\{\overline 1, \overline5\},\cdot), (\{\overline 1,\overline 7 \},\cdot), (\{\overline 1, \overline{11} \},\cdot), (\{\overline1 \},\cdot)\leftarrow\) These are the only proper subgroups of \((\mathbb Z_{12}^*, \cdot)\)</li>
+<li>Note: We have seen in the proof of the one-step subgroup test that if \(H\vartriangleleft G\), then \(e \in H\) where \(e\) is the identity in \(G\). However, since \(H\) is closed under the operation on \(G, \forall a\in H, ae = ea = a\) (since \(e\) is the identity in \(G\)) \(\Rightarrow e\) is an identity element in \(H\) for the operation in \(H\). So, because identity element are unique, \(e\) is also the identity in \(H\).</li>
+</ul></li>
+<li>Prop: Let \(G\) be a group and \(a\in G\). Set \(\langle a\rangle:=\{a^m = aa\cdots a \mid m\in \mathbb Z\}\) Then \(\langle a\rangle \vartriangleleft G\) called the <strong>cyclic subgroup of \(G\) generated by \(a\)</strong>
+
+<ul>
+<li>Proof:
+
+<ul>
+<li>Let \(a^m, a^{m&#39;}\in \langle a\rangle\).</li>
+<li>Then \((a^m)^{-1} = a^{-m}\in &lt;a\rangle\), since \(-m&#39; \in \mathbb Z\).</li>
+<li>Therefore \(a^m (a^{m&#39;})^{-1} = a^m a^{-m&#39;} = a^{m-m&#39;} \in \langle a\rangle\) since \(m&#39;\in Z\).</li>
+<li>So, by the 1-step subgroup test, \(\langle a\rangle \vartriangleleft G\)</li>
+</ul></li>
+</ul></li>
+<li>Ex 1)
+
+<ul>
+<li>\((\mathbb Z,+) \rightsquigarrow H=\{2m \mid m\in \mathbb Z\}=\langle 2\rangle\) since, using additive notation, \(\langle 2\rangle = \{2+2+\cdots +2\mid m\in \mathbb Z\}\)</li>
+</ul></li>
+<li>Ex 2)
+
+<ul>
+<li>\((\mathbb Z_{12}^*, \cdot) = \{\overline 1,\overline 5,\overline 7,\overline{11}\}\)</li>
+<li>\(\{1,5\}\) = \(\langle\overline 5\rangle\) because \(\langle\overline 5\rangle = \langle1, \overline 5, \overline 5^2, \overline 5^3, \cdots\rangle\)</li>
+<li>\(\{\overline 1, \overline 7\}\)</li>
+<li>\(\{\overline 1, \overline{11}\}\) </li>
 </ul></li>
 </ul>
 
