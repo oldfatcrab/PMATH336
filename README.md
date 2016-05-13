@@ -8,6 +8,7 @@
 - [Chapter 1: Groups](#toc_2) (May 02)
     - [1.1 Definitions and examples](#toc_3) (May 02)
     - [1.2 Subgroups](#toc_4) (May 06)
+    - [1.3 Finite groups](#toc_5) (May 13)
 
 --------------------------------------------------------------------------------
 
@@ -268,34 +269,35 @@ _2016/05/09_
 
 - Theorem (**Two-step subgroup test**) Let $G$ be a group and $H$ be a non-empty subset of $G$. Then $H$ is a subgroup of $G$ if $ab\in H \forall a,b\in H$ (H is closed under the operation on G), and $a^{-1} \in H, \forall a \in H$ (H is closed under inverse).
 	- Proof: Let $a,b\in H$. Then $b^{-1} \in H$ so that $ab^{-1} \in H$. Thus, by one-step subgroup test, H is a subgroup.
-	- Remark: The two-step subgroup test is useful if one already knows that **the subset $H$ of $G$ is clsed under the operation or clsed under inverses**, so that there then is only one thing left to check.
-- Ex 1)
-	- $(\mathbb C, +) \rightsquigarrow (\mathbb Z^*, +) \vartriangleleft (\mathbb Q^*,+)\vartriangleleft (\mathbb R^*,+)\vartriangleleft (\mathbb C^*,+)$
-	- $(\mathbb C, \cdot) \rightsquigarrow (\mathbb Q^*,\cdot)\vartriangleleft (\mathbb R^*,\cdot)\vartriangleleft (\mathbb C^*,\cdot)$
-	- Note: $^*$ means without zero
-- Ex 2)
-	- $(\{1,-1\}, \cdot)$ group with $\cdot$ the usual multiplication in $\mathbb C$
-	- $(\{1,-1\}, \cdot)\vartriangleleft(\mathbb Q^*, \cdot)\vartriangleleft(\mathbb R^*, \cdot)\vartriangleleft(\mathbb C^*, \cdot)$
-- Ex 3)
-	- $(\mathbb Z, +)$
-	- $H=\{2m\mid m\in \mathbb Z\} \Rightarrow $ H is closed under $+$ since the sum of 2 even integers is even
-	- Also, $\forall 2m \in H$, its inverse - $2m\in H \Rightarrow H$ is closed under inverse. Thus, $H \vartriangleleft (\mathbb Z,+)$ by the two-step subgroup test
-- Ex 4)
-	- $(\mathbb Z_6,+) =\{\overline 0, \overline 1, \overline 2, \overline 3, \overline 4, \overline 5\}$
-	- Then, $H = \{\overline 0, \overline 2, \overline 4\} \vartriangleleft \mathbb Z_6$
-	- $(Z_6^*, \cdot) = {\overline 1, \overline 5} \rightsquigarrow $ the only proper subgroup of $Z_6^*$ is the trivial subgroup $H=\{\overline 1\}$
-	- $(Z_{12}^*, \cdot) =\{\overline 1,\overline 5,\overline 7,\overline{11}\}$
+		- Remark: The two-step subgroup test is useful if one already knows that **the subset $H$ of $G$ is clsed under the operation or clsed under inverses**, so that there then is only one thing left to check.
+	- Ex 1)
+		- $(\mathbb C, +) \rightsquigarrow (\mathbb Z^*, +) \vartriangleleft (\mathbb Q^*,+)\vartriangleleft (\mathbb R^*,+)\vartriangleleft (\mathbb C^*,+)$
+		- $(\mathbb C, \cdot) \rightsquigarrow (\mathbb Q^*,\cdot)\vartriangleleft (\mathbb R^*,\cdot)\vartriangleleft (\mathbb C^*,\cdot)$
+		- Note: $^*$ means without zero
+	- Ex 2)
+		- $(\{1,-1\}, \cdot)$ group with $\cdot$ the usual multiplication in $\mathbb C$
+		- $(\{1,-1\}, \cdot)\vartriangleleft(\mathbb Q^*, \cdot)\vartriangleleft(\mathbb R^*, \cdot)\vartriangleleft(\mathbb C^*, \cdot)$
+	- Ex 3)
+		- $(\mathbb Z, +)$
+		- $H=\{2m\mid m\in \mathbb Z\} \Rightarrow $ H is closed under $+$ since the sum of 2 even integers is even
+		- Also, $\forall 2m \in H$, its inverse - $2m\in H \Rightarrow H$ is closed under inverse. Thus, $H \vartriangleleft (\mathbb Z,+)$ by the two-step subgroup test
+	- Ex 4)
+		- $(\mathbb Z_6,+) =\{\overline 0, \overline 1, \overline 2, \overline 3, \overline 4, \overline 5\}$
+		- Then, $H = \{\overline 0, \overline 2, \overline 4\} \vartriangleleft \mathbb Z_6$
+		- $(Z_6^*, \cdot) = {\overline 1, \overline 5} \rightsquigarrow $ the only proper subgroup of $Z_6^*$ is the trivial subgroup $H=\{\overline 1\}$
+		- $(Z_{12}^*, \cdot) =\{\overline 1,\overline 5,\overline 7,\overline{11}\}$
+	
+	| $\cdot$ | $\overline 1$  | $\overline 5$ | $\overline 7$ | $\overline {11}$ |
+	|---------|----|----|---|----|
+	| $\overline 1$ | $\overline 1$ | $\overline 5$ | $\overline 7$ | $\overline{11} $ |
+	| $\overline 5$ | $\overline 5$  | $\overline 1$ | $\overline{11}$ | $\overline 7$ |
+	| $\overline 7$ | $\overline 7$  | $\overline{11}$ | $\overline 1$ | $\overline 5$ |
+	| $\overline{11}$ | $\overline{11}$  | $\overline 7$ | $\overline 5$ | $\overline 1$ |
 
-| $\cdot$ | $\overline 1$  | $\overline 5$ | $\overline 7$ | $\overline {11}$ |
-|---------|----|----|---|----|
-| $\overline 1$ | $\overline 1$ | $\overline 5$ | $\overline 7$ | $\overline{11} $ |
-| $\overline 5$ | $\overline 5$  | $\overline 1$ | $\overline{11}$ | $\overline 7$ |
-| $\overline 7$ | $\overline 7$  | $\overline{11}$ | $\overline 1$ | $\overline 5$ |
-| $\overline{11}$ | $\overline{11}$  | $\overline 1$ | $\overline 5$ | $\overline 1$ |
-
-- (Continue)
-	- Every element is inverse itself
-	- $(\{\overline 1, \overline5\},\cdot), (\{\overline 1,\overline 7 \},\cdot), (\{\overline 1, \overline{11} \},\cdot), (\{\overline1 \},\cdot)\leftarrow$ These are the only proper subgroups of $(\mathbb Z_{12}^*, \cdot)$
+-	
+	- 
+		- Every element is inverse itself
+		- $(\{\overline 1, \overline5\},\cdot), (\{\overline 1,\overline 7 \},\cdot), (\{\overline 1, \overline{11} \},\cdot), (\{\overline1 \},\cdot)\leftarrow$ These are the only proper subgroups of $(\mathbb Z_{12}^*, \cdot)$
 	- Note: We have seen in the proof of the one-step subgroup test that if $H\vartriangleleft G$, then $e \in H$ where $e$ is the identity in $G$. However, since $H$ is closed under the operation on $G, \forall a\in H, ae = ea = a$ (since $e$ is the identity in $G$) $\Rightarrow e$ is an identity element in $H$ for the operation in $H$. So, because identity element are unique, $e$ is also the identity in $H$.
 - Prop: Let $G$ be a group and $a\in G$. Set $\langle a\rangle:=\{a^m = aa\cdots a \mid m\in \mathbb Z\}$ Then $\langle a\rangle \vartriangleleft G$ called the **cyclic subgroup of $G$ generated by $a$**
 	- Proof:
@@ -303,10 +305,124 @@ _2016/05/09_
 		- Then $(a^m)^{-1} = a^{-m}\in <a\rangle$, since $-m' \in \mathbb Z$.
 		- Therefore $a^m (a^{m'})^{-1} = a^m a^{-m'} = a^{m-m'} \in \langle a\rangle$ since $m'\in Z$.
 		- So, by the 1-step subgroup test, $\langle a\rangle \vartriangleleft G$
-- Ex 1)
-	- $(\mathbb Z,+) \rightsquigarrow H=\{2m \mid m\in \mathbb Z\}=\langle 2\rangle$ since, using additive notation, $\langle 2\rangle = \{2+2+\cdots +2\mid m\in \mathbb Z\}$
-- Ex 2)
-	- $(\mathbb Z_{12}^*, \cdot) = \{\overline 1,\overline 5,\overline 7,\overline{11}\}$
-	- $\{1,5\}$ = $\langle\overline 5\rangle$ because $\langle\overline 5\rangle = \langle1, \overline 5, \overline 5^2, \overline 5^3, \cdots\rangle$
-	- $\{\overline 1, \overline 7\}$
-	- $\{\overline 1, \overline{11}\}$ 
+	- Ex 1)
+		- $(\mathbb Z,+) \rightsquigarrow H=\{2m \mid m\in \mathbb Z\}=\langle 2\rangle$ since, using additive notation, $\langle 2\rangle = \{2+2+\cdots +2\mid m\in \mathbb Z\}$
+	- Ex 2)
+		- $(\mathbb Z_{12}^*, \cdot) = \{\overline 1,\overline 5,\overline 7,\overline{11}\}$
+		- $\{1,5\}$ = $\langle\overline 5\rangle$ because $\langle\overline 5\rangle = \langle1, \overline 5, \overline 5^2, \overline 5^3, \cdots\rangle$
+		- $\{\overline 1, \overline 7\}$
+		- $\{\overline 1, \overline{11}\}$ 
+
+_2016/05/11_
+
+- Clarification from last lecture: 
+	- Let $G$ be a group, and $a\in G$. We defined: $\langle a\rangle:=\{a^m\mid m\in \mathbb Z\}$ when $a^0:=e$ and $a^{-n} = a_{-1}\cdot a_{-1}\cdot \cdots a_{-1}$ if $n\in \mathbb N$. 
+	- This means $a^{n}a^{-n}$ $= (a_{1}\cdot a_{1}\cdot \cdots a_{1})( a_{-1}\cdot a_{-1}\cdot \cdots a_{-1}) $ $= (a_{1}\cdot a_{1}\cdot \cdots a_{1})(a_{1}\cdot a_{-1})( a_{-1}\cdot a_{-1}\cdot \cdots a_{-1}) $ $= (a_{1}\cdot a_{1}\cdot \cdots a_{1})e( a_{-1}\cdot a_{-1}\cdot \cdots a_{-1}) $ $= \cdots = e$. Similarly, $a^{-n}a^{n} =e$. So, by uniqueness of inverses, $a^{-n} = (a^{-1})^n$. Also note that $\langle a\rangle = \langle a^{-1}\rangle$ because, $\forall m \in \mathbb Z, \langle a\rangle \ni a^m=(a^{-1})^m \in \langle a^{-n}\rangle$. We have that **prop**: $\langle a\rangle \vartriangleleft G$
+
+- Important:
+	- Let $G$ be a group and $H\vartriangleleft G$. By definition, this means that $H$ is a group in its own right so that:
+		- $H$ has an indentity element, $e_H\in H$
+		- $\forall a\in H$, then it has an inverse in $H$, say $a_H^{-1}\in H$, such that $aa_H^{-1}=a_H^{-1}a=e_H$
+		- Then, $e_H=e=$(indentity in $G$) because, $\forall a\in H, since a\in G$ as $H\subset G$, we have $ae=ea=a$.
+		- So, $e$ is an indentity in $H$, implying that $e=e^H$ by uniqueness of the indentity element.
+		- Similarly, if $a^{-1}$ as the identity of $a\in G$, then $aa^{-1}=a^{-1}a=e=e_H$
+		- $\Rightarrow a^{-1}$ is an indentity for $a\in H\Rightarrow a^{-1}=a_H^{-1}$ by uniqueness of inverse
+	- **So**: if $H\vartriangleleft G$, then the indentity of $H$ is the indentity of G and the inverse of any element in $H$ is its inverse in $G$.
+- Given a subset $H\subset G$, how can we tell if $H$ is $NOT$ a subgroup of $G$?
+	- If $e\notin H$, then $H \not \vartriangleleft G$
+	- If $H$ is not closed under the operation on $G$, then $H \not \vartriangleleft G$
+		- E.g. $(G,\cdot) = (\mathbb R^*, \cdot)$ and $H = \{x\in(G, \cdot) \mid x=q or x \mathbb Q\}$. Note that $1\in H$, so that $H$ may be a subgroup of $G$. **BUT**, $\sqrt{2}\in H$ and $\sqrt{2}\sqrt{2} \notin H$
+			- $\Rightarrow H$ is not closed under multiplication
+			- $\Rightarrow H \not \vartriangleleft G$
+	- $H$ is not closed under inverses, the $H \not \vartriangleleft G$ (i.e. If $\exists a \in G$ with $a^{-1} \notin H$, then $H \not \vartriangleleft G$)
+		- E.g. $(G,\cdot) = (\mathbb R^*,\cdot)$ and $H = \{x\in (G,\cdot) \mid x\ge 1\}$. Note that $1\in H$. Also, $\forall x,y\in H, xy\in H$ because $xy \ge 1$ since $x,y\ge 1$. But, $2\in H$ and $2^{-1} = \frac{1}{2}\notin H$.
+			- $\Rightarrow H$ is not closed under inverses
+			- $\Rightarrow H\not \vartriangleleft G$
+- Also not every of element in a group commute, some element commute with every element in a group. For example, if $G$ is a group, then $e$ commutes with every element in $G$ because $ae=ea, \forall a \in G$
+- Definition (**Centre of a group**): Let $G$ be a group, we define $\mathcal Z(G):=\{a\in G\mid ax=xa, \forall x \in G\}$ = (element in $G$ that commute with all elements in $G$) = centre of G
+	- Note: 
+		- 1) $\mathcal Z$ is for zentrum = (centre in German)
+		- 2) $e\in \mathcal Z(G)$
+		- 3) If $G$ is abelian, then $\mathcal Z(G) = G$. In fact, we have ($G$ is abelian) $\Leftrightarrow$ ($\mathcal Z(G) = G$)
+	- Ex: Consider $\mathcal G=GL(2,\mathbb R) = \{A\in M_{2\times 2}(\mathbb R)\mid \det A \neq 0\}$ under matrix multiplication. Let us show that $\mathcal Z(G) = \bigg \{\left.\begin{pmatrix}a&0\\0&a\end{pmatrix}\right\vert a\in R^*\bigg\}\subset \mathcal Z(G)$. Note that $\mathcal Z(G)\neq G$, which is to be expected since $G$ is not abelian!
+	- Proof:
+		- $\mathcal Z(G)\subset \bigg \{\left.\begin{pmatrix}a&0\\0&a\end{pmatrix}\right\vert a\in R^*\bigg\}\subset \mathcal Z(G)$
+		- Let $\begin{pmatrix}a&b\\c&d\end{pmatrix}\in \mathcal Z(G)$ so that $\begin{pmatrix}a&b\\c&d\end{pmatrix}$ commutes with every matrix in $GL(2,\mathbb R)$
+		- In particular:
+			- $\begin{pmatrix}a&b\\c&d\end{pmatrix}\begin{pmatrix}1&0\\0&2\end{pmatrix}=\begin{pmatrix}1&0\\0&2\end{pmatrix}\begin{pmatrix}a&b\\c&d\end{pmatrix}$
+				- $\Leftrightarrow \begin{pmatrix}a&2b\\c&2d\end{pmatrix}=\begin{pmatrix}a&b\\2c&2d\end{pmatrix}$
+				- $\Rightarrow c = 2c$ and $2b = b$
+				- $\Rightarrow c=b=0$
+				- $\Rightarrow (a,0;0,b)$ (i.e. must be diagonal)
+			- $\begin{pmatrix}a&0\\0&d\end{pmatrix}\begin{pmatrix}1&1\\0&1\end{pmatrix}=\begin{pmatrix}1&1\\0&1\end{pmatrix}\begin{pmatrix}a&0\\0&d\end{pmatrix}$
+				- $ \Leftrightarrow \begin{pmatrix}a&a\\0&d\end{pmatrix}=\begin{pmatrix}a&d\\0&d\end{pmatrix}(a,a;0,d)=(a,d;0,d)$
+				- $\Rightarrow a=d$
+			- So $\mathcal Z(G) = {\begin{pmatrix}a&0\\0&a\end{pmatrix}\mid a\in R^*}$, where $a \neq 0$ because $\det \begin{pmatrix}a&0\\0&a\end{pmatrix} = a^2 \neq 0$
+		- $\bigg \{\left.\begin{pmatrix}a&0\\0&a\end{pmatrix}\right\vert a\in R^*\bigg\}\subset \mathcal Z(G)$: 
+			- Proof:
+				- Consider $\begin{pmatrix}a&0\\0&a\end{pmatrix}$ with $a \in \mathbb R^*$. 
+				- Then, $\forall \begin{pmatrix}x&y\\z&w\end{pmatrix}\in GL(2,\mathbb R)$, we have: $\begin{pmatrix}a&0\\0&a\end{pmatrix}\begin{pmatrix}x&y\\z&w\end{pmatrix}=\begin{pmatrix}ax&ay\\az&aw\end{pmatrix} = \begin{pmatrix}a&0\\0&a\end{pmatrix}$
+				- $ \Rightarrow \begin{pmatrix}a&0\\0&a\end{pmatrix}\in \mathcal Z(G)$ 
+				- and $\bigg \{\left.\begin{pmatrix}a&0\\0&a\end{pmatrix}\right\vert a\in R^*\bigg\}\subset \mathcal Z(G)$
+- Theorem (**center is a subgroup**): Let $G$ be a group.Then $\mathcal Z(G) \vartriangleleft G$.
+	- Proof:
+		- Let us use 2-step subgroup test.
+		- We need to verify that $\mathcal Z(G)$ is a) closed under the operation, and b) also closed under inverses. 
+			- a) Let $a,b\in \mathcal Z(G)$. Then $ax=xa$ and $bx=xb, \forall x\in G$. Do we have $(ab)x = x(ab), \forall x \in G$?
+				- Let $x\in G$. Then, $(ab)x = a(bx) = a(xb) = (ax)b = (xa)b = x(ab)$
+				- $\Rightarrow ab\in \mathcal Z(G)$
+			- b) Let $x\in \mathcal Z(G)$ so that $ax = xa, \forall x\in G$. Then $a^{-1}x = (x^{-1}a)^{-1} = (ax^{-1})^{-1} = (x^{-1})^{-1}a^{-1} = xa^{-1} \Rightarrow a^{-1}\in \mathcal Z(G)$
+
+_2016/05/13_
+
+- Review of last lecture:
+	- Def: Let G be a group. Then $$\mathcal Z(G) = \{a\in G\mid ax=xa,\forall x\in G\} = center of G$$
+		- Note: $G$ is abelian iff $\mathcal Z(G)=G$
+- Theorem: $\mathcal Z(G)$ is a subgroup of $G$
+- Definition (**Centraliser of an element $a$ in $G$**): Let $G$ be a group and $a \in G$. Then: $$\mathcal C(a):= {g\in G\mid ag=ga}\\=\{\text{set of all element in }G\text{ that commute with }a\}\\=\{\text{centraliser of }a\text{ in }G\}$$
+
+- E.g.
+	- 1) $\mathcal C(e) = G$ since, $\forall a\in G, eg=ge$
+	- 2) If $a\in \mathcal Z(G)$, then $C(a)=G$. Moreover, if $a\in G$ is such that $\mathcal C(a)=G$, we must have that $a\in \mathcal Z(G)$, by definition of $\mathcal Z(G)$ So: $(a\in \mathcal Z(G))\Leftrightarrow(\mathcal C(a)=G)$
+	- 3) $G=GL(2, \mathbb R)$. Then, $\mathcal Z(G) = \{(a,0;0,a)\mid a\in \mathbb R^*\}$
+		- Consider $A=\begin{pmatrix}a&0\\0&b\end{pmatrix}$ with $a\neq b$ and $a,b\neq 0$ (so that $\begin{pmatrix}a&0\\0&b\end{pmatrix}\in G$)
+		- Let us compute $\mathcal C(A)$. Note that since $A\notin \mathcal Z(G)$, we must have that $\mathcal C(A) \subsetneqq G$.
+		- By definition, $\mathcal C(A)=\{\begin{pmatrix}x&y\\z&w\end{pmatrix}\in GL(2,\mathbb R)\mid A\begin{pmatrix}x&y\\z&w\end{pmatrix}=\begin{pmatrix}x&y\\z&w\end{pmatrix}A\}$
+		- **BUT**, $\begin{pmatrix}a&0\\0&b\end{pmatrix}\begin{pmatrix}x&y\\z&w\end{pmatrix}=\begin{pmatrix}x&y\\z&w\end{pmatrix}\begin{pmatrix}a&0\\0&b\end{pmatrix} \Leftrightarrow \begin{pmatrix}ax&ay\\bz&bw\end{pmatrix}\Leftrightarrow ay=by$ and $bz=az \Leftrightarrow (a-b)y=0$ and $(a-b)z=0 \Leftrightarrow y=z=0$
+		- So: $\mathcal C(A)=\{\begin{pmatrix}x&0\\0&w\end{pmatrix}\mid x,w\in \mathbb R^*\}\subset GL(2,\mathbb R)$
+- Theorem: Let $G$ be a group and $a\in G$. Then, $\mathcal C(a)$ is a subgroup.
+	- Proof: exercise
+- Remark
+	- 1) $\forall a\in G, \mathcal C(a)=\mathcal C(a^{-1})$
+	- 2) $\mathcal Z(G) = \bigcap\limits_{a\in G} \mathcal C(a)$
+	- Proof for exercise
+
+## 1.3 Finite groups
+- Definition: A group $G$ is called **finite** if $|G|<\infty$ (i.e. $G$ has a finite number of elements)
+- E.g.:
+	- 1) $(\mathbb Z_n, +) \rightsquigarrow |G|=n<\infty$
+	- 2) $(\mathbb Z_n^*, \cdot) \rightsquigarrow |\mathbb Z_n^*|<|\mathbb Z_n|=n<\infty$
+	- 3) **Permutations of degree $n$**
+		- Permutations of degree $n$ is a bijection from $\{1,\cdots, n\}$ to itself, i.e. it is a map $$\sigma :{1,\cdots,n}\rightarrow{1,\cdots,n}$$ that is 1:1 and onto. The set of all permutation of degree n is denoted $S_n$
+		- $S_n$ is group under the operation of composition $$S_n\times S_n \rightarrow S_n\\(\sigma, \tau)\mapsto\sigma\circ \tau$$ (which is well-defined because $\sigma,\tau:\{1,\cdots,n\}\rightarrow\{1,\cdots,n\}$ so that $\sigma\circ \tau$ is well-defined. and $\sigma\circ\tau$ is a bijection since $\sigma,\tau$ are both bijection) Also composition of function is associative, the identity permutation $id:\{1,\cdots,n\}\rightarrow\{1,\cdots,n\}, i\mapsto i$, is an identity for the operation of composition $\forall \tau\in S_n$, its inverse map $\tau^{-1}\in S_n$ and is an inverse for $\tau$ with respect to the operation of composition. So, $(S_n,\circ)$ is a group
+			- Claim: $S_n$ has $n!$ elements
+				- Proof: to determine $\sigma$, we just have to specify the values $\sigma_1, \cdots, \sigma_n$ which are **distinct**  element of $\{1,\cdots,n\}$ since $\sigma$ is 1:1
+					- $\sigma(1)$ can take $n$ possible values since $\sigma(1)\in \{1,\cdots,n\}$
+					- $\sigma(2)$ can take $n-1$ possible values once $\sigma(1)$ is fixed because $\sigma(2)\in \{1,\cdots,n\} \setminus \{\sigma(1)\}$
+					- $\sigma(3)$ can take $n-2$ possible values once $\sigma(1)$ and $\sigma(2)$ is fixed because $\sigma(3)\in \{1,\cdots,n\} \setminus \{\sigma(1),\sigma(2)\}$
+					- etc$\cdots$
+					- $\sigma(n)$ can only take one possible value once $\sigma(1),...,\sigma(n-1)$ are fixed
+					- Thus, there are $n(n-1)\cdots 1=n!$ possible ways of defining \sigma
+		- So: $(S_n,\circ)$ is a finite group with $|S_n| = n!$, we often just write $S_n$ and call it the **symmetric group of degree n**.
+- For a finite group $G$, checking that a subset $H\subset G$ is a subgroup is very simple
+- Theorem (**Finite subgroup test**): Let $G$ be a finite group and let $\phi\ne H\subset G$. Then $$(H\text{ is a subgroup of }G)\Leftrightarrow(ab\in H, \forall a,b\in H)$$
+	- Proof:
+		- If $H$ is a subgroup of $G$, then it is closed under the operation in $G$ (by definition), so the property holds so that $ab\in H, \forall a,b\in H$. Since $H$ is closed under the operation in $G$, by the 2-step subgroup test, the only thing left is that $H$ is closed under inverse: $\forall a\in H, a^{-1}\in H$.
+		- Let $a\in H$. If $a=e$, then $a^{-1}=e^{-1}=e=a\in H$. If $a\neq e$, consider the set $S={a, a^2, a^3, \cdots} = {a^m\mid m\in \mathbb N}$. Then $S\subset G$ with $G$ finite $\Rightarrow S$ has only a finite number of elements. 
+		- Moreover, since $H$ is closed under the operation in $G$, we have that $$a^2=a\cdot a \in H\text{ since }a\in H\\a^3=a^2\cdot a\in H\text{ since }a,a^2\in H\\\text{etc}\cdots\\\Rightarrow a^m\in H, \forall m\in \mathbb N\\\Rightarrow S\subset H$$
+		- Now, since $S$ is finite, $\exists i,j\in \mathbb N$ such that $i\neq j$ and $a^i=a^j$. Suppose that $i<j$ so that $j-i>0$ and so $j-i\in \mathbb N$.
+		- Then, $a^{j-i}=e$ (since $a^i=a^j$) with $j-i\geq 1$ (since $j-i>0$)
+			- If $j-i=1$, then $a=a^1=a^{j-i}=e$, which is impossible since we assumed that $a\neq e$
+			- So, $j-i>1 \Rightarrow j-i-1>0$ and $j-i-1\in \mathbb N$
+			- $\Rightarrow a^{j-i-1}\in S\subset H$
+			- **BUT**, $a^{-1}=e\cdot a^{-1} = a^{j-1}\cdot a^{-1}=a^{j-i-1}\in H$
