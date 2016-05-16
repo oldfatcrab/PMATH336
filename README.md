@@ -71,7 +71,7 @@ _2016/05/02_
     - (ii) (**Identity**): $\exists e \in G$ such that: $ea = ae =a, \forall a$ in $G$
     - (iii) (**Inverse**): $\forall a \in G$, $\exists a^{-1} \in G$ such that: $aa^{-1} = a^{-1} a = e$
 - Ex 1)
-    - The integers: $(\mathbb{Z},+) \rightsquigarrow $ this is a group
+    - The integers: $(\mathbb{Z},+) \leadsto $ this is a group
     - **HERE**: $G = \mathbb{Z}$ and $+: \mathbb{Z}\times\mathbb{Z} \rightarrow \mathbb{Z}, (m,n) \mapsto m+n$
     - Does $+$ satisfy properties (i) to (iii)?
         - (i) Let $m, n, r \in \mathbb{Z}$, then:
@@ -83,7 +83,7 @@ _2016/05/02_
             - $\Rightarrow -m \in \mathbb{Z}$ is the inverse of $m \in \mathbb{Z}$
         - Thus, $(\mathbb{Z},+)$ is a group.
 - Ex 2)
-    - The integers: $(\mathbb{Z},\cdot)\rightsquigarrow$ this is a group
+    - The integers: $(\mathbb{Z},\cdot)\leadsto$ this is a group
     - **HERE**: $G = \mathbb{Z}$ and $\cdot: \mathbb{Z}\times\mathbb{Z} \rightarrow \mathbb{Z}, (m,n) \mapsto m\cdot n$
     - Does $\cdot$ satisfy properties (i) to (iii)?
         - (i) Let $m, n, r \in \mathbb{Z}$, then:
@@ -104,7 +104,7 @@ _2016/05/02_
     - Note that $\cdot$ is just the usual product in $\mathbb{R}$ restricted to element in $G$. Then $G$ is a group because:
         - (i) $\cdot$ is associative because multiplication in $\mathbb{R}$ is associative
         - (ii) $1$ is the identity.
-        - (iii) From the table, we see that $1$ is the inverse of $1$ and $-1$ is the inverse of $-1\rightsquigarrow$ every element in $G$ has an inverse.
+        - (iii) From the table, we see that $1$ is the inverse of $1$ and $-1$ is the inverse of $-1\leadsto$ every element in $G$ has an inverse.
 - Ex 4)
     - $(\mathbb{Q}, +)$ is a group (exercise)
 - Ex 5)
@@ -271,8 +271,8 @@ _2016/05/09_
 	- Proof: Let $a,b\in H$. Then $b^{-1} \in H$ so that $ab^{-1} \in H$. Thus, by one-step subgroup test, H is a subgroup.
 		- Remark: The two-step subgroup test is useful if one already knows that **the subset $H$ of $G$ is clsed under the operation or clsed under inverses**, so that there then is only one thing left to check.
 	- Ex 1)
-		- $(\mathbb C, +) \rightsquigarrow (\mathbb Z^*, +) \vartriangleleft (\mathbb Q^*,+)\vartriangleleft (\mathbb R^*,+)\vartriangleleft (\mathbb C^*,+)$
-		- $(\mathbb C, \cdot) \rightsquigarrow (\mathbb Q^*,\cdot)\vartriangleleft (\mathbb R^*,\cdot)\vartriangleleft (\mathbb C^*,\cdot)$
+		- $(\mathbb C, +) \leadsto (\mathbb Z^*, +) \vartriangleleft (\mathbb Q^*,+)\vartriangleleft (\mathbb R^*,+)\vartriangleleft (\mathbb C^*,+)$
+		- $(\mathbb C, \cdot) \leadsto (\mathbb Q^*,\cdot)\vartriangleleft (\mathbb R^*,\cdot)\vartriangleleft (\mathbb C^*,\cdot)$
 		- Note: $^*$ means without zero
 	- Ex 2)
 		- $(\{1,-1\}, \cdot)$ group with $\cdot$ the usual multiplication in $\mathbb C$
@@ -284,7 +284,7 @@ _2016/05/09_
 	- Ex 4)
 		- $(\mathbb Z_6,+) =\{\overline 0, \overline 1, \overline 2, \overline 3, \overline 4, \overline 5\}$
 		- Then, $H = \{\overline 0, \overline 2, \overline 4\} \vartriangleleft \mathbb Z_6$
-		- $(Z_6^*, \cdot) = {\overline 1, \overline 5} \rightsquigarrow $ the only proper subgroup of $Z_6^*$ is the trivial subgroup $H=\{\overline 1\}$
+		- $(Z_6^*, \cdot) = {\overline 1, \overline 5} \leadsto $ the only proper subgroup of $Z_6^*$ is the trivial subgroup $H=\{\overline 1\}$
 		- $(Z_{12}^*, \cdot) =\{\overline 1,\overline 5,\overline 7,\overline{11}\}$
 	
 	| $\cdot$ | $\overline 1$  | $\overline 5$ | $\overline 7$ | $\overline {11}$ |
@@ -306,7 +306,7 @@ _2016/05/09_
 		- Therefore $a^m (a^{m'})^{-1} = a^m a^{-m'} = a^{m-m'} \in \langle a\rangle$ since $m'\in Z$.
 		- So, by the 1-step subgroup test, $\langle a\rangle \vartriangleleft G$
 	- Ex 1)
-		- $(\mathbb Z,+) \rightsquigarrow H=\{2m \mid m\in \mathbb Z\}=\langle 2\rangle$ since, using additive notation, $\langle 2\rangle = \{2+2+\cdots +2\mid m\in \mathbb Z\}$
+		- $(\mathbb Z,+) \leadsto H=\{2m \mid m\in \mathbb Z\}=\langle 2\rangle$ since, using additive notation, $\langle 2\rangle = \{2+2+\cdots +2\mid m\in \mathbb Z\}$
 	- Ex 2)
 		- $(\mathbb Z_{12}^*, \cdot) = \{\overline 1,\overline 5,\overline 7,\overline{11}\}$
 		- $\{1,5\}$ = $\langle\overline 5\rangle$ because $\langle\overline 5\rangle = \langle1, \overline 5, \overline 5^2, \overline 5^3, \cdots\rangle$
@@ -384,12 +384,12 @@ _2016/05/13_
 - E.g.
 	- 1) $\mathcal C(e) = G$ since, $\forall a\in G, eg=ge$
 	- 2) If $a\in \mathcal Z(G)$, then $C(a)=G$. Moreover, if $a\in G$ is such that $\mathcal C(a)=G$, we must have that $a\in \mathcal Z(G)$, by definition of $\mathcal Z(G)$ So: $(a\in \mathcal Z(G))\Leftrightarrow(\mathcal C(a)=G)$
-	- 3) $G=GL(2, \mathbb R)$. Then, $\mathcal Z(G) = \{(a,0;0,a)\mid a\in \mathbb R^*\}$
+	- 3) $G=GL(2, \mathbb R)$. Then, $\mathcal Z(G) = \bigg \{\left.\begin{pmatrix}a&0\\0&a\end{pmatrix}\right.\mid a\in \mathbb R^* \bigg \}$
 		- Consider $A=\begin{pmatrix}a&0\\0&b\end{pmatrix}$ with $a\neq b$ and $a,b\neq 0$ (so that $\begin{pmatrix}a&0\\0&b\end{pmatrix}\in G$)
 		- Let us compute $\mathcal C(A)$. Note that since $A\notin \mathcal Z(G)$, we must have that $\mathcal C(A) \subsetneqq G$.
-		- By definition, $\mathcal C(A)=\{\begin{pmatrix}x&y\\z&w\end{pmatrix}\in GL(2,\mathbb R)\mid A\begin{pmatrix}x&y\\z&w\end{pmatrix}=\begin{pmatrix}x&y\\z&w\end{pmatrix}A\}$
+		- By definition, $\mathcal C(A)=\bigg \{\left.\begin{pmatrix}x&y\\z&w\end{pmatrix}\right.\in GL(2,\mathbb R)\mid A\begin{pmatrix}x&y\\z&w\end{pmatrix}=\begin{pmatrix}x&y\\z&w\end{pmatrix}A\bigg \}$
 		- **BUT**, $\begin{pmatrix}a&0\\0&b\end{pmatrix}\begin{pmatrix}x&y\\z&w\end{pmatrix}=\begin{pmatrix}x&y\\z&w\end{pmatrix}\begin{pmatrix}a&0\\0&b\end{pmatrix} \Leftrightarrow \begin{pmatrix}ax&ay\\bz&bw\end{pmatrix}\Leftrightarrow ay=by$ and $bz=az \Leftrightarrow (a-b)y=0$ and $(a-b)z=0 \Leftrightarrow y=z=0$
-		- So: $\mathcal C(A)=\{\begin{pmatrix}x&0\\0&w\end{pmatrix}\mid x,w\in \mathbb R^*\}\subset GL(2,\mathbb R)$
+		- So: $\mathcal C(A)=\bigg \{\left.\begin{pmatrix}x&0\\0&w\end{pmatrix}\right.\mid x,w\in \mathbb R^* \bigg \}\subset GL(2,\mathbb R)$
 - Theorem: Let $G$ be a group and $a\in G$. Then, $\mathcal C(a)$ is a subgroup.
 	- Proof: exercise
 - Remark
@@ -400,8 +400,8 @@ _2016/05/13_
 ## 1.3 Finite groups
 - Definition: A group $G$ is called **finite** if $|G|<\infty$ (i.e. $G$ has a finite number of elements)
 - E.g.:
-	- 1) $(\mathbb Z_n, +) \rightsquigarrow |G|=n<\infty$
-	- 2) $(\mathbb Z_n^*, \cdot) \rightsquigarrow |\mathbb Z_n^*|<|\mathbb Z_n|=n<\infty$
+	- 1) $(\mathbb Z_n, +) \leadsto |G|=n<\infty$
+	- 2) $(\mathbb Z_n^*, \cdot) \leadsto |\mathbb Z_n^*|<|\mathbb Z_n|=n<\infty$
 	- 3) **Permutations of degree $n$**
 		- Permutations of degree $n$ is a bijection from $\{1,\cdots, n\}$ to itself, i.e. it is a map $$\sigma :{1,\cdots,n}\rightarrow{1,\cdots,n}$$ that is 1:1 and onto. The set of all permutation of degree n is denoted $S_n$
 		- $S_n$ is group under the operation of composition $$S_n\times S_n \rightarrow S_n\\(\sigma, \tau)\mapsto\sigma\circ \tau$$ (which is well-defined because $\sigma,\tau:\{1,\cdots,n\}\rightarrow\{1,\cdots,n\}$ so that $\sigma\circ \tau$ is well-defined. and $\sigma\circ\tau$ is a bijection since $\sigma,\tau$ are both bijection) Also composition of function is associative, the identity permutation $id:\{1,\cdots,n\}\rightarrow\{1,\cdots,n\}, i\mapsto i$, is an identity for the operation of composition $\forall \tau\in S_n$, its inverse map $\tau^{-1}\in S_n$ and is an inverse for $\tau$ with respect to the operation of composition. So, $(S_n,\circ)$ is a group
@@ -426,3 +426,46 @@ _2016/05/13_
 			- So, $j-i>1 \Rightarrow j-i-1>0$ and $j-i-1\in \mathbb N$
 			- $\Rightarrow a^{j-i-1}\in S\subset H$
 			- **BUT**, $a^{-1}=e\cdot a^{-1} = a^{j-1}\cdot a^{-1}=a^{j-i-1}\in H$
+
+_2016/05/16_
+
+- Review:
+	- Definition: A group is **finite** if $|G|<\infty$
+	- Theorem (**Finite subgroup test**): Let $G$ be a finite group and let $\phi\ne H\subset G$. Then $$(H\text{ is a subgroup of }G)\Leftrightarrow(ab\in H, \forall a,b\in H)$$
+	- Note: For a finite group, it is enough to check whether a non-empty subset $H$ is closed under the operation to determine if $H$ is a subgroup.
+- Ex:
+	- Consider $\mathbb Z_n^*$, which is finite, and $k \in \mathbb N$ with $k|n$. Let $$H=\{\overline x\in \mathbb Z_n^*\mid x \bmod k=1\}$$
+	- We need to check that this definition is independent of the representative $x$ of $\overline x$
+	- [If $\overline{x'} = \overline x$, we need to check $$(x\bmod k =1)\Leftrightarrow(x'\bmod k =1)$$
+	- But $\overline{x'} = \overline x$ in $\mathbb Z_n^*\Leftrightarrow x'+x+rn$ for some $r\in \mathbb Z$
+	- However, $k|n$ so that $n=ks$ with $s\in \mathbb N$. Thus $$x'=x+rn=(x+rs)k$$
+	- $\Rightarrow x'=x\bmod k$, and $$(x'\bmod k=1)\Rightarrow (x'+m'k=1)\text{ for some }m'\in \mathbb Z$$ $$\Leftrightarrow x+(rs)k+m'k=1$$ $$\Leftrightarrow x+k[rs+m']=1\text{ for some }m'\in \mathbb Z$$ $$\Leftrightarrow (x\bmod k=1)\text{ for some }m'\in \mathbb Z$$
+	- $H=\{\overline x\in \mathbb Z_n^*\mid x\bmod k=1\}$
+	- Here, the operation in $\mathbb Z_n^*$ is multiplication. If $\overline x, \overline y\in H$ so that $x\bmod k=1$ and $y\bmod k=1$, then $x+mk=1$ and $y+m'k=1$ for some $m,m'\in \mathbb Z$ and $$1=(x+mk)(y+m'k)=xy+[xm'+my+mm'k]k$$ $$\Leftrightarrow xy\bmod k=1\Rightarrow \overline{xy}\in H \Rightarrow \overline x\overline y \in H$$
+	- So, by the finite subgroup test, $H$ is a subgroup of $\mathbb Z_n^*$ because $H\neq \emptyset$ (since $\overline 1\in H$ because $1\bmod k=1$)
+- Defnition (**order of an element**): Let $G$ be a group. For any $a\in G$, the order of a is defined as the smallest _positive_ integer in such that $a^m=e$ (if it exists. If no such integer exists, then a is said to have **infinite order**. The order of a is denoted $|a|$.
+	- Note:
+		- 1) To compute the order of an element$a\in G$, consider the sequence of for for odeuts(?) $1^1,a^2,a^3\cdots,$ and the first power of a that is equal to $e$ will be the order of $a$
+		- 2) $|e| = 1$ because $e^1=e$. In fact, if $a\in G$ with $|a|=1$, then $a^1=e$. So the only element in $G$ that has order $1$ is the identity $e$.
+		- 3) $\forall a\in G, |a|=|a^{-1}|$
+			- Proof: Suppose that $|a|=m$. Then, $a^m=e$. So, $$(a^{-1})^m=a^{-m}=(a^m)^{-1}=e^{-1}=e$$ So, by definition of the order of an element, since $(a^{-1})^m=e$, we have: $$|a^{-1}|\le m=|a|$$ One prove similarly that $|a|=|a^{-1}|\Rightarrow |a|=|a^{-1}|$
+		- 4) $\forall a\in G, |\langle a\rangle|=|a|$ where $\langle a\rangle=\{a^r \mid r\in \mathbb Z\}$ (i.e., the number of element in $\langle a\rangle$ is equal to $|a|$)
+			- Proof: exercise
+		- 5) If $|G|<\infty$, then $|a|<\infty, \forall a\in G$, In fact, $|a|\le |G|$
+			- Proof: exerciese
+- E.x.
+	- 1) $\mathbb Z_6=\{\overline 0, \overline 1, \overline 2, \overline 3, \overline 4, \overline 5\} \leadsto$ Here: operation is $+$ and $e=\overline 0$ Then: $$|\overline 0|=1$$ $$|\overline 1|=6\text{ because }\overline 1+\overline 1+\overline 1+\overline 1+\overline 1+\overline 1=\overline 6=\overline 6$$ $$\\overline 2|=3 \text{ because } \overline 2+\overline 2+\overline 2=\overline 6=\overline 0$$ $$|\overline 3|=2 \text{ because } \overline 3+ \overline 3=\overline 6 = \overline =0$$ $$|\overline 4|=3$$ $$|\overline 5|=6$$
+		- Note that $$\overline 5^{-1}=\overline 1\text{ and }|\overline 5|=|\overline 1|=6,$$ $$\overline 4^{-1}=\overline 2\text{ and }|\overline 4|=|\overline 2|=3,$$ $$\overline 3^{-1}=\overline 3$$
+	- 2) $\mathbb Z_6^* = \{\overline 1, \overline 5\}\leadsto$ Here: operation is $\cdot$ and $e=\overline 1$
+		- $|\overline 1|=1, |\overline5|=2$ because $\overline 5\cdot \overline 5 = \overline 1$
+	- 3) Not ever element of a group has finite order
+		- e.g. $(G,\cdot)=(\mathbb Z, +)$. Then, $2\in \mathbb Z$ has infinite order because $2+2+\cdots+2=2m\neq0,\forall m\in \mathbb N$
+- New example of a finite group: the **Dihedral group $D_n, n \ge 3$**. These group s represent symmetries of regular n-gons in $\mathbb R^2$
+	- $n=3$: regular 3-gon is $\mathbb R^2$ is an equilateral triangle.
+	- Consider the 6 following symmetries of the triangle (3 rotations+3 reflections):
+		- $R_0=$ rotation about the origin by $0$ rad conterclockwise ![dihedrald3r0](http://www.maa.org/sites/default/files/images/cms_upload/d3sym436454.gif)
+		- $R_1=$ rotation about the origin by $\frac{2\pi}{3}$ rad conterclockwise ![dihedrald3r1](http://www.maa.org/sites/default/files/images/cms_upload/d3sym537754.gif)
+		- $R_2=$ rotation about the origin by $\frac{4\pi}{3}$ rad conterclockwise ![dihedrald3r2](http://www.maa.org/sites/default/files/images/cms_upload/d3sym638955.gif)
+		- $H$: ![dihedrald3h](http://www.maa.org/sites/default/files/images/cms_upload/d3sym132371.gif)
+		- $V$: ![dihedrald3v](http://www.maa.org/sites/default/files/images/cms_upload/d3sym234053.gif)
+		- $D$: ![dihedrald3d](http://www.maa.org/sites/default/files/images/cms_upload/d3sym335250.gif)
