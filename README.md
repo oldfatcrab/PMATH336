@@ -454,7 +454,7 @@ _2016/05/16_
 		- 5) If $|G|<\infty$, then $|a|<\infty, \forall a\in G$, In fact, $|a|\le |G|$
 			- Proof: exerciese
 - E.x.
-	- 1) $\mathbb Z_6=\{\overline 0, \overline 1, \overline 2, \overline 3, \overline 4, \overline 5\} \leadsto$ Here: operation is $+$ and $e=\overline 0$ Then: $$|\overline 0|=1$$ $$|\overline 1|=6\text{ because }\overline 1+\overline 1+\overline 1+\overline 1+\overline 1+\overline 1=\overline 6=\overline 6$$ $$\\overline 2|=3 \text{ because } \overline 2+\overline 2+\overline 2=\overline 6=\overline 0$$ $$|\overline 3|=2 \text{ because } \overline 3+ \overline 3=\overline 6 = \overline =0$$ $$|\overline 4|=3$$ $$|\overline 5|=6$$
+	- 1) $\mathbb Z_6=\{\overline 0, \overline 1, \overline 2, \overline 3, \overline 4, \overline 5\} \leadsto$ Here: operation is $+$ and $e=\overline 0$ Then: $$|\overline 0|=1$$ $$|\overline 1|=6\text{ because }\overline 1+\overline 1+\overline 1+\overline 1+\overline 1+\overline 1=\overline 6=\overline 6$$ $$\\overline 2|=3 \text{ because } \overline 2+\overline 2+\overline 2=\overline 6=\overline 0$$ $$|\overline 3|=2 \text{ because } \overline 3+ \overline 3=\overline 6 = \overline 0$$ $$|\overline 4|=3$$ $$|\overline 5|=6$$
 		- Note that $$\overline 5^{-1}=\overline 1\text{ and }|\overline 5|=|\overline 1|=6,$$ $$\overline 4^{-1}=\overline 2\text{ and }|\overline 4|=|\overline 2|=3,$$ $$\overline 3^{-1}=\overline 3$$
 	- 2) $\mathbb Z_6^* = \{\overline 1, \overline 5\}\leadsto$ Here: operation is $\cdot$ and $e=\overline 1$
 		- $|\overline 1|=1, |\overline5|=2$ because $\overline 5\cdot \overline 5 = \overline 1$
@@ -466,6 +466,6 @@ _2016/05/16_
 		- $R_0=$ rotation about the origin by $0$ rad conterclockwise ![dihedrald3r0](http://www.maa.org/sites/default/files/images/cms_upload/d3sym436454.gif)
 		- $R_1=$ rotation about the origin by $\frac{2\pi}{3}$ rad conterclockwise ![dihedrald3r1](http://www.maa.org/sites/default/files/images/cms_upload/d3sym537754.gif)
 		- $R_2=$ rotation about the origin by $\frac{4\pi}{3}$ rad conterclockwise ![dihedrald3r2](http://www.maa.org/sites/default/files/images/cms_upload/d3sym638955.gif)
-		- $H$: ![dihedrald3h](http://www.maa.org/sites/default/files/images/cms_upload/d3sym132371.gif)
-		- $V$: ![dihedrald3v](http://www.maa.org/sites/default/files/images/cms_upload/d3sym234053.gif)
-		- $D$: ![dihedrald3d](http://www.maa.org/sites/default/files/images/cms_upload/d3sym335250.gif)
+		- $H$: flip from height through point B in graph ![dihedrald3h](http://www.maa.org/sites/default/files/images/cms_upload/d3sym132371.gif)
+		- $V$: flip from height through point A in graph![dihedrald3v](http://www.maa.org/sites/default/files/images/cms_upload/d3sym234053.gif)
+		- $D$: flip from height through point C in graph![dihedrald3d](http://www.maa.org/sites/default/files/images/cms_upload/d3sym335250.gif)
