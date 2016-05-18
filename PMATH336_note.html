@@ -452,7 +452,7 @@ pre[class*="language-"] {
 
 <body>
 
-<p><strong>Important</strong>: since github markdown doesn&#39;t support LaTeX, download the html file in repo instead!</p>
+<p><strong>Important</strong>: since github markdown doesn&#39;t support LaTeX, view the complete note in the following link instead: <a href="https://rawgit.com/oldfatcrab/PMATH336/master/PMATH336_note.html">https://rawgit.com/oldfatcrab/PMATH336/master/PMATH336_note.html</a></p>
 
 <hr>
 
@@ -466,6 +466,7 @@ pre[class*="language-"] {
 <li><a href="#toc_3">1.1 Definitions and examples</a> (May 02)</li>
 <li><a href="#toc_4">1.2 Subgroups</a> (May 06)</li>
 <li><a href="#toc_5">1.3 Finite groups</a> (May 13)</li>
+<li><a href="#toc_6">1.4 Cyclic groups</a> (May 18)</li>
 </ul></li>
 </ul>
 
@@ -663,9 +664,9 @@ pre[class*="language-"] {
 <li>\((\mathbb{Q}, +)\) is a group (exercise)</li>
 </ul></li>
 <li>Ex 5)
--\( (\mathbb{Q}^*, \cdot)\) is a group where \(\mathbb{Q}^* = \mathbb{Q}\setminus\{0\}\)
 
 <ul>
+<li>\( (\mathbb{Q}^*, \cdot)\) is a group where \(\mathbb{Q}^* = \mathbb{Q}\setminus\{0\}\)</li>
 <li>Indeed:
 
 <ul>
@@ -775,7 +776,7 @@ pre[class*="language-"] {
 <li>\((\mathbb{Z}_n, +)\): since \(+\) is associative in \(\mathbb{Z}\), it is also associative with \(\mathbb{Z}_n\). Moreover, \(\overline{0}\) is the identity for \(+\). finally, \(\overline{-r}\) is <strong>inverse</strong> of \(F\) with respect to \(+\). We will denote \(\overline{-r}\) by \(-\overline{r} \Rightarrow (\mathbb{Z}_n, +)\) is a group</li>
 <li>\((\mathbb{Z}_n, \cdot)\): Again, since \(\cdot\) is associative in \(\mathbb{Z}\), it is also associative in \(\mathbb{Z}\),. And \(\overline{1}\) is the identity for \(\cdot\), however, not every element in \(\mathbb{Z}_n\) has an inverse with respect to \(\cdot\). In fact, recall that \(F \in \mathbb{Z}_n\) has a multiplicative inverse iff \(gcd(r,n) = 1\). I.e. \(\exists \overline s \in \mathbb{Z}_n\) such that \(\overline r \cdot \overline s = \overline s \cdot \overline r = \overline 1\) iff \(gcd(r, n) = 1\)</li>
 <li>If an element \(\overline r \in \mathbb{Z}_n\) has an inverse in \(\mathbb{Z}_n\), it is called a <strong>unit</strong>.</li>
-<li>Set \(\mathbb{Z}_n^* = \{\text{units in }\mathbb{Z}_n\} = \{F\in \mathbb{Z}_n \mid gcd(r,n)=1\}\). Then, \((\mathbb{Z}_n*, \cdot)\) is a group
+<li>Set \(\mathbb{Z}_n^* = \{\text{units in }\mathbb{Z}_n\} = \{F\in \mathbb{Z}_n \mid gcd(r,n)=1\}\). Then, \((\mathbb{Z}_n^*, \cdot)\) is a group
 
 <ul>
 <li>E.g. \(\mathbb{Z}_6 = \{\overline 1, \overline 2, \overline 3, \overline 4, \overline 5, \overline 6\}\) and \(\mathbb{Z}_6^* = \{\overline 1, \overline 5\}\)</li>
@@ -1405,7 +1406,7 @@ pre[class*="language-"] {
 <li>e.g. \((G,\cdot)=(\mathbb Z, +)\). Then, \(2\in \mathbb Z\) has infinite order because \(2+2+\cdots+2=2m\neq0,\forall m\in \mathbb N\)</li>
 </ul></li>
 </ul></li>
-<li>New example of a finite group: the <strong>Dihedral group \(D_n, n \ge 3\)</strong>. These group s represent symmetries of regular n-gons in \(\mathbb R^2\)
+<li>New example of a finite group: the <strong>Dihedral group \(D_n, n \ge 3\)</strong>. These groups represent symmetries of regular n-gons in \(\mathbb R^2\)
 
 <ul>
 <li>\(n=3\): regular 3-gon is \(\mathbb R^2\) is an equilateral triangle.</li>
@@ -1419,6 +1420,166 @@ pre[class*="language-"] {
 <li>\(V\): flip from height through point A in graph<img src="http://www.maa.org/sites/default/files/images/cms_upload/d3sym234053.gif" alt="dihedrald3v"></li>
 <li>\(D\): flip from height through point C in graph<img src="http://www.maa.org/sites/default/files/images/cms_upload/d3sym335250.gif" alt="dihedrald3d"></li>
 </ul></li>
+</ul></li>
+</ul>
+
+<p><em>2016/05/18</em></p>
+
+<ul>
+<li><p>Review:</p>
+
+<ul>
+<li>\(D_{2n}=(\) **dibedial group \()=(\)group of symmetries of regular n-gon in \(\mathbb R^2)\) (Here: rotations and reflections)
+
+<ul>
+<li>\(R_0, R_1, R_2, H,V,D\cdots\)</li>
+<li>Set \(D_3=\{R_0, R_1, R_2, H,V,D\}\)</li>
+<li>Claim: \(D_3\) is a group under composition</li>
+<li>First thing to check is that \(D_3\) is closed under composition，i.e. \(\forall f,g\in D_3, f\circ g\in D_3\)</li>
+<li>Table: </li>
+</ul></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th>\(f\circ g\)</th>
+<th>\( R_0 \)</th>
+<th>\( R_1 \)</th>
+<th>\( R_2 \)</th>
+<th>\( H  \)</th>
+<th>\( V  \)</th>
+<th>\( D  \)</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>\(R_0 \)</td>
+<td>\( R_0 \)</td>
+<td>\( R_1 \)</td>
+<td>\( R_2 \)</td>
+<td>\( H  \)</td>
+<td>\(V  \)</td>
+<td>\( D  \)</td>
+</tr>
+<tr>
+<td>\(R_1 \)</td>
+<td>\( R_1 \)</td>
+<td>\( R_2 \)</td>
+<td>\( R_0 \)</td>
+<td>\( D  \)</td>
+<td>\( H\)</td>
+<td>\(V\)</td>
+</tr>
+<tr>
+<td>\(R_2\)</td>
+<td>\(R_2\)</td>
+<td>\(R_0\)</td>
+<td>\(R_1\)</td>
+<td>\(V\)</td>
+<td>\(D\)</td>
+<td>\(H\)</td>
+</tr>
+<tr>
+<td>\(H\)</td>
+<td>\(H\)</td>
+<td>\(V\)</td>
+<td>\(D\)</td>
+<td>\(R_0\)</td>
+<td>\(R_1\)</td>
+<td>\(R_2\)</td>
+</tr>
+<tr>
+<td>\(V\)</td>
+<td>\(V\)</td>
+<td>\(H\)</td>
+<td>\(D\)</td>
+<td>\(R_2\)</td>
+<td>\(R_0\)</td>
+<td>\(R_1\)</td>
+</tr>
+<tr>
+<td>\(D\)</td>
+<td>\(D\)</td>
+<td>\(H\)</td>
+<td>\(V\)</td>
+<td>\(R_1\)</td>
+<td>\(R_2\)</td>
+<td>\(R_0\)</td>
+</tr>
+</tbody>
+</table></li>
+<li><ul>
+<li>
+
+<ul>
+<li>Also:
+
+<ul>
+<li>composition is assotiation</li>
+<li>\(R_0\) is the identity</li>
+<li>every element as an inverse: \(R_0^{-1}=R_0, R_1^{-1}=R_2=R_2^{-1}=R_1, H^{-1}=H,V^{-1}=V,D^{-1}=D\)</li>
+<li>\(\Rightarrow D_3\) is a group with 6 elements</li>
+</ul></li>
+<li>In general, \(D_{n}\) is a finite group with \(|D_n|=2n\), where
+
+<ul>
+<li>\(D_{n}\) will contain \(n\) rotation (about the origin, counterclowise by \(\frac{2\pi}{r}\) rad.) and \(n\) reflections (read about in a textbook)</li>
+</ul></li>
+<li>when \(n=4\):
+
+<ul>
+<li>\(\Rightarrow\) only need to use either 2 vertices that are jointed by a diagonal OR \(\frac{1}{2}\) point of 2 opposite edges to get all the reflections</li>
+<li>\(\Rightarrow\) since there are 4 vertices and 4 edges, get 4 reflections</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h1 id="toc_6">1.4 Cyclic groups</h1>
+
+<ul>
+<li>Definition: A group G is called <strong>cyclic</strong> if \(G=\langle a\rangle\) for some \(a\in G\), where \[\langle a\rangle:=\{a^m\mid m\in \mathbb Z\}\] (with \(a_0=e\) and \(a^{-m}=(a^m)^{-1}\)). In this case, a is called a <strong>generator of \(G\)</strong></li>
+<li>Ex:
+
+<ul>
+<li>1) \((\mathbb Z,+)\). Then \(\mathbb Z=\langle 1\rangle\) because, \(\forall m\in \mathbb Z\),
+
+<ul>
+<li>if \(m&gt;0\): \(m=1+1+\cdots+1\) (\(m\) times) \(= m(1)\)</li>
+<li>\(0=0(1)\)</li>
+<li>if \(m&lt;0\): \(m=-(-m)=-(1+\cdots+1)\) (\(-m\) times)</li>
+<li>Similarly, we see that \(\mathbb Z=\langle -1\rangle\). We then see that generators are <strong>not</strong> unique.</li>
+<li>Note: Here \(\mathbb Z=\infty\) and \(|1|=\infty\), which is a good thing! We will see that if \(G=\langle a\rangle\), then \(|G|=|a|\)</li>
+</ul></li>
+<li>2) \((\mathbb Z_n,+)\). Then, \(\mathbb Z_n=\langle \overline 1\rangle=\langle \overline{-1}\rangle=\langle \overline{n-1}\rangle\)
+
+<ul>
+<li>\(\leadsto \mathbb Z_n\) is a cyclic group it has at least 2 possible generators, usually, \(\overline 1\) and \(\overline{n-1}\) </li>
+<li>But, may have more than these two.
+
+<ul>
+<li>e.g. \(\mathbb Z_8 = \langle \overline 1\rangle= \langle \overline 7\rangle= \langle \overline 3\rangle= \langle \overline 5\rangle\) because:
+
+<ul>
+<li>\(\overline 3\)</li>
+<li>\(\overline 3+\overline 3 = \overline 6\)</li>
+<li>\(\overline 3+\overline 3 + \overline 3=\overline 9=\overline 1\)</li>
+<li>\(\overline 3+\overline 3+\overline 3+\overline 3=\overline 4\)</li>
+<li>\(\overline 3+\overline 3+\overline 3+\overline 3+\overline 3=\overline 7\)</li>
+<li>\(\overline 3+\overline 3+\overline 3+\overline 3+\overline 3+\overline 3=\overline 2\)</li>
+<li>\(\overline 3+\overline 3+\overline 3+\overline 3+\overline 3+\overline 3+\overline 3=\overline 5\) </li>
+<li>But, \(\overline 2\) is not a generator since \[\langle \overline 2\rangle=\{\overline 0, \overline 2, \overline 4=\overline 2+\overline 2, \overline 6 = \overline 2+\overline 2+\overline 2\}\]</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Questions:
+
+<ul>
+<li>What is the order of a generator?</li>
+<li>What are the possible generator?</li>
 </ul></li>
 </ul>
 

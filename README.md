@@ -1,4 +1,4 @@
-**Important**: since github markdown doesn't support LaTeX, download the html file in repo instead!
+**Important**: since github markdown doesn't support LaTeX, view the complete note in the following link instead: <https://rawgit.com/oldfatcrab/PMATH336/master/PMATH336_note.html>
 
 --------------------------------------------------------------------------------
 
@@ -9,6 +9,7 @@
     - [1.1 Definitions and examples](#toc_3) (May 02)
     - [1.2 Subgroups](#toc_4) (May 06)
     - [1.3 Finite groups](#toc_5) (May 13)
+    - [1.4 Cyclic groups](#toc_6) (May 18)
 
 --------------------------------------------------------------------------------
 
@@ -108,7 +109,7 @@ _2016/05/02_
 - Ex 4)
     - $(\mathbb{Q}, +)$ is a group (exercise)
 - Ex 5)
-    -$ (\mathbb{Q}^*, \cdot)$ is a group where $\mathbb{Q}^* = \mathbb{Q}\setminus\{0\}$
+    - $ (\mathbb{Q}^*, \cdot)$ is a group where $\mathbb{Q}^* = \mathbb{Q}\setminus\{0\}$
     - Indeed:
         - (i) Multiplication in $\mathbb{Q}^*$ is associative as in $\mathbb{Z}$ and $\mathbb{R}$
         - (ii) $1 \in \mathbb{Q}^*$ is the identity with respect to \dot.
@@ -150,7 +151,7 @@ _2016/05/04_
 	- $(\mathbb{Z}_n, +)$: since $+$ is associative in $\mathbb{Z}$, it is also associative with $\mathbb{Z}_n$. Moreover, $\overline{0}$ is the identity for $+$. finally, $\overline{-r}$ is **inverse** of $F$ with respect to $+$. We will denote $\overline{-r}$ by $-\overline{r} \Rightarrow (\mathbb{Z}_n, +)$ is a group
 	- $(\mathbb{Z}_n, \cdot)$: Again, since $\cdot$ is associative in $\mathbb{Z}$, it is also associative in $\mathbb{Z}$,. And $\overline{1}$ is the identity for $\cdot$, however, not every element in $\mathbb{Z}_n$ has an inverse with respect to $\cdot$. In fact, recall that $F \in \mathbb{Z}_n$ has a multiplicative inverse iff $gcd(r,n) = 1$. I.e. $\exists \overline s \in \mathbb{Z}_n$ such that $\overline r \cdot \overline s = \overline s \cdot \overline r = \overline 1$ iff $gcd(r, n) = 1$
 	- If an element $\overline r \in \mathbb{Z}_n$ has an inverse in $\mathbb{Z}_n$, it is called a **unit**.
-	- Set $\mathbb{Z}_n^* = \{\text{units in }\mathbb{Z}_n\} = \{F\in \mathbb{Z}_n \mid gcd(r,n)=1\}$. Then, $(\mathbb{Z}_n*, \cdot)$ is a group
+	- Set $\mathbb{Z}_n^* = \{\text{units in }\mathbb{Z}_n\} = \{F\in \mathbb{Z}_n \mid gcd(r,n)=1\}$. Then, $(\mathbb{Z}_n^*, \cdot)$ is a group
 		- E.g. $\mathbb{Z}_6 = \{\overline 1, \overline 2, \overline 3, \overline 4, \overline 5, \overline 6\}$ and $\mathbb{Z}_6^* = \{\overline 1, \overline 5\}$
 	- The Cayley table for $(\mathbb{Z}_6, \cdot)$ is:
 
@@ -460,7 +461,7 @@ _2016/05/16_
 		- $|\overline 1|=1, |\overline5|=2$ because $\overline 5\cdot \overline 5 = \overline 1$
 	- 3) Not ever element of a group has finite order
 		- e.g. $(G,\cdot)=(\mathbb Z, +)$. Then, $2\in \mathbb Z$ has infinite order because $2+2+\cdots+2=2m\neq0,\forall m\in \mathbb N$
-- New example of a finite group: the **Dihedral group $D_n, n \ge 3$**. These group s represent symmetries of regular n-gons in $\mathbb R^2$
+- New example of a finite group: the **Dihedral group $D_n, n \ge 3$**. These groups represent symmetries of regular n-gons in $\mathbb R^2$
 	- $n=3$: regular 3-gon is $\mathbb R^2$ is an equilateral triangle.
 	- Consider the 6 following symmetries of the triangle (3 rotations+3 reflections):
 		- $R_0=$ rotation about the origin by $0$ rad conterclockwise ![dihedrald3r0](http://www.maa.org/sites/default/files/images/cms_upload/d3sym436454.gif)
@@ -469,3 +470,60 @@ _2016/05/16_
 		- $H$: flip from height through point B in graph ![dihedrald3h](http://www.maa.org/sites/default/files/images/cms_upload/d3sym132371.gif)
 		- $V$: flip from height through point A in graph![dihedrald3v](http://www.maa.org/sites/default/files/images/cms_upload/d3sym234053.gif)
 		- $D$: flip from height through point C in graph![dihedrald3d](http://www.maa.org/sites/default/files/images/cms_upload/d3sym335250.gif)
+
+_2016/05/18_
+
+- Review:
+	- $D_{2n}=($ **dibedial group $)=($group of symmetries of regular n-gon in $\mathbb R^2)$ (Here: rotations and reflections)
+		- $R_0, R_1, R_2, H,V,D\cdots$
+		- Set $D_3=\{R_0, R_1, R_2, H,V,D\}$
+		- Claim: $D_3$ is a group under composition
+		- First thing to check is that $D_3$ is closed under composition，i.e. $\forall f,g\in D_3, f\circ g\in D_3$
+		- Table: 
+
+    |$f\circ g$ |$ R_0 $|$ R_1 $|$ R_2 $|$ H  $|$ V  $|$ D  $|
+    |---|---|---|---|---|---|---|
+    |$R_0 $|$ R_0 $|$ R_1 $|$ R_2 $|$ H  $|$V  $|$ D  $|
+    |$R_1 $|$ R_1 $|$ R_2 $|$ R_0 $|$ D  $|$ H$|$V$|
+    |$R_2$|$R_2$|$R_0$|$R_1$|$V$|$D$|$H$|
+    |$H$|$H$|$V$|$D$|$R_0$|$R_1$|$R_2$|
+    |$V$|$V$|$H$|$D$|$R_2$|$R_0$|$R_1$|
+    |$D$|$D$|$H$|$V$|$R_1$|$R_2$|$R_0$|
+
+- 
+   - 
+      - Also:
+			- composition is assotiation
+			- $R_0$ is the identity
+			- every element as an inverse: $R_0^{-1}=R_0, R_1^{-1}=R_2=R_2^{-1}=R_1, H^{-1}=H,V^{-1}=V,D^{-1}=D$
+			- $\Rightarrow D_3$ is a group with 6 elements
+		- In general, $D_{n}$ is a finite group with $|D_n|=2n$, where
+			- $D_{n}$ will contain $n$ rotation (about the origin, counterclowise by $\frac{2\pi}{r}$ rad.) and $n$ reflections (read about in a textbook)
+		- when $n=4$:
+			- $\Rightarrow$ only need to use either 2 vertices that are jointed by a diagonal OR $\frac{1}{2}$ point of 2 opposite edges to get all the reflections
+			- $\Rightarrow$ since there are 4 vertices and 4 edges, get 4 reflections
+
+# 1.4 Cyclic groups 
+- Definition: A group G is called **cyclic** if $G=\langle a\rangle$ for some $a\in G$, where $$\langle a\rangle:=\{a^m\mid m\in \mathbb Z\}$$ (with $a_0=e$ and $a^{-m}=(a^m)^{-1}$). In this case, a is called a **generator of $G$**
+- Ex:
+	- 1) $(\mathbb Z,+)$. Then $\mathbb Z=\langle 1\rangle$ because, $\forall m\in \mathbb Z$,
+		- if $m>0$: $m=1+1+\cdots+1$ ($m$ times) $= m(1)$
+		- $0=0(1)$
+		- if $m<0$: $m=-(-m)=-(1+\cdots+1)$ ($-m$ times)
+		- Similarly, we see that $\mathbb Z=\langle -1\rangle$. We then see that generators are **not** unique.
+		- Note: Here $\mathbb Z=\infty$ and $|1|=\infty$, which is a good thing! We will see that if $G=\langle a\rangle$, then $|G|=|a|$
+	- 2) $(\mathbb Z_n,+)$. Then, $\mathbb Z_n=\langle \overline 1\rangle=\langle \overline{-1}\rangle=\langle \overline{n-1}\rangle$
+		- $\leadsto \mathbb Z_n$ is a cyclic group it has at least 2 possible generators, usually, $\overline 1$ and $\overline{n-1}$ 
+		- But, may have more than these two.
+			- e.g. $\mathbb Z_8 = \langle \overline 1\rangle= \langle \overline 7\rangle= \langle \overline 3\rangle= \langle \overline 5\rangle$ because:
+				- $\overline 3$
+				- $\overline 3+\overline 3 = \overline 6$
+				- $\overline 3+\overline 3 + \overline 3=\overline 9=\overline 1$
+				- $\overline 3+\overline 3+\overline 3+\overline 3=\overline 4$
+				- $\overline 3+\overline 3+\overline 3+\overline 3+\overline 3=\overline 7$
+				- $\overline 3+\overline 3+\overline 3+\overline 3+\overline 3+\overline 3=\overline 2$
+				- $\overline 3+\overline 3+\overline 3+\overline 3+\overline 3+\overline 3+\overline 3=\overline 5$ 
+				- But, $\overline 2$ is not a generator since $$\langle \overline 2\rangle=\{\overline 0, \overline 2, \overline 4=\overline 2+\overline 2, \overline 6 = \overline 2+\overline 2+\overline 2\}$$
+- Questions:
+	- What is the order of a generator?
+	- What are the possible generator?
