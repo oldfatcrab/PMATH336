@@ -474,7 +474,7 @@ _2016/05/16_
 _2016/05/18_
 
 - Review:
-	- $D_{2n}=($ **dibedial group $)=($group of symmetries of regular n-gon in $\mathbb R^2)$ (Here: rotations and reflections)
+	- $D_{n}=($ **dihedral group** $)=($group of symmetries of regular n-gon in $\mathbb R^2)$ (Here: rotations and reflections)
 		- $R_0, R_1, R_2, H,V,D\cdots$
 		- Set $D_3=\{R_0, R_1, R_2, H,V,D\}$
 		- Claim: $D_3$ is a group under composition
@@ -500,6 +500,7 @@ _2016/05/18_
 		- In general, $D_{n}$ is a finite group with $|D_n|=2n$, where
 			- $D_{n}$ will contain $n$ rotation (about the origin, counterclowise by $\frac{2\pi}{r}$ rad.) and $n$ reflections (read about in a textbook)
 		- when $n=4$:
+			- ![dihedral_d4](imgs/dihedral_d4.png)
 			- $\Rightarrow$ only need to use either 2 vertices that are jointed by a diagonal OR $\frac{1}{2}$ point of 2 opposite edges to get all the reflections
 			- $\Rightarrow$ since there are 4 vertices and 4 edges, get 4 reflections
 
@@ -523,7 +524,7 @@ _2016/05/18_
 				- $\overline 3+\overline 3+\overline 3+\overline 3+\overline 3=\overline 7$
 				- $\overline 3+\overline 3+\overline 3+\overline 3+\overline 3+\overline 3=\overline 2$
 				- $\overline 3+\overline 3+\overline 3+\overline 3+\overline 3+\overline 3+\overline 3=\overline 5$ 
-				- But, $\overline 2$ is not a generator since $$\langle \overline 2\rangle=\{\overline 0, \overline 2, \overline 4=\overline 2+\overline 2, \overline 6 = \overline 2+\overline 2+\overline 2\}$$
+				- But, $\overline 2$ is not a generator since $$\langle \overline 2\rangle=\{\overline 0, \overline 2, \overline 4=\overline 2+\overline 2, \overline 6 = \overline 2+\overline 2+\overline 2\}\subsetneqq \mathbb Z_8$$
 - Questions:
 	- What is the order of a generator?
 	- What are the possible generator?
