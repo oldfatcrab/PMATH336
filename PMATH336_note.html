@@ -1584,6 +1584,38 @@ pre[class*="language-"] {
 </ul></li>
 </ul>
 
+<p><em>2016/05/20</em></p>
+
+<ul>
+<li>Review:
+
+<ul>
+<li>A group \(G\) is <strong>cyclic</strong> if \(G=\langle a\rangle=\{a^m\mid m\in \mathbb Z\}\) for some \(a\in G\).</li>
+<li>Note: \(a^0=e\) and \((a^{-m})=(a^m)^{-1}\oplus a = (\text{generator of }G)\)</li>
+<li>Questions:
+
+<ul>
+<li>What is the order of a generator of \(G\)?</li>
+<li>Generators are not unique. What are the possible generator of \(G\)?</li>
+</ul></li>
+<li>We first need some technical facts about cyclic groups</li>
+</ul></li>
+<li>Prop: Let \(G\) be a group and \(a\in G\)
+
+<ul>
+<li>1) If \(|a|=\infty\), then \(a^i\neq a^j, \forall i\neq j\)</li>
+<li>2) If \(|a|=n&lt;\infty\), then \(\langle a\rangle=\{e,a,a^2,\cdots, a^{n-1}\}\) and \((a^i=a^j)\Leftrightarrow (n\mid i-j)\)</li>
+<li>Morover, if \(k\in \mathbb N\), then \(\langle a^k\rangle=\langle a^{gcd(n,k)}\rangle\) and \(|a^k|=\frac{n}{gcd(n,k)}\)</li>
+<li>Proof:
+
+<ul>
+<li>1) Suppose that \(|a|=\infty\). Assume \(a^i=a^j\) with \(i\neq j\). Suppose that \(i&lt;j\). Then, \(a^{j-i}=e\) with \(j-i&gt;0\). \[\Rightarrow |a|=(\text{smallest position integer }d\text{ such that }a^d=e)\leq j-i&lt;\infty\] But, this contradicts the fact that \(|a|=\infty\). So, \(i=j \) \[\Rightarrow a^i\neq a^j,\forall i\neq j\]</li>
+<li>2) Suppose \(|a| = n\infty\). Let us first show that \[\langle a\rangle=\{e,a,a^2,\cdots, a^{n-1}\}\] By definition of \(\langle a\rangle\), we of course have \(\{e,a,a^2,\cdots, a^{n-1}\}\subset\langle a\rangle\). We just have to show that \(\langle a\rangle\subset \{e,a,a^2,\cdots, a^{n-1}\}\). Let \(b\in \langle a\rangle\). Then \(b=a^m\) for some \(m\in \mathbb Z\). If \(0\leq m\leq n-1\), then \(b\in \{e,a,a^2,\cdots, a^{n-1}\}\). So we can assume that \(m\geq n\) or \(m &lt; 0\). Using the division algorithm, we can write \[m=nq+r\text{ with }0\leq r&lt;n\] \(\Rightarrow b=a^m=a^{(nq+r)}=a^{nq}a^r=(a^n)^q\cdot a^r = e^q\cdot a^r = e\cdot a^r=a^r\) So, \(b=a^r\) with \(0\leq r\leq n-1\Rightarrow b\in \{e,a,a^2,\cdots, a^{n-1}\}\) \[\Rightarrow\langle a\rangle\subset \{e,a,a^2,\cdots, a^{n-1}\}\] \[\Rightarrow \langle a\rangle = \{e,a,a^2,\cdots, a^{n-1}\}\] Now assume that \(a^i=a^j\). Then, \(a^{i-j}=e\). Again, using the division algorithm, \[i-j=np+s\] with \(0\leq s&lt;n\). So, \(a^{i-j}=a^{np+s}=a^s\Rightarrow \) either \(s=0\) or \(s\geq |a|\) since \(a^s=e\). BUT, \(|a|=n\) and \(s&lt;n\). So, must have that s=0.\[\Rightarrow i-j=np\Rightarrow n\mid i-j\] Conversely, if \(n\mid i-j\), then \(i-j=np\) for some \(p\in\mathbb Z\). So, \(a^{i-j}=a^{np}=(a^n)^p=e^p=e\) \[\Rightarrow a^i = a^j\] THUS, \((a^i=a^j)\Leftrightarrow(n\mid i-j)\)</li>
+</ul></li>
+<li>Let \(d=gcd(n,k)\). In purticular, \(d\mid k\) so that \(k=dp\) for some \(p\in\mathbb Z\). Note that \(d&gt;0\) and \(k&gt;0\) so that \(p\in \mathbb N\). Let us show that \[\langle a^k\rangle =\langle a^d \rangle\]. First note that since \(k=dp\), we have that \[a^k=a^{dp}=(a^d)^p\in \langle a^d\rangle\].  Then, since \(\langle a^d\rangle\) is closed under the operation and inverses, and \(a^k\in \langle a^d\rangle\), we have that \((a^k)^m\in \langle a^d\rangle, \forall m\in \mathbb Z\). \[\langle a^k\rangle\subset \langle a^d\rangle\] Let us check that \(\langle a^d \rangle\subset\langle a^k\rangle\). Let \(b\in \langle a^d\rangle\) and let us show that \(b=(a^k)^r\) for some \(r\in \mathbb Z\). Since \(d=gcd(n,k), \exists r,s\in \mathbb Z\) such that \[rk+sn=d\] Therefore, \(a^d=a^{rk+sn}=a^{rk}\cdot a^{sn}=(a^k)^r\cdot (a^n)^s=(a^k)^r\cdot e^s = (a^k)^r\) \[\Rightarrow a^d=(a^k)^r\] Then, if \(b\in \langle a^d\rangle\) so that \(b=(a^d)^m\) for some \(m\in \mathbb Z\), we get \[b=((a^k)^r)^m = (a^k)^{rm}\in\langle a^k\rangle\] \[\Rightarrow \langle a^d\rangle\subset \langle a^k \rangle\] \[\Rightarrow \langle a^d\rangle= \langle a^k \rangle\] The last thing to verify is that \(|a^k|=\frac{n}{d}\). We have seen that if \(b\in G\) and \(|b|=m\) then \[\langle b\rangle=\{e,b,\cdots, b^{m-1}\}\] so that \(|b|=m\). In particular, \(|\langle b\rangle|=|b|=m\). Thus, \(|a^d|=|\langle a^d\rangle|=|\langle a^k\rangle|=|a^k|\). So, to prove that \(|a^k|=\frac{n}{d}\), it is enough to show that \(|a^d|=\frac{n}{d}\). Now, \[(a^d)^{\frac{n}{d}}=a^n=e\] \[\Rightarrow \frac{n}{d} \geq |a^d|\] Let us assume that \(|a^d|&lt;\frac{n}{d}\). So, \(\exists m\in \mathbb N\) such that \((a^d)^m=e\) and \(m&lt;\frac{n}{d}\). So, \[a^{dm}=(a^d)^m=e\text{ with }dm &lt; d(\frac{n}{d})=n\] So, \(dm\in \mathbb N\) such that \(a^{dm}=e\) and \(dm&lt;n\), which is impossible because \(n=|a|\). Therefore, \(|a^d|\geq \frac{n}{d}\). So, \(|a^d|=\frac{n}{d}\)</li>
+</ul></li>
+</ul>
+
 
 
 <script type="text/javascript">
