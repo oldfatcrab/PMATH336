@@ -1616,6 +1616,75 @@ pre[class*="language-"] {
 </ul></li>
 </ul>
 
+<p><em>2016/05/25</em></p>
+
+<ul>
+<li><p>Review:</p>
+
+<ul>
+<li><strong>Prop</strong>: Let \(G\) be a group and \(a\in G\)</li>
+<li>i) If \(|a|=\infty\), then \(a^i\neq a^j, \forall i\neq j\)</li>
+<li>ii) If \(|a|=n&lt;\infty\), then \(\langle a\rangle=\{e,a,a^2,\cdots, a^{n-1}\}\) and \((a^i=a^j)\Leftrightarrow (n\mid i-j)\)</li>
+<li>Morover, if \(k\in \mathbb N\), then \(\langle a^k\rangle=\langle a^{gcd(n,k)}\rangle\) and \(|a^k|=\frac{n}{gcd(n,k)}\)</li>
+</ul></li>
+<li><p><strong>Order of a generator of a cyclic group</strong></p>
+
+<ul>
+<li><strong>COR</strong>: Let \(G\) be a group and \(a\in G\), then
+
+<ul>
+<li>(i) \(|\langle a \rangle|=| a|\)</li>
+<li>(ii) \(a^k=e\Rightarrow |a| \mid k\) (if \({a}=n&lt;\infty\))</li>
+</ul></li>
+<li>Proof:
+
+<ul>
+<li>(i) If \(|a|=\infty\), then \(a^i\neq a^j\) for all \(i,j\in \mathbb Z\) with \(i\neq j\). So \(|\langle a\rangle|=\infty\). But if \(|a|=n&lt;\infty\), the \(\langle a\rangle =\{e, a, a^2, \cdots, a^{n-1}\}\), so that $|\langle a\rangle|=n=|a|</li>
+<li>(ii) Suppose that \(|a|=n&lt;\infty\). Let \(k\in \mathbb Z\) such that \(a^k=e\). Then, \(a^k=e=a^0\Rightarrow n\mid k=0\Rightarrow n\mid k\Rightarrow |a| \mid k\) if \(|a| = n\)</li>
+</ul></li>
+<li>Let \(G = \langle a\rangle \) with \(a\in G\) be a cyclic group. Any generator of \(G\) is of the form \(a^m\) with \(m\in \mathbb Z\) because any generator of \(G\) must be an element of \(G\) and \(G=\{a^m\mid m\in \mathbb Z\}\). But, what powers of \(a\) correspond to generators?</li>
+<li><strong>Thm</strong>: Let \(G=\langle a\rangle\) be a cyclic group with \(a\in G\). Then:
+
+<ul>
+<li>(i) If \(|G|=\infty\), then \(a\) and \(a^{-1}\) are the only generators of \(G\)</li>
+<li>(ii) If \(|g|=n&lt;\infty\), then \(G=\langle a^k\rangle\) iff \(gcd (n,k)=1\).</li>
+<li>Proof:
+
+<ul>
+<li>(i) Exercise</li>
+<li>(ii) Suppose that \(G=\langle a^k\rangle \). Then, by Prop (ii), \(|a^k|=\frac{n}{gcd(n,k)}\). But by the COR, \(|a^k|=|G|=n\) since \(a^k\) is a generator. Thus, \[\frac{n}{gcd(n,k)}=n\Rightarrow gcd(n,k)=1\] Conversely, suppose that \(gcd(n,k)=1\). Then, Prop (ii) $\(\langle a^k\rangle=\langle a^{gcd(n,k)}\rangle=\langle a^1\rangle =\langle a\rangle =G\)</li>
+</ul></li>
+</ul></li>
+<li><strong>COR</strong>: \(1\) and \(-1\) are the only generators of \(\mathbb Z=\langle 1\rangle=\langle -1\rangle\)</li>
+<li><strong>COR</strong>: (Generator of \(\mathbb Z_n\))
+
+<ul>
+<li>\(\mathbb Z_n=\langle \overline k\rangle\) iff \(ged(n,k)=1\) iff \(\overline k\in \mathbb Z_n^*\)</li>
+<li>E.g. \(\mathbb Z_8=\langle \overline 1\rangle=\langle \overline 3\rangle=\langle \overline 5\rangle=\langle \overline 7\rangle\) and these are the only generators.</li>
+</ul></li>
+<li><strong>Thm</strong>: (Fundamental Theorem of cyclic groups)
+
+<ul>
+<li>Every subgroup of a cclic group \(G=\langle a\rangle\) (with \(a\in G\)) is cyclic. Moreover, if \(|a|=n\), then the order of any subgroup of \(G\) is a divisor of \(n\), and, for every positive divisor \(k\) of \(n\), the group \(G\) has exactly \(1\) subgroup of order \(k\), namely, \(\langle a^{\frac{n}{k}}\rangle\)</li>
+<li>What does it mean?
+
+<ul>
+<li>If \(G=\langle a\rangle\) and \(H\) is a subgroup of \(G\), then \(H=\langle a^m\rangle\) for some \(m\in \mathbb Z\)</li>
+<li>If \(|a|=n\), then \(H=\langle a^k\rangle\) is a subgroup of \(G\) of order \(k\), \(\forall k\in \mathbb N\) such that \(k\mid n\), and there is the only subgroup of \(G\) of order \(k\)</li>
+</ul></li>
+<li>E.g. \(n=20\): The subgroups of \(G\) are: \[H=\langle e\rangle, \langle a^{10}\rangle, \langle a^5\rangle, \langle a^4\rangle, \langle a\rangle=G\]where \( e=a^{20}, a^{10}=a^{\frac{20}{2}}, a^5=a^{\frac{20}{4}}, a^4=a^{\frac{20}{5}}, a=a^{\frac{20}{20} }\)</li>
+<li>Note: In Galliam&#39;s book, the last part of the proof of the theorem is incorrect.</li>
+<li>Proof:
+
+<ul>
+<li>Suppose that \(G=\langle a\rangle\) with \(a\in G\). And let \(H\) be a subgroup of \(G\). If \(H=\{e\}\), then \(H=\langle e\rangle\), which is cyclic. But if \(H\neq \{ e\}\), then \(\exists e\neq a^m\in H\). This means in particular that \(m\neq 0\). Let us first show that \(m\) can be chosen to be positive. Suppose instead that \(m&lt; 0\). Then, \(-m&gt;0\) and \(e^{-m}\in H\) (because \(H\) is closed under inverses since it is a subgroup of \(G\)). Therefore, \(H\) contains a positive power of \(a\). Let \(m\) be the smallest positive integer such that \(a^m\in H\). Let us show that \(H=\langle a^m\rangle\)</li>
+<li>\(*\) \(\langle a^m\rangle \subset H\) because \(a^m\in H\) and \(H\) is closed under multiplication and inverses (since it is a subgroup) so that \((a^m)^k\in H\)</li>
+<li>\(*\) \(H\subset\langle a^m\rangle \): Let \(b\in H\) and let us show that \(b=(a^m)^q\) for some \(q\in \mathbb Z\). Since \(H\subset G=\langle a\rangle\), \(b=a^k\) for some \(k\in \mathbb Z\). By the division algorithm, \(k=mq+r\) with \(0\leq r&lt; m\). Then, \[a^k=a^{mq+r}=(a^m)^q\cdot a^r\] Let us show that \(r=0\). But, \[a^r=(a^m)^{-q}\cdot a^k\in H\] since \((a^m)^{-q}\in H\) and \(a^k\in H\). Since \(m\) was chosen to be the smallest positive integer such that \(a^m\in H\) and \(0\leq r&lt;m\), \(a^r\in H\) forces \(r=0\) \(\Rightarrow b\in (a^m)^q\in \langle a^m\rangle\)</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+
 
 
 <script type="text/javascript">

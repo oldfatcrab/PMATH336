@@ -546,3 +546,41 @@ _2016/05/20_
 		- 1) Suppose that $|a|=\infty$. Assume $a^i=a^j$ with $i\neq j$. Suppose that $i<j$. Then, $a^{j-i}=e$ with $j-i>0$. $$\Rightarrow |a|=(\text{smallest position integer }d\text{ such that }a^d=e)\leq j-i<\infty$$ But, this contradicts the fact that $|a|=\infty$. So, $i=j $ $$\Rightarrow a^i\neq a^j,\forall i\neq j$$
 		- 2) Suppose $|a| = n\infty$. Let us first show that $$\langle a\rangle=\{e,a,a^2,\cdots, a^{n-1}\}$$ By definition of $\langle a\rangle$, we of course have $\{e,a,a^2,\cdots, a^{n-1}\}\subset\langle a\rangle$. We just have to show that $\langle a\rangle\subset \{e,a,a^2,\cdots, a^{n-1}\}$. Let $b\in \langle a\rangle$. Then $b=a^m$ for some $m\in \mathbb Z$. If $0\leq m\leq n-1$, then $b\in \{e,a,a^2,\cdots, a^{n-1}\}$. So we can assume that $m\geq n$ or $m < 0$. Using the division algorithm, we can write $$m=nq+r\text{ with }0\leq r<n$$ $\Rightarrow b=a^m=a^{(nq+r)}=a^{nq}a^r=(a^n)^q\cdot a^r = e^q\cdot a^r = e\cdot a^r=a^r$ So, $b=a^r$ with $0\leq r\leq n-1\Rightarrow b\in \{e,a,a^2,\cdots, a^{n-1}\}$ $$\Rightarrow\langle a\rangle\subset \{e,a,a^2,\cdots, a^{n-1}\}$$ $$\Rightarrow \langle a\rangle = \{e,a,a^2,\cdots, a^{n-1}\}$$ Now assume that $a^i=a^j$. Then, $a^{i-j}=e$. Again, using the division algorithm, $$i-j=np+s$$ with $0\leq s<n$. So, $a^{i-j}=a^{np+s}=a^s\Rightarrow $ either $s=0$ or $s\geq |a|$ since $a^s=e$. BUT, $|a|=n$ and $s<n$. So, must have that s=0.$$\Rightarrow i-j=np\Rightarrow n\mid i-j$$ Conversely, if $n\mid i-j$, then $i-j=np$ for some $p\in\mathbb Z$. So, $a^{i-j}=a^{np}=(a^n)^p=e^p=e$ $$\Rightarrow a^i = a^j$$ THUS, $(a^i=a^j)\Leftrightarrow(n\mid i-j)$
 	- Let $d=gcd(n,k)$. In purticular, $d\mid k$ so that $k=dp$ for some $p\in\mathbb Z$. Note that $d>0$ and $k>0$ so that $p\in \mathbb N$. Let us show that $$\langle a^k\rangle =\langle a^d \rangle$$. First note that since $k=dp$, we have that $$a^k=a^{dp}=(a^d)^p\in \langle a^d\rangle$$.  Then, since $\langle a^d\rangle$ is closed under the operation and inverses, and $a^k\in \langle a^d\rangle$, we have that $(a^k)^m\in \langle a^d\rangle, \forall m\in \mathbb Z$. $$\langle a^k\rangle\subset \langle a^d\rangle$$ Let us check that $\langle a^d \rangle\subset\langle a^k\rangle$. Let $b\in \langle a^d\rangle$ and let us show that $b=(a^k)^r$ for some $r\in \mathbb Z$. Since $d=gcd(n,k), \exists r,s\in \mathbb Z$ such that $$rk+sn=d$$ Therefore, $a^d=a^{rk+sn}=a^{rk}\cdot a^{sn}=(a^k)^r\cdot (a^n)^s=(a^k)^r\cdot e^s = (a^k)^r$ $$\Rightarrow a^d=(a^k)^r$$ Then, if $b\in \langle a^d\rangle$ so that $b=(a^d)^m$ for some $m\in \mathbb Z$, we get $$b=((a^k)^r)^m = (a^k)^{rm}\in\langle a^k\rangle$$ $$\Rightarrow \langle a^d\rangle\subset \langle a^k \rangle$$ $$\Rightarrow \langle a^d\rangle= \langle a^k \rangle$$ The last thing to verify is that $|a^k|=\frac{n}{d}$. We have seen that if $b\in G$ and $|b|=m$ then $$\langle b\rangle=\{e,b,\cdots, b^{m-1}\}$$ so that $|b|=m$. In particular, $|\langle b\rangle|=|b|=m$. Thus, $|a^d|=|\langle a^d\rangle|=|\langle a^k\rangle|=|a^k|$. So, to prove that $|a^k|=\frac{n}{d}$, it is enough to show that $|a^d|=\frac{n}{d}$. Now, $$(a^d)^{\frac{n}{d}}=a^n=e$$ $$\Rightarrow \frac{n}{d} \geq |a^d|$$ Let us assume that $|a^d|<\frac{n}{d}$. So, $\exists m\in \mathbb N$ such that $(a^d)^m=e$ and $m<\frac{n}{d}$. So, $$a^{dm}=(a^d)^m=e\text{ with }dm < d(\frac{n}{d})=n$$ So, $dm\in \mathbb N$ such that $a^{dm}=e$ and $dm<n$, which is impossible because $n=|a|$. Therefore, $|a^d|\geq \frac{n}{d}$. So, $|a^d|=\frac{n}{d}$
+
+_2016/05/25_
+
+- Review:
+	- **Prop**: Let $G$ be a group and $a\in G$
+	- i) If $|a|=\infty$, then $a^i\neq a^j, \forall i\neq j$
+	- ii) If $|a|=n<\infty$, then $\langle a\rangle=\{e,a,a^2,\cdots, a^{n-1}\}$ and $(a^i=a^j)\Leftrightarrow (n\mid i-j)$
+	- Morover, if $k\in \mathbb N$, then $\langle a^k\rangle=\langle a^{gcd(n,k)}\rangle$ and $|a^k|=\frac{n}{gcd(n,k)}$
+
+- **Order of a generator of a cyclic group**
+	- **COR**: Let $G$ be a group and $a\in G$, then
+		- (i) $|\langle a \rangle|=| a|$
+		- (ii) $a^k=e\Rightarrow |a| \mid k$ (if ${a}=n<\infty$)
+	- Proof:
+		- (i) If $|a|=\infty$, then $a^i\neq a^j$ for all $i,j\in \mathbb Z$ with $i\neq j$. So $|\langle a\rangle|=\infty$. But if $|a|=n<\infty$, the $\langle a\rangle =\{e, a, a^2, \cdots, a^{n-1}\}$, so that $|\langle a\rangle|=n=|a|
+		- (ii) Suppose that $|a|=n<\infty$. Let $k\in \mathbb Z$ such that $a^k=e$. Then, $a^k=e=a^0\Rightarrow n\mid k=0\Rightarrow n\mid k\Rightarrow |a| \mid k$ if $|a| = n$
+	- Let $G = \langle a\rangle $ with $a\in G$ be a cyclic group. Any generator of $G$ is of the form $a^m$ with $m\in \mathbb Z$ because any generator of $G$ must be an element of $G$ and $G=\{a^m\mid m\in \mathbb Z\}$. But, what powers of $a$ correspond to generators?
+	- **Thm**: Let $G=\langle a\rangle$ be a cyclic group with $a\in G$. Then:
+		- (i) If $|G|=\infty$, then $a$ and $a^{-1}$ are the only generators of $G$
+		- (ii) If $|g|=n<\infty$, then $G=\langle a^k\rangle$ iff $gcd (n,k)=1$.
+		- Proof:
+			- (i) Exercise
+			- (ii) Suppose that $G=\langle a^k\rangle $. Then, by Prop (ii), $|a^k|=\frac{n}{gcd(n,k)}$. But by the COR, $|a^k|=|G|=n$ since $a^k$ is a generator. Thus, $$\frac{n}{gcd(n,k)}=n\Rightarrow gcd(n,k)=1$$ Conversely, suppose that $gcd(n,k)=1$. Then, Prop (ii) $$\langle a^k\rangle=\langle a^{gcd(n,k)}\rangle=\langle a^1\rangle =\langle a\rangle =G$
+	- **COR**: $1$ and $-1$ are the only generators of $\mathbb Z=\langle 1\rangle=\langle -1\rangle$
+	- **COR**: (Generator of $\mathbb Z_n$)
+		- $\mathbb Z_n=\langle \overline k\rangle$ iff $ged(n,k)=1$ iff $\overline k\in \mathbb Z_n^*$
+		- E.g. $\mathbb Z_8=\langle \overline 1\rangle=\langle \overline 3\rangle=\langle \overline 5\rangle=\langle \overline 7\rangle$ and these are the only generators.
+	- **Thm**: (Fundamental Theorem of cyclic groups)
+		- Every subgroup of a cclic group $G=\langle a\rangle$ (with $a\in G$) is cyclic. Moreover, if $|a|=n$, then the order of any subgroup of $G$ is a divisor of $n$, and, for every positive divisor $k$ of $n$, the group $G$ has exactly $1$ subgroup of order $k$, namely, $\langle a^{\frac{n}{k}}\rangle$
+		- What does it mean?
+			- If $G=\langle a\rangle$ and $H$ is a subgroup of $G$, then $H=\langle a^m\rangle$ for some $m\in \mathbb Z$
+			- If $|a|=n$, then $H=\langle a^k\rangle$ is a subgroup of $G$ of order $k$, $\forall k\in \mathbb N$ such that $k\mid n$, and there is the only subgroup of $G$ of order $k$
+		- E.g. $n=20$: The subgroups of $G$ are: $$H=\langle e\rangle, \langle a^{10}\rangle, \langle a^5\rangle, \langle a^4\rangle, \langle a\rangle=G$$where $ e=a^{20}, a^{10}=a^{\frac{20}{2}}, a^5=a^{\frac{20}{4}}, a^4=a^{\frac{20}{5}}, a=a^{\frac{20}{20}	}$
+		- Note: In Galliam's book, the last part of the proof of the theorem is incorrect.
+		- Proof:
+			- Suppose that $G=\langle a\rangle$ with $a\in G$. And let $H$ be a subgroup of $G$. If $H=\{e\}$, then $H=\langle e\rangle$, which is cyclic. But if $H\neq \{ e\}$, then $\exists e\neq a^m\in H$. This means in particular that $m\neq 0$. Let us first show that $m$ can be chosen to be positive. Suppose instead that $m< 0$. Then, $-m>0$ and $e^{-m}\in H$ (because $H$ is closed under inverses since it is a subgroup of $G$). Therefore, $H$ contains a positive power of $a$. Let $m$ be the smallest positive integer such that $a^m\in H$. Let us show that $H=\langle a^m\rangle$
+			- $*$ $\langle a^m\rangle \subset H$ because $a^m\in H$ and $H$ is closed under multiplication and inverses (since it is a subgroup) so that $(a^m)^k\in H$
+			- $*$ $H\subset\langle a^m\rangle $: Let $b\in H$ and let us show that $b=(a^m)^q$ for some $q\in \mathbb Z$. Since $H\subset G=\langle a\rangle$, $b=a^k$ for some $k\in \mathbb Z$. By the division algorithm, $k=mq+r$ with $0\leq r< m$. Then, $$a^k=a^{mq+r}=(a^m)^q\cdot a^r$$ Let us show that $r=0$. But, $$a^r=(a^m)^{-q}\cdot a^k\in H$$ since $(a^m)^{-q}\in H$ and $a^k\in H$. Since $m$ was chosen to be the smallest positive integer such that $a^m\in H$ and $0\leq r<m$, $a^r\in H$ forces $r=0$ $\Rightarrow b\in (a^m)^q\in \langle a^m\rangle$
