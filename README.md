@@ -574,7 +574,7 @@ _2016/05/25_
 		- $\mathbb Z_n=\langle \overline k\rangle$ iff $ged(n,k)=1$ iff $\overline k\in \mathbb Z_n^*$
 		- E.g. $\mathbb Z_8=\langle \overline 1\rangle=\langle \overline 3\rangle=\langle \overline 5\rangle=\langle \overline 7\rangle$ and these are the only generators.
 	- **Thm**: (Fundamental Theorem of cyclic groups)
-		- Every subgroup of a cclic group $G=\langle a\rangle$ (with $a\in G$) is cyclic. Moreover, if $|a|=n$, then the order of any subgroup of $G$ is a divisor of $n$, and, for every positive divisor $k$ of $n$, the group $G$ has exactly $1$ subgroup of order $k$, namely, $\langle a^{\frac{n}{k}}\rangle$
+		- Every subgroup of a cyclic group $G=\langle a\rangle$ (with $a\in G$) is cyclic. Moreover, if $|a|=n$, then the order of any subgroup of $G$ is a divisor of $n$, and, for every positive divisor $k$ of $n$, the group $G$ has exactly $1$ subgroup of order $k$, namely, $\langle a^{\frac{n}{k}}\rangle$
 		- What does it mean?
 			- If $G=\langle a\rangle$ and $H$ is a subgroup of $G$, then $H=\langle a^m\rangle$ for some $m\in \mathbb Z$
 			- If $|a|=n$, then $H=\langle a^k\rangle$ is a subgroup of $G$ of order $k$, $\forall k\in \mathbb N$ such that $k\mid n$, and there is the only subgroup of $G$ of order $k$
@@ -584,3 +584,116 @@ _2016/05/25_
 			- Suppose that $G=\langle a\rangle$ with $a\in G$. And let $H$ be a subgroup of $G$. If $H=\{e\}$, then $H=\langle e\rangle$, which is cyclic. But if $H\neq \{ e\}$, then $\exists e\neq a^m\in H$. This means in particular that $m\neq 0$. Let us first show that $m$ can be chosen to be positive. Suppose instead that $m< 0$. Then, $-m>0$ and $e^{-m}\in H$ (because $H$ is closed under inverses since it is a subgroup of $G$). Therefore, $H$ contains a positive power of $a$. Let $m$ be the smallest positive integer such that $a^m\in H$. Let us show that $H=\langle a^m\rangle$
 			- $*$ $\langle a^m\rangle \subset H$ because $a^m\in H$ and $H$ is closed under multiplication and inverses (since it is a subgroup) so that $(a^m)^k\in H$
 			- $*$ $H\subset\langle a^m\rangle $: Let $b\in H$ and let us show that $b=(a^m)^q$ for some $q\in \mathbb Z$. Since $H\subset G=\langle a\rangle$, $b=a^k$ for some $k\in \mathbb Z$. By the division algorithm, $k=mq+r$ with $0\leq r< m$. Then, $$a^k=a^{mq+r}=(a^m)^q\cdot a^r$$ Let us show that $r=0$. But, $$a^r=(a^m)^{-q}\cdot a^k\in H$$ since $(a^m)^{-q}\in H$ and $a^k\in H$. Since $m$ was chosen to be the smallest positive integer such that $a^m\in H$ and $0\leq r<m$, $a^r\in H$ forces $r=0$ $\Rightarrow b\in (a^m)^q\in \langle a^m\rangle$
+
+_2016/06/27_
+
+- Review:
+	- **Thm**: (Fund thm of cyclic groups)
+		- Every subgroup of a cyclic group $G=\langle a\rangle$ (with $a\in G$) is cyclic. Moreover, if $|a|=n$, then the order of any subgroup of $G$ is a divisor of $n$, and, for every positive divisor $k$ of $n$, the group $G$ has exactly $1$ subgroup of order $k$, namely, $\langle a^{\frac{n}{k}}\rangle$
+		- Proof: proof of case where |G|=\infty (exercise)
+
+- E.g.
+	- 1) $\mathbb Z_8$ what are the subgroups?
+		- $|\mathbb Z_8|=8=n\leadsto$ positive divisors of $8$: $1,2,4,8$
+		- Suppose of $\mathbb Z_8$:
+			- $k=1:\langle \overline 8 / 1\rangle=\langle \overline 8\rangle =\langle \overline 0 \rangle =\{\overline 0\}$ order $1$
+			- $k=2:\langle \overline 8 / 2\rangle=\langle \overline 4\rangle =\{\overline 0, \overline 4\}$ order $2$
+			- $k=4:\langle \overline 8 / 4\rangle=\langle \overline 2\rangle =\{\overline 0,\overline 2,\overline 4\}$ order $4$
+			- $k=8:\langle \overline 8 / 8\rangle=\langle \overline 1\rangle =\{\overline 0, \overline 1, \overline 2, \overline 3, \overline 4, \overline 5, \overline 6, \overline 7\}$ order $8$
+		- Note that since $gcd(3,8)=gcd(5,8)=gcd(7,8)=1\Rightarrow \overline 3, \overline 5,\overline 7$ generate $\mathbb Z_8$. That is, $\langle \overline 3\rangle=\langle \overline 5\rangle=\langle \overline 7\rangle$
+		- In general, for $\mathbb Z_n$, for each positive divisor $k$ of $n$, $\langle \frac{n}{k}\rangle$ is the **only** of $\mathbb Z_n$ of order $k$
+	- 2) $\mathbb Z_8^*=\{\overline 1, \overline 3, \overline 5, \overline 7\}$ Is $\mathbb Z_8^*$ cyclic?
+		- If $\mathbb Z_8^*$ is cyclic then $\mathbb Z_8^*=\langle \overline k\rangle$ with $k=1,3,5,7$. 
+		- But, $\langle \overline 1\rangle=\{(\overline 1)^m\mid m\in \mathbb Z\}=\{\overline 1\}\leadsto$ trifvial subgroup
+		- $\langle 3\rangle = \{\overline 1,\overline 3\} \subsetneqq \mathbb Z_8^*$ order $2$
+		- $\langle 5\rangle = \{\overline 1,\overline 5\} \subsetneqq \mathbb Z_8^*$ order $2$
+		- $\Rightarrow Z_8^*$ is not cyclic
+	- 3) $Z_5^* = \{\overline 1,\overline 2,\overline 3,\overline 4\}$ and $Z_5^*=\langle \overline 2\rangle \Rightarrow Z_5^*$ is cyclic of order $4$
+		- The subgroups of $Z_5^*$ will correspond to positive divisors of $4$: $1,2,4$
+		- $k=1: \langle (\overline 2)^{4/1}\rangle=\langle \overline 1\rangle=\{\overline 1\}$ order $1$
+		- $k=2: \langle (\overline 2)^{4/2}\rangle=\langle \overline 4\rangle=\{\overline 1, \overline 4\}$ order $2$
+		- $k=4: \langle (\overline 2)^{4/4}\rangle=\langle \overline 2\rangle=\mathbb Z_5^*$ order $4$
+- The relationship between the various subgroups of a group $G$ can be illustrated using the subgroup lattice of the group. This is a diagram that includes all the subgroup, and connects a subgoup $H$ at one level to a subgroup $K$ at a higher level if $H\subsetneqq K$
+	- Note: The subgroup lattice can be constructed for any group, not just cyclic groups
+- Ex.
+	- 1) $\mathbb Z_8$: subgroups
+		- $\langle \overline 0\rangle = \{\overline 0\}$ order $1$
+		- $\langle \overline 4\rangle = \{\overline 0,\overline 4\}$ order $2$
+		- $\langle \overline 2\rangle = \{\overline 0,\overline 2,\overline 4,\overline 6\}$ order $4$
+		- $\langle \overline 1\rangle = \mathbb Z_8$ order $4$
+		- So subgroup lattice for Z8:
+		
+|         $\mathbb Z_8$         |
+|:-----------------------------:|
+|            $\vert$            |
+| $\langle \overline 2 \rangle$ |
+|            $\vert$            |
+| $\langle \overline 4 \rangle$ |
+|            $\vert$            |
+| $\langle \overline 0 \rangle$ |
+
+- 
+	- 2) $\mathbb Z_{20}$: order is $n=20 \Rightarrow$ positive divisors are $k=1,2,4,5,10,20$
+		- $k=1: \langle\overline{20} / 1\rangle = \langle\overline 0\rangle = \{\overline 0\}$ order 1
+		- $k=2: \langle\overline{20}/2\rangle = \langle\overline 10\rangle = \{\overline 0,\overline{10}\}$ order 2
+		- $k=4: \langle\overline{20}/4\rangle = \langle\overline 5\rangle = \{\overline 0,\overline 5,\overline{10},\overline{15}\}$ order 4
+		- $k=5: \langle\overline{20}/5\rangle = \langle\overline 4\rangle = \{\overline 0,\overline 4,\overline 8,\overline{12},\overline{16}\}$ order 5
+		- $k=10: \langle\overline{20}/10\rangle = \langle\overline 2\rangle = \{\overline 0,\overline 2,\overline 4,\overline 6,\overline 8,\overline{10},\overline{12},\overline{14},\overline{16},\overline{18}\}$ order 10
+		- $k=20: \langle\overline{20}/20\rangle = \langle\overline 1\rangle = \mathbb Z_{20}$ order 20
+		- Subgroup lattice of $\mathbb Z_{20}$:
+
+|                               |               |          $\mathbb Z_8$          |               |                               |               |                               |
+|-------------------------------|---------------|:-------------------------------:|---------------|-------------------------------|---------------|-------------------------------|
+|                               | $\mathbin{/}$ |                                 | $\backslash$  |                               |               |                               |
+| $\langle \overline 5 \rangle$ |               |                                 |               | $\langle \overline 2 \rangle$ |               |                               |
+|                               | $\backslash$  |                                 | $\mathbin{/}$ |                               | $\backslash$  |                               |
+|                               |               | $\langle \overline{10} \rangle$ |               |                               |               | $\langle \overline 4 \rangle$ |
+|                               |               |                                 | $\backslash$  |                               | $\mathbin{/}$ |                               |
+|                               |               |                                 |               | $\langle \overline 0 \rangle$ |               |                               |
+
+- 
+	- 3) $Z_8^*=\{\overline 1, \overline 3, \overline 5, \overline 7\}\leadsto$ the only subgroup are: 
+		- $\langle \overline 1\rangle = \{\overline 1\}$ order $1$ 
+		- $\langle \overline 3\rangle = \{\overline 1,\overline 3\}$ order $2$
+		- $\langle \overline 5\rangle = \{\overline 1,\overline 5\}$ order $2$
+		- $\langle \overline 7\rangle = \{\overline 1,\overline 7\}$ order $2$
+		- $\mathbb Z_8^*$ order $4$
+		- Subgroup lattice of $\mathbb Z_8^*$:
+		
+|                               |               |         $\mathbb Z_8^*$         |               |                               |
+|-------------------------------|---------------|:-------------------------------:|---------------|-------------------------------|
+|                               | $\mathbin{/}$ |             $\vert$             | $\backslash$  |                               |
+| $\langle \overline 3 \rangle$ |               |  $\langle \overline 5 \rangle$  |               | $\langle \overline 7 \rangle$ |
+|                               | $\backslash$  |             $\vert$             | $\mathbin{/}$ |                               |
+|                               |               | $\langle \overline 1 \rangle$ |               |                               |
+
+- 
+	- 4) $Z_5^*=\{\overline 1,\overline 2,\overline 3,\overline 4\}\leadsto$ subgroups:
+		- $\langle \overline 1\rangle = \{\overline 1\}$ order $1$
+		- $\langle \overline 4\rangle = \{\overline 1,\overline 4\}$ order $2$
+		- $\mathbb Z_5^* $ order $4$
+		- Subgroup lattice of $Z_5^*$:
+		
+|        $\mathbb Z_5^*$        |
+|:-----------------------------:|
+|            $\vert$            |
+| $\langle \overline 4 \rangle$ |
+|            $\vert$            |
+| $\langle \overline 1 \rangle$ |
+
+- 
+	- 5) $\mathbb Z_4 = \{\overline 0,\overline 1,\overline 2,\overline 3\}\leadsto$ subgroups: cyclic of order $4$ and subgroups are:
+		- $\langle \overline 0\rangle = \{\overline 0\}$ order $1$
+		- $\langle \overline 2\rangle = \{\overline 0,\overline 2\}$ order $2$
+		- $\mathbb Z_4$ order $4$
+		- subgroup lattice of $\mathbb Z_4$:
+		
+|         $\mathbb Z_4$         |
+|:-----------------------------:|
+|            $\vert$            |
+| $\langle \overline 2 \rangle$ |
+|            $\vert$            |
+| $\langle \overline 0 \rangle$ |
+
+- 
+	- Note: The groups $\mathbb Z_8^*, \mathbb Z_5^*$ and $\mathbb Z_4$ are all finite of order $4$. The operation on $\mathbb Z_8^*$ and $\mathbb Z_5^*$ is multiplication, where as the operation on $\mathbb Z_4$ is addition. We see that $\mathbb Z_5^*$ and $\mathbb Z_4$ have the same subgroup lattice, which is not surprising because they bothcyclic. But their subgroup lattices differ from the subgroup of lattice of $\mathbb Z_8^*$, which is natural since $\mathbb Z_8^*$ is not cyclic. We will see that any 2 cyclics of the same finite order $n$ are "isomorphic" (i.e. have the same shape) $$G= \langle a\rangle = \{e,a,\cdots, a^{n-1}\} (|a|=n)$$ $$\langle a^{n/k}\rangle \text{ with }k\mid n$$

@@ -1665,7 +1665,7 @@ pre[class*="language-"] {
 <li><strong>Thm</strong>: (Fundamental Theorem of cyclic groups)
 
 <ul>
-<li>Every subgroup of a cclic group \(G=\langle a\rangle\) (with \(a\in G\)) is cyclic. Moreover, if \(|a|=n\), then the order of any subgroup of \(G\) is a divisor of \(n\), and, for every positive divisor \(k\) of \(n\), the group \(G\) has exactly \(1\) subgroup of order \(k\), namely, \(\langle a^{\frac{n}{k}}\rangle\)</li>
+<li>Every subgroup of a cyclic group \(G=\langle a\rangle\) (with \(a\in G\)) is cyclic. Moreover, if \(|a|=n\), then the order of any subgroup of \(G\) is a divisor of \(n\), and, for every positive divisor \(k\) of \(n\), the group \(G\) has exactly \(1\) subgroup of order \(k\), namely, \(\langle a^{\frac{n}{k}}\rangle\)</li>
 <li>What does it mean?
 
 <ul>
@@ -1682,6 +1682,337 @@ pre[class*="language-"] {
 <li>\(*\) \(H\subset\langle a^m\rangle \): Let \(b\in H\) and let us show that \(b=(a^m)^q\) for some \(q\in \mathbb Z\). Since \(H\subset G=\langle a\rangle\), \(b=a^k\) for some \(k\in \mathbb Z\). By the division algorithm, \(k=mq+r\) with \(0\leq r&lt; m\). Then, \[a^k=a^{mq+r}=(a^m)^q\cdot a^r\] Let us show that \(r=0\). But, \[a^r=(a^m)^{-q}\cdot a^k\in H\] since \((a^m)^{-q}\in H\) and \(a^k\in H\). Since \(m\) was chosen to be the smallest positive integer such that \(a^m\in H\) and \(0\leq r&lt;m\), \(a^r\in H\) forces \(r=0\) \(\Rightarrow b\in (a^m)^q\in \langle a^m\rangle\)</li>
 </ul></li>
 </ul></li>
+</ul></li>
+</ul>
+
+<p><em>2016/06/27</em></p>
+
+<ul>
+<li><p>Review:</p>
+
+<ul>
+<li><strong>Thm</strong>: (Fund thm of cyclic groups)
+
+<ul>
+<li>Every subgroup of a cyclic group \(G=\langle a\rangle\) (with \(a\in G\)) is cyclic. Moreover, if \(|a|=n\), then the order of any subgroup of \(G\) is a divisor of \(n\), and, for every positive divisor \(k\) of \(n\), the group \(G\) has exactly \(1\) subgroup of order \(k\), namely, \(\langle a^{\frac{n}{k}}\rangle\)</li>
+<li>Proof: proof of case where |G|=\infty (exercise)</li>
+</ul></li>
+</ul></li>
+<li><p>E.g.</p>
+
+<ul>
+<li>1) \(\mathbb Z_8\) what are the subgroups?
+
+<ul>
+<li>\(|\mathbb Z_8|=8=n\leadsto\) positive divisors of \(8\): \(1,2,4,8\)</li>
+<li>Suppose of \(\mathbb Z_8\):
+
+<ul>
+<li>\(k=1:\langle \overline 8 / 1\rangle=\langle \overline 8\rangle =\langle \overline 0 \rangle =\{\overline 0\}\) order \(1\)</li>
+<li>\(k=2:\langle \overline 8 / 2\rangle=\langle \overline 4\rangle =\{\overline 0, \overline 4\}\) order \(2\)</li>
+<li>\(k=4:\langle \overline 8 / 4\rangle=\langle \overline 2\rangle =\{\overline 0,\overline 2,\overline 4\}\) order \(4\)</li>
+<li>\(k=8:\langle \overline 8 / 8\rangle=\langle \overline 1\rangle =\{\overline 0, \overline 1, \overline 2, \overline 3, \overline 4, \overline 5, \overline 6, \overline 7\}\) order \(8\)</li>
+</ul></li>
+<li>Note that since \(gcd(3,8)=gcd(5,8)=gcd(7,8)=1\Rightarrow \overline 3, \overline 5,\overline 7\) generate \(\mathbb Z_8\). That is, \(\langle \overline 3\rangle=\langle \overline 5\rangle=\langle \overline 7\rangle\)</li>
+<li>In general, for \(\mathbb Z_n\), for each positive divisor \(k\) of \(n\), \(\langle \frac{n}{k}\rangle\) is the <strong>only</strong> of \(\mathbb Z_n\) of order \(k\)</li>
+</ul></li>
+<li>2) \(\mathbb Z_8^*=\{\overline 1, \overline 3, \overline 5, \overline 7\}\) Is \(\mathbb Z_8^*\) cyclic?
+
+<ul>
+<li>If \(\mathbb Z_8^*\) is cyclic then \(\mathbb Z_8^*=\langle \overline k\rangle\) with \(k=1,3,5,7\). </li>
+<li>But, \(\langle \overline 1\rangle=\{(\overline 1)^m\mid m\in \mathbb Z\}=\{\overline 1\}\leadsto\) trifvial subgroup</li>
+<li>\(\langle 3\rangle = \{\overline 1,\overline 3\} \subsetneqq \mathbb Z_8^*\) order \(2\)</li>
+<li>\(\langle 5\rangle = \{\overline 1,\overline 5\} \subsetneqq \mathbb Z_8^*\) order \(2\)</li>
+<li>\(\Rightarrow Z_8^*\) is not cyclic</li>
+</ul></li>
+<li>3) \(Z_5^* = \{\overline 1,\overline 2,\overline 3,\overline 4\}\) and \(Z_5^*=\langle \overline 2\rangle \Rightarrow Z_5^*\) is cyclic of order \(4\)
+
+<ul>
+<li>The subgroups of \(Z_5^*\) will correspond to positive divisors of \(4\): \(1,2,4\)</li>
+<li>\(k=1: \langle (\overline 2)^{4/1}\rangle=\langle \overline 1\rangle=\{\overline 1\}\) order \(1\)</li>
+<li>\(k=2: \langle (\overline 2)^{4/2}\rangle=\langle \overline 4\rangle=\{\overline 1, \overline 4\}\) order \(2\)</li>
+<li>\(k=4: \langle (\overline 2)^{4/4}\rangle=\langle \overline 2\rangle=\mathbb Z_5^*\) order \(4\)</li>
+</ul></li>
+</ul></li>
+<li><p>The relationship between the various subgroups of a group \(G\) can be illustrated using the subgroup lattice of the group. This is a diagram that includes all the subgroup, and connects a subgoup \(H\) at one level to a subgroup \(K\) at a higher level if \(H\subsetneqq K\)</p>
+
+<ul>
+<li>Note: The subgroup lattice can be constructed for any group, not just cyclic groups</li>
+</ul></li>
+<li><p>Ex.</p>
+
+<ul>
+<li>1) \(\mathbb Z_8\): subgroups
+
+<ul>
+<li>\(\langle \overline 0\rangle = \{\overline 0\}\) order \(1\)</li>
+<li>\(\langle \overline 4\rangle = \{\overline 0,\overline 4\}\) order \(2\)</li>
+<li>\(\langle \overline 2\rangle = \{\overline 0,\overline 2,\overline 4,\overline 6\}\) order \(4\)</li>
+<li>\(\langle \overline 1\rangle = \mathbb Z_8\) order \(4\)</li>
+<li>So subgroup lattice for Z8:</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">\(\mathbb Z_8\)</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">\(\vert\)</td>
+</tr>
+<tr>
+<td style="text-align: center">\(\langle \overline 2 \rangle\)</td>
+</tr>
+<tr>
+<td style="text-align: center">\(\vert\)</td>
+</tr>
+<tr>
+<td style="text-align: center">\(\langle \overline 4 \rangle\)</td>
+</tr>
+<tr>
+<td style="text-align: center">\(\vert\)</td>
+</tr>
+<tr>
+<td style="text-align: center">\(\langle \overline 0 \rangle\)</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>
+
+<ul>
+<li>2) \(\mathbb Z_{20}\): order is \(n=20 \Rightarrow\) positive divisors are \(k=1,2,4,5,10,20\)
+
+<ul>
+<li>\(k=1: \langle\overline{20} / 1\rangle = \langle\overline 0\rangle = \{\overline 0\}\) order 1</li>
+<li>\(k=2: \langle\overline{20}/2\rangle = \langle\overline 10\rangle = \{\overline 0,\overline{10}\}\) order 2</li>
+<li>\(k=4: \langle\overline{20}/4\rangle = \langle\overline 5\rangle = \{\overline 0,\overline 5,\overline{10},\overline{15}\}\) order 4</li>
+<li>\(k=5: \langle\overline{20}/5\rangle = \langle\overline 4\rangle = \{\overline 0,\overline 4,\overline 8,\overline{12},\overline{16}\}\) order 5</li>
+<li>\(k=10: \langle\overline{20}/10\rangle = \langle\overline 2\rangle = \{\overline 0,\overline 2,\overline 4,\overline 6,\overline 8,\overline{10},\overline{12},\overline{14},\overline{16},\overline{18}\}\) order 10</li>
+<li>\(k=20: \langle\overline{20}/20\rangle = \langle\overline 1\rangle = \mathbb Z_{20}\) order 20</li>
+<li>Subgroup lattice of \(\mathbb Z_{20}\):</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th style="text-align: center">\(\mathbb Z_8\)</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td></td>
+<td>\(\mathbin{/}\)</td>
+<td style="text-align: center"></td>
+<td>\(\backslash\)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>\(\langle \overline 5 \rangle\)</td>
+<td></td>
+<td style="text-align: center"></td>
+<td></td>
+<td>\(\langle \overline 2 \rangle\)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>\(\backslash\)</td>
+<td style="text-align: center"></td>
+<td>\(\mathbin{/}\)</td>
+<td></td>
+<td>\(\backslash\)</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td style="text-align: center">\(\langle \overline{10} \rangle\)</td>
+<td></td>
+<td></td>
+<td></td>
+<td>\(\langle \overline 4 \rangle\)</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td style="text-align: center"></td>
+<td>\(\backslash\)</td>
+<td></td>
+<td>\(\mathbin{/}\)</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td style="text-align: center"></td>
+<td></td>
+<td>\(\langle \overline 0 \rangle\)</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>
+
+<ul>
+<li>3) \(Z_8^*=\{\overline 1, \overline 3, \overline 5, \overline 7\}\leadsto\) the only subgroup are: 
+
+<ul>
+<li>\(\langle \overline 1\rangle = \{\overline 1\}\) order \(1\) </li>
+<li>\(\langle \overline 3\rangle = \{\overline 1,\overline 3\}\) order \(2\)</li>
+<li>\(\langle \overline 5\rangle = \{\overline 1,\overline 5\}\) order \(2\)</li>
+<li>\(\langle \overline 7\rangle = \{\overline 1,\overline 7\}\) order \(2\)</li>
+<li>\(\mathbb Z_8^*\) order \(4\)</li>
+<li>Subgroup lattice of \(\mathbb Z_8^*\):</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th style="text-align: center">\(\mathbb Z_8^*\)</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td></td>
+<td>\(\mathbin{/}\)</td>
+<td style="text-align: center">\(\vert\)</td>
+<td>\(\backslash\)</td>
+<td></td>
+</tr>
+<tr>
+<td>\(\langle \overline 3 \rangle\)</td>
+<td></td>
+<td style="text-align: center">\(\langle \overline 5 \rangle\)</td>
+<td></td>
+<td>\(\langle \overline 7 \rangle\)</td>
+</tr>
+<tr>
+<td></td>
+<td>\(\backslash\)</td>
+<td style="text-align: center">\(\vert\)</td>
+<td>\(\mathbin{/}\)</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td style="text-align: center">\(\langle \overline 1 \rangle\)</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>
+
+<ul>
+<li>4) \(Z_5^*=\{\overline 1,\overline 2,\overline 3,\overline 4\}\leadsto\) subgroups:
+
+<ul>
+<li>\(\langle \overline 1\rangle = \{\overline 1\}\) order \(1\)</li>
+<li>\(\langle \overline 4\rangle = \{\overline 1,\overline 4\}\) order \(2\)</li>
+<li>\(\mathbb Z_5^* \) order \(4\)</li>
+<li>Subgroup lattice of \(Z_5^*\):</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">\(\mathbb Z_5^*\)</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">\(\vert\)</td>
+</tr>
+<tr>
+<td style="text-align: center">\(\langle \overline 4 \rangle\)</td>
+</tr>
+<tr>
+<td style="text-align: center">\(\vert\)</td>
+</tr>
+<tr>
+<td style="text-align: center">\(\langle \overline 1 \rangle\)</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>
+
+<ul>
+<li>5) \(\mathbb Z_4 = \{\overline 0,\overline 1,\overline 2,\overline 3\}\leadsto\) subgroups: cyclic of order \(4\) and subgroups are:
+
+<ul>
+<li>\(\langle \overline 0\rangle = \{\overline 0\}\) order \(1\)</li>
+<li>\(\langle \overline 2\rangle = \{\overline 0,\overline 2\}\) order \(2\)</li>
+<li>\(\mathbb Z_4\) order \(4\)</li>
+<li>subgroup lattice of \(\mathbb Z_4\):</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">\(\mathbb Z_4\)</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">\(\vert\)</td>
+</tr>
+<tr>
+<td style="text-align: center">\(\langle \overline 2 \rangle\)</td>
+</tr>
+<tr>
+<td style="text-align: center">\(\vert\)</td>
+</tr>
+<tr>
+<td style="text-align: center">\(\langle \overline 0 \rangle\)</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>
+
+<ul>
+<li>Note: The groups \(\mathbb Z_8^*, \mathbb Z_5^*\) and \(\mathbb Z_4\) are all finite of order \(4\). The operation on \(\mathbb Z_8^*\) and \(\mathbb Z_5^*\) is multiplication, where as the operation on \(\mathbb Z_4\) is addition. We see that \(\mathbb Z_5^*\) and \(\mathbb Z_4\) have the same subgroup lattice, which is not surprising because they bothcyclic. But their subgroup lattices differ from the subgroup of lattice of \(\mathbb Z_8^*\), which is natural since \(\mathbb Z_8^*\) is not cyclic. We will see that any 2 cyclics of the same finite order \(n\) are &quot;isomorphic&quot; (i.e. have the same shape) \[G= \langle a\rangle = \{e,a,\cdots, a^{n-1}\} (|a|=n)\] \[\langle a^{n/k}\rangle \text{ with }k\mid n\]</li>
 </ul></li>
 </ul>
 
