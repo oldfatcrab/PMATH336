@@ -10,6 +10,7 @@
     - [1.2 Subgroups](#toc_4) (May 06)
     - [1.3 Finite groups](#toc_5) (May 13)
     - [1.4 Cyclic groups](#toc_6) (May 18)
+- [Chapter 2: Group homomorphisms](#toc_y) (May 30)
 
 --------------------------------------------------------------------------------
 
@@ -697,3 +698,40 @@ _2016/06/27_
 
 - 
 	- Note: The groups $\mathbb Z_8^*, \mathbb Z_5^*$ and $\mathbb Z_4$ are all finite of order $4$. The operation on $\mathbb Z_8^*$ and $\mathbb Z_5^*$ is multiplication, where as the operation on $\mathbb Z_4$ is addition. We see that $\mathbb Z_5^*$ and $\mathbb Z_4$ have the same subgroup lattice, which is not surprising because they bothcyclic. But their subgroup lattices differ from the subgroup of lattice of $\mathbb Z_8^*$, which is natural since $\mathbb Z_8^*$ is not cyclic. We will see that any 2 cyclics of the same finite order $n$ are "isomorphic" (i.e. have the same shape) $$G= \langle a\rangle = \{e,a,\cdots, a^{n-1}\} (|a|=n)$$ $$\langle a^{n/k}\rangle \text{ with }k\mid n$$
+
+_2016/05/30_
+
+- $G=\langle a\rangle$ finite cyclic group of order n (so that |a|=n). In this, we can determine explicitly the number of elements in G of a fixed order d: it is given by the Euler $\phi$ (PH1) function:$$
+    \phi(d)= 
+\begin{cases}
+    1,& \text{if } d=1\\
+    \text{# of positive integer } k<d \text{ such that }gcd(k,d)=1,              & \text{if } d\neq 1
+\end{cases}
+$$ Note that, $|\mathbb Z_n^* |=\phi(n) $ (since $\mathbb Z_n^*$ consists of all equivalence classes $\overline k$ in $\mathbb Z_n$ such that gcd(k,n)=1 with $1\leq k\leq n-1$)
+
+- E.g. 
+
+| $d$  |  $1 $ | $2 $  | $ 3$  | $4 $  | $ 5$|$6 $|$7 $|$8 $|$\cdots$|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| $\phi(d)$  | $ 1$  | $1 $  | $ 2$  | $ 2$  | $4 $  | $2 $  | $ 6$  | $ 4$  | $ \cdots$ 
+
+- Thm (**Number of elements of a given order in a finite cyclic group**):
+	- Let $G$ be a finite cyclic group of order $n$. If $d$ is a positive divisor of $n$, then the number of elements of order $d$ in $G$ is $\phi(d)$.
+	- Note: recall that the order of any element must divide $n$, so d must be a divisor of $n$.
+	- Proof: By the Fundamental Thm of cyclic groups, $\exists$ unique subgroup $H$ of $G$ of order d. Moreover, $H$ is cyclic so that $H=\langle b\rangle$ for some $b\in G$ with $|b|=d$. Let $c\in G$ be any other element of order d. Then, $\langle c\rangle$ is also a subgroup of $G$ of order $d$. But $H$ is the only subgroup of $G$ of order $d$, implying $\langle c\rangle = H$. So $c\in \langle c\rangle=H$. This means that $H$ contains all the elements of $G$ of order $d$. Also, $c=b^k$ for some $0\leq k\leq d-1$ since $H=\{e,b,\cdots, b^{n-1}\}$. Recall that if $H=\langle b\rangle$, then $|b^k| = \frac{|b|}{gcd(|b|,k)}$. But here $|b|=d$ so that $|b^k| = \frac{d}{gcd(d,k)}$. Thus, $|c| = |b^k|=d\Leftrightarrow \frac{d}{gcd(d,k)} = d\Leftrightarrow gcd(d,k) = 1\Rightarrow $ {element of G of order d} = $\{b^k\mid gcd(d,k) = 1\}:=\phi(d)$
+
+# Chapter 2: Group homomorphisms
+
+- Definition: Let $G_1$ and $G_2$ be two groups. A **homomorphism** $\phi$ from $G_1$ to $G_2$ is a mapping $\phi:G_1\rightarrow G_2$ that preserves the group operation $$\phi(ab) = \phi(a)\phi(b), \forall a,b\in G_1$$ Moreover, if $\phi$ is a bijection whose inverse is also a homomorphism, then $\phi$ is called an **isomorphism**.
+
+- E.x.
+	- 1) $G_1 = (GL(n,\mathbb R),\cdot)$ and $G_2 = (\mathbb R^*, \cdots)$. Consider the map: $$\phi: GL(n,\mathbb R)\rightarrow \mathbb R^*$$ $$A \mapsto \det A$$ Then, $\phi$ is a group homomorphism because: Let $A,B\in GL(n\mathbb R)$, do we have that: $$\phi(AB) \stackrel{?}{=} \phi(A)\phi(B)$$ Yes: $\phi(AB) = \det(AB) = (\det A)(\det B) = \phi(a)\phi(B)$
+	- 2) $G_1 = (\mathbb R^*,\cdot)=G_2$. Consider: $$\phi: \mathbb R^*\rightarrow\mathbb R^*$$ $$x\mapsto |x|$$ This is a group homomorphism because, $\forall x,y\in \mathbb R^*$, $$\phi(xy) = |xy| = |x||y| = \phi(x)\phi(y)$$
+	- 3) Let $G_1=G_2 = (\mathbb R[x],+)$, where $\mathbb R[x]=$ {polynomial in x with coefficients in $\mathbb R$}. Then $(\mathbb R[x],+)$ is a group (proof in exercise). Consider the map: $$\phi:\mathbb R[x]\rightarrow \mathbb R[x]$$ $$p(x)\mapsto p'(x)$$ Then, $\phi$ is a homomorphism because, $\forall p,q \in \mathbb R[x]$, $$\phi(p(x)+q(x))=[p(x)+q(x)]' = p'(x) + q'(x) = \phi(p(x))+\phi(q(x))$$ Note that $\mathbb R[x]$ is a vector space over $\mathbb R$ under addition and the derivation map $\phi$ is linear. In general, if $V$ is a vector space, then $(V, +)$ is a group and any linear map $\phi:V\rightarrow V$ is a homomorphism.
+
+- Let us look at some examples of isomorphisms:
+	- 1) $G_1=(\mathbb R, +)$ and $G_2 = (\mathbb R^{>0}, \cdots)$. Then, $$\phi:\mathbb R\rightarrow \mathbb R^{>0}$$ $$x\mapsto 2^x$$ is an isomorphism.
+		- Proof: $\phi$ is a bijection. We just need to check that $\phi$ and $\phi^{-1}:\mathbb R^{>0}\rightarrow \mathbb R, y\mapsto \log_2y$ are homomorphisms. Let $x,x'\in \mathbb R$. Then, $$\phi(x+x') = 2^{(x+x')}=2^x\cdot 2^{x'} = \phi(x)\phi(x')$$ Similarly, if $y,y'\in \mathbb R^{>0}$, then:$$\phi^{-1}(yy') = \log_2(yy') = \log_2(y)+\log_2(y') = \phi^{-1}(y)\phi^{-1}(y')$$ $\Rightarrow \phi$ is a group isomorphism.
+	- 2) Let $G=\langle a\rangle$ be a cyclic group. Then, 
+		- If $|a|=\infty$, the map $\phi:G=\langle a\rangle\rightarrow\mathbb Z = \langle 1\rangle, a^k\mapsto k$ is an isomorphism
+		- If $|a| = n$, then map $\phi:G=\langle a\rangle\rightarrow \mathbb Z_n=\langle \overline 1\rangle, a^k\mapsto \overline k$ is an isomorphism (proof as exercise)
