@@ -10,7 +10,7 @@
     - [1.2 Subgroups](#toc_4) (May 06)
     - [1.3 Finite groups](#toc_5) (May 13)
     - [1.4 Cyclic groups](#toc_6) (May 18)
-- [Chapter 2: Group homomorphisms](#toc_y) (May 30)
+- [Chapter 2: Group homomorphisms](#toc_7) (May 30)
 
 --------------------------------------------------------------------------------
 
@@ -735,3 +735,31 @@ $$ Note that, $|\mathbb Z_n^* |=\phi(n) $ (since $\mathbb Z_n^*$ consists of all
 	- 2) Let $G=\langle a\rangle$ be a cyclic group. Then, 
 		- If $|a|=\infty$, the map $\phi:G=\langle a\rangle\rightarrow\mathbb Z = \langle 1\rangle, a^k\mapsto k$ is an isomorphism
 		- If $|a| = n$, then map $\phi:G=\langle a\rangle\rightarrow \mathbb Z_n=\langle \overline 1\rangle, a^k\mapsto \overline k$ is an isomorphism (proof as exercise)
+
+_2016/06/01_
+
+- Note:
+	- 1) Many authors define an isomorphism as a bijective homomorphism. Even with that definition, we have that $\phi^{-1}$ itself as a homomorphism.
+	- 2) Not every bijection is a homophophism (and thus an isomorphism)
+		- E.g. $\phi:(\mathbb R, +)\rightarrow (\mathbb R, +),x\mapsto x^3$ is a bijection, but not a homomorphism since $$\phi(x+y) = (x+y)^3\neq x^3+y^3=\phi(x)+\phi(y)$$ if $x,y\neq 0$
+- Prop: Let $\phi: G_1\rightarrow G_2$ be a isomorphism, the inverse of $\phi$ is also isomorphism.
+	- Proof: Let $c,d\in G_2$. Since $\phi$ is onto (because it is a bijection), $\exists a,b\in G$, such that $c=\phi(a)$ and $d=\phi(b)$. Therefore, $$\phi^{-1}(cd) = \phi^{-1}(\phi(a)\phi(b)) \stackrel{\text{because }\phi(a)\phi(b) = \phi(ab)\text{ since }\phi\text{ is a homomorphism}}{=} \phi^{-1}(\phi(ab)) = ab = \phi^{-1}(c)\phi^{-1}(d)$$ $\Rightarrow \phi^{-1}$ is homomorphism. Also since $\phi$ is bijection, $\phi{-1}$ is also bijection, and so $\phi^{-1}$ is isomorphism.
+
+- Def: Two groups $G_1$ and $G_2$ are called **isomorphic** if $\exists$ an isomorphism $\phi G_1\rightarrow G_2$. This is denoted $G_1 \simeq G_2$
+- **Isomorphic** groups are considered to be the same
+- **Remark**: Isomorphisms may not exist
+- E.g.
+	- (i) $\mathbb Z_{10}^* \not \simeq \mathbb Z_{12}^*$. $$\mathbb Z_{10}^*=\{\overline 1, \overline 3, \overline 7, \overline 9\}$$ $$\mathbb Z_{12}^*=\{\overline 1, \overline 5, \overline 7, \overline{11}\}$$ $$\text{(finite groups of order 4)}$$ Note that $\mathbb Z_{10}^*=\langle \overline 3\rangle$ is cyclic, where as $\mathbb Z_{12}^*$ is not cyclic: $$\langle \overline 1\rangle = \{\overline 1\}$$ $$\langle \overline 5\rangle = \{\overline 1, \overline 5\}$$ $$\langle \overline 7\rangle = \{\overline 1, \overline 7\}$$ $$\langle \overline{11}\rangle = \{\overline 1, \overline{11}\}$$ $$\text{we see that }\overline k^2=1, \forall \overline k\in \mathbb Z_{12}^*$$ $\Rightarrow$ We don't expect to be able to find an isomorphism because $\mathbb Z_{10}^*$ and $\mathbb Z_{12}^*$. Suppose instead that $\exists$ isomorphism $\phi: \mathbb Z_{10}^*\rightarrow \mathbb Z_{12}^*$. Then: $$\phi(\overline 9) = \phi(\overline 3 \cdot \overline 3)=\phi(\overline 3)\cdot \phi(\overline 3) = \overline 1 \text{ since } \overline k^2=1, \forall \overline k\in \mathbb Z_{12}^*$$ $$\phi(\overline 1) = \phi(\overline 1\cdot \overline 1) = \phi(\overline 1)\cdot \phi(\overline 1)=\overline 1 \text{ since } \overline k^2=1, \forall \overline k\in \mathbb Z_{12}^*$$ $\Rightarrow \phi(\overline 9)= \phi(\overline 1)\Rightarrow \overline 9 = \overline 1$ in $\mathbb Z_{10}^*$ since $\phi$ is a bijection, which is impossible! So, we get contradition, implying that no isomophism exists between $\mathbb Z_{10}^*$ and $\mathbb Z_{12}^*$
+	- (ii) $G_1=(\mathbb Q,+)$ and $G_2=(\mathbb Q^*, \cdot)$. Then $G_1\not \simeq G_2$.
+		- Pf: So, instead that $exists$ isomorphism $\phi:G_1\rightarrow G_2$ so that $\phi$ is a bijective homophism. This means imparticular that $\phi$ is onto. So since $-1\in \mathbb Q^*$, $\exists a\in \mathbb Q$ such that $\phi(a) = -1$ $$-1=\phi(a)=\phi(a/2+a/2) \stackrel{\phi\text{ is a homomorphism}}{=} \phi(a/2) + \phi(a/2)\Rightarrow (\phi(a/2))^2 = -1\text{ with }\phi(a/2)\in \mathbb Q^*, \text{ which is impossible!}$$ $\Rightarrow$ we get a contradiction $\Rightarrow(\mathbb Q,+)\not \simeq(\mathbb Q^*, \cdot)$. Then $G_1\not \simeq G_2$
+		- Nonetheless, isomorphism do exist! see next example
+	- (iii) $$\phi: (\mathbb R,+)\rightarrow (\mathbb R^{>0}, \cdot)$$ $$x\mapsto 2^x$$ is an isomorphism, so that 
+	- 4) To show that 2 groups $G_1$ and $G_2$ are isomorphic, one needs to construct a map $\phi: G_1\rightarrow G_2$ that is isomorphism
+		- e.g. $G_1=(\mathbb Z,+), G_2=(3\mathbb Z,+)$ where $3\mathbb Z = \{3m\mid m\in \mathbb Z\}$. Note that $G_2$ is a subgroup of $G_1$. But, $G_1$ and $G_2$ are in fact isomorphic! Consider $$\phi: Z\rightarrow 3Z$$ $$m\mapsto 3m$$ Then:
+			- $\phi(m+n) = 3(m+n) = 3m+3n = \phi(m) + \phi(n), \forall m,n\in \mathbb Z\Rightarrow \phi$ is a homomorphism
+			- $\phi$ is 1 to 1: $\phi(m) = \phi(n) \Rightarrow 3m=3n\Rightarrow m=n,\forall m,n\in \mathbb Z$
+			- $phi$ is onto: $\forall x\in 3\mathbb Z$ then $x=3m$ for $m\in Z$ so that $x=\phi(m) \Rightarrow$ is a bijection homomorphism $\Rightarrow \phi$ is an isomorphism $\Rightarrow G_1$ and $G_2$ are isomorphic 
+- Def: Let $G_1$, $G_2$ be 2 groups and $\phi:G_1\rightarrow G_2$ be a homomorphism. We define the **kernel** of $\phi$ as $$\ker \phi:=\{g\in G_1\mid \phi(a) = e_2\}$$ where $e_2$ is the indentity in $G_2$
+- E.x.
+	- 1) $\det: (GL(n,\mathbb R),\cdot )\rightarrow (\mathbb R^*,\cdot)$, we have that $$\ker(det) = \{A\in GL(n,\mathbb R)\mid \det A = 1\}$$ $$SL(n,\mathbb R)=(\text{special linear group})$$
+	- 2) $$\phi: (\mathbb R[x],+ ) \rightarrow (\mathbb R[x],+)$$ $$p(x)\mapsto p'(x)$ Then, since $0$ is the identity in $(\mathbb R[x],+)$, so that $\ker(\phi) = \{p(x)\in \mathbb R[x]\mid p'(x)=0\}=(\text{constant polynomial})=\mathbb R$

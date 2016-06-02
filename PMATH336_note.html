@@ -468,7 +468,7 @@ pre[class*="language-"] {
 <li><a href="#toc_5">1.3 Finite groups</a> (May 13)</li>
 <li><a href="#toc_6">1.4 Cyclic groups</a> (May 18)</li>
 </ul></li>
-<li><a href="#toc_y">Chapter 2: Group homomorphisms</a> (May 30)</li>
+<li><a href="#toc_7">Chapter 2: Group homomorphisms</a> (May 30)</li>
 </ul>
 
 <hr>
@@ -2097,6 +2097,59 @@ pre[class*="language-"] {
 <li>If \(|a|=\infty\), the map \(\phi:G=\langle a\rangle\rightarrow\mathbb Z = \langle 1\rangle, a^k\mapsto k\) is an isomorphism</li>
 <li>If \(|a| = n\), then map \(\phi:G=\langle a\rangle\rightarrow \mathbb Z_n=\langle \overline 1\rangle, a^k\mapsto \overline k\) is an isomorphism (proof as exercise)</li>
 </ul></li>
+</ul></li>
+</ul>
+
+<p><em>2016/06/01</em></p>
+
+<ul>
+<li>Note:
+
+<ul>
+<li>1) Many authors define an isomorphism as a bijective homomorphism. Even with that definition, we have that \(\phi^{-1}\) itself as a homomorphism.</li>
+<li>2) Not every bijection is a homophophism (and thus an isomorphism)
+
+<ul>
+<li>E.g. \(\phi:(\mathbb R, +)\rightarrow (\mathbb R, +),x\mapsto x^3\) is a bijection, but not a homomorphism since \[\phi(x+y) = (x+y)^3\neq x^3+y^3=\phi(x)+\phi(y)\] if \(x,y\neq 0\)</li>
+</ul></li>
+</ul></li>
+<li><p>Prop: Let \(\phi: G_1\rightarrow G_2\) be a isomorphism, the inverse of \(\phi\) is also isomorphism.</p>
+
+<ul>
+<li>Proof: Let \(c,d\in G_2\). Since \(\phi\) is onto (because it is a bijection), \(\exists a,b\in G\), such that \(c=\phi(a)\) and \(d=\phi(b)\). Therefore, \[\phi^{-1}(cd) = \phi^{-1}(\phi(a)\phi(b)) \stackrel{\text{because }\phi(a)\phi(b) = \phi(ab)\text{ since }\phi\text{ is a homomorphism}}{=} \phi^{-1}(\phi(ab)) = ab = \phi^{-1}(c)\phi^{-1}(d)\] \(\Rightarrow \phi^{-1}\) is homomorphism. Also since \(\phi\) is bijection, \(\phi{-1}\) is also bijection, and so \(\phi^{-1}\) is isomorphism.</li>
+</ul></li>
+<li><p>Def: Two groups \(G_1\) and \(G_2\) are called <strong>isomorphic</strong> if \(\exists\) an isomorphism \(\phi G_1\rightarrow G_2\). This is denoted \(G_1 \simeq G_2\)</p></li>
+<li><p><strong>Isomorphic</strong> groups are considered to be the same</p></li>
+<li><p><strong>Remark</strong>: Isomorphisms may not exist</p></li>
+<li><p>E.g.</p>
+
+<ul>
+<li>(i) \(\mathbb Z_{10}^* \not \simeq \mathbb Z_{12}^*\). \[\mathbb Z_{10}^*=\{\overline 1, \overline 3, \overline 7, \overline 9\}\] \[\mathbb Z_{12}^*=\{\overline 1, \overline 5, \overline 7, \overline{11}\}\] \[\text{(finite groups of order 4)}\] Note that \(\mathbb Z_{10}^*=\langle \overline 3\rangle\) is cyclic, where as \(\mathbb Z_{12}^*\) is not cyclic: \[\langle \overline 1\rangle = \{\overline 1\}\] \[\langle \overline 5\rangle = \{\overline 1, \overline 5\}\] \[\langle \overline 7\rangle = \{\overline 1, \overline 7\}\] \[\langle \overline{11}\rangle = \{\overline 1, \overline{11}\}\] \[\text{we see that }\overline k^2=1, \forall \overline k\in \mathbb Z_{12}^*\] \(\Rightarrow\) We don&#39;t expect to be able to find an isomorphism because \(\mathbb Z_{10}^*\) and \(\mathbb Z_{12}^*\). Suppose instead that \(\exists\) isomorphism \(\phi: \mathbb Z_{10}^*\rightarrow \mathbb Z_{12}^*\). Then: \[\phi(\overline 9) = \phi(\overline 3 \cdot \overline 3)=\phi(\overline 3)\cdot \phi(\overline 3) = \overline 1 \text{ since } \overline k^2=1, \forall \overline k\in \mathbb Z_{12}^*\] \[\phi(\overline 1) = \phi(\overline 1\cdot \overline 1) = \phi(\overline 1)\cdot \phi(\overline 1)=\overline 1 \text{ since } \overline k^2=1, \forall \overline k\in \mathbb Z_{12}^*\] \(\Rightarrow \phi(\overline 9)= \phi(\overline 1)\Rightarrow \overline 9 = \overline 1\) in \(\mathbb Z_{10}^*\) since \(\phi\) is a bijection, which is impossible! So, we get contradition, implying that no isomophism exists between \(\mathbb Z_{10}^*\) and \(\mathbb Z_{12}^*\)</li>
+<li>(ii) \(G_1=(\mathbb Q,+)\) and \(G_2=(\mathbb Q^*, \cdot)\). Then \(G_1\not \simeq G_2\).
+
+<ul>
+<li>Pf: So, instead that \(exists\) isomorphism \(\phi:G_1\rightarrow G_2\) so that \(\phi\) is a bijective homophism. This means imparticular that \(\phi\) is onto. So since \(-1\in \mathbb Q^*\), \(\exists a\in \mathbb Q\) such that \(\phi(a) = -1\) \[-1=\phi(a)=\phi(a/2+a/2) \stackrel{\phi\text{ is a homomorphism}}{=} \phi(a/2) + \phi(a/2)\Rightarrow (\phi(a/2))^2 = -1\text{ with }\phi(a/2)\in \mathbb Q^*, \text{ which is impossible!}\] \(\Rightarrow\) we get a contradiction \(\Rightarrow(\mathbb Q,+)\not \simeq(\mathbb Q^*, \cdot)\). Then \(G_1\not \simeq G_2\)</li>
+<li>Nonetheless, isomorphism do exist! see next example</li>
+</ul></li>
+<li>(iii) \[\phi: (\mathbb R,+)\rightarrow (\mathbb R^{&gt;0}, \cdot)\] \[x\mapsto 2^x\] is an isomorphism, so that </li>
+<li>4) To show that 2 groups \(G_1\) and \(G_2\) are isomorphic, one needs to construct a map \(\phi: G_1\rightarrow G_2\) that is isomorphism
+
+<ul>
+<li>e.g. \(G_1=(\mathbb Z,+), G_2=(3\mathbb Z,+)\) where \(3\mathbb Z = \{3m\mid m\in \mathbb Z\}\). Note that \(G_2\) is a subgroup of \(G_1\). But, \(G_1\) and \(G_2\) are in fact isomorphic! Consider \[\phi: Z\rightarrow 3Z\] \[m\mapsto 3m\] Then:
+
+<ul>
+<li>\(\phi(m+n) = 3(m+n) = 3m+3n = \phi(m) + \phi(n), \forall m,n\in \mathbb Z\Rightarrow \phi\) is a homomorphism</li>
+<li>\(\phi\) is 1 to 1: \(\phi(m) = \phi(n) \Rightarrow 3m=3n\Rightarrow m=n,\forall m,n\in \mathbb Z\)</li>
+<li>\(phi\) is onto: \(\forall x\in 3\mathbb Z\) then \(x=3m\) for \(m\in Z\) so that \(x=\phi(m) \Rightarrow\) is a bijection homomorphism \(\Rightarrow \phi\) is an isomorphism \(\Rightarrow G_1\) and \(G_2\) are isomorphic </li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><p>Def: Let \(G_1\), \(G_2\) be 2 groups and \(\phi:G_1\rightarrow G_2\) be a homomorphism. We define the <strong>kernel</strong> of \(\phi\) as \[\ker \phi:=\{g\in G_1\mid \phi(a) = e_2\}\] where \(e_2\) is the indentity in \(G_2\)</p></li>
+<li><p>E.x.</p>
+
+<ul>
+<li>1) \(\det: (GL(n,\mathbb R),\cdot )\rightarrow (\mathbb R^*,\cdot)\), we have that \[\ker(det) = \{A\in GL(n,\mathbb R)\mid \det A = 1\}\] \[SL(n,\mathbb R)=(\text{special linear group})\]</li>
+<li>2) \[\phi: (\mathbb R[x],+ ) \rightarrow (\mathbb R[x],+)\] $\(p(x)\mapsto p&#39;(x)\) Then, since \(0\) is the identity in \((\mathbb R[x],+)\), so that \(\ker(\phi) = \{p(x)\in \mathbb R[x]\mid p&#39;(x)=0\}=(\text{constant polynomial})=\mathbb R\)</li>
 </ul></li>
 </ul>
 
