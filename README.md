@@ -762,4 +762,38 @@ _2016/06/01_
 - Def: Let $G_1$, $G_2$ be 2 groups and $\phi:G_1\rightarrow G_2$ be a homomorphism. We define the **kernel** of $\phi$ as $$\ker \phi:=\{g\in G_1\mid \phi(a) = e_2\}$$ where $e_2$ is the indentity in $G_2$
 - E.x.
 	- 1) $\det: (GL(n,\mathbb R),\cdot )\rightarrow (\mathbb R^*,\cdot)$, we have that $$\ker(det) = \{A\in GL(n,\mathbb R)\mid \det A = 1\}$$ $$SL(n,\mathbb R)=(\text{special linear group})$$
-	- 2) $$\phi: (\mathbb R[x],+ ) \rightarrow (\mathbb R[x],+)$$ $$p(x)\mapsto p'(x)$ Then, since $0$ is the identity in $(\mathbb R[x],+)$, so that $\ker(\phi) = \{p(x)\in \mathbb R[x]\mid p'(x)=0\}=(\text{constant polynomial})=\mathbb R$
+	- 2) $$\phi: (\mathbb R[x],+ ) \rightarrow (\mathbb R[x],+)$$ $$p(x)\mapsto p'(x)$$ Then, since $0$ is the identity in $(\mathbb R[x],+)$, so that $\ker(\phi) = \{p(x)\in \mathbb R[x]\mid p'(x)=0\}=(\text{constant polynomial})=\mathbb R$
+
+_2016/06/03_
+
+- Some properties of homomorphisms
+	- Thm: $G_1$ and $G_2$ are 2 groups and $\phi:G_1\rightarrow G_2$ is homomorphism. Then:
+		- (1) $\phi(e_1) = e_2$, where $e_1$ and $e_2$ are the identity element in $G_1$ and $G_2$, respectively.
+		- (2) $\phi(a^{-1}) = (\phi(a))^{-1}, \forall a\in G_1$
+		- (3) $\phi (a^n) = (\phi(a))^n, \forall a\in G_1$
+		- (4) Let $a\in G_1$. If $|a|$ is finite, then $|\phi(a)| \mid |a|$
+		- (5) $\ker \phi$ is a subgroup of $G_1$. Moreover, $\phi$ is an isomorphism iff $\ker \phi = {e_1}$
+	- Proof:
+		- (1) Let $e_1^2 = e_1$ $$\phi(e_1) = \phi(e_1^2) = \phi(e_1e_1) = (\phi is homor) \phi(e_1)\phi(e_1)$$ $$\Rightarrow \phi(e_1)e_2 = \phi(e_1) = \phi(e_1)\phi(e_1)$$ $$ \Rightarrow e_2 = \phi(e_1)\text{, by the cancelation property}$$
+		- (2) Let $a\in G_1$. Need to check that $\phi(a)\phi(a^{-1})=\phi(a^{-1})\phi(a)=e^2$. But $\phi(a)\phi(a^{-1})\stackrel{\phi\text{ is homomorphism}}{=}\phi(aa^{-1}) = \phi(e_1) = (by (1)) = e^2$. Similarly, $\phi(a^{-1})\phi(a) \Rightarrow \phi(a^-1)=(\phi(a))^-1$
+		- (3) Exercise
+		- (4) Let $a\in G_1$ such that $|a|=n$ so that $n$ is the smallest possitive integer $a^n = e_1$. Then, $$\phi(a^n)=\phi(e_1)=(by (1)) e_2$$ $$\stackrel{\text{by (3)}}{\Leftrightarrow} (by(3)) (\phi(a))^n = \phi(a^n) = e_2$$ $$\Rightarrow |\phi(a)| \mid n =|a|$$
+		- (5) Let us verify that $\ker \phi$ is a subgroup of $G_1$ by checking that, $\forall a,b\in \ker \phi, ab\in \phi$ and $a^{-1}\in \ker \phi$. Since $a,b\in \ker \phi = \{c\in G_1\mid \phi(c) = e_2\}$, we have that $$\phi(a) = \phi(b) = e_2$$ Thus, $$\phi(ab)\stackrel{\phi\text{ is homomorphism}}{=} \phi(a)\phi(b)=e_2e_2 = e_2\Rightarrow ab\in \ker\phi$$ and $$\phi(a^{-1}) \stackrel{\text{by (2)}}{=} (\phi(a))^{-1} = (e_2)^{-1} = e_2 \Rightarrow a^{-1} \in \ker\phi$$ $\Rightarrow \ker \phi$ is a subgroup of $G_1$. Finally, let us prove that $\phi$ is injective iff $\ker\phi = \{e_1\}$. Suppose that $\phi$ is injective. Then, $\phi$ is a bijective homomorphism. By (1) we must have $\phi(e_1) = e_2$. Also, since $\phi$ is 1:1, $e_1$ must be the only element of $G_1$ that maps to $e_2$ under $\phi$. Therefore, $\ker \phi=\{c\in G_1\mid \phi(c)=e_2\} = \{e_1\}$. Conversely, suppose that $\ker \phi = \{e_1\}$. Let us check that $\phi$ is injective. Let $a,b\in G_1$ such that $\phi(a)=\phi(b)$. We want to show that $a=b$. But, $$\phi(a)=\phi(b)$$ $$\Rightarrow \phi(a)\phi(b^{-1}) = \phi(b)\phi(b^{-1})\Rightarrow \phi(ab^{-1}) = \phi(bb^{-1})$$ $$\Rightarrow \phi(ab^{-1}) = \phi(bb^{-1}) = \phi(e_1) = (by (1)) = e_2$$ $$\Rightarrow ab^{-1}\in \ker \phi = \{e_1\}\Rightarrow ab^{-1} = e_1 \Rightarrow (ab^{-1})b = (e_1)b\Rightarrow a=b$$
+			- Remark: If $|G_1| = |G_2| = n < \infty$ and $\phi:G_1\rightarrow G_2$ is a homomorphism, then $\phi$ is isomorphism iff $\ker \phi = \{e_1\}$, where $e_1$ is the identity in $G_1$.
+				- Proof: By (5) in the thm, $\phi$ is injective iff $\ker\phi = \{e_1\}$. Moreover since $|G_1| = |G_2| = n, \phi$ is injective iff $\phi$ is bijective.
+- Further properties
+	- Thm: Let $G_1$ and $G_2$ be 2 groups and $\phi: G_1\rightarrow G_2$ be a homomorphism
+		- (6) If $H$ is a subgroup of $G_1$, then $\phi(H)$ is subgroup of $G_2$
+		- (7) If $K$ is a subgroup of $G_2$, then $\phi^{-1}(K)$ is subgroup of $G_1$.
+		- (8) Let $G_3$ be a and $\psi: G_2\rightarrow G_3$. Then, $\psi\circ\phi:  G_1\rightarrow G_3$ is homomorphism
+	- Proof:
+		- (6) Need to check $\phi(H)$ is closed under the operation in $G_2$ and under inverse. Let $x,y\in \phi(H)$ so that $x=\phi(a)$ and $y=\phi(b)$ for some $a,b\in H$. Note that since $H$ is a subgroup of $G_1$, we hav ethat $ab\in H$ and $a^{-1}\in H$. Thus, $$xy = \phi(a)\phi(b) \stackrel{\phi\text{ is homomorphism}}{=} \phi(ab) \in \phi(H)\text{ since } ab\in H$$ and $$x^{-1} = [\phi(a)]^{-1} = (by (2)) \phi(a^{-1})\in \phi(H) \text{ since } a^{-1} \in H$$ $\Rightarrow \phi(H)$ is closed under the operation oin $G_2$ and underinverse $\Rightarrow \phi(H)$ is a subgroup of $G_2$
+		- (7) and (8) exercise.
+	- Remark: Properties (6) and (7) tell us that if $G_1 \simeq G_2$, so that $\exists$ isomorphism $\phi:G_1\rightarrow G_2$, then there is a 1-1correspondence between subgroups in $G_1$ and subgroups in $G_2$. I.e., For any subgroup $H$ of $G_1$, $\phi(H)$ is a subgroup of $G_2 \bigoplus$ any subgroup of $G_2$ is of the form $\phi(H)$ for some subgroup $H$ of $G_1$ (exercise, use inverse map). This means in particular that isomorphic groups must have the same subgroup lattice (so that if 2 groups don't have the same subgroup lattice, they cannot be isomorphic)
+- Prop: Let $G_1$ and $G_2$ be 2 groups such that $G_1 \simeq G_2$. Then
+	- (1) $|G_1| = |G_2|$
+	- (2) $G_1$ is abelian iff $G_2$ is abelian
+	- (3) $G_1$ is cyclic iff $G_2$ is cyclic
+- E.x.
+	- (1) $G_1 = D_3$ and $G_2 =\mathbb Z_6$ are both finite groups of order 6. But $D_3\not \simeq \mathbb Z_6$ because $D_3$ is **not** abelian, but $\mathbb Z_6$ is abelian
+	- (2) $\mathbb Z_{10}^* \not \simeq Z_{12}^*$ because $\mathbb Z_{10}^*$ is cyclic, but $\mathbb Z_{12}^*$ is not cyclic
