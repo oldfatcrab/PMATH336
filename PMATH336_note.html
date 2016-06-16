@@ -473,7 +473,8 @@ pre[class*="language-"] {
 
 <hr>
 
-<p><em>2016/05/02</em></p>
+<p><em>2016/05/02</em>
+I</p>
 
 <h1 id="toc_1">Chapter 0: Course Administration</h1>
 
@@ -2380,6 +2381,119 @@ pre[class*="language-"] {
 <li>Isomorphism? No, because \(|\mathbb Z_{10}|\neq |\mathbb Z_{6}|\)</li>
 <li>\(\exists\) subjective homomorphism \(\phi:\mathbb Z_{10}\rightarrow \mathbb Z_{6}\)?</li>
 </ul></li>
+</ul></li>
+</ul>
+
+<p><em>2016/06/10</em></p>
+
+<p>...</p>
+
+<ul>
+<li>midterm up till today.</li>
+</ul>
+
+<p><em>2016/06/13</em></p>
+
+<ul>
+<li>Last class:
+
+<ul>
+<li>Prop: Let \(\sigma, \tau\in S_n\) with \(n&gt;1\)
+
+<ul>
+<li>(1) \(\sigma\) is a cycle or the product of the product of disjoint cycles.</li>
+<li>(2) If \(\sigma\) and \(\tau\) are disjoint cycles, then \(\sigma\tau=\tau\sigma\)</li>
+<li>(3) \(\sigma\) is a product of 2-cycles.</li>
+<li>Note: \(\sigma\tau=\sigma\cdot\tau\) where \(\sigma,\tau:\{1,\cdots,n\}\rightarrow\{1,\cdots,n\}\)</li>
+</ul></li>
+</ul></li>
+<li>Note:
+
+<ul>
+<li>1) The decomposition in the proof of (3) is <strong>NOT</strong> unique.
+
+<ul>
+<li>e.g. In \(S_3\), \((1\;2\;3) = (1\;3)(1\;2) = (1\;2)(2\;3)\)a</li>
+<li>Nonetheless, we will see that <strong>any</strong> decomposition of \(\sigma\) as product of 2-cycles will either <strong>always</strong> have an even nb of 2-cycles or <strong>always</strong> have an odd number of 2-cycles</li>
+</ul></li>
+<li>2) Some authors call 2-cycles \((a\;b)\) transpositions. Note that any 2-cycle is its even inverse.</li>
+<li>Notation: Let us denote the \(\epsilon\), the identity  permutation in \(S_n, n&gt;1\) which is the identity element of the group</li>
+</ul></li>
+<li><strong>Order of a permuttation</strong>: Let \(\sigma\in S_n, n&gt;1\)
+
+<ul>
+<li>If \(\sigma = (a_1\cdots a_m)\) is a cycle, then \(|\sigma|=m=(\text{length of }\sigma)\) (proof exercise)</li>
+<li>If \(\sigma\) is not a cycle, then its order can be computed in terms of its decomposition as a product of disjoint cycles:</li>
+</ul></li>
+<li>Thm (<strong>Ruffini</strong>): Let \(\sigma\in S_n, n&gt;1\). Then, \(|\sigma|\) is equal to the least common multiple of the lengths of cycles appearing in its decomposition as a product of disjoint cycles.
+
+<ul>
+<li>Pf: If \(\sigma\) is a cycle, then \(|\sigma| = (\text{length }r)\), so we are done. Otherwise, \(\sigma\) can be written as a product of disjoint cycles. Let us assume that \(\sigma = \sigma_1\sigma_2\) with \(\sigma_1, \sigma_2\) disjoint cycles (the proof for a product of more than 2 disjoint cycles is similar) Suppose that \(|\sigma_1| = m_1, |\sigma_2|=m_2\). Set \(k = lcm(m_1, m_2)\) since \(m_1, m_2\mid k\) and \(\sigma_1^{m_1}=\sigma_2^{m_2}=\epsilon\), we have that \[\sigma_1^k = \sigma_2^k = \epsilon\] Moreover, since \(\sigma_1\) and \(\sigma_2\) are disjoint cycles, \(\sigma_1\sigma_2 = \sigma_2\sigma_1 \) and so \(\sigma^k = (\sigma_1\sigma_2)^k = \sigma_1^k\sigma_2^k = \epsilon\) Therefore, if \(t=|\sigma|\), we must ahve that \(t\mid k\). Let us show that \(k\mid t\), which give us that \(|\sigma|=t=k=lcm(m_1, m_2)\). It is enough to show that \(m_1, m_2\mid t\), which will force \(k = lcm(m_1, m_2)\mid t\). We do this by checking that \(\sigma_1^k = \sigma_2^k = \epsilon\) Now, \(t = |\sigma|\) so that \(\sigma^t = \epsilon\). But, \[\sigma^t = (\sigma_1\sigma_2)^t = \sigma_1^t\sigma_2^t\] \(\Rightarrow \sigma_1^t\sigma_2^t = \epsilon\Rightarrow to\sigma_1^t=(\sigma_2^{-1})^t\) But, \(\sigma_1\) and \(\sigma_2\) are disjoint cycles so that they don&#39;t contain common integers. The same is the of any power of \(\sigma_1\) and \(\sigma_2\) . Thus, the onlly way that we can have \(\sigma_1^t=(\sigma_2^{-1})^t\) is if \[\sigma_1^t=(\sigma_2^{-1})^t=\epsilon\] \(\Leftrightarrow \sigma_1^t=\sigma_2^t = \epsilon\Rightarrow m_1 = |\sigma_1|\mid t\) and \(m_2 = |\sigma_2|\mid t\)</li>
+<li>Ex. 
+
+<ul>
+<li>1) \[\sigma=\begin{bmatrix}1&amp;2&amp;3&amp;4&amp;5&amp;6&amp;7&amp;8 \\ 2&amp;1&amp;3&amp;5&amp;4&amp;7&amp;6&amp;8\end{bmatrix}\] \[\sigma = (1\;2)(3)(4\;5)(6\;7)(8)=(1\;2)(4\;5)(6\;7)\] \(\leadsto\) product of disjoint cycles, each of length 2$\Rightarrow |\sigma| = lcm(2,2,2)=2
+
+<ul>
+<li>Note: \(\sigma\) is an odd permutation because it is the product of odd number of 2-cycles)</li>
+</ul></li>
+<li>2) \[\tau=\begin{bmatrix}1&amp;2&amp;3&amp;4&amp;5&amp;6&amp;7&amp;8 \\ 1&amp;3&amp;8&amp;7&amp;6&amp;5&amp;2&amp;4\end{bmatrix}\] \[\tau= (2\;3\;8\;4\;7)(5\;6)\leadsto |\tau| = lcm(5,2)=10\] \[(2\;7)(2\;4)(2\;8)(2\;3)(5\;6)\Rightarrow \text{ odd}\]</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p><em>2016/06/15</em></p>
+
+<ul>
+<li>Thm: If \(\sigma\in S_n, n&gt;1\), can be expressed as a product of an even number of 2-cycles, then any decomposition of \(\sigma\) into products of 2-cycles must be an even number of 2-cycles. i.e. if \(\sigma = \beta_1\cdots\beta_s=\gamma_1\cdots\gamma_s\) with every \(\beta_i\) and every \(\gamma_j\) a 2-cycle, then \(r\) and \(s\) are either both even or both odd.
+
+<ul>
+<li>Pf: Since \(\sigma = \beta_1\cdots\beta_s=\gamma_1\cdots\gamma_s\Rightarrow (\beta_1\cdots\beta_s(\gamma_1\cdots\gamma_s)^{-1} = \epsilon (=\text{identity permutation}\Rightarrow \beta_1\cdots\beta_(\gamma_1^{-1}\cdots\gamma_s^{-1}=\epsilon\Rightarrow \beta_1\cdots\beta_s\gamma_s\cdots\gamma_1=\epsilon\) (since \(r^{-1}_j = r_j\forall j\), because they are 2-cycle) If can prove that a product of 2-cycles that is equal to \(\epsilon\) ust be a pruduct of an even number of 2-cycles, this will force \(r+s\) to even, implying that \(r\) and \(s\) are either both even or both odd. The only thing left to prove is that if \(\alpha_1, \cdots, \alpha_l\) are 2-cycles such that \(\alpha_1\cdots\alpha_l=\epsilon\), then \(l\) is even. Let us do it by induction on \(l\)
+
+<ul>
+<li>\(l=1\): then \(\alpha_1\neq \epsilon\) since an 2-cycle must permute 2 elements in \(\{1,\cdots, n\}\)</li>
+<li>\(l=2\): then \(\alpha_1\alpha_2 = \epsilon\) with \(l=2\) which is even.</li>
+<li>Assume that it is true for \(l&gt;2\). Let us prove it for \(l+1\). We have \[\alpha_1\cdots\alpha_l\alpha_{l+1}=\epsilon\] There are 4 possibilities for \(\alpha_l\alpha_{l+1}\): \[\alpha_l\alpha_{l+1} = (a b)(a b)=\epsilon\] \[\alpha_l\alpha_{l+1} = (a c)(a b)=(a b)(b c)\] \[\alpha_l\alpha_{l+1} = (b c)(a b)=(a c)(c b)\] \[\alpha_l\alpha_{l+1} = (c d)(a b)=(a b)(c d)\] \[\text{where }c,d\neq a,b\] For the first case, remove \(\alpha_l\alpha_{l+1}\) from product. For the other cases, replace \(\alpha_l\alpha_{l+1}\) in the pruduct by expression in the right hand side. \[ \] In the first case, we obtain \(\epsilon=\alpha_1\cdots\alpha_l\alpha_{l+1}\Rightarrow l-1 \) is even by the induction hypothesis \(\Rightarrow l+1\) is even. In the other cases, the integer &quot;\(a\)&quot; no longer appears in the expression of the last 2-cycle. One can repeat the process with \(\alpha_{l-1}\alpha_l\) so that &quot;\(a\)&quot; no longer appears in \(\alpha_l\), but rather in \(\alpha_{l-1}\). We obtain: \[\alpha_1\cdots\alpha_{l-1}\text{(with &quot;a&quot;)}\cdot\alpha_l\alpha_{l+1}\text{(no &quot;a&quot;)}=\epsilon\] The process must eventually give us that \(\alpha_{1}\cdots\alpha_{l-1}=\epsilon\), which will imply that \(l-1\) is even and therefore \(l+1\) is also even.</li>
+</ul></li>
+</ul></li>
+<li>Def: Let \(\alpha\in S_n, n&gt;1\). If \(\sigma\) can be expressed as an even number of 2-cycles, then \(\sigma\) is called <strong>even</strong>. Otherwise, it is called <strong>odd</strong>.
+
+<ul>
+<li>Note:
+
+<ul>
+<li>1) Since any decomposition of \(\sigma\) as a product of 2-cycles either always has an even number of 2-cycles or always an odd number of 2-cycles, then notion of even or odd permutation is independent of the decomposition of \(\sigma\) as a product of 2-cycles, and is thus well-defined.</li>
+<li>2) The product of 2 odd permutation is even so that the set of all odd permutations is <strong>not</strong> closed under composition \(\Rightarrow\) teh set of all odd permutations is <strong>not</strong> a subgroup of \(S_n\). Nonetheless, we have:</li>
+</ul></li>
+</ul></li>
+<li>Thm: The set of even permutations of \(S_n\) is a subgroup of \(S_n, n&gt;1\).
+
+<ul>
+<li>Pf: Exercise.</li>
+</ul></li>
+<li>Def: The set of all even permutations in \(S_n,n&gt;1\), is called the <strong>alternating group of degree \(n\)</strong> and is denoted \(A_n\)</li>
+<li>Prop: \(|A_n| = \frac{n!}{2}\)
+
+<ul>
+<li>Pf: We know that \(|S_n|=n!\). Also, the sets of even and odd permutaitons are disjoint and contain the same number of elements. Since we have the following bijection... (table)</li>
+</ul></li>
+<li>Ex: \[\sigma=\begin{bmatrix}1&amp;2&amp;3&amp;4&amp;5&amp;6 \\ 2&amp;1&amp;5&amp;4&amp;6&amp;3\end{bmatrix}\in S_6\] \(\leadsto \sigma =(1\;2)(3;5\;6)=(1\;2)(3\;6)(3;5)\leadsto\) odd</li>
+<li>Def: Let \(A\) be a set. A <strong>permutation of \(A\)</strong> is a bijection \(\mathbb{F}:A\rightarrow A\)
+
+<ul>
+<li>Note: The set of <strong>all</strong> permutations of \(A\) is a group under compisition</li>
+</ul></li>
+<li>Thm (<strong>Cayley</strong>): Every group is isomorphic to a group of permutations.
+
+<ul>
+<li>Pf: Let \(G\) be a group, which may have an infinite order. We have to find a group of permutations \(\overline G\) such that \(\overline G\simeq G\). Let \(g\in G\), set \[T_g: G\rightarrow G\] \[x\mapsto gx\text{ (i.e. multiplication on the left by g)}\] Note that \(T_g\) is a bijection of \(G\) and therefore a permutation of \(G\)
+
+<ul>
+<li>\(T_g\) is 1:1: \(T_g(x) = T_g(y)\Rightarrow gx=gy\Rightarrow(by cancellation property) x=y\) </li>
+<li>\(T_g\) is onto: \(\forall y\in G, y=g(g^{-1}y) = T_g(g^{-1}y)\)</li>
+</ul></li>
+<li>But, \(T_g\) is not a homomorphism if \(g\neq e\) since \(T_g(xy) = g(xy)\neq (gx)(gy) = T_g(x)T_g(y)\)</li>
+<li>Set \(\overline G=\{T_g, g\in G\}\leadsto \overline G\simeq G\)</li>
 </ul></li>
 </ul>
 
