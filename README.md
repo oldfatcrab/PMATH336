@@ -936,3 +936,177 @@ _2016/06/15_
 		- $T_g$ is onto: $\forall y\in G, y=g(g^{-1}y) = T_g(g^{-1}y)$
 	- But, $T_g$ is not a homomorphism if $g\neq e$ since $T_g(xy) = g(xy)\neq (gx)(gy) = T_g(x)T_g(y)$
 	- Set $\overline G=\{T_g, g\in G\}\leadsto \overline G\simeq G$
+
+_2016/06/20_
+
+...
+
+_2016/06/22_
+
+3 pics
+
+- ex:
+	- 6）...
+		- Important in Chemistry: chemical formula of the form $AB_4$ such as methane $(CH_4)$ have $A_4$ a symmetry group. The following picture is a tetrahedral $AB_4$ molecule: ![dihedral_d4](imgs/tetrahedral_AB4.png)
+- More generally, one can consider **representations of the group $G$**. Let $V$ be a vector space (e.g. $V=\mathbb R^n$) and let $GL(V)$ be the set of invertible linear transformation $L:V\rightarrow V$ (e.g. $GL(V)\simeq GL(n,\mathbb R)$). Note that $GL(V)$ is a group onder composition. A representation of $G$ is homomorphism $$\zeta: G\rightarrow GL(V)$$
+	- E.g. Rotations about the origin in $\mathbb R^2:\{\mathbb R_\theta\mid \theta\in \mathbb R\}\simeq(\mathbb R, +)$ $$\zeta:G\rightarrow GL(\mathbb R^3)=GL(2,\mathbb R)$$ $$R_\theta \leadsto \begin{pmatrix}cos(\theta)&sin(\theta) \\ -sin(\theta)&cos(\theta)\end{pmatrix}$$
+		- Pf Need to check that $\zeta$ is a homomorphism. Let $R_{\theta_1}, R_{\theta_2}\in G$, then $R_{\theta_1}\circ R_{\theta_2} = R_{\theta_{1+2}}$ and $$\zeta(R_{\theta_1}\circ R_{\theta_2}) = g(R_{\theta_1}) + g(R_{\theta_2})$$
+
+## 2.3 Automorphisms
+- Def: An isomorphism from from $G$ to itself is called an **automorphism** of $G$
+- Ex:
+	- 1) $\phi:(\mathbb C,+)\rightarrow (\mathbb C,+), z\mapsto az$ for some fixed $0\neq a\in \mathbb C$ is automorphism of $(\mathbb C,+)$, or $\phi:(\mathbb C,+)\rightarrow (\mathbb C,+), z\mapsto \overline z$ is automorphism of $(\mathbb C,+)$
+	- 2) $\phi:(\mathbb R^n,+)\rightarrow (\mathbb R^n,+), \vec v \mapsto A\vec v$ for some fixed A\in GL(n,R) is an automorphism of (Rn,+)
+	- 3) Not every bijection $\phi: G\rightarrow G$ is automorphism
+		- e.g. $T_g:G\rightarrow G, x\mapsto gx$ for fixed $g\in G$ is a bijection but **NOT** an automorphism if $g\neq e$ (since $T_g$ is not a homomorphism) in general
+		- However, the following map is always an automorphism $$\phi_g:g\rightarrow G$$ $$x\mapsto gx g^{-1}, \forall \text{ fixed } g\in G$$
+			- Pf:
+				- **homomorphism**: $\forall x, y $, we have: $$\phi_g(xy) = g(xy)g^{-1} = gx(g^{-1}g)yg^{-1}=\phi_g(x)\phi_g(y)$$
+				- **1:1**: $\forall x,y\in G$, if $\phi_g(x)=\phi_g(y)$, then $gxg^{-1}=gyg^{-1}\rightarrow xg^{-1}=yg^{-1}\rightarrow x=y$ (by cancellation property applied twice)
+				- **onto**: $\forall y \in G$, $y=g(g^{-1}yg)^{-1}=\phi_g(g^{-1}yg)$ with $g^{-1}yg\in G\rightarrow \phi_g$ is a bijective homomorphism $\Rightarrow \phi_g $ is an isomorphism of $G$ to itself $\Rightarrow \phi_g$ is an automorphism
+- Def: Let $G$ be a group and $g\in G$. The function defined by $\phi_g(x) = gxg^{-1}$ for all $x\in G$ is called the **inner automorphism** of $G$ induced by $g$
+- Notation: $Aut(G):=\{\text{set of all automorphisms of } G\}$ and $Inn(G):=\{\text{set of all inner automorphisms of } G\}$
+	- Note that $Inn(G)\subset Aut(G)$
+- Thm: $Aut(G)$ and $Inn(G)$ are groups under composition (with identity the identity map Id $G\rightarrow G, x\mapsto x$)
+	- Pf: exercise
+	- Note: 
+		- 1) $Inn(G)$ is a subgroup of $Aut(G)$
+		- 2) If $G$ and $G'$ are 2 groups such that $G\simeq G'$, then $Aut(G)\simeq Aut(G)$ and $Inn(G)\simeq Inn(G')$ (proof as exercise) This means in particular that if $Aut(G)\not \simeq Aut(G')$ or $Inn(G)\not \simeq Inn(G')$, then $G\not \simeq G'$.
+		- 3) If $G$ is abelian, $\forall g\in G$, $\phi_g=Id$ because $$\phi_g=gx g^{-1} = gg^{-1}x=ex=x,\forall x\in G$$ $\Rightarrow Inn(G)=\{Id\}$. So if $Inn(G)\not \simeq \{Id\}$, then $G$ is not abelian.
+- Ex.
+	- 1) $G=(\mathbb Z, +)$, $Aut(\mathbb Z)=\{\pn Id\}$, $Int(\mathbb Z) = \{Id\}$
+
+_2016/06/27_
+
+- ...
+	- 3) $G=S_3$ (which is not abelian), $H=\langle(1\, 2)\rangle=\{\epsilon, (1\,2)\}$. Let us find all the left coset of $H$:
+		- $a=\epsilon: \epsilon H = H $
+		- $a = (1\,2): (1\,2)H=\{(1\,2)\epsilon, (1\, 2)(1\, 2)\}= \{(1\, 2\), \epsilon\} = H$
+		- $a = (1\, 3): (1\,  3)H=\{(1\,  3)\epsilon, (1\,  3)(1\,  2)\}=\{(1\,  3), (1\,  2\,  3)\}$
+		- $a = (2\, 3): (2\, 3)H = \{(2\, 3), (1\, 2\, 3)\}$
+		- $a = (1\, 2\, 3): (1\, 2\, 3)H = \{(1\, 2\, 3),(1\, 3)\} = (1\, 3)H$
+		- $a = (1\, 3\, 2): (1\, 3\, 2)H = \{(2\, 3), (1\, 3\, 2)\} = (23\, )H$
+		- So, $H$ has only 3 left costs: $(1\, 3)H, (2\, 3)H$.
+		- Note: $\frac{|G|}{|H|} = \frac{6}{2} = 3 = $ (# of left cosets of $G$)
+		- $\leadsto$ **This** is always true and follows from Lagrange's Thm.
+		- The same is true for right cosets (check with $S_3 and H=\langle(1\, 2)\rangle$
+- Lemma: (**Properties of cosets**) Let $G$ be a group, and H be a subgroup of $G$, $a,b\in G$
+	- 1. $a\in aH$
+	- 2. $aH = H \Leftrightarrow a\in H$
+	- 3. $aH = bH$ or $aH\cap	 bH = \emptyset$
+	- 4. $aH = bH \Leftrightarrow a^{-1}b\in H$
+	- 5. $|aH| = |bH| = |H|$
+	- 6. $aH = Ha \Leftarrow H = aHa^{-1}$
+	- 7. $aH$ is a subgroup $\Leftrightarrow a\in H$
+	- Note: The same properties hold for right cosets.
+- Proof:
+	- 1. $e\in H$ since $H$ is a subgroup of $G \Rightarrow a=ae\in aH$
+	- 2. suppose that $aH=H$. By 1, $a\in aH = H\Rightarrow a\in H$. Conversely, suppose that $a\in H$. This means in particular that $a^{-1}\in H$ because $H$ is a subgroup of $G$ (and thus closed under inverses)
+		- $aH\subset H$: Since $a\in H$, $\forall h\in H, ah\in H,$ then $aH=\{ah\mid h\in H\}\subset H$. 
+		- $H\in aH$: $\forall h\in H$. Then $$h=a(a^{-1}h)\in aH$$ because $a^{-1}H\in H$ since $a^{-1}, h\in H$ and $H$ is a subgroup.
+	- 3. If $aH=bH$, then we are done. Suppose, otherwise, that $aH\neq bH$, and let us show that $aH\cap bH=\emptyset$. Assume instead that $aH\in bH\neq \emptyset$. Then $\exists g\in G$ such that $g\in aH \cap bH\Rightarrow g=ah=bh'$ for some $h, h' \in H$ $$\Rightarrow ah=bh'$$ $$\Rightarrow a=bh'h^{-1}\in bH$$ $$\Rightarrow aH\subset bH \text{ because } ah''=(bh'h^{-1})h''=b(h'h^{-1}h'')$$ since $h, h', h'' \in H$. So, $ah''\in bH$. Similarly, since $b=ah(h')^{-1}$, then $bH\subset aH$. Thus, $aH =bH$, contradicting the fact that $aH\neq bH$. Hence, $aH\cap bH=\emptyset$
+	- 4. Exercise
+	- 5. $\exists$ bijection: $f: H\rightarrow aH, h\mapsto aH$
+		- 1:1: $f(h) = f(h') \Rightarrow ah=ah'\Rightarrow h=h'$ (by cancellation rule)
+		- onto: $\forall ah\in |aH|, ah=f(h)$
+		- $\Rightarrow f$ is a bijection$\Rightarrow |H|=|aH|$
+	- 6. Exercise
+	- 7. Exercise
+- Thm: (**Lagrange**) Let $G$ be a finite group, and $H$ be a subgroup of $G$. Then, $|H| \mid |G|$
+	- Proof: Let $a_1H, \cdots, a_rH$ be the distince left costs of $H$ in $G$. Therefore, $\forall a\in G, aH = a_iH$ for some $1\leq i\leq r \Rightarrow a\in  aH =a_iH$ (by (1) in lemma)$\Rightarrow$ any element $a\in G$ is contained in one of the left cosets $a_1H, \cdots, a_rH \Rightarrow G=a_1H\cup \cdots\cup a_rH$. But by (3) in lemma, $a_iH\cap a_jH=\emptyset$ if $i\neq j$ since $a_iH = a_jH$. So, $G$ is the **disjoint** union of the left cosets $a_1H, \cdots, a_rH \Rightarrow |G| = |a_1H|+ \cdots+ |a_rH| =\text{ (lemma (5)) } r|H| \Rightarrow |G| = r|H| \Rightarrow |H|\mid |G|$
+
+_2016/06/29_
+- Corraries...
+	- Remark: Lagrange's Thm tells us that if $G$ is a finite group, then
+		- If $H$ is any subgroup, then $|H|\mid |G| $
+		- If $a\in G$, then $|a|\mid |G|$
+	- Remark: We have seen that if $G$ is cyclic, then $\forall$ positive divisor $k$ of $|G|$:
+		- $\exists$ subgroup $G$ of $G$ such that $|H|=k$
+		- $\exists$ an alement $a\in G$ such that $|a| = k$
+		- (This is the content of the Fund Thm of Cyclic groups)
+	- Remark: However, this is **not** true in general. That is, $\exists$ finite groups $G$ such that for some positvie divisors $k$ of $|G|$, $\not \exists$ subgroup of order $k$ or $\not \exists$ an element of order $k$.
+		- e.g. $G=A_4=$ (even permutations on {1,2,3,4}) $\mapsto |G|=\frac{4!}{2}=12\Rightarrow$ positive divisors of $12: k=1,2,3,4,6,12$ BUT, $\not \exists$ element in $A_4$ of order $4,6,12$, $\not \exsits$ a subgroup of $A_4$ of order $6$. Nonetheless, $A_4$ has $1$ subgroup of order $1$, $3$ subgroups of order $2$, $8$ subgroups of order $3$, $1$ subgroups of order $4$, $1$ subgroups of order $12$, that is, $H=A_4$
+			- Proof: $A_4=\{\text{even permutations in }S_4\}\leadsto$ every element in $A_4$ is a product of an even number of 2-cycles.
+				- $\epsilon$
+				- $(12)(34)$
+				- $(13)(24)$
+				- $(14)(23)$
+			- All above are disjoint and has order 2
+			- $(12)(13),(13)(12),(12)(14),(14)(12),(13)(14),(14)(13),(23)(24),(24,23)\Rightarrow$ subgroup of order $3$
+			- Subgroup of order 1: $\{\epsilon\}$ 
+			- Subgroup of order 2: $\langle(12)(34)\rangle,\langle(13)(24)\rangle,\langle(14)(23)\rangle$ (because the subgroup can contain only one element other than $\epsilon$, forcing that element to be order $2$)
+			- Subgroup fo order 3: $\langle(\sigma)\rangle$ with $\sigma\in A_4$ of order 3 (There are no other possiblilies because $3$ is prime and so any subgroup of order $3$ must be cyclic and thus generated by an element of order $3$)
+			- Subgroups of order 4: $\{\epsilon,(12)(34),(13)(24), (14)(23)\}$
+			- [This clime, if $H$ is a subgroup of $A_4$ of order $4$, then it can only contain element  of order $1,2,4$ (because $1,2,4$ are the only positive divisors of $4$). So, it can only contain $\epsilon,(12)(34),(13)(24), (14)(23)$. Also, it must contain more than $\epsilon$ and just are of $(12)(34),(13)(24), (14)(23)$, otherwise it would be cyclic of order $2$. Finally, if it contains $2$ of the permutations $(12)(34),(13)(24), (14)(23)$, it must contain the third (because the third is the product of the other 2)]
+			- Subgroups of order 12: $A_4$
+			- Let us now prove that $\not \exists$ subgroup of order 6. We do it by contradiction. Suppose instead that $\exists$ subgroup $H$ of order 6. Let $\sigma\in A_4$ be order $3$. Consider the left cosets: $H = \epsilon H=\sigma H=\sigma^2 H$. Note taht, be Lagrange's Thm, the number of left cosets of $H$ is $|A_4:H|=\frac{|A_4|}{|H|}=\frac{12}{6}=2\Rightarrow \exists$ at most $2$ distinct left cosets amongst $H, \sigma H, \sigma^2H$ So $H=\sigma H\Rightarrow \sigma\in H$, or $H=\sigma^2H\Rightarrow \sigma^2\in H\Rightarrow (\sigma^2)^{-1}\in H$ (Since $H$ is a subgroup) but $(\sigma^2)^{-1}=\sigma$ since $\sigma^3=\epsilon\Rightarrow \sigma\in H$, or $\sigma H = \sigma^2 H\Rightarrow H=\sigma H\Rightarrow \sigma \in H$ Thus, $\sigma \in H,\forall \sigma \in A_4$ of order $3$. But $\exists 8$ elements of order $3$ in $A_4$ and $|H|=6$, leading to a countradiction.
+
+_2016/07/04_
+
+- Review:
+	- (**Lagrange**) Let $G$ be a finite group and $H$ is a subgroup of $G$, then $|H|\mid|G|$.
+	- Cor:
+		- 1) $|G:H| =$ (# of disjoint left cosets of H) = |G|/|H|
+		- 2) $\forall a\in G, |a|\mid|G|$. Moreover, $a^{|G|}=e$
+		- 3) A group of prime order is cyclic.
+- Thm (**Fermat's Little Theorem**): Let $m\in \mathbb Z$. The, for any prime number $p$, $$m^p\mod p = m\mod p$$ 
+	- Proof: Using the division algorithm, we can write $m=sp+r$ for some $s\in \mathbb Z$ and $0\le r<p$. So, $m\mod p=r\mod p$ and $$m^p\mod p = r^p \mod p$$ So it is enough to prove that $$r^p \mod p = r^p\mod p$$ for $0\le r<p$. If $r=0$, the certainly $0^p\mod p = 0 \mod p$. And if $0<r<p$, then $F=r\mod p\in \mathbb Z^*_p = \{\overline 1, \overline 2, \cdots, \overline{p-1}\}$ Then, because $|\mathbb Z^*_p|=p-1$ and $F\in \mathbb Z^*_p$, by (2) of COR, $$F^{p-1}=\overline 1=(\text{identity of }\mathbb Z_p^*)$$ $$\Rightarrow F(F^{p-1})=F\Rightarrow F^p=F \Leftrightarrow r^p \mod p = r\mod p$$
+- Thm: If $G$ is finite an of order $2p$ with $p$ prime, then $G\simeq \mathbb Z_{2p}$ or $sD_p$
+
+(before is 3.1 Lagrange Theorem)
+
+## 3.2 Group Actions
+
+- Let $G$ be a group and $X$ be a set. We have seen that a **permutation** of $X$ is a bijection $f:X\rightarrow X$. Also the set of **all** permutationsof $X$ is a group under composition, which we denote $Sym(X)$. Note that if $X=\{1,\cdots, n\}$, then $Sym(X) = S_n, \forall n\in \mathbb N$
+- Def: a **group action** of $G$ on $X$ is a choice , $\forall g\in G$, of a permutation $\pi_g:X\rightarrow X$ such that:
+	- (i) $\pi_e = id_X$
+	- (ii) $\forall g_1, g_2\in G, \pi_{g_1g_2} = \pi_{g_1}\circ\pi_{g_2}$
+	- Then, $G$ is said to **act on $X$**. Also, if $\pi_g=id_X$, then $g$ is said to act **trivially on $X$**. In fact, if $\pi_g=id_X, \forall g\in G$, then the action is called **trivial**.
+- Ex:
+	- 1) $G=S_n$ and $X=\{1,\cdots, n\}$ Then, $S_n$ acts on $X$ in the natural way: $\forall \sigma \in S_n$, then $\sigma: X\rightarrow X$ is a permutaiton by definition. So we can define: $$\pi:Sn\rightarrow Sym(X)=S_n$$ $$\sigma\mapsto \pi_{\sigma} =\sigma$$ Then: (i) $\pi_{\epsilon} = \epsilon = id_X:X\rightarrow X$; (ii) $\pi_{\sigma_1\sigma_2} = \pi_{\sigma_1}\circ\pi_{\sigma_2}$ Therefore, the choice $\pi_\sigma:=\sigma, \forall \sigma \in S_n$, gives an action of $S_n \in X$.
+	- 2) Let G be a group and let $X=G$. Then, $Sym(X) = Sym(G)$, which contains $Aut(G)$, but is much bigger. From the proof of Cayley's Thm, we have seen the following action: $$\pi:G\rightarrow Sym(X)=Sym(G)$$ $$g\mapsto\pi_g=(T_g:G\rightarrow G, x\mapsto gx\text{(left multiplication by g)})$$ Note that $T_g\in Sym(G)$ but $T_g\not \in Aut(G)$ if $g\neq e$ (because $T_g$ is not a homomorphism when $g\neq e$). We checked, when proving Cayley's Thm, that:
+		- (i) $T_e=id_G \Rightarrow \pi_e=id_X$
+		- (ii) $T_{g_1}\circ T_{g_2} = T_{g_1g_2}\Rightarrow \pi_{g_1}\circ \pi_{g_2} = \pi_{g_1g_2}\Rightarrow \pi$ is a group action of $G$ on itself called **left multiplication** (one defines similarly the action of $G$ on itself by **right multiplication**)
+	- 3) Let $G$ be a group and $X=G$. We can define the action of $G$ on itself by **conjugation** as follows: $$\pi: G\rightarrow Sym(X)=Sym(G)$$ $$g\mapsto \pi_g=(\phi_g:G\rightarrow G, x\mapsto gxg^{-1})$$ where $\phi_g$ is inner automorphism of $G$ induced by $g$. Then, $\pi_g\in Inn(G)\subset Aut(G)\subset Sym(G)\leadsto \pi_g $ is an automorphism $\forall g\in G$. Then $\pi$ is a group action (check that (i) (ii) hold!)
+	- Note that if $g\in \mathcal Z(G)$, then $gx=xg, \forall x\in G\Leftrightarrow gxg^{-1}=x,\forall x\in G$. So $\phi_g=id_X\Rightarrow \pi_g=id_X$ if $g\in \mathcal Z(G) \Rightarrow \forall g\in Z(G)$, $g$ acts trivially on $X$ by conjugation.
+	- In particular, if $G$ is abelian (so that $G=\mathcal Z(G)$), then every element in $G$ act trivially on $G$ by conjugation. In this case, the action of $G$ on $G$ by conjugation is **trivial**.
+- Remark: A group action of $G$ on $X$ corresponse to a homomorphism $$\pi:G\rightarrow Sym(X)$$ $$g\mapsto \pi_g$$ [Indeed, condition (i) and (ii) in the definition tell us that $\pi$ is a homomorphism] This homomorphism is called the **permutation of representation of the action of $G$ on $X$** Then:
+	- $\ker\pi=\{g\in G \mid \pi_g=id_X\} = \{g\in G\mid \text{ g acts trivially on X}\}$
+	- $\text{Im }\pi = \{\text{the set of all permutations of X specified by the action is a subgroup of }Sym(X)\}$
+- Def: A group action $\pi: G\rightarrow Sym(X)$ of a group $G$ on a set $X$ is called **faithful** if $\ker \pi=\{e\}$
+
+_2016/07/06_
+
+- Review:
+	- Let $G$ be a group and $X$ be a set
+	- Group action of $X$ on $G$: $\forall g\in G$, have a choice of permutaion $\pi_g\in Sym(X) = \{f:X\rightarrow X\mid f\text{ is a bijection}\}$ such that 
+		- $\pi_e = id_x :X\rightarrow X, x\mapsto x$ 
+		- $\pi_{g_1}\circ \pi_{g_2} = \pi_{g_1g_2}, \forall g_1,g_2\in G$
+		- $\leadsto$ It corresponsds to homomorphism: $$\pi:G\rightarrow Sym(X)$$ $$g\mapsto \pi_g$$
+	- Note:
+		- (i) $\ker \pi = \{g\in G\mid \pi_g = id_X\} = \{g\in G \mid g\text{ acts trivially on }X\}$. In particular, if $\ker \pi = G$, then the action is trivial.
+		- (ii) $\operatorname{Im} \pi$ is the subgroup of $Sym(X)$ corresponding to all the permutations of $X$ given by the action.
+- Def'n: A group $G$ is said to act **faithfully** on the set $X$ if $\ker \pi=\{e\}$. The action is then called **faithful** (or **effective**)
+	- E.g.
+		- 1) If $G = S_n$ and $X=\{1, \cdots, n\}$ with $S_n$ acts on $\{1, \cdots, n\}$ in the natural way: $$\pi: S_n\rightarrow Sym(\{1, \cdots, n\})=S_n$$ $$\sigma\mapsto \sigma$$ $\Rightarrow \ker \pi = \{\epsilon\}\Rightarrow$ This action is faithful.
+		- 2) Let $G$ be a group and $X = G$, and $G$ acts on itself by conjugation: $$\pi \rightarrow Sym(G)$$ $$g\mapsto (\phi_g:G\rightarrow G, x\mapsto gxg^{-1})$$ Then, $\ker \pi = \mathcal Z(G)$ (because $\phi_g = id_G\Leftrightarrow gxg^{-1}=x, \forall x\in G\Leftrightarrow gx=xg\forall x\in G\Leftrightarrow g\in \mathcal Z(G)$) $\Rightarrow$ This action is faithful $\iff \mathcal Z(G) = \{e\}$. In particular, if $G$ is abelian, then $\mathcal Z(G) = G$, implying that the action is not faithful if $G\neq \{e\}$ (i.e. $G$ is not the trivial group)
+		- 3) $G = S_n$ and $X = \mathbb R[x_1, \cdots, x_n] = \{\text{set of polynomial in the }n\text{ variables x_1, \cdots, x_n}\}$ (e.g. $p(x_1, \cdots, x_n)=2x_1^2x_n - 3x_3x_{n-1}^4$). Define the following action of $S_n$ on X: $$\pi: S_n\rightarrow Sym(X)$$ $$\sigma \mapsto (\pi_\sigma: X\rightarrow X, p(x_1, \cdots, x_n)\mapsto p(x_{\sigma(1)}, \cdots, x_{\sigma(n)}))$$
+			- e.g. $\sigma  = (1,2,\cdots, n) \leadsto \sigma(i) = i+1$ if $1\le i\le n-1$ and $\sigma(n) = 1$. $\pi_\sigma: X\rightarrow X, p(x_1, x_2, \cdots, x_{n-1}, x_n) \mapsto p(x_2, x_3, \cdots, x_n, x_1)$. (as in last example, $(2x_1^2x_n - 3x_3x_{n-1}^4 \mapsto 2x_2^2x_1 - 3x_4x_{n}^4)$).
+			- This is an action (exercise). [CHECK that $\pi_\epsilon = id_X, \pi_{\sigma\tau}=\pi_\sigma\circ\pi_\tau$]
+			- Is this action faithful? Yes! Let us verify that $\ker \pi = \{\epsilon\}$. Let $\sigma\in \ker \pi$ so that $\pi_\tau = id_X$ $\Leftrightarrow \pi_\sigma(p(x_1, \cdots, x_n) = p(x_1, \cdots, x_n)), \forall p(x_1, \cdots, x_n)\in X$ $\Leftrightarrow p(x_\sigma(1), \cdots, x_\sigma(n)) = p(x_1, \cdots, x_n), \forall p(x_1, \cdots, x_n) \in X$.
+			- In particular, if $p(x_1, \cdots, x_n) = x_i, \forall i = 1, \cdots, n,$ we have that $\pi_\tau(x_i) = x_i, \forall i = 1,\cdots,n$ $\Leftrightarrow x_{\sigma(i)} = x_i \forall i=1,\cdots,n$ $\Leftrightarrow \sigma(i)=i, \forall i=1,\cdots,n$ $\Leftrightarrow \sigma = \epsilon$
+			- So: $\ker \pi=\{\epsilon\}$ where $\pi:S_n \rightarrow Sym(X)$ (with $X = \mathbb R[x1,..., xn]\Rightarrow \operatorname{Im} \pi \simeq Sn$
+- Definition: Let $G$ be a group, and $X$ be a set. Suppose that $G$ acts on $X$. Then, $X$ is called a **$G$-set**. If the action is given by the homomorphism $$\pi: G\rightarrow Sym(X)$$ we write, $\forall g\in G$, if $\pi_g = \pi(g) \in Sym(X)$, $$x\cdot x:=\pi_g(x) \text{ (where the }\cdot\text{ is } g\text{ acts on the element }x\in X, \forall x\in X\text{)}$$ Using this notation, the definition of a group action becomes: $\forall g\in G, \exists$ a choice of a permutaiton $\pi_g: X\rightarrow X, x\mapsto g\cdot x$  such that:
+	- (i) $e\cdot x = x, \forall x\in X$
+	- (ii) $\forall g_1, g_2\in G, g_1\cdot(g_2\cdot x) = (g_1\cdot g_2)\cdot x, \forall x\in X$
+- Thm: Suppose that $X$ is a $G$-set. If $x\in X$ and $g\in G$ and $y = g\cdot x$, then $x = g^{-1} \cdot y$. If $x\neq x'$, then $g\cdot x\neq g\cdot x', \forall x, x'\in X$. 
+	- Pf: Suppose that $y = g\cdot x$. But $g^{-1}\in G$, so that $$g^{-1} \cdot y=g^{-1} \cdot(g\cdot x) = (g^{-1}\cdot g)\cdot x=e\cdot x=x$$ Let $x,x'\in X$. If $g\cdot x = g\cdot x'$, then $$x=g^{-1}\cdot (g\cdot x)=g^{-1}\cdot (g\cdot x')=x'$$
+
+# 3.3 Stabilizers and orbits of an action
+- Def: Let $G$ be a group, $X$ be a $G$-set and $x\in X$. We define $G_X = stab(X):= \{g\in G\mid g\cdot x = x\} = (\text{stabilizer of }x\text{ in }G)$
+	- Note: $e\in G_X$ because, by def of any action of $G$ on $X$, $e\cdot x =x,\forall x\in X$.
+	- Ex: $G = D_3$, and $X = \{\text{ verticies of an equilateval trianble}\} = \{1,2,3\}$. Consider the natural action of $D_3$ on $X$: $$\pi: D_3\rightarrow Sym(X)$$ $$g\mapsto g$$ Let $x = 1$. What is $stab(1) = G_1$? $G_1 = \{id_X, \text{ reflection with respect to the line going throught }1\}$
+	- ![dd3](https://www.math.usm.edu/lee/mathphysarchive/wp-content/uploads/2014/09/D3.gif)
+	- (In above image, $\mu_1 = G_1$)
+- Prop: $G_X$ is a subgroup of $G, \forall x\in X$.
+	- Pf: exercise 
