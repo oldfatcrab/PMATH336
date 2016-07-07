@@ -15,7 +15,7 @@
 --------------------------------------------------------------------------------
 
 _2016/05/02_
-I
+
 # Chapter 0: Course Administration
 - Course structure
     - Group Theory Basics
@@ -885,6 +885,53 @@ _2016/06/10_
 
 ...
 
+- Thm: (**Cayley**) every finite group is isomorphic to a subgroup of a permutation group $S_n, n>1$ 
+
+...
+
+- e.g. 
+    - 2) $\sigma:\mathbb Z_{10}\rightarrow \mathbb Z_6$
+        - Isomorphism? No.
+        - Is there a subjective homomorphism? No
+        - How many homomorphism $\sigma:\mathbb Z_{10}\rightarrow \mathbb Z_6$ exist? 2 (The **trivial** homomorphism $\sigma: \mathbb Z_{10}=\langle \overline \rangle\rightarrow \mathbb Z_6, \overline 1\mapsto \overline 0 = $ (identity in $(\mathbb Z_6, +)$ and another.
+
+## 2.2 Permutation Groups
+- Recall that **a permutation of degree $n$** is a bijection $$\sigma:\{1, \cdots, n\}\rightarrow \{1, \cdots, n\}$$ Also, $S_n = \{ \text{all permutations of degree } n\}$ is a group under composition.
+    - Notation: Since the group operation is composition, we will denote it by multiplication: $$\sigma \tau:= \sigma\circ \tau, \forall \sigma, \tau\in S_n$$
+    - $\oplus S_n$ is a finite group with $|S_n| = n!$
+    - $\oplus S_n$ is **NOT** abelian if $n\geq 3$
+        - $S_2=\{\sigma:\{1,2\}\rightarrow \{1,2\}\mid \sigma \text{ is bijection}\}$  and $|S_2| = 2!$ $$\sigma_0:\sigma:\{1,2\}\rightarrow \{1,2\}$$ $$1\mapsto 1$$ $$2\mapsto 2$$ where $\sigma_0$ is the identity in $S_2$ $$\sigma_1:\sigma:\{1,2\}\rightarrow \{1,2\}$$ $$1\mapsto 2$$ $$2\mapsto 1$$
+            - Note: 
+                - $\sigma_0$ is the identity in $S_2$ **and** $\sigma_1\sigma_1 = \sigma_0\Rightarrow \sigma_1^{-1} = \sigma_1$
+                - $S_2$ is abelian
+        - $S_3=\{\sigma:\{1,2,3\}\rightarrow \{1,2,3\}\mid \sigma \text{ is bijection}\}$  and $|S_2| = 3! = 6$ $$\sigma_0 = \text{identity}, i\mapsto i$$ $$\sigma_1: 1\mapsto 2, 2\mapsto 1, 3\mapsto 3 \leadsto (1\,2)$$ $$\sigma_2: 1\mapsto 3, 2\mapsto 2, 3\mapsto 1 \leadsto (1\,3)$$ $$\sigma_3: 1\mapsto 1, 2\mapsto 3, 3\mapsto 2 \leadsto (2\,3)$$ $$\sigma_4: 1\mapsto 2, 2\mapsto 3, 3\mapsto 1 \leadsto (1\,2\,3)$$ $$\sigma_1: 1\mapsto 3, 2\mapsto 1, 3\mapsto 2 \leadsto (1\,3\,2)$$
+- Cycle notation:
+    - $S_3: \sigma_4 = \begin{bmatrix}1&2&3\\2&3&1\end{bmatrix} \begin{matrix}i\\\sigma(i)\end{matrix},\sigma_3 = \begin{bmatrix}1&2&3\\1&3&2\end{bmatrix}$
+        - ![cycle_s3](imgs/cycle_s3.png)
+        - $\sigma_3 = (1)(2\,3) = (2\,3)$ (omit $(1)$)
+    - $S_6: \sigma_4 = \begin{bmatrix}1&2&3&4&5&6\\3&2&1&6&4&5\end{bmatrix}$
+        - ![cycle_s6](imgs/cycle_s6.png)
+        - $\sigma_4 = (1\,3)(2)(4\,6\,5) = (1\,3)(4\,6\,5)$ (omit $(2)$)
+- An expression of the form $(a_1, \cdots, a_m)$ with $a_i\neq a_j$ if $i\neq j$ is called a **cycle of length $m$** or an **$m$-cycle**. Two cycles $(a_1, \cdots, a_m)$ and $(b_1, \cdots, b_m)$ are called **disjoint** if $a_i\neq b_j$ for all $i,j$
+    - e.g. $(1\,3)$ and $(4\,6\,5)$ are disjoint, $(1\,2)$ and $(1\,3)$ are **not** disjoint
+- Some facts:
+    - Prop: Let $\sigma, \tau\in S_n$ with $n>1$.
+        - (1) $\sigma$ is a cycle or the product of disjoint cycles.
+        - (2) If $\sigma$ and $\tau$ are disjoint cycles, then $\sigma \tau = \tau\sigma$
+        - (3) $\sigma$ is a product of 2-cycles
+    - Ex: $S_3 = \{(1)(2)(3), (1\,2), (1\,3), (2\,3), (1\,2\,3), (1\,3\,2)\}$ 
+        - (1) identity $= (1)(2)(3)$ is a product of disjoint 1-cycles; the rest of the elements are cycles.
+        - (3) identity $= (1\,2)(1\,2)$ product of two 2-cycles. $(1\,2\,3)= (1\,3)(1\,2)$ $(1\,3\,2)= (1\,2)(1\,3)$
+    - Pf: (2) 
+        - Let $\sigma = (a_1, \cdots, a_m)$ and $\tau = (b_1, \cdots, b_{m'})$ be disjoint cycles so that $a_i\neq b_j, \forall i, j$
+        - $\rightarrow \sigma $ leaves $b_1, \cdots, b_{m'}$ fixed since $b_1, \cdots, b_{m'}$ does not appear in the expression of $\sigma$
+        - $\rightarrow \tau$ leaves $a_1, \cdots, a_m$ fixed since $a_1, \cdots, a_m$ does not appear in the expression of $\tau$
+        - $\rightarrow$ The remaining integers $\{c_1, \cdots, c_r\} = \{1,\cdots, n\}\setminus \{a_1, \cdots, a_m,b_1, \cdots, b_{m'}\} $ are fixed by both $\sigma$ and $\tau$
+        - Need to check that $\sigma \tau(a_i)=\tau\sigma(a_i), \forall i$, $\sigma \tau(b_j)=\tau\sigma(b_j), \forall j$, $\sigma \tau(c_k)=\tau\sigma(c_k), \forall k$
+        - So, $\forall i, \sigma \tau(a_i)= \sigma (\tau(a_i))= \sigma(a_{i}) = a_{i+1}=\tau (a_{i+1}) = \tau(\sigma(a_i))=\tau\sigma(a_i)$
+        - One proves the others similarly (Exercise)
+    - Pf: (3)
+        - By (1), anh permutation is a product of disjoint cycles, so it is enough to prove that any cycle is a product of 2-cycles. Let $\sigma=(a_1\,\cdots\, a_m)$ be a cycle. Then $\sigma=(a_1\, a_m)(a_1\, a_{m-1})\cdots (a_1\, a_3)(a_1\, a_2)$
 - midterm up till today.
 
 _2016/06/13_
