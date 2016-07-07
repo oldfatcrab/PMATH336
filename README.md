@@ -11,6 +11,13 @@
     - [1.3 Finite groups](#toc_5) (May 13)
     - [1.4 Cyclic groups](#toc_6) (May 18)
 - [Chapter 2: Group homomorphisms](#toc_7) (May 30)
+    - [2.1 Homomorphism and Isomorphism](#toc_8) (May 30)
+    - [2.2 Permutation Groups](#toc_9) (Jun 10)
+    - [2.3 Automorphisms](#toc_10) (Jun 22)
+- [Chapter 3: Lagrange Theorem and Group Actions](#toc_11) (Jun 27)
+    - [3.1 Langrange Theorem and Cosets](#toc_12) (Jun 27)
+    - [3.2 Group Actions](#toc_13) (Jul 4)
+    - [3.3 Stabilizers and orbits of an action](#toc_14) (Jul 6)
 
 --------------------------------------------------------------------------------
 
@@ -721,6 +728,7 @@ $$ Note that, $|\mathbb Z_n^* |=\phi(n) $ (since $\mathbb Z_n^*$ consists of all
 	- Proof: By the Fundamental Thm of cyclic groups, $\exists$ unique subgroup $H$ of $G$ of order d. Moreover, $H$ is cyclic so that $H=\langle b\rangle$ for some $b\in G$ with $|b|=d$. Let $c\in G$ be any other element of order d. Then, $\langle c\rangle$ is also a subgroup of $G$ of order $d$. But $H$ is the only subgroup of $G$ of order $d$, implying $\langle c\rangle = H$. So $c\in \langle c\rangle=H$. This means that $H$ contains all the elements of $G$ of order $d$. Also, $c=b^k$ for some $0\leq k\leq d-1$ since $H=\{e,b,\cdots, b^{n-1}\}$. Recall that if $H=\langle b\rangle$, then $|b^k| = \frac{|b|}{gcd(|b|,k)}$. But here $|b|=d$ so that $|b^k| = \frac{d}{gcd(d,k)}$. Thus, $|c| = |b^k|=d\Leftrightarrow \frac{d}{gcd(d,k)} = d\Leftrightarrow gcd(d,k) = 1\Rightarrow $ {element of G of order d} = $\{b^k\mid gcd(d,k) = 1\}:=\phi(d)$
 
 # Chapter 2: Group homomorphisms
+## 2.1 Homomorphism and Isomorphism
 
 - Definition: Let $G_1$ and $G_2$ be two groups. A **homomorphism** $\phi$ from $G_1$ to $G_2$ is a mapping $\phi:G_1\rightarrow G_2$ that preserves the group operation $$\phi(ab) = \phi(a)\phi(b), \forall a,b\in G_1$$ Moreover, if $\phi$ is a bijection whose inverse is also a homomorphism, then $\phi$ is called an **isomorphism**.
 
@@ -1025,6 +1033,10 @@ _2016/06/22_
 
 _2016/06/27_
 
+...
+
+# Chapter 3: Lagrange Theorem and Group Actions
+## 3.1 Langrange Theorem and Cosets
 - ...
 	- 3) $G=S_3$ (which is not abelian), $H=\langle(1\, 2)\rangle=\{\epsilon, (1\,2)\}$. Let us find all the left coset of $H$:
 		- $a=\epsilon: \epsilon H = H $
