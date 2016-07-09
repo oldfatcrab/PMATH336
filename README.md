@@ -998,11 +998,15 @@ _2016/06/20_
 
 _2016/06/22_
 
-3 pics
-
-- ex:
-	- 6）.‘m
-		- Important in Chemistry: chemical formula of the form $AB_4$ such as methane $(CH_4)$ have $A_4$ a symmetry group. The following picture is a tetrahedral $AB_4$ molecule: ![dihedral_d4](imgs/tetrahedral_AB4.png)
+- Review from last lecture:
+    - Theorem (**Cayley**): Every group is isomorphic to a group of permutations.
+    - More precisely, given a group $G$, $G\simeq \overline G$ where $$\overline G:=\{T_g:G\to G, x\mapsto gx\mid \forall g\in G\}$$ $$=(\text{group of left representations of }G)$$
+- E.g.
+    - ... (missing)
+    - 4) Rotation in $\mathbb R^2$: $G=\{R_\theta\mid \theta\in \mathbb R\}\simeq \mathbb R$; $\overline G = \{T_{\theta_0}(R_\theta) = R_{\theta_0+\theta}\mid \theta_0\in \mathbb R\}$
+    - 5) Rotations of equilateral triangle in $\mathbb R^2$: $G=\{Id, R_{\frac{2\pi}{3}},R_{\frac{4\pi}{3}}\}$ subgroup of $D_3$. Identification with $A_3=(\text{even permutations in }S_3)$: $$Id\leftrightarrow \epsilon$$ $$R_{\frac{2\pi}{3}}\leftrightarrow (1~2~3) = (1~3)(1~2)$$ $$R_{\frac{4\pi}{3}}\leftrightarrow (1~3~2) = (1~2)(1~3)$$ $\overline G = \{T_{\theta_0}(R_\theta) = R_{\theta_0}\cdot R_\theta = R_{\theta_0+\theta}\mid \theta_0=0, \frac{2\pi}{3}, \frac{4\pi}{3}\}$
+    - 6) Rotations of the regular tetrahedron in $\mathbb R^3$ can be identified with $A_4 = (\text{even permutation in }S_4)$, which has $\frac{4!}{2}=12$ elements (see Gallian, Ch5.1, Ex.8, for details) ![rotation_tetrahedron](imgs/rotation_tetrahedron.png)
+        - Important in Chemistry: chemical formula of the form $AB_4$ such as methane $(CH_4)$ have $A_4$ a symmetry group. The following picture is a tetrahedral $AB_4$ molecule: ![dihedral_d4](imgs/tetrahedral_AB4.png)
 - More generally, one can consider **representations of the group $G$**. Let $V$ be a vector space (e.g. $V=\mathbb R^n$) and let $GL(V)$ be the set of invertible linear transformation $L:V\implies V$ (e.g. $GL(V)\simeq GL(n,\mathbb R)$). Note that $GL(V)$ is a group onder composition. A representation of $G$ is homomorphism $$\zeta: G\implies GL(V)$$
 	- E.g. Rotations about the origin in $\mathbb R^2:\{\mathbb R_\theta\mid \theta\in \mathbb R\}\simeq(\mathbb R, +)$ $$\zeta:G\implies GL(\mathbb R^3)=GL(2,\mathbb R)$$ $$R_\theta \leadsto \begin{pmatrix}cos(\theta)&sin(\theta) \\ -sin(\theta)&cos(\theta)\end{pmatrix}$$
 		- Pf Need to check that $\zeta$ is a homomorphism. Let $R_{\theta_1}, R_{\theta_2}\in G$, then $R_{\theta_1}\circ R_{\theta_2} = R_{\theta_{1+2}}$ and $$\zeta(R_{\theta_1}\circ R_{\theta_2}) = g(R_{\theta_1}) + g(R_{\theta_2})$$
