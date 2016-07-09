@@ -1221,5 +1221,7 @@ _2016/07/08_
 		- Pf: If $O_a = O_a'$, then $a\in O_a = O_{a'}\implies a\sim a'$ (by def of $O_a$). Conversely, if $a\sim a'$ then, $\forall b\in O_a, a\sim b$ and $a\sim a'\iff b\sim a$ and $a\sim a'\iff b\sim a'\iff a'\sim b\implies b\in O_a'\implies O_a\subset O_a'$. Similarly, since $a\sim a'\iff a'\sim a$, we get $O_a'\subset O_a$, giving $O_a = O_a'$ if $a\sim a'$
 - Ex.
 	- 1) $G= \{\text{Rotations about z-axis in }\mathbb R^3\}$ $ = \{R_\theta\mid \theta\in \mathbb R\text{ is the angular rotation counterclockwise in the xy-plane}\}$ (pic...) $X = S^2$. Define the action of $G$ on $S^2$ by: $\forall R_\theta\in G, R_\theta\cdot p = R_\theta(p), \forall p \in S^2$. If $p=(x0,y0,z0)$, then $R_\theta(p)$ has z-cond $z_0$. So, $R_\theta(p)$ is a point on the circle of intersection of $S^2$ with the plane $z=z_0$.
+	    -![rotate_z](rotate_z.jpg)
+        -![s2_plane](s2_plane.jpg)
 		- If $p\neq(0,0,\pm 1)$, then $O_p = (\text{circle }S^2 \cap \{z=z_0\}) = S^1$
 		- If $p=(0,0,\pm 1)$, then $O_p = \{p\} = \{\text{point}\}$
