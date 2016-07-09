@@ -1091,7 +1091,15 @@ _2016/06/27_
 	- Proof: Let $a_1H, \cdots, a_rH$ be the distince left costs of $H$ in $G$. Therefore, $\forall a\in G, aH = a_iH$ for some $1\leq i\leq r \implies a\in  aH =a_iH$ (by (1) in lemma)$\implies$ any element $a\in G$ is contained in one of the left cosets $a_1H, \cdots, a_rH \implies G=a_1H\cup \cdots\cup a_rH$. But by (3) in lemma, $a_iH\cap a_jH=\emptyset$ if $i\neq j$ since $a_iH = a_jH$. So, $G$ is the **disjoint** union of the left cosets $a_1H, \cdots, a_rH \implies |G| = |a_1H|+ \cdots+ |a_rH| =\text{ (lemma (5)) } r|H| \implies |G| = r|H| \implies |H|\mid |G|$
 
 _2016/06/29_
-- Corraries...
+- ...(missing)
+- Corraries: Let $G$ be a finite group and $H$ be a subgroup of $G$. then:
+    - 1) $|G:H| = \frac{|G|}{|H|}$
+    - 2) $\forall a\in G, |a|\mid |G|$. Moreover, $a^{|G|}=e$
+    - 3) A group of prime order is cyclic.
+- Proof:
+    - 1) Done
+    - 2) $\forall a\in G, |a| = |\langle a\rangle |$ with $\langle a\rangle$ a subgroup of $G$. So, by Lagrange's Theorem... (missing)
+    - 3) ... (missing)
 	- Remark: Lagrange's Thm tells us that if $G$ is a finite group, then
 		- If $H$ is any subgroup, then $|H|\mid |G| $
 		- If $a\in G$, then $|a|\mid |G|$
