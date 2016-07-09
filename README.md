@@ -1038,11 +1038,22 @@ _2016/06/22_
 
 _2016/06/27_
 
-...
+... (missing)
 
 # Chapter 3: Lagrange Theorem and Group Actions
 ## 3.1 Langrange Theorem and Cosets
-- ...
+
+- Theorem (**Lagrange**): If $G$ is a **finite** group and $H$ is a subgroup of $G$, then $|H|\mid|G|$
+- Def: Let $G$ be a group, $H$ is a subgroup of $G$ and $a\in G$
+    - $aH:=\{ah\mid h\in H\} = (\text{left cost containing }a)$
+    - $Ha:=\{ha\mid h\in H\} = (\text{right cost containing }a)$
+    - $a = (\text{coset representative of } aH\text{ (or } Ha\text{)})$
+    - $|aH| = \text{number of elements in coset} = |Ha|$
+- E.x.
+    - 1) ... (missing) $\implies 3+2m_0$ is a representative of $3+H, \forall m_0\in \mathbb Z$. Also, $H+3 = \{2m+3\mid m\in \mathbb Z\}$ $= (\text{right coset containing }3)$ $\stackrel{  \text{since }G\text{ (and }H\text{) are abelian}}{=}3+H$ 
+    - 2) $G=\mathbb Z_6=\{\overline 0, \overline 1, \overline 2, \overline 3, \overline 4, \overline 5\}, H=\langle \overline 2\rangle=\{\overline 0, \overline 2, \overline 4\}, a=\overline 5$. Then, since $G$ is abelian $$\overline 5 + \mathbb Z_6 = \mathbb Z_6 + \overline 5 = \{\overline 5 + \overline 0, \overline 5 + \overline 2, \overline 5 + \overline 4\} = \{\overline 1, \overline 3, \overline 5\}$$
+        - Rmk: $\overline 5 + \mathbb Z_6$ is not a subgroup of $G$ (since $\overline 0\not \in \overline 5+\mathbb Z_6)$
+        - Important: cosets may not be subgroups (even though $H$ is a subgroup)!
 	- 3) $G=S_3$ (which is not abelian), $H=\langle(1\, 2)\rangle=\{\epsilon, (1\,2)\}$. Let us find all the left coset of $H$:
 		- $a=\epsilon: \epsilon H = H $
 		- $a = (1\,2): (1\,2)H=\{(1\,2)\epsilon, (1\, 2)(1\, 2)\}= \{(1\, 2\), \epsilon\} = H$
