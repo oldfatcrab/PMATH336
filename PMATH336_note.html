@@ -554,7 +554,7 @@ pre[class*="language-"] {
 <li>Def&#39;n: A binary operation on \(G\) is a map that
 
 <ul>
-<li>\(G \times G \rightarrow G\)</li>
+<li>\(G \times G \implies G\)</li>
 <li>\((a,b) \mapsto a\star b\) or \(a\cdot b\) or \(ab\) (notation)</li>
 </ul></li>
 <li>A binary operation is often called a <strong>product</strong></li>
@@ -563,18 +563,18 @@ pre[class*="language-"] {
 
 <ul>
 <li>\(G=\mathbb{Z}\) and</li>
-<li>and \(+: \mathbb{Z}\times \mathbb{Z} \rightarrow \mathbb{Z}\), \((m,n) \mapsto m+n\)</li>
-<li>or \(\cdot: \mathbb{Z}\times \mathbb{Z} \rightarrow \mathbb{Z}\), \((a,b) \mapsto ab\)</li>
+<li>and \(+: \mathbb{Z}\times \mathbb{Z} \implies \mathbb{Z}\), \((m,n) \mapsto m+n\)</li>
+<li>or \(\cdot: \mathbb{Z}\times \mathbb{Z} \implies \mathbb{Z}\), \((a,b) \mapsto ab\)</li>
 </ul></li>
 <li>Ex 2)
 
 <ul>
 <li>\(G=\mathbb{R}^3\)</li>
-<li>and \( +: \mathbb{R}^3 \times \mathbb{R}^3 \rightarrow \mathbb{R}^3, ((x_1, y_1, z_1), (x_2, y_2, z_2)) \mapsto (x_1+x_2, y_1+y_2, z_1+z_2)\)</li>
-<li>and \(\times: \mathbb{R}^3 \times \mathbb{R}^3 \rightarrow \mathbb{R}^3, ((x_1, y_1, z_1), (x_2, y_2, z_2)) \mapsto (x_1, y_1, z_1) \cdot (x_2, y_2, z_2)\)</li>
-<li>but \(\dot: \mathbb{R}^3 \times \mathbb{R}^3  \rightarrow \mathbb{R}, ((x_1, y_1, z_1), (x_2, y_2, z_2)) \mapsto (x_1x_2, y_1y_2, z_1z_2)\) is <strong>not</strong> a binary operation because the target space is not \(G=\mathbb{R}^3\)</li>
+<li>and \( +: \mathbb{R}^3 \times \mathbb{R}^3 \implies \mathbb{R}^3, ((x_1, y_1, z_1), (x_2, y_2, z_2)) \mapsto (x_1+x_2, y_1+y_2, z_1+z_2)\)</li>
+<li>and \(\times: \mathbb{R}^3 \times \mathbb{R}^3 \implies \mathbb{R}^3, ((x_1, y_1, z_1), (x_2, y_2, z_2)) \mapsto (x_1, y_1, z_1) \cdot (x_2, y_2, z_2)\)</li>
+<li>but \(\dot: \mathbb{R}^3 \times \mathbb{R}^3  \implies \mathbb{R}, ((x_1, y_1, z_1), (x_2, y_2, z_2)) \mapsto (x_1x_2, y_1y_2, z_1z_2)\) is <strong>not</strong> a binary operation because the target space is not \(G=\mathbb{R}^3\)</li>
 </ul></li>
-<li>Def&#39;n (<strong>Groups</strong>): Let \(G\) be a non-empty set with a binary operation, \(G\times G\rightarrow G\), then \(G\) is a <strong>group</strong> if the binary operation has the following properties:
+<li>Def&#39;n (<strong>Groups</strong>): Let \(G\) be a non-empty set with a binary operation, \(G\times G\implies G\), then \(G\) is a <strong>group</strong> if the binary operation has the following properties:
 
 <ul>
 <li>(i) (<strong>Associativity</strong>): \(a(bc) = (ab)c\), \(\forall a,b,c \in G\)</li>
@@ -585,7 +585,7 @@ pre[class*="language-"] {
 
 <ul>
 <li>The integers: \((\mathbb{Z},+) \leadsto \) this is a group</li>
-<li><strong>HERE</strong>: \(G = \mathbb{Z}\) and \(+: \mathbb{Z}\times\mathbb{Z} \rightarrow \mathbb{Z}, (m,n) \mapsto m+n\)</li>
+<li><strong>HERE</strong>: \(G = \mathbb{Z}\) and \(+: \mathbb{Z}\times\mathbb{Z} \implies \mathbb{Z}, (m,n) \mapsto m+n\)</li>
 <li>Does \(+\) satisfy properties (i) to (iii)?
 
 <ul>
@@ -603,7 +603,7 @@ pre[class*="language-"] {
 
 <ul>
 <li>\(m + (-m) = (-m) + m = 0\)</li>
-<li>\(\Rightarrow -m \in \mathbb{Z}\) is the inverse of \(m \in \mathbb{Z}\)</li>
+<li>\(\implies -m \in \mathbb{Z}\) is the inverse of \(m \in \mathbb{Z}\)</li>
 </ul></li>
 <li>Thus, \((\mathbb{Z},+)\) is a group.</li>
 </ul></li>
@@ -612,7 +612,7 @@ pre[class*="language-"] {
 
 <ul>
 <li>The integers: \((\mathbb{Z},\cdot)\leadsto\) this is a group</li>
-<li><strong>HERE</strong>: \(G = \mathbb{Z}\) and \(\cdot: \mathbb{Z}\times\mathbb{Z} \rightarrow \mathbb{Z}, (m,n) \mapsto m\cdot n\)</li>
+<li><strong>HERE</strong>: \(G = \mathbb{Z}\) and \(\cdot: \mathbb{Z}\times\mathbb{Z} \implies \mathbb{Z}, (m,n) \mapsto m\cdot n\)</li>
 <li>Does \(\cdot\) satisfy properties (i) to (iii)?
 
 <ul>
@@ -686,7 +686,7 @@ pre[class*="language-"] {
 <ul>
 <li>(i) Multiplication in \(\mathbb{Q}^*\) is associative as in \(\mathbb{Z}\) and \(\mathbb{R}\)</li>
 <li>(ii) \(1 \in \mathbb{Q}^*\) is the identity with respect to \dot.</li>
-<li>(iii) \(\forall \frac{a}{b} \in \mathbb{Q}^*\), we have that \(\frac{b}{a} \in \mathbb{Q}^*\) and \(\frac{a}{b} \cdot \frac{b}{a} = \frac{b}{a}\cdot \frac{a}{b} = 1 \Rightarrow \frac{a}{b}^{-1} = \frac{b}{a} \Rightarrow\) every element in \(\mathbb{Q}^*\) has an inverse</li>
+<li>(iii) \(\forall \frac{a}{b} \in \mathbb{Q}^*\), we have that \(\frac{b}{a} \in \mathbb{Q}^*\) and \(\frac{a}{b} \cdot \frac{b}{a} = \frac{b}{a}\cdot \frac{a}{b} = 1 \implies \frac{a}{b}^{-1} = \frac{b}{a} \implies\) every element in \(\mathbb{Q}^*\) has an inverse</li>
 </ul></li>
 <li>Note:
 
@@ -760,7 +760,7 @@ pre[class*="language-"] {
 <li>Review from last lecture:
 
 <ul>
-<li>Def&#39;n (<strong>Groups</strong>): Let \(G\) be a non-empty set with a binary operation, \(G\times G\rightarrow G\), then \(G\) is a <strong>group</strong> if the binary operation has the following properties:
+<li>Def&#39;n (<strong>Groups</strong>): Let \(G\) be a non-empty set with a binary operation, \(G\times G\implies G\), then \(G\) is a <strong>group</strong> if the binary operation has the following properties:
 
 <ul>
 <li>(i) (<strong>Associativity</strong>): \(a(bc) = (ab)c\), \(\forall a,b,c \in G\)</li>
@@ -787,7 +787,7 @@ pre[class*="language-"] {
 <li>\(\overline{r} + \overline{r_1} = \overline{r+r_1}\), and</li>
 <li>\(\overline{r} \cdot \overline{r_1} = \overline{r \cdot r1}\)</li>
 </ul></li>
-<li>\((\mathbb{Z}_n, +)\): since \(+\) is associative in \(\mathbb{Z}\), it is also associative with \(\mathbb{Z}_n\). Moreover, \(\overline{0}\) is the identity for \(+\). finally, \(\overline{-r}\) is <strong>inverse</strong> of \(F\) with respect to \(+\). We will denote \(\overline{-r}\) by \(-\overline{r} \Rightarrow (\mathbb{Z}_n, +)\) is a group</li>
+<li>\((\mathbb{Z}_n, +)\): since \(+\) is associative in \(\mathbb{Z}\), it is also associative with \(\mathbb{Z}_n\). Moreover, \(\overline{0}\) is the identity for \(+\). finally, \(\overline{-r}\) is <strong>inverse</strong> of \(F\) with respect to \(+\). We will denote \(\overline{-r}\) by \(-\overline{r} \implies (\mathbb{Z}_n, +)\) is a group</li>
 <li>\((\mathbb{Z}_n, \cdot)\): Again, since \(\cdot\) is associative in \(\mathbb{Z}\), it is also associative in \(\mathbb{Z}\),. And \(\overline{1}\) is the identity for \(\cdot\), however, not every element in \(\mathbb{Z}_n\) has an inverse with respect to \(\cdot\). In fact, recall that \(F \in \mathbb{Z}_n\) has a multiplicative inverse iff \(gcd(r,n) = 1\). I.e. \(\exists \overline s \in \mathbb{Z}_n\) such that \(\overline r \cdot \overline s = \overline s \cdot \overline r = \overline 1\) iff \(gcd(r, n) = 1\)</li>
 <li>If an element \(\overline r \in \mathbb{Z}_n\) has an inverse in \(\mathbb{Z}_n\), it is called a <strong>unit</strong>.</li>
 <li>Set \(\mathbb{Z}_n^* = \{\text{units in }\mathbb{Z}_n\} = \{F\in \mathbb{Z}_n \mid gcd(r,n)=1\}\). Then, \((\mathbb{Z}_n^*, \cdot)\) is a group
@@ -830,9 +830,9 @@ pre[class*="language-"] {
 <li>E.g.:
 
 <ul>
-<li>\((\mathbb{Z}, +) \Rightarrow \mid\mathbb{Z}\mid = \infty\)</li>
-<li>\((\mathbb{Z}_6,+) \Rightarrow \mid\mathbb{Z}_6\mid = 6\)</li>
-<li>\((\mathbb{Z}_6^*,\cdot) \Rightarrow \mid\mathbb{Z}_6^* \mid = 2\)</li>
+<li>\((\mathbb{Z}, +) \implies \mid\mathbb{Z}\mid = \infty\)</li>
+<li>\((\mathbb{Z}_6,+) \implies \mid\mathbb{Z}_6\mid = 6\)</li>
+<li>\((\mathbb{Z}_6^*,\cdot) \implies \mid\mathbb{Z}_6^* \mid = 2\)</li>
 </ul></li>
 </ul></li>
 <li>Aside: There is another important set of objets in abstract algebra, which corresponds to rings (with identity):
@@ -861,8 +861,8 @@ pre[class*="language-"] {
 
 <ul>
 <li>\(A+B,\, A\cdot B \in M_{n\times n}(\mathbb{R})\)</li>
-<li>\(\Rightarrow +\), \(\cdot\) are binary operations for \(M_{n\times n}(\mathbb{R})\)</li>
-<li>However, if \(A, B \in G\), although \(A\cdot B \in G\), may not have \(A+B \in G\) (e.g. \(a\in G\) so that \(0\in G\), but \(A+(-A)=0 \notin G\)) \(\Rightarrow\) \(+\) is not a binary operation with for \(G\)</li>
+<li>\(\implies +\), \(\cdot\) are binary operations for \(M_{n\times n}(\mathbb{R})\)</li>
+<li>However, if \(A, B \in G\), although \(A\cdot B \in G\), may not have \(A+B \in G\) (e.g. \(a\in G\) so that \(0\in G\), but \(A+(-A)=0 \notin G\)) \(\implies\) \(+\) is not a binary operation with for \(G\)</li>
 <li>Consider \((G, \cdot)\). Then it is a group (exercise) where the identity is the nxn identity matrix \(I_{n\times n}\). But, \((G, \cdot)\) is <strong>not</strong> abelian because \(AB \neq BA\) for most \(A,B \in G\)</li>
 </ul></li>
 <li>A group \((G, \cdot)\) is called <strong>non-abelian</strong> if it is not abelian.</li>
@@ -881,7 +881,7 @@ pre[class*="language-"] {
 <li>Review:
 
 <ul>
-<li>Def&#39;n (<strong>Groups</strong>): Let \(G\) be a non-empty set with a binary operation, \(G\times G\rightarrow G\), then \(G\) is a <strong>group</strong> if the binary operation has the following properties:
+<li>Def&#39;n (<strong>Groups</strong>): Let \(G\) be a non-empty set with a binary operation, \(G\times G\implies G\), then \(G\) is a <strong>group</strong> if the binary operation has the following properties:
 
 <ul>
 <li>(i) (<strong>Associativity</strong>): \(a(bc) = (ab)c\), \(\forall a,b,c \in G\)</li>
@@ -904,14 +904,14 @@ pre[class*="language-"] {
 <li>Suppose \(\exists e, f \in G\) such that \(ae = ea = a\) and \(af = fa = a, \forall a \in G\).</li>
 <li>In particular, since  \(f\in G\), we have that \(f = fe\) because \(e\) is an identity</li>
 <li>Similarly, because \(e\in G\) and \(f\) is an identity, \(fe = e\)</li>
-<li>\(\Rightarrow f=fe=e\)</li>
+<li>\(\implies f=fe=e\)</li>
 </ul></li>
 <li>2) (Uniqueness of inverses)
 
 <ul>
 <li>Let \(a\in G\). Suppose that a has <strong>two</strong> inverses in \(G\), say \(a^{-1}\) and \(b\). Therefore, by property (iii), we have: \(aa^{-1} = a^{-1} a = e\) and \(ab = ba = e\)</li>
 <li>Then \(a^{-1} = a^{-1}e = a^{-1}(ab) = (a^{-1}a)b = eb = b\)</li>
-<li>\(\Rightarrow a^{-1}=b\)</li>
+<li>\(\implies a^{-1}=b\)</li>
 </ul></li>
 </ul></li>
 <li>Using these properties, we obtain:
@@ -937,7 +937,7 @@ pre[class*="language-"] {
 <li>By uniqueness of the inverse, it is enough to check that \(ab(b^{-1}a^{-1}) = (b^{-1}a^{-1})ab = e\)</li>
 <li>By associatitivy, we have that \(ab(b^{-1}a^{-1} = a(bb^{-1})a^{-1} = aea^{-1} = (ae)a^{-1} = aa^{-1} = e\)</li>
 <li>Similarly, \((b^{-1}a^{-1})ab=b^{-1}(a^{-1}a)b=b^{-1}eb=(b^{-1}e)b=b^{-1}b=e\)</li>
-<li>\(\Rightarrow (ab)^{-1}=b^{-1}a^{-1}\)</li>
+<li>\(\implies (ab)^{-1}=b^{-1}a^{-1}\)</li>
 <li>Note: 
 
 <ul>
@@ -948,7 +948,7 @@ pre[class*="language-"] {
 <ul>
 <li>\((G,\cdot) = (GL(2,\mathbb{R}),\cdot)\)</li>
 <li>A = \(\begin{pmatrix}1&amp;2\\0&amp;1\end{pmatrix}\) and B = \(\begin{pmatrix}2&amp;0\\0&amp;3\end{pmatrix}\)</li>
-<li>\(\Rightarrow AB = \begin{pmatrix}2&amp;6\\0&amp;3\end{pmatrix}\) and \((AB)^{-1}=\begin{pmatrix}\frac{1}{2}&amp;-1\\ 0&amp;\frac{1}{3} \end{pmatrix}\)</li>
+<li>\(\implies AB = \begin{pmatrix}2&amp;6\\0&amp;3\end{pmatrix}\) and \((AB)^{-1}=\begin{pmatrix}\frac{1}{2}&amp;-1\\ 0&amp;\frac{1}{3} \end{pmatrix}\)</li>
 <li>But, \(A^{-1}B^{-1} = \begin{pmatrix}\frac 1 2&amp;-\frac 2 3\\0&amp;\frac 1 3\end{pmatrix} \neq (AB)^{-1}\)</li>
 <li>Nonetheless, \(B^{-1}A^{-1} = \begin{pmatrix}\frac{1}{2}&amp;-1\\ 0&amp;\frac{1}{3} \end{pmatrix} = (AB)^{-1}\)</li>
 </ul></li>
@@ -976,7 +976,7 @@ pre[class*="language-"] {
 
 <ul>
 <li>Def&#39;n: Let \(G\) e a group. If a subset \(H\) of \(G\) is itself a group under the operation of \(G\), we say that H is a <strong>subgroup</strong> of \(G\).</li>
-<li>Note: the definition of a subgroup implies that subset it <strong>is closed under the operation in G</strong>. I.e. \(\forall a,b\in H\), then \(ab\in H\). This ensures that restriction of the binary operation \(G\times G\rightarrow G\) is again a binary operation taking \(H\times H\rightarrow H\). However, a subset of a group of \(G\) may not be closed under the operation on \(G\).
+<li>Note: the definition of a subgroup implies that subset it <strong>is closed under the operation in G</strong>. I.e. \(\forall a,b\in H\), then \(ab\in H\). This ensures that restriction of the binary operation \(G\times G\implies G\) is again a binary operation taking \(H\times H\implies H\). However, a subset of a group of \(G\) may not be closed under the operation on \(G\).
 
 <ul>
 <li>E.g. \((M_{n\times n}(\mathbb{R}), +)\) is a group and \(GL(n,\mathbb R)=\{A\in M_{n\times n}(\mathbb R) \mid \det A\ne 0\} \subset M_{nxn}(\mathbb R)\), but \(GL(n, \mathbb R)\) is not closed under \(+\) (e.g. \(\forall A \in GL(n,\mathbb R), -A \in GL(n,\mathbb R)\)) but \(A+(-A) \notin GL(n,\mathbb R)\)</li>
@@ -1013,7 +1013,7 @@ pre[class*="language-"] {
 <li>We first notice that \(e\in H\), because \(H\) has at least one element, say a, so that \(e=aa^{-1}\in H\) (by \((*)\)).</li>
 <li>Also, \(e^{-1} = e\). Thus, \(\forall a \in H\), we have that \(a^{-1} = ea^{-1}\in H\) (by \((*)\)).</li>
 <li>Finally, \(\forall a,b\in H\), since \(b^{-1}\in H\), we get that \(ab=a(b^{-1})^{-1}\in H\) by \((*)\)</li>
-<li>\(\Rightarrow H\) is closed under the operation</li>
+<li>\(\implies H\) is closed under the operation</li>
 <li>Note: we still to check that the restriction of the operation on \(G\) satisfies the 3 group axioms. Since the operation is associative on \(G\), it is also associative on \(H\). And we have already seen that the identity and inverse axioms hold.</li>
 </ul></li>
 <li><p>Theorem (<strong>Two-step subgroup test</strong>) Let \(G\) be a group and \(H\) be a non-empty subset of \(G\). Then \(H\) is a subgroup of \(G\) if \(ab\in H \forall a,b\in H\) (H is closed under the operation on G), and \(a^{-1} \in H, \forall a \in H\) (H is closed under inverse).</p>
@@ -1041,8 +1041,8 @@ pre[class*="language-"] {
 
 <ul>
 <li>\((\mathbb Z, +)\)</li>
-<li>\(H=\{2m\mid m\in \mathbb Z\} \Rightarrow \) H is closed under \(+\) since the sum of 2 even integers is even</li>
-<li>Also, \(\forall 2m \in H\), its inverse - \(2m\in H \Rightarrow H\) is closed under inverse. Thus, \(H \vartriangleleft (\mathbb Z,+)\) by the two-step subgroup test</li>
+<li>\(H=\{2m\mid m\in \mathbb Z\} \implies \) H is closed under \(+\) since the sum of 2 even integers is even</li>
+<li>Also, \(\forall 2m \in H\), its inverse - \(2m\in H \implies H\) is closed under inverse. Thus, \(H \vartriangleleft (\mathbb Z,+)\) by the two-step subgroup test</li>
 </ul></li>
 <li>Ex 4)
 
@@ -1103,7 +1103,7 @@ pre[class*="language-"] {
 <li>Every element is inverse itself</li>
 <li>\((\{\overline 1, \overline5\},\cdot), (\{\overline 1,\overline 7 \},\cdot), (\{\overline 1, \overline{11} \},\cdot), (\{\overline1 \},\cdot)\leftarrow\) These are the only proper subgroups of \((\mathbb Z_{12}^*, \cdot)\)</li>
 </ul></li>
-<li>Note: We have seen in the proof of the one-step subgroup test that if \(H\vartriangleleft G\), then \(e \in H\) where \(e\) is the identity in \(G\). However, since \(H\) is closed under the operation on \(G, \forall a\in H, ae = ea = a\) (since \(e\) is the identity in \(G\)) \(\Rightarrow e\) is an identity element in \(H\) for the operation in \(H\). So, because identity element are unique, \(e\) is also the identity in \(H\).</li>
+<li>Note: We have seen in the proof of the one-step subgroup test that if \(H\vartriangleleft G\), then \(e \in H\) where \(e\) is the identity in \(G\). However, since \(H\) is closed under the operation on \(G, \forall a\in H, ae = ea = a\) (since \(e\) is the identity in \(G\)) \(\implies e\) is an identity element in \(H\) for the operation in \(H\). So, because identity element are unique, \(e\) is also the identity in \(H\).</li>
 </ul></li>
 <li><p>Prop: Let \(G\) be a group and \(a\in G\). Set \(\langle a\rangle:=\{a^m = aa\cdots a \mid m\in \mathbb Z\}\) Then \(\langle a\rangle \vartriangleleft G\) called the <strong>cyclic subgroup of \(G\) generated by \(a\)</strong></p>
 
@@ -1152,7 +1152,7 @@ pre[class*="language-"] {
 <li>Then, \(e_H=e=\)(indentity in \(G\)) because, \(\forall a\in H, since a\in G\) as \(H\subset G\), we have \(ae=ea=a\).</li>
 <li>So, \(e\) is an indentity in \(H\), implying that \(e=e^H\) by uniqueness of the indentity element.</li>
 <li>Similarly, if \(a^{-1}\) as the identity of \(a\in G\), then \(aa^{-1}=a^{-1}a=e=e_H\)</li>
-<li>\(\Rightarrow a^{-1}\) is an indentity for \(a\in H\Rightarrow a^{-1}=a_H^{-1}\) by uniqueness of inverse</li>
+<li>\(\implies a^{-1}\) is an indentity for \(a\in H\implies a^{-1}=a_H^{-1}\) by uniqueness of inverse</li>
 </ul></li>
 <li><strong>So</strong>: if \(H\vartriangleleft G\), then the indentity of \(H\) is the indentity of G and the inverse of any element in \(H\) is its inverse in \(G\).</li>
 </ul></li>
@@ -1166,8 +1166,8 @@ pre[class*="language-"] {
 <li>E.g. \((G,\cdot) = (\mathbb R^*, \cdot)\) and \(H = \{x\in(G, \cdot) \mid x=q or x \mathbb Q\}\). Note that \(1\in H\), so that \(H\) may be a subgroup of \(G\). <strong>BUT</strong>, \(\sqrt{2}\in H\) and \(\sqrt{2}\sqrt{2} \notin H\)
 
 <ul>
-<li>\(\Rightarrow H\) is not closed under multiplication</li>
-<li>\(\Rightarrow H \not \vartriangleleft G\)</li>
+<li>\(\implies H\) is not closed under multiplication</li>
+<li>\(\implies H \not \vartriangleleft G\)</li>
 </ul></li>
 </ul></li>
 <li>\(H\) is not closed under inverses, the \(H \not \vartriangleleft G\) (i.e. If \(\exists a \in G\) with \(a^{-1} \notin H\), then \(H \not \vartriangleleft G\))
@@ -1176,8 +1176,8 @@ pre[class*="language-"] {
 <li>E.g. \((G,\cdot) = (\mathbb R^*,\cdot)\) and \(H = \{x\in (G,\cdot) \mid x\ge 1\}\). Note that \(1\in H\). Also, \(\forall x,y\in H, xy\in H\) because \(xy \ge 1\) since \(x,y\ge 1\). But, \(2\in H\) and \(2^{-1} = \frac{1}{2}\notin H\).
 
 <ul>
-<li>\(\Rightarrow H\) is not closed under inverses</li>
-<li>\(\Rightarrow H\not \vartriangleleft G\)</li>
+<li>\(\implies H\) is not closed under inverses</li>
+<li>\(\implies H\not \vartriangleleft G\)</li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -1205,15 +1205,15 @@ pre[class*="language-"] {
 
 <ul>
 <li>\(\Leftrightarrow \begin{pmatrix}a&amp;2b\\c&amp;2d\end{pmatrix}=\begin{pmatrix}a&amp;b\\2c&amp;2d\end{pmatrix}\)</li>
-<li>\(\Rightarrow c = 2c\) and \(2b = b\)</li>
-<li>\(\Rightarrow c=b=0\)</li>
-<li>\(\Rightarrow (a,0;0,b)\) (i.e. must be diagonal)</li>
+<li>\(\implies c = 2c\) and \(2b = b\)</li>
+<li>\(\implies c=b=0\)</li>
+<li>\(\implies (a,0;0,b)\) (i.e. must be diagonal)</li>
 </ul></li>
 <li>\(\begin{pmatrix}a&amp;0\\0&amp;d\end{pmatrix}\begin{pmatrix}1&amp;1\\0&amp;1\end{pmatrix}=\begin{pmatrix}1&amp;1\\0&amp;1\end{pmatrix}\begin{pmatrix}a&amp;0\\0&amp;d\end{pmatrix}\)
 
 <ul>
 <li>\( \Leftrightarrow \begin{pmatrix}a&amp;a\\0&amp;d\end{pmatrix}=\begin{pmatrix}a&amp;d\\0&amp;d\end{pmatrix}(a,a;0,d)=(a,d;0,d)\)</li>
-<li>\(\Rightarrow a=d\)</li>
+<li>\(\implies a=d\)</li>
 </ul></li>
 <li>So \(\mathcal Z(G) = {\begin{pmatrix}a&amp;0\\0&amp;a\end{pmatrix}\mid a\in R^*}\), where \(a \neq 0\) because \(\det \begin{pmatrix}a&amp;0\\0&amp;a\end{pmatrix} = a^2 \neq 0\)</li>
 </ul></li>
@@ -1225,7 +1225,7 @@ pre[class*="language-"] {
 <ul>
 <li>Consider \(\begin{pmatrix}a&amp;0\\0&amp;a\end{pmatrix}\) with \(a \in \mathbb R^*\). </li>
 <li>Then, \(\forall \begin{pmatrix}x&amp;y\\z&amp;w\end{pmatrix}\in GL(2,\mathbb R)\), we have: \(\begin{pmatrix}a&amp;0\\0&amp;a\end{pmatrix}\begin{pmatrix}x&amp;y\\z&amp;w\end{pmatrix}=\begin{pmatrix}ax&amp;ay\\az&amp;aw\end{pmatrix} = \begin{pmatrix}a&amp;0\\0&amp;a\end{pmatrix}\)</li>
-<li>\( \Rightarrow \begin{pmatrix}a&amp;0\\0&amp;a\end{pmatrix}\in \mathcal Z(G)\) </li>
+<li>\( \implies \begin{pmatrix}a&amp;0\\0&amp;a\end{pmatrix}\in \mathcal Z(G)\) </li>
 <li>and \(\bigg \{\left.\begin{pmatrix}a&amp;0\\0&amp;a\end{pmatrix}\right\vert a\in R^*\bigg\}\subset \mathcal Z(G)\)</li>
 </ul></li>
 </ul></li>
@@ -1245,9 +1245,9 @@ pre[class*="language-"] {
 
 <ul>
 <li>Let \(x\in G\). Then, \((ab)x = a(bx) = a(xb) = (ax)b = (xa)b = x(ab)\)</li>
-<li>\(\Rightarrow ab\in \mathcal Z(G)\)</li>
+<li>\(\implies ab\in \mathcal Z(G)\)</li>
 </ul></li>
-<li>b) Let \(x\in \mathcal Z(G)\) so that \(ax = xa, \forall x\in G\). Then \(a^{-1}x = (x^{-1}a)^{-1} = (ax^{-1})^{-1} = (x^{-1})^{-1}a^{-1} = xa^{-1} \Rightarrow a^{-1}\in \mathcal Z(G)\)</li>
+<li>b) Let \(x\in \mathcal Z(G)\) so that \(ax = xa, \forall x\in G\). Then \(a^{-1}x = (x^{-1}a)^{-1} = (ax^{-1})^{-1} = (x^{-1})^{-1}a^{-1} = xa^{-1} \implies a^{-1}\in \mathcal Z(G)\)</li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -1308,8 +1308,8 @@ pre[class*="language-"] {
 <li>3) <strong>Permutations of degree \(n\)</strong>
 
 <ul>
-<li>Permutations of degree \(n\) is a bijection from \(\{1,\cdots, n\}\) to itself, i.e. it is a map \[\sigma :{1,\cdots,n}\rightarrow{1,\cdots,n}\] that is 1:1 and onto. The set of all permutation of degree n is denoted \(S_n\)</li>
-<li>\(S_n\) is group under the operation of composition \[S_n\times S_n \rightarrow S_n\\(\sigma, \tau)\mapsto\sigma\circ \tau\] (which is well-defined because \(\sigma,\tau:\{1,\cdots,n\}\rightarrow\{1,\cdots,n\}\) so that \(\sigma\circ \tau\) is well-defined. and \(\sigma\circ\tau\) is a bijection since \(\sigma,\tau\) are both bijection) Also composition of function is associative, the identity permutation \(id:\{1,\cdots,n\}\rightarrow\{1,\cdots,n\}, i\mapsto i\), is an identity for the operation of composition \(\forall \tau\in S_n\), its inverse map \(\tau^{-1}\in S_n\) and is an inverse for \(\tau\) with respect to the operation of composition. So, \((S_n,\circ)\) is a group
+<li>Permutations of degree \(n\) is a bijection from \(\{1,\cdots, n\}\) to itself, i.e. it is a map \[\sigma :{1,\cdots,n}\implies{1,\cdots,n}\] that is 1:1 and onto. The set of all permutation of degree n is denoted \(S_n\)</li>
+<li>\(S_n\) is group under the operation of composition \[S_n\times S_n \implies S_n\\(\sigma, \tau)\mapsto\sigma\circ \tau\] (which is well-defined because \(\sigma,\tau:\{1,\cdots,n\}\implies\{1,\cdots,n\}\) so that \(\sigma\circ \tau\) is well-defined. and \(\sigma\circ\tau\) is a bijection since \(\sigma,\tau\) are both bijection) Also composition of function is associative, the identity permutation \(id:\{1,\cdots,n\}\implies\{1,\cdots,n\}, i\mapsto i\), is an identity for the operation of composition \(\forall \tau\in S_n\), its inverse map \(\tau^{-1}\in S_n\) and is an inverse for \(\tau\) with respect to the operation of composition. So, \((S_n,\circ)\) is a group
 
 <ul>
 <li>Claim: \(S_n\) has \(n!\) elements
@@ -1322,7 +1322,7 @@ pre[class*="language-"] {
 <li>\(\sigma(2)\) can take \(n-1\) possible values once \(\sigma(1)\) is fixed because \(\sigma(2)\in \{1,\cdots,n\} \setminus \{\sigma(1)\}\)</li>
 <li>\(\sigma(3)\) can take \(n-2\) possible values once \(\sigma(1)\) and \(\sigma(2)\) is fixed because \(\sigma(3)\in \{1,\cdots,n\} \setminus \{\sigma(1),\sigma(2)\}\)</li>
 <li>etc\(\cdots\)</li>
-<li>\(\sigma(n)\) can only take one possible value once \(\sigma(1),...,\sigma(n-1)\) are fixed</li>
+<li>\(\sigma(n)\) can only take one possible value once \(\sigma(1),\cdots,\sigma(n-1)\) are fixed</li>
 <li>Thus, there are \(n(n-1)\cdots 1=n!\) possible ways of defining \sigma</li>
 </ul></li>
 </ul></li>
@@ -1338,15 +1338,15 @@ pre[class*="language-"] {
 
 <ul>
 <li>If \(H\) is a subgroup of \(G\), then it is closed under the operation in \(G\) (by definition), so the property holds so that \(ab\in H, \forall a,b\in H\). Since \(H\) is closed under the operation in \(G\), by the 2-step subgroup test, the only thing left is that \(H\) is closed under inverse: \(\forall a\in H, a^{-1}\in H\).</li>
-<li>Let \(a\in H\). If \(a=e\), then \(a^{-1}=e^{-1}=e=a\in H\). If \(a\neq e\), consider the set \(S={a, a^2, a^3, \cdots} = {a^m\mid m\in \mathbb N}\). Then \(S\subset G\) with \(G\) finite \(\Rightarrow S\) has only a finite number of elements. </li>
-<li>Moreover, since \(H\) is closed under the operation in \(G\), we have that \[a^2=a\cdot a \in H\text{ since }a\in H\\a^3=a^2\cdot a\in H\text{ since }a,a^2\in H\\\text{etc}\cdots\\\Rightarrow a^m\in H, \forall m\in \mathbb N\\\Rightarrow S\subset H\]</li>
+<li>Let \(a\in H\). If \(a=e\), then \(a^{-1}=e^{-1}=e=a\in H\). If \(a\neq e\), consider the set \(S={a, a^2, a^3, \cdots} = {a^m\mid m\in \mathbb N}\). Then \(S\subset G\) with \(G\) finite \(\implies S\) has only a finite number of elements. </li>
+<li>Moreover, since \(H\) is closed under the operation in \(G\), we have that \[a^2=a\cdot a \in H\text{ since }a\in H\\a^3=a^2\cdot a\in H\text{ since }a,a^2\in H\\\text{etc}\cdots\\\implies a^m\in H, \forall m\in \mathbb N\\\implies S\subset H\]</li>
 <li>Now, since \(S\) is finite, \(\exists i,j\in \mathbb N\) such that \(i\neq j\) and \(a^i=a^j\). Suppose that \(i&lt;j\) so that \(j-i&gt;0\) and so \(j-i\in \mathbb N\).</li>
 <li>Then, \(a^{j-i}=e\) (since \(a^i=a^j\)) with \(j-i\geq 1\) (since \(j-i&gt;0\))
 
 <ul>
 <li>If \(j-i=1\), then \(a=a^1=a^{j-i}=e\), which is impossible since we assumed that \(a\neq e\)</li>
-<li>So, \(j-i&gt;1 \Rightarrow j-i-1&gt;0\) and \(j-i-1\in \mathbb N\)</li>
-<li>\(\Rightarrow a^{j-i-1}\in S\subset H\)</li>
+<li>So, \(j-i&gt;1 \implies j-i-1&gt;0\) and \(j-i-1\in \mathbb N\)</li>
+<li>\(\implies a^{j-i-1}\in S\subset H\)</li>
 <li><strong>BUT</strong>, \(a^{-1}=e\cdot a^{-1} = a^{j-1}\cdot a^{-1}=a^{j-i-1}\in H\)</li>
 </ul></li>
 </ul></li>
@@ -1371,9 +1371,9 @@ pre[class*="language-"] {
 <li>[If \(\overline{x&#39;} = \overline x\), we need to check \[(x\bmod k =1)\Leftrightarrow(x&#39;\bmod k =1)\]</li>
 <li>But \(\overline{x&#39;} = \overline x\) in \(\mathbb Z_n^*\Leftrightarrow x&#39;+x+rn\) for some \(r\in \mathbb Z\)</li>
 <li>However, \(k|n\) so that \(n=ks\) with \(s\in \mathbb N\). Thus \[x&#39;=x+rn=(x+rs)k\]</li>
-<li>\(\Rightarrow x&#39;=x\bmod k\), and \[(x&#39;\bmod k=1)\Rightarrow (x&#39;+m&#39;k=1)\text{ for some }m&#39;\in \mathbb Z\] \[\Leftrightarrow x+(rs)k+m&#39;k=1\] \[\Leftrightarrow x+k[rs+m&#39;]=1\text{ for some }m&#39;\in \mathbb Z\] \[\Leftrightarrow (x\bmod k=1)\text{ for some }m&#39;\in \mathbb Z\]</li>
+<li>\(\implies x&#39;=x\bmod k\), and \[(x&#39;\bmod k=1)\implies (x&#39;+m&#39;k=1)\text{ for some }m&#39;\in \mathbb Z\] \[\Leftrightarrow x+(rs)k+m&#39;k=1\] \[\Leftrightarrow x+k[rs+m&#39;]=1\text{ for some }m&#39;\in \mathbb Z\] \[\Leftrightarrow (x\bmod k=1)\text{ for some }m&#39;\in \mathbb Z\]</li>
 <li>\(H=\{\overline x\in \mathbb Z_n^*\mid x\bmod k=1\}\)</li>
-<li>Here, the operation in \(\mathbb Z_n^*\) is multiplication. If \(\overline x, \overline y\in H\) so that \(x\bmod k=1\) and \(y\bmod k=1\), then \(x+mk=1\) and \(y+m&#39;k=1\) for some \(m,m&#39;\in \mathbb Z\) and \[1=(x+mk)(y+m&#39;k)=xy+[xm&#39;+my+mm&#39;k]k\] \[\Leftrightarrow xy\bmod k=1\Rightarrow \overline{xy}\in H \Rightarrow \overline x\overline y \in H\]</li>
+<li>Here, the operation in \(\mathbb Z_n^*\) is multiplication. If \(\overline x, \overline y\in H\) so that \(x\bmod k=1\) and \(y\bmod k=1\), then \(x+mk=1\) and \(y+m&#39;k=1\) for some \(m,m&#39;\in \mathbb Z\) and \[1=(x+mk)(y+m&#39;k)=xy+[xm&#39;+my+mm&#39;k]k\] \[\Leftrightarrow xy\bmod k=1\implies \overline{xy}\in H \implies \overline x\overline y \in H\]</li>
 <li>So, by the finite subgroup test, \(H\) is a subgroup of \(\mathbb Z_n^*\) because \(H\neq \emptyset\) (since \(\overline 1\in H\) because \(1\bmod k=1\))</li>
 </ul></li>
 <li>Defnition (<strong>order of an element</strong>): Let \(G\) be a group. For any \(a\in G\), the order of a is defined as the smallest <em>positive</em> integer in such that \(a^m=e\) (if it exists. If no such integer exists, then a is said to have <strong>infinite order</strong>. The order of a is denoted \(|a|\).
@@ -1387,7 +1387,7 @@ pre[class*="language-"] {
 <li>3) \(\forall a\in G, |a|=|a^{-1}|\)
 
 <ul>
-<li>Proof: Suppose that \(|a|=m\). Then, \(a^m=e\). So, \[(a^{-1})^m=a^{-m}=(a^m)^{-1}=e^{-1}=e\] So, by definition of the order of an element, since \((a^{-1})^m=e\), we have: \[|a^{-1}|\le m=|a|\] One prove similarly that \(|a|=|a^{-1}|\Rightarrow |a|=|a^{-1}|\)</li>
+<li>Proof: Suppose that \(|a|=m\). Then, \(a^m=e\). So, \[(a^{-1})^m=a^{-m}=(a^m)^{-1}=e^{-1}=e\] So, by definition of the order of an element, since \((a^{-1})^m=e\), we have: \[|a^{-1}|\le m=|a|\] One prove similarly that \(|a|=|a^{-1}|\implies |a|=|a^{-1}|\)</li>
 </ul></li>
 <li>4) \(\forall a\in G, |\langle a\rangle|=|a|\) where \(\langle a\rangle=\{a^r \mid r\in \mathbb Z\}\) (i.e., the number of element in \(\langle a\rangle\) is equal to \(|a|\))
 
@@ -1534,7 +1534,7 @@ pre[class*="language-"] {
 <li>composition is assotiation</li>
 <li>\(R_0\) is the identity</li>
 <li>every element as an inverse: \(R_0^{-1}=R_0, R_1^{-1}=R_2=R_2^{-1}=R_1, H^{-1}=H,V^{-1}=V,D^{-1}=D\)</li>
-<li>\(\Rightarrow D_3\) is a group with 6 elements</li>
+<li>\(\implies D_3\) is a group with 6 elements</li>
 </ul></li>
 <li>In general, \(D_{n}\) is a finite group with \(|D_n|=2n\), where
 
@@ -1545,8 +1545,8 @@ pre[class*="language-"] {
 
 <ul>
 <li><img src="imgs/dihedral_d4.png" alt="dihedral_d4"></li>
-<li>\(\Rightarrow\) only need to use either 2 vertices that are jointed by a diagonal OR \(\frac{1}{2}\) point of 2 opposite edges to get all the reflections</li>
-<li>\(\Rightarrow\) since there are 4 vertices and 4 edges, get 4 reflections</li>
+<li>\(\implies\) only need to use either 2 vertices that are jointed by a diagonal OR \(\frac{1}{2}\) point of 2 opposite edges to get all the reflections</li>
+<li>\(\implies\) since there are 4 vertices and 4 edges, get 4 reflections</li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -1623,10 +1623,10 @@ pre[class*="language-"] {
 <li>Proof:
 
 <ul>
-<li>1) Suppose that \(|a|=\infty\). Assume \(a^i=a^j\) with \(i\neq j\). Suppose that \(i&lt;j\). Then, \(a^{j-i}=e\) with \(j-i&gt;0\). \[\Rightarrow |a|=(\text{smallest position integer }d\text{ such that }a^d=e)\leq j-i&lt;\infty\] But, this contradicts the fact that \(|a|=\infty\). So, \(i=j \) \[\Rightarrow a^i\neq a^j,\forall i\neq j\]</li>
-<li>2) Suppose \(|a| = n\infty\). Let us first show that \[\langle a\rangle=\{e,a,a^2,\cdots, a^{n-1}\}\] By definition of \(\langle a\rangle\), we of course have \(\{e,a,a^2,\cdots, a^{n-1}\}\subset\langle a\rangle\). We just have to show that \(\langle a\rangle\subset \{e,a,a^2,\cdots, a^{n-1}\}\). Let \(b\in \langle a\rangle\). Then \(b=a^m\) for some \(m\in \mathbb Z\). If \(0\leq m\leq n-1\), then \(b\in \{e,a,a^2,\cdots, a^{n-1}\}\). So we can assume that \(m\geq n\) or \(m &lt; 0\). Using the division algorithm, we can write \[m=nq+r\text{ with }0\leq r&lt;n\] \(\Rightarrow b=a^m=a^{(nq+r)}=a^{nq}a^r=(a^n)^q\cdot a^r = e^q\cdot a^r = e\cdot a^r=a^r\) So, \(b=a^r\) with \(0\leq r\leq n-1\Rightarrow b\in \{e,a,a^2,\cdots, a^{n-1}\}\) \[\Rightarrow\langle a\rangle\subset \{e,a,a^2,\cdots, a^{n-1}\}\] \[\Rightarrow \langle a\rangle = \{e,a,a^2,\cdots, a^{n-1}\}\] Now assume that \(a^i=a^j\). Then, \(a^{i-j}=e\). Again, using the division algorithm, \[i-j=np+s\] with \(0\leq s&lt;n\). So, \(a^{i-j}=a^{np+s}=a^s\Rightarrow \) either \(s=0\) or \(s\geq |a|\) since \(a^s=e\). BUT, \(|a|=n\) and \(s&lt;n\). So, must have that s=0.\[\Rightarrow i-j=np\Rightarrow n\mid i-j\] Conversely, if \(n\mid i-j\), then \(i-j=np\) for some \(p\in\mathbb Z\). So, \(a^{i-j}=a^{np}=(a^n)^p=e^p=e\) \[\Rightarrow a^i = a^j\] THUS, \((a^i=a^j)\Leftrightarrow(n\mid i-j)\)</li>
+<li>1) Suppose that \(|a|=\infty\). Assume \(a^i=a^j\) with \(i\neq j\). Suppose that \(i&lt;j\). Then, \(a^{j-i}=e\) with \(j-i&gt;0\). \[\implies |a|=(\text{smallest position integer }d\text{ such that }a^d=e)\leq j-i&lt;\infty\] But, this contradicts the fact that \(|a|=\infty\). So, \(i=j \) \[\implies a^i\neq a^j,\forall i\neq j\]</li>
+<li>2) Suppose \(|a| = n\infty\). Let us first show that \[\langle a\rangle=\{e,a,a^2,\cdots, a^{n-1}\}\] By definition of \(\langle a\rangle\), we of course have \(\{e,a,a^2,\cdots, a^{n-1}\}\subset\langle a\rangle\). We just have to show that \(\langle a\rangle\subset \{e,a,a^2,\cdots, a^{n-1}\}\). Let \(b\in \langle a\rangle\). Then \(b=a^m\) for some \(m\in \mathbb Z\). If \(0\leq m\leq n-1\), then \(b\in \{e,a,a^2,\cdots, a^{n-1}\}\). So we can assume that \(m\geq n\) or \(m &lt; 0\). Using the division algorithm, we can write \[m=nq+r\text{ with }0\leq r&lt;n\] \(\implies b=a^m=a^{(nq+r)}=a^{nq}a^r=(a^n)^q\cdot a^r = e^q\cdot a^r = e\cdot a^r=a^r\) So, \(b=a^r\) with \(0\leq r\leq n-1\implies b\in \{e,a,a^2,\cdots, a^{n-1}\}\) \[\implies\langle a\rangle\subset \{e,a,a^2,\cdots, a^{n-1}\}\] \[\implies \langle a\rangle = \{e,a,a^2,\cdots, a^{n-1}\}\] Now assume that \(a^i=a^j\). Then, \(a^{i-j}=e\). Again, using the division algorithm, \[i-j=np+s\] with \(0\leq s&lt;n\). So, \(a^{i-j}=a^{np+s}=a^s\implies \) either \(s=0\) or \(s\geq |a|\) since \(a^s=e\). BUT, \(|a|=n\) and \(s&lt;n\). So, must have that s=0.\[\implies i-j=np\implies n\mid i-j\] Conversely, if \(n\mid i-j\), then \(i-j=np\) for some \(p\in\mathbb Z\). So, \(a^{i-j}=a^{np}=(a^n)^p=e^p=e\) \[\implies a^i = a^j\] THUS, \((a^i=a^j)\Leftrightarrow(n\mid i-j)\)</li>
 </ul></li>
-<li>Let \(d=gcd(n,k)\). In purticular, \(d\mid k\) so that \(k=dp\) for some \(p\in\mathbb Z\). Note that \(d&gt;0\) and \(k&gt;0\) so that \(p\in \mathbb N\). Let us show that \[\langle a^k\rangle =\langle a^d \rangle\]. First note that since \(k=dp\), we have that \[a^k=a^{dp}=(a^d)^p\in \langle a^d\rangle\].  Then, since \(\langle a^d\rangle\) is closed under the operation and inverses, and \(a^k\in \langle a^d\rangle\), we have that \((a^k)^m\in \langle a^d\rangle, \forall m\in \mathbb Z\). \[\langle a^k\rangle\subset \langle a^d\rangle\] Let us check that \(\langle a^d \rangle\subset\langle a^k\rangle\). Let \(b\in \langle a^d\rangle\) and let us show that \(b=(a^k)^r\) for some \(r\in \mathbb Z\). Since \(d=gcd(n,k), \exists r,s\in \mathbb Z\) such that \[rk+sn=d\] Therefore, \(a^d=a^{rk+sn}=a^{rk}\cdot a^{sn}=(a^k)^r\cdot (a^n)^s=(a^k)^r\cdot e^s = (a^k)^r\) \[\Rightarrow a^d=(a^k)^r\] Then, if \(b\in \langle a^d\rangle\) so that \(b=(a^d)^m\) for some \(m\in \mathbb Z\), we get \[b=((a^k)^r)^m = (a^k)^{rm}\in\langle a^k\rangle\] \[\Rightarrow \langle a^d\rangle\subset \langle a^k \rangle\] \[\Rightarrow \langle a^d\rangle= \langle a^k \rangle\] The last thing to verify is that \(|a^k|=\frac{n}{d}\). We have seen that if \(b\in G\) and \(|b|=m\) then \[\langle b\rangle=\{e,b,\cdots, b^{m-1}\}\] so that \(|b|=m\). In particular, \(|\langle b\rangle|=|b|=m\). Thus, \(|a^d|=|\langle a^d\rangle|=|\langle a^k\rangle|=|a^k|\). So, to prove that \(|a^k|=\frac{n}{d}\), it is enough to show that \(|a^d|=\frac{n}{d}\). Now, \[(a^d)^{\frac{n}{d}}=a^n=e\] \[\Rightarrow \frac{n}{d} \geq |a^d|\] Let us assume that \(|a^d|&lt;\frac{n}{d}\). So, \(\exists m\in \mathbb N\) such that \((a^d)^m=e\) and \(m&lt;\frac{n}{d}\). So, \[a^{dm}=(a^d)^m=e\text{ with }dm &lt; d(\frac{n}{d})=n\] So, \(dm\in \mathbb N\) such that \(a^{dm}=e\) and \(dm&lt;n\), which is impossible because \(n=|a|\). Therefore, \(|a^d|\geq \frac{n}{d}\). So, \(|a^d|=\frac{n}{d}\)</li>
+<li>Let \(d=gcd(n,k)\). In purticular, \(d\mid k\) so that \(k=dp\) for some \(p\in\mathbb Z\). Note that \(d&gt;0\) and \(k&gt;0\) so that \(p\in \mathbb N\). Let us show that \[\langle a^k\rangle =\langle a^d \rangle\]. First note that since \(k=dp\), we have that \[a^k=a^{dp}=(a^d)^p\in \langle a^d\rangle\].  Then, since \(\langle a^d\rangle\) is closed under the operation and inverses, and \(a^k\in \langle a^d\rangle\), we have that \((a^k)^m\in \langle a^d\rangle, \forall m\in \mathbb Z\). \[\langle a^k\rangle\subset \langle a^d\rangle\] Let us check that \(\langle a^d \rangle\subset\langle a^k\rangle\). Let \(b\in \langle a^d\rangle\) and let us show that \(b=(a^k)^r\) for some \(r\in \mathbb Z\). Since \(d=gcd(n,k), \exists r,s\in \mathbb Z\) such that \[rk+sn=d\] Therefore, \(a^d=a^{rk+sn}=a^{rk}\cdot a^{sn}=(a^k)^r\cdot (a^n)^s=(a^k)^r\cdot e^s = (a^k)^r\) \[\implies a^d=(a^k)^r\] Then, if \(b\in \langle a^d\rangle\) so that \(b=(a^d)^m\) for some \(m\in \mathbb Z\), we get \[b=((a^k)^r)^m = (a^k)^{rm}\in\langle a^k\rangle\] \[\implies \langle a^d\rangle\subset \langle a^k \rangle\] \[\implies \langle a^d\rangle= \langle a^k \rangle\] The last thing to verify is that \(|a^k|=\frac{n}{d}\). We have seen that if \(b\in G\) and \(|b|=m\) then \[\langle b\rangle=\{e,b,\cdots, b^{m-1}\}\] so that \(|b|=m\). In particular, \(|\langle b\rangle|=|b|=m\). Thus, \(|a^d|=|\langle a^d\rangle|=|\langle a^k\rangle|=|a^k|\). So, to prove that \(|a^k|=\frac{n}{d}\), it is enough to show that \(|a^d|=\frac{n}{d}\). Now, \[(a^d)^{\frac{n}{d}}=a^n=e\] \[\implies \frac{n}{d} \geq |a^d|\] Let us assume that \(|a^d|&lt;\frac{n}{d}\). So, \(\exists m\in \mathbb N\) such that \((a^d)^m=e\) and \(m&lt;\frac{n}{d}\). So, \[a^{dm}=(a^d)^m=e\text{ with }dm &lt; d(\frac{n}{d})=n\] So, \(dm\in \mathbb N\) such that \(a^{dm}=e\) and \(dm&lt;n\), which is impossible because \(n=|a|\). Therefore, \(|a^d|\geq \frac{n}{d}\). So, \(|a^d|=\frac{n}{d}\)</li>
 </ul></li>
 </ul>
 
@@ -1648,13 +1648,13 @@ pre[class*="language-"] {
 
 <ul>
 <li>(i) \(|\langle a \rangle|=| a|\)</li>
-<li>(ii) \(a^k=e\Rightarrow |a| \mid k\) (if \({a}=n&lt;\infty\))</li>
+<li>(ii) \(a^k=e\implies |a| \mid k\) (if \({a}=n&lt;\infty\))</li>
 </ul></li>
 <li>Proof:
 
 <ul>
 <li>(i) If \(|a|=\infty\), then \(a^i\neq a^j\) for all \(i,j\in \mathbb Z\) with \(i\neq j\). So \(|\langle a\rangle|=\infty\). But if \(|a|=n&lt;\infty\), the \(\langle a\rangle =\{e, a, a^2, \cdots, a^{n-1}\}\), so that $|\langle a\rangle|=n=|a|</li>
-<li>(ii) Suppose that \(|a|=n&lt;\infty\). Let \(k\in \mathbb Z\) such that \(a^k=e\). Then, \(a^k=e=a^0\Rightarrow n\mid k=0\Rightarrow n\mid k\Rightarrow |a| \mid k\) if \(|a| = n\)</li>
+<li>(ii) Suppose that \(|a|=n&lt;\infty\). Let \(k\in \mathbb Z\) such that \(a^k=e\). Then, \(a^k=e=a^0\implies n\mid k=0\implies n\mid k\implies |a| \mid k\) if \(|a| = n\)</li>
 </ul></li>
 <li>Let \(G = \langle a\rangle \) with \(a\in G\) be a cyclic group. Any generator of \(G\) is of the form \(a^m\) with \(m\in \mathbb Z\) because any generator of \(G\) must be an element of \(G\) and \(G=\{a^m\mid m\in \mathbb Z\}\). But, what powers of \(a\) correspond to generators?</li>
 <li><strong>Thm</strong>: Let \(G=\langle a\rangle\) be a cyclic group with \(a\in G\). Then:
@@ -1666,7 +1666,7 @@ pre[class*="language-"] {
 
 <ul>
 <li>(i) Exercise</li>
-<li>(ii) Suppose that \(G=\langle a^k\rangle \). Then, by Prop (ii), \(|a^k|=\frac{n}{gcd(n,k)}\). But by the COR, \(|a^k|=|G|=n\) since \(a^k\) is a generator. Thus, \[\frac{n}{gcd(n,k)}=n\Rightarrow gcd(n,k)=1\] Conversely, suppose that \(gcd(n,k)=1\). Then, Prop (ii) $\(\langle a^k\rangle=\langle a^{gcd(n,k)}\rangle=\langle a^1\rangle =\langle a\rangle =G\)</li>
+<li>(ii) Suppose that \(G=\langle a^k\rangle \). Then, by Prop (ii), \(|a^k|=\frac{n}{gcd(n,k)}\). But by the COR, \(|a^k|=|G|=n\) since \(a^k\) is a generator. Thus, \[\frac{n}{gcd(n,k)}=n\implies gcd(n,k)=1\] Conversely, suppose that \(gcd(n,k)=1\). Then, Prop (ii) $\(\langle a^k\rangle=\langle a^{gcd(n,k)}\rangle=\langle a^1\rangle =\langle a\rangle =G\)</li>
 </ul></li>
 </ul></li>
 <li><strong>COR</strong>: \(1\) and \(-1\) are the only generators of \(\mathbb Z=\langle 1\rangle=\langle -1\rangle\)</li>
@@ -1693,7 +1693,7 @@ pre[class*="language-"] {
 <ul>
 <li>Suppose that \(G=\langle a\rangle\) with \(a\in G\). And let \(H\) be a subgroup of \(G\). If \(H=\{e\}\), then \(H=\langle e\rangle\), which is cyclic. But if \(H\neq \{ e\}\), then \(\exists e\neq a^m\in H\). This means in particular that \(m\neq 0\). Let us first show that \(m\) can be chosen to be positive. Suppose instead that \(m&lt; 0\). Then, \(-m&gt;0\) and \(e^{-m}\in H\) (because \(H\) is closed under inverses since it is a subgroup of \(G\)). Therefore, \(H\) contains a positive power of \(a\). Let \(m\) be the smallest positive integer such that \(a^m\in H\). Let us show that \(H=\langle a^m\rangle\)</li>
 <li>\(*\) \(\langle a^m\rangle \subset H\) because \(a^m\in H\) and \(H\) is closed under multiplication and inverses (since it is a subgroup) so that \((a^m)^k\in H\)</li>
-<li>\(*\) \(H\subset\langle a^m\rangle \): Let \(b\in H\) and let us show that \(b=(a^m)^q\) for some \(q\in \mathbb Z\). Since \(H\subset G=\langle a\rangle\), \(b=a^k\) for some \(k\in \mathbb Z\). By the division algorithm, \(k=mq+r\) with \(0\leq r&lt; m\). Then, \[a^k=a^{mq+r}=(a^m)^q\cdot a^r\] Let us show that \(r=0\). But, \[a^r=(a^m)^{-q}\cdot a^k\in H\] since \((a^m)^{-q}\in H\) and \(a^k\in H\). Since \(m\) was chosen to be the smallest positive integer such that \(a^m\in H\) and \(0\leq r&lt;m\), \(a^r\in H\) forces \(r=0\) \(\Rightarrow b\in (a^m)^q\in \langle a^m\rangle\)</li>
+<li>\(*\) \(H\subset\langle a^m\rangle \): Let \(b\in H\) and let us show that \(b=(a^m)^q\) for some \(q\in \mathbb Z\). Since \(H\subset G=\langle a\rangle\), \(b=a^k\) for some \(k\in \mathbb Z\). By the division algorithm, \(k=mq+r\) with \(0\leq r&lt; m\). Then, \[a^k=a^{mq+r}=(a^m)^q\cdot a^r\] Let us show that \(r=0\). But, \[a^r=(a^m)^{-q}\cdot a^k\in H\] since \((a^m)^{-q}\in H\) and \(a^k\in H\). Since \(m\) was chosen to be the smallest positive integer such that \(a^m\in H\) and \(0\leq r&lt;m\), \(a^r\in H\) forces \(r=0\) \(\implies b\in (a^m)^q\in \langle a^m\rangle\)</li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -1727,7 +1727,7 @@ pre[class*="language-"] {
 <li>\(k=4:\langle \overline 8 / 4\rangle=\langle \overline 2\rangle =\{\overline 0,\overline 2,\overline 4\}\) order \(4\)</li>
 <li>\(k=8:\langle \overline 8 / 8\rangle=\langle \overline 1\rangle =\{\overline 0, \overline 1, \overline 2, \overline 3, \overline 4, \overline 5, \overline 6, \overline 7\}\) order \(8\)</li>
 </ul></li>
-<li>Note that since \(gcd(3,8)=gcd(5,8)=gcd(7,8)=1\Rightarrow \overline 3, \overline 5,\overline 7\) generate \(\mathbb Z_8\). That is, \(\langle \overline 3\rangle=\langle \overline 5\rangle=\langle \overline 7\rangle\)</li>
+<li>Note that since \(gcd(3,8)=gcd(5,8)=gcd(7,8)=1\implies \overline 3, \overline 5,\overline 7\) generate \(\mathbb Z_8\). That is, \(\langle \overline 3\rangle=\langle \overline 5\rangle=\langle \overline 7\rangle\)</li>
 <li>In general, for \(\mathbb Z_n\), for each positive divisor \(k\) of \(n\), \(\langle \frac{n}{k}\rangle\) is the <strong>only</strong> of \(\mathbb Z_n\) of order \(k\)</li>
 </ul></li>
 <li>2) \(\mathbb Z_8^*=\{\overline 1, \overline 3, \overline 5, \overline 7\}\) Is \(\mathbb Z_8^*\) cyclic?
@@ -1737,9 +1737,9 @@ pre[class*="language-"] {
 <li>But, \(\langle \overline 1\rangle=\{(\overline 1)^m\mid m\in \mathbb Z\}=\{\overline 1\}\leadsto\) trifvial subgroup</li>
 <li>\(\langle 3\rangle = \{\overline 1,\overline 3\} \subsetneqq \mathbb Z_8^*\) order \(2\)</li>
 <li>\(\langle 5\rangle = \{\overline 1,\overline 5\} \subsetneqq \mathbb Z_8^*\) order \(2\)</li>
-<li>\(\Rightarrow Z_8^*\) is not cyclic</li>
+<li>\(\implies Z_8^*\) is not cyclic</li>
 </ul></li>
-<li>3) \(Z_5^* = \{\overline 1,\overline 2,\overline 3,\overline 4\}\) and \(Z_5^*=\langle \overline 2\rangle \Rightarrow Z_5^*\) is cyclic of order \(4\)
+<li>3) \(Z_5^* = \{\overline 1,\overline 2,\overline 3,\overline 4\}\) and \(Z_5^*=\langle \overline 2\rangle \implies Z_5^*\) is cyclic of order \(4\)
 
 <ul>
 <li>The subgroups of \(Z_5^*\) will correspond to positive divisors of \(4\): \(1,2,4\)</li>
@@ -1801,7 +1801,7 @@ pre[class*="language-"] {
 <li>
 
 <ul>
-<li>2) \(\mathbb Z_{20}\): order is \(n=20 \Rightarrow\) positive divisors are \(k=1,2,4,5,10,20\)
+<li>2) \(\mathbb Z_{20}\): order is \(n=20 \implies\) positive divisors are \(k=1,2,4,5,10,20\)
 
 <ul>
 <li>\(k=1: \langle\overline{20} / 1\rangle = \langle\overline 0\rangle = \{\overline 0\}\) order 1</li>
@@ -2081,7 +2081,7 @@ pre[class*="language-"] {
 <ul>
 <li>Let \(G\) be a finite cyclic group of order \(n\). If \(d\) is a positive divisor of \(n\), then the number of elements of order \(d\) in \(G\) is \(\phi(d)\).</li>
 <li>Note: recall that the order of any element must divide \(n\), so d must be a divisor of \(n\).</li>
-<li>Proof: By the Fundamental Thm of cyclic groups, \(\exists\) unique subgroup \(H\) of \(G\) of order d. Moreover, \(H\) is cyclic so that \(H=\langle b\rangle\) for some \(b\in G\) with \(|b|=d\). Let \(c\in G\) be any other element of order d. Then, \(\langle c\rangle\) is also a subgroup of \(G\) of order \(d\). But \(H\) is the only subgroup of \(G\) of order \(d\), implying \(\langle c\rangle = H\). So \(c\in \langle c\rangle=H\). This means that \(H\) contains all the elements of \(G\) of order \(d\). Also, \(c=b^k\) for some \(0\leq k\leq d-1\) since \(H=\{e,b,\cdots, b^{n-1}\}\). Recall that if \(H=\langle b\rangle\), then \(|b^k| = \frac{|b|}{gcd(|b|,k)}\). But here \(|b|=d\) so that \(|b^k| = \frac{d}{gcd(d,k)}\). Thus, \(|c| = |b^k|=d\Leftrightarrow \frac{d}{gcd(d,k)} = d\Leftrightarrow gcd(d,k) = 1\Rightarrow \) {element of G of order d} = \(\{b^k\mid gcd(d,k) = 1\}:=\phi(d)\)</li>
+<li>Proof: By the Fundamental Thm of cyclic groups, \(\exists\) unique subgroup \(H\) of \(G\) of order d. Moreover, \(H\) is cyclic so that \(H=\langle b\rangle\) for some \(b\in G\) with \(|b|=d\). Let \(c\in G\) be any other element of order d. Then, \(\langle c\rangle\) is also a subgroup of \(G\) of order \(d\). But \(H\) is the only subgroup of \(G\) of order \(d\), implying \(\langle c\rangle = H\). So \(c\in \langle c\rangle=H\). This means that \(H\) contains all the elements of \(G\) of order \(d\). Also, \(c=b^k\) for some \(0\leq k\leq d-1\) since \(H=\{e,b,\cdots, b^{n-1}\}\). Recall that if \(H=\langle b\rangle\), then \(|b^k| = \frac{|b|}{gcd(|b|,k)}\). But here \(|b|=d\) so that \(|b^k| = \frac{d}{gcd(d,k)}\). Thus, \(|c| = |b^k|=d\Leftrightarrow \frac{d}{gcd(d,k)} = d\Leftrightarrow gcd(d,k) = 1\implies \) {element of G of order d} = \(\{b^k\mid gcd(d,k) = 1\}:=\phi(d)\)</li>
 </ul></li>
 </ul>
 
@@ -2090,27 +2090,27 @@ pre[class*="language-"] {
 <h2 id="toc_8">2.1 Homomorphism and Isomorphism</h2>
 
 <ul>
-<li><p>Definition: Let \(G_1\) and \(G_2\) be two groups. A <strong>homomorphism</strong> \(\phi\) from \(G_1\) to \(G_2\) is a mapping \(\phi:G_1\rightarrow G_2\) that preserves the group operation \[\phi(ab) = \phi(a)\phi(b), \forall a,b\in G_1\] Moreover, if \(\phi\) is a bijection whose inverse is also a homomorphism, then \(\phi\) is called an <strong>isomorphism</strong>.</p></li>
+<li><p>Definition: Let \(G_1\) and \(G_2\) be two groups. A <strong>homomorphism</strong> \(\phi\) from \(G_1\) to \(G_2\) is a mapping \(\phi:G_1\implies G_2\) that preserves the group operation \[\phi(ab) = \phi(a)\phi(b), \forall a,b\in G_1\] Moreover, if \(\phi\) is a bijection whose inverse is also a homomorphism, then \(\phi\) is called an <strong>isomorphism</strong>.</p></li>
 <li><p>E.x.</p>
 
 <ul>
-<li>1) \(G_1 = (GL(n,\mathbb R),\cdot)\) and \(G_2 = (\mathbb R^*, \cdots)\). Consider the map: \[\phi: GL(n,\mathbb R)\rightarrow \mathbb R^*\] \[A \mapsto \det A\] Then, \(\phi\) is a group homomorphism because: Let \(A,B\in GL(n\mathbb R)\), do we have that: \[\phi(AB) \stackrel{?}{=} \phi(A)\phi(B)\] Yes: \(\phi(AB) = \det(AB) = (\det A)(\det B) = \phi(a)\phi(B)\)</li>
-<li>2) \(G_1 = (\mathbb R^*,\cdot)=G_2\). Consider: \[\phi: \mathbb R^*\rightarrow\mathbb R^*\] \[x\mapsto |x|\] This is a group homomorphism because, \(\forall x,y\in \mathbb R^*\), \[\phi(xy) = |xy| = |x||y| = \phi(x)\phi(y)\]</li>
-<li>3) Let \(G_1=G_2 = (\mathbb R[x],+)\), where \(\mathbb R[x]=\) {polynomial in x with coefficients in \(\mathbb R\)}. Then \((\mathbb R[x],+)\) is a group (proof in exercise). Consider the map: \[\phi:\mathbb R[x]\rightarrow \mathbb R[x]\] \[p(x)\mapsto p&#39;(x)\] Then, \(\phi\) is a homomorphism because, \(\forall p,q \in \mathbb R[x]\), \[\phi(p(x)+q(x))=[p(x)+q(x)]&#39; = p&#39;(x) + q&#39;(x) = \phi(p(x))+\phi(q(x))\] Note that \(\mathbb R[x]\) is a vector space over \(\mathbb R\) under addition and the derivation map \(\phi\) is linear. In general, if \(V\) is a vector space, then \((V, +)\) is a group and any linear map \(\phi:V\rightarrow V\) is a homomorphism.</li>
+<li>1) \(G_1 = (GL(n,\mathbb R),\cdot)\) and \(G_2 = (\mathbb R^*, \cdots)\). Consider the map: \[\phi: GL(n,\mathbb R)\implies \mathbb R^*\] \[A \mapsto \det A\] Then, \(\phi\) is a group homomorphism because: Let \(A,B\in GL(n\mathbb R)\), do we have that: \[\phi(AB) \stackrel{?}{=} \phi(A)\phi(B)\] Yes: \(\phi(AB) = \det(AB) = (\det A)(\det B) = \phi(a)\phi(B)\)</li>
+<li>2) \(G_1 = (\mathbb R^*,\cdot)=G_2\). Consider: \[\phi: \mathbb R^*\implies\mathbb R^*\] \[x\mapsto |x|\] This is a group homomorphism because, \(\forall x,y\in \mathbb R^*\), \[\phi(xy) = |xy| = |x||y| = \phi(x)\phi(y)\]</li>
+<li>3) Let \(G_1=G_2 = (\mathbb R[x],+)\), where \(\mathbb R[x]=\) {polynomial in x with coefficients in \(\mathbb R\)}. Then \((\mathbb R[x],+)\) is a group (proof in exercise). Consider the map: \[\phi:\mathbb R[x]\implies \mathbb R[x]\] \[p(x)\mapsto p&#39;(x)\] Then, \(\phi\) is a homomorphism because, \(\forall p,q \in \mathbb R[x]\), \[\phi(p(x)+q(x))=[p(x)+q(x)]&#39; = p&#39;(x) + q&#39;(x) = \phi(p(x))+\phi(q(x))\] Note that \(\mathbb R[x]\) is a vector space over \(\mathbb R\) under addition and the derivation map \(\phi\) is linear. In general, if \(V\) is a vector space, then \((V, +)\) is a group and any linear map \(\phi:V\implies V\) is a homomorphism.</li>
 </ul></li>
 <li><p>Let us look at some examples of isomorphisms:</p>
 
 <ul>
-<li>1) \(G_1=(\mathbb R, +)\) and \(G_2 = (\mathbb R^{&gt;0}, \cdots)\). Then, \[\phi:\mathbb R\rightarrow \mathbb R^{&gt;0}\] \[x\mapsto 2^x\] is an isomorphism.
+<li>1) \(G_1=(\mathbb R, +)\) and \(G_2 = (\mathbb R^{&gt;0}, \cdots)\). Then, \[\phi:\mathbb R\implies \mathbb R^{&gt;0}\] \[x\mapsto 2^x\] is an isomorphism.
 
 <ul>
-<li>Proof: \(\phi\) is a bijection. We just need to check that \(\phi\) and \(\phi^{-1}:\mathbb R^{&gt;0}\rightarrow \mathbb R, y\mapsto \log_2y\) are homomorphisms. Let \(x,x&#39;\in \mathbb R\). Then, \[\phi(x+x&#39;) = 2^{(x+x&#39;)}=2^x\cdot 2^{x&#39;} = \phi(x)\phi(x&#39;)\] Similarly, if \(y,y&#39;\in \mathbb R^{&gt;0}\), then:\[\phi^{-1}(yy&#39;) = \log_2(yy&#39;) = \log_2(y)+\log_2(y&#39;) = \phi^{-1}(y)\phi^{-1}(y&#39;)\] \(\Rightarrow \phi\) is a group isomorphism.</li>
+<li>Proof: \(\phi\) is a bijection. We just need to check that \(\phi\) and \(\phi^{-1}:\mathbb R^{&gt;0}\implies \mathbb R, y\mapsto \log_2y\) are homomorphisms. Let \(x,x&#39;\in \mathbb R\). Then, \[\phi(x+x&#39;) = 2^{(x+x&#39;)}=2^x\cdot 2^{x&#39;} = \phi(x)\phi(x&#39;)\] Similarly, if \(y,y&#39;\in \mathbb R^{&gt;0}\), then:\[\phi^{-1}(yy&#39;) = \log_2(yy&#39;) = \log_2(y)+\log_2(y&#39;) = \phi^{-1}(y)\phi^{-1}(y&#39;)\] \(\implies \phi\) is a group isomorphism.</li>
 </ul></li>
 <li>2) Let \(G=\langle a\rangle\) be a cyclic group. Then, 
 
 <ul>
-<li>If \(|a|=\infty\), the map \(\phi:G=\langle a\rangle\rightarrow\mathbb Z = \langle 1\rangle, a^k\mapsto k\) is an isomorphism</li>
-<li>If \(|a| = n\), then map \(\phi:G=\langle a\rangle\rightarrow \mathbb Z_n=\langle \overline 1\rangle, a^k\mapsto \overline k\) is an isomorphism (proof as exercise)</li>
+<li>If \(|a|=\infty\), the map \(\phi:G=\langle a\rangle\implies\mathbb Z = \langle 1\rangle, a^k\mapsto k\) is an isomorphism</li>
+<li>If \(|a| = n\), then map \(\phi:G=\langle a\rangle\implies \mathbb Z_n=\langle \overline 1\rangle, a^k\mapsto \overline k\) is an isomorphism (proof as exercise)</li>
 </ul></li>
 </ul></li>
 </ul>
@@ -2125,46 +2125,46 @@ pre[class*="language-"] {
 <li>2) Not every bijection is a homophophism (and thus an isomorphism)
 
 <ul>
-<li>E.g. \(\phi:(\mathbb R, +)\rightarrow (\mathbb R, +),x\mapsto x^3\) is a bijection, but not a homomorphism since \[\phi(x+y) = (x+y)^3\neq x^3+y^3=\phi(x)+\phi(y)\] if \(x,y\neq 0\)</li>
+<li>E.g. \(\phi:(\mathbb R, +)\implies (\mathbb R, +),x\mapsto x^3\) is a bijection, but not a homomorphism since \[\phi(x+y) = (x+y)^3\neq x^3+y^3=\phi(x)+\phi(y)\] if \(x,y\neq 0\)</li>
 </ul></li>
 </ul></li>
-<li><p>Prop: Let \(\phi: G_1\rightarrow G_2\) be a isomorphism, the inverse of \(\phi\) is also isomorphism.</p>
+<li><p>Prop: Let \(\phi: G_1\implies G_2\) be a isomorphism, the inverse of \(\phi\) is also isomorphism.</p>
 
 <ul>
-<li>Proof: Let \(c,d\in G_2\). Since \(\phi\) is onto (because it is a bijection), \(\exists a,b\in G\), such that \(c=\phi(a)\) and \(d=\phi(b)\). Therefore, \[\phi^{-1}(cd) = \phi^{-1}(\phi(a)\phi(b)) \stackrel{\text{because }\phi(a)\phi(b) = \phi(ab)\text{ since }\phi\text{ is a homomorphism}}{=} \phi^{-1}(\phi(ab)) = ab = \phi^{-1}(c)\phi^{-1}(d)\] \(\Rightarrow \phi^{-1}\) is homomorphism. Also since \(\phi\) is bijection, \(\phi{-1}\) is also bijection, and so \(\phi^{-1}\) is isomorphism.</li>
+<li>Proof: Let \(c,d\in G_2\). Since \(\phi\) is onto (because it is a bijection), \(\exists a,b\in G\), such that \(c=\phi(a)\) and \(d=\phi(b)\). Therefore, \[\phi^{-1}(cd) = \phi^{-1}(\phi(a)\phi(b)) \stackrel{\text{because }\phi(a)\phi(b) = \phi(ab)\text{ since }\phi\text{ is a homomorphism}}{=} \phi^{-1}(\phi(ab)) = ab = \phi^{-1}(c)\phi^{-1}(d)\] \(\implies \phi^{-1}\) is homomorphism. Also since \(\phi\) is bijection, \(\phi{-1}\) is also bijection, and so \(\phi^{-1}\) is isomorphism.</li>
 </ul></li>
-<li><p>Def: Two groups \(G_1\) and \(G_2\) are called <strong>isomorphic</strong> if \(\exists\) an isomorphism \(\phi G_1\rightarrow G_2\). This is denoted \(G_1 \simeq G_2\)</p></li>
+<li><p>Def: Two groups \(G_1\) and \(G_2\) are called <strong>isomorphic</strong> if \(\exists\) an isomorphism \(\phi G_1\implies G_2\). This is denoted \(G_1 \simeq G_2\)</p></li>
 <li><p><strong>Isomorphic</strong> groups are considered to be the same</p></li>
 <li><p><strong>Remark</strong>: Isomorphisms may not exist</p></li>
 <li><p>E.g.</p>
 
 <ul>
-<li>(i) \(\mathbb Z_{10}^* \not \simeq \mathbb Z_{12}^*\). \[\mathbb Z_{10}^*=\{\overline 1, \overline 3, \overline 7, \overline 9\}\] \[\mathbb Z_{12}^*=\{\overline 1, \overline 5, \overline 7, \overline{11}\}\] \[\text{(finite groups of order 4)}\] Note that \(\mathbb Z_{10}^*=\langle \overline 3\rangle\) is cyclic, where as \(\mathbb Z_{12}^*\) is not cyclic: \[\langle \overline 1\rangle = \{\overline 1\}\] \[\langle \overline 5\rangle = \{\overline 1, \overline 5\}\] \[\langle \overline 7\rangle = \{\overline 1, \overline 7\}\] \[\langle \overline{11}\rangle = \{\overline 1, \overline{11}\}\] \[\text{we see that }\overline k^2=1, \forall \overline k\in \mathbb Z_{12}^*\] \(\Rightarrow\) We don&#39;t expect to be able to find an isomorphism because \(\mathbb Z_{10}^*\) and \(\mathbb Z_{12}^*\). Suppose instead that \(\exists\) isomorphism \(\phi: \mathbb Z_{10}^*\rightarrow \mathbb Z_{12}^*\). Then: \[\phi(\overline 9) = \phi(\overline 3 \cdot \overline 3)=\phi(\overline 3)\cdot \phi(\overline 3) = \overline 1 \text{ since } \overline k^2=1, \forall \overline k\in \mathbb Z_{12}^*\] \[\phi(\overline 1) = \phi(\overline 1\cdot \overline 1) = \phi(\overline 1)\cdot \phi(\overline 1)=\overline 1 \text{ since } \overline k^2=1, \forall \overline k\in \mathbb Z_{12}^*\] \(\Rightarrow \phi(\overline 9)= \phi(\overline 1)\Rightarrow \overline 9 = \overline 1\) in \(\mathbb Z_{10}^*\) since \(\phi\) is a bijection, which is impossible! So, we get contradition, implying that no isomophism exists between \(\mathbb Z_{10}^*\) and \(\mathbb Z_{12}^*\)</li>
+<li>(i) \(\mathbb Z_{10}^* \not \simeq \mathbb Z_{12}^*\). \[\mathbb Z_{10}^*=\{\overline 1, \overline 3, \overline 7, \overline 9\}\] \[\mathbb Z_{12}^*=\{\overline 1, \overline 5, \overline 7, \overline{11}\}\] \[\text{(finite groups of order 4)}\] Note that \(\mathbb Z_{10}^*=\langle \overline 3\rangle\) is cyclic, where as \(\mathbb Z_{12}^*\) is not cyclic: \[\langle \overline 1\rangle = \{\overline 1\}\] \[\langle \overline 5\rangle = \{\overline 1, \overline 5\}\] \[\langle \overline 7\rangle = \{\overline 1, \overline 7\}\] \[\langle \overline{11}\rangle = \{\overline 1, \overline{11}\}\] \[\text{we see that }\overline k^2=1, \forall \overline k\in \mathbb Z_{12}^*\] \(\implies\) We don&#39;t expect to be able to find an isomorphism because \(\mathbb Z_{10}^*\) and \(\mathbb Z_{12}^*\). Suppose instead that \(\exists\) isomorphism \(\phi: \mathbb Z_{10}^*\implies \mathbb Z_{12}^*\). Then: \[\phi(\overline 9) = \phi(\overline 3 \cdot \overline 3)=\phi(\overline 3)\cdot \phi(\overline 3) = \overline 1 \text{ since } \overline k^2=1, \forall \overline k\in \mathbb Z_{12}^*\] \[\phi(\overline 1) = \phi(\overline 1\cdot \overline 1) = \phi(\overline 1)\cdot \phi(\overline 1)=\overline 1 \text{ since } \overline k^2=1, \forall \overline k\in \mathbb Z_{12}^*\] \(\implies \phi(\overline 9)= \phi(\overline 1)\implies \overline 9 = \overline 1\) in \(\mathbb Z_{10}^*\) since \(\phi\) is a bijection, which is impossible! So, we get contradition, implying that no isomophism exists between \(\mathbb Z_{10}^*\) and \(\mathbb Z_{12}^*\)</li>
 <li>(ii) \(G_1=(\mathbb Q,+)\) and \(G_2=(\mathbb Q^*, \cdot)\). Then \(G_1\not \simeq G_2\).
 
 <ul>
-<li>Pf: So, instead that \(exists\) isomorphism \(\phi:G_1\rightarrow G_2\) so that \(\phi\) is a bijective homophism. This means imparticular that \(\phi\) is onto. So since \(-1\in \mathbb Q^*\), \(\exists a\in \mathbb Q\) such that \(\phi(a) = -1\) \[-1=\phi(a)=\phi(a/2+a/2) \stackrel{\phi\text{ is a homomorphism}}{=} \phi(a/2) + \phi(a/2)\Rightarrow (\phi(a/2))^2 = -1\text{ with }\phi(a/2)\in \mathbb Q^*, \text{ which is impossible!}\] \(\Rightarrow\) we get a contradiction \(\Rightarrow(\mathbb Q,+)\not \simeq(\mathbb Q^*, \cdot)\). Then \(G_1\not \simeq G_2\)</li>
+<li>Pf: So, instead that \(exists\) isomorphism \(\phi:G_1\implies G_2\) so that \(\phi\) is a bijective homophism. This means imparticular that \(\phi\) is onto. So since \(-1\in \mathbb Q^*\), \(\exists a\in \mathbb Q\) such that \(\phi(a) = -1\) \[-1=\phi(a)=\phi(a/2+a/2) \stackrel{\phi\text{ is a homomorphism}}{=} \phi(a/2) + \phi(a/2)\implies (\phi(a/2))^2 = -1\text{ with }\phi(a/2)\in \mathbb Q^*, \text{ which is impossible!}\] \(\implies\) we get a contradiction \(\implies(\mathbb Q,+)\not \simeq(\mathbb Q^*, \cdot)\). Then \(G_1\not \simeq G_2\)</li>
 <li>Nonetheless, isomorphism do exist! see next example</li>
 </ul></li>
-<li>(iii) \[\phi: (\mathbb R,+)\rightarrow (\mathbb R^{&gt;0}, \cdot)\] \[x\mapsto 2^x\] is an isomorphism, so that </li>
-<li>4) To show that 2 groups \(G_1\) and \(G_2\) are isomorphic, one needs to construct a map \(\phi: G_1\rightarrow G_2\) that is isomorphism
+<li>(iii) \[\phi: (\mathbb R,+)\implies (\mathbb R^{&gt;0}, \cdot)\] \[x\mapsto 2^x\] is an isomorphism, so that </li>
+<li>4) To show that 2 groups \(G_1\) and \(G_2\) are isomorphic, one needs to construct a map \(\phi: G_1\implies G_2\) that is isomorphism
 
 <ul>
-<li>e.g. \(G_1=(\mathbb Z,+), G_2=(3\mathbb Z,+)\) where \(3\mathbb Z = \{3m\mid m\in \mathbb Z\}\). Note that \(G_2\) is a subgroup of \(G_1\). But, \(G_1\) and \(G_2\) are in fact isomorphic! Consider \[\phi: Z\rightarrow 3Z\] \[m\mapsto 3m\] Then:
+<li>e.g. \(G_1=(\mathbb Z,+), G_2=(3\mathbb Z,+)\) where \(3\mathbb Z = \{3m\mid m\in \mathbb Z\}\). Note that \(G_2\) is a subgroup of \(G_1\). But, \(G_1\) and \(G_2\) are in fact isomorphic! Consider \[\phi: Z\implies 3Z\] \[m\mapsto 3m\] Then:
 
 <ul>
-<li>\(\phi(m+n) = 3(m+n) = 3m+3n = \phi(m) + \phi(n), \forall m,n\in \mathbb Z\Rightarrow \phi\) is a homomorphism</li>
-<li>\(\phi\) is 1 to 1: \(\phi(m) = \phi(n) \Rightarrow 3m=3n\Rightarrow m=n,\forall m,n\in \mathbb Z\)</li>
-<li>\(phi\) is onto: \(\forall x\in 3\mathbb Z\) then \(x=3m\) for \(m\in Z\) so that \(x=\phi(m) \Rightarrow\) is a bijection homomorphism \(\Rightarrow \phi\) is an isomorphism \(\Rightarrow G_1\) and \(G_2\) are isomorphic </li>
+<li>\(\phi(m+n) = 3(m+n) = 3m+3n = \phi(m) + \phi(n), \forall m,n\in \mathbb Z\implies \phi\) is a homomorphism</li>
+<li>\(\phi\) is 1 to 1: \(\phi(m) = \phi(n) \implies 3m=3n\implies m=n,\forall m,n\in \mathbb Z\)</li>
+<li>\(phi\) is onto: \(\forall x\in 3\mathbb Z\) then \(x=3m\) for \(m\in Z\) so that \(x=\phi(m) \implies\) is a bijection homomorphism \(\implies \phi\) is an isomorphism \(\implies G_1\) and \(G_2\) are isomorphic </li>
 </ul></li>
 </ul></li>
 </ul></li>
-<li><p>Def: Let \(G_1\), \(G_2\) be 2 groups and \(\phi:G_1\rightarrow G_2\) be a homomorphism. We define the <strong>kernel</strong> of \(\phi\) as \[\ker \phi:=\{g\in G_1\mid \phi(a) = e_2\}\] where \(e_2\) is the indentity in \(G_2\)</p></li>
+<li><p>Def: Let \(G_1\), \(G_2\) be 2 groups and \(\phi:G_1\implies G_2\) be a homomorphism. We define the <strong>kernel</strong> of \(\phi\) as \[\ker \phi:=\{g\in G_1\mid \phi(a) = e_2\}\] where \(e_2\) is the indentity in \(G_2\)</p></li>
 <li><p>E.x.</p>
 
 <ul>
-<li>1) \(\det: (GL(n,\mathbb R),\cdot )\rightarrow (\mathbb R^*,\cdot)\), we have that \[\ker(det) = \{A\in GL(n,\mathbb R)\mid \det A = 1\}\] \[SL(n,\mathbb R)=(\text{special linear group})\]</li>
-<li>2) \[\phi: (\mathbb R[x],+ ) \rightarrow (\mathbb R[x],+)\] \[p(x)\mapsto p&#39;(x)\] Then, since \(0\) is the identity in \((\mathbb R[x],+)\), so that \(\ker(\phi) = \{p(x)\in \mathbb R[x]\mid p&#39;(x)=0\}=(\text{constant polynomial})=\mathbb R\)</li>
+<li>1) \(\det: (GL(n,\mathbb R),\cdot )\implies (\mathbb R^*,\cdot)\), we have that \[\ker(det) = \{A\in GL(n,\mathbb R)\mid \det A = 1\}\] \[SL(n,\mathbb R)=(\text{special linear group})\]</li>
+<li>2) \[\phi: (\mathbb R[x],+ ) \implies (\mathbb R[x],+)\] \[p(x)\mapsto p&#39;(x)\] Then, since \(0\) is the identity in \((\mathbb R[x],+)\), so that \(\ker(\phi) = \{p(x)\in \mathbb R[x]\mid p&#39;(x)=0\}=(\text{constant polynomial})=\mathbb R\)</li>
 </ul></li>
 </ul>
 
@@ -2174,7 +2174,7 @@ pre[class*="language-"] {
 <li>Some properties of homomorphisms
 
 <ul>
-<li>Thm: \(G_1\) and \(G_2\) are 2 groups and \(\phi:G_1\rightarrow G_2\) is homomorphism. Then:
+<li>Thm: \(G_1\) and \(G_2\) are 2 groups and \(\phi:G_1\implies G_2\) is homomorphism. Then:
 
 <ul>
 <li>(1) \(\phi(e_1) = e_2\), where \(e_1\) and \(e_2\) are the identity element in \(G_1\) and \(G_2\), respectively.</li>
@@ -2186,14 +2186,14 @@ pre[class*="language-"] {
 <li>Proof:
 
 <ul>
-<li>(1) Let \(e_1^2 = e_1\) \[\phi(e_1) = \phi(e_1^2) = \phi(e_1e_1) = (\phi is homor) \phi(e_1)\phi(e_1)\] \[\Rightarrow \phi(e_1)e_2 = \phi(e_1) = \phi(e_1)\phi(e_1)\] \[ \Rightarrow e_2 = \phi(e_1)\text{, by the cancelation property}\]</li>
-<li>(2) Let \(a\in G_1\). Need to check that \(\phi(a)\phi(a^{-1})=\phi(a^{-1})\phi(a)=e^2\). But \(\phi(a)\phi(a^{-1})\stackrel{\phi\text{ is homomorphism}}{=}\phi(aa^{-1}) = \phi(e_1) = (by (1)) = e^2\). Similarly, \(\phi(a^{-1})\phi(a) \Rightarrow \phi(a^-1)=(\phi(a))^-1\)</li>
+<li>(1) Let \(e_1^2 = e_1\) \[\phi(e_1) = \phi(e_1^2) = \phi(e_1e_1) = (\phi is homor) \phi(e_1)\phi(e_1)\] \[\implies \phi(e_1)e_2 = \phi(e_1) = \phi(e_1)\phi(e_1)\] \[ \implies e_2 = \phi(e_1)\text{, by the cancelation property}\]</li>
+<li>(2) Let \(a\in G_1\). Need to check that \(\phi(a)\phi(a^{-1})=\phi(a^{-1})\phi(a)=e^2\). But \(\phi(a)\phi(a^{-1})\stackrel{\phi\text{ is homomorphism}}{=}\phi(aa^{-1}) = \phi(e_1) = (by (1)) = e^2\). Similarly, \(\phi(a^{-1})\phi(a) \implies \phi(a^-1)=(\phi(a))^-1\)</li>
 <li>(3) Exercise</li>
-<li>(4) Let \(a\in G_1\) such that \(|a|=n\) so that \(n\) is the smallest possitive integer \(a^n = e_1\). Then, \[\phi(a^n)=\phi(e_1)=(by (1)) e_2\] \[\stackrel{\text{by (3)}}{\Leftrightarrow} (by(3)) (\phi(a))^n = \phi(a^n) = e_2\] \[\Rightarrow |\phi(a)| \mid n =|a|\]</li>
-<li>(5) Let us verify that \(\ker \phi\) is a subgroup of \(G_1\) by checking that, \(\forall a,b\in \ker \phi, ab\in \phi\) and \(a^{-1}\in \ker \phi\). Since \(a,b\in \ker \phi = \{c\in G_1\mid \phi(c) = e_2\}\), we have that \[\phi(a) = \phi(b) = e_2\] Thus, \[\phi(ab)\stackrel{\phi\text{ is homomorphism}}{=} \phi(a)\phi(b)=e_2e_2 = e_2\Rightarrow ab\in \ker\phi\] and \[\phi(a^{-1}) \stackrel{\text{by (2)}}{=} (\phi(a))^{-1} = (e_2)^{-1} = e_2 \Rightarrow a^{-1} \in \ker\phi\] \(\Rightarrow \ker \phi\) is a subgroup of \(G_1\). Finally, let us prove that \(\phi\) is injective iff \(\ker\phi = \{e_1\}\). Suppose that \(\phi\) is injective. Then, \(\phi\) is a bijective homomorphism. By (1) we must have \(\phi(e_1) = e_2\). Also, since \(\phi\) is 1:1, \(e_1\) must be the only element of \(G_1\) that maps to \(e_2\) under \(\phi\). Therefore, \(\ker \phi=\{c\in G_1\mid \phi(c)=e_2\} = \{e_1\}\). Conversely, suppose that \(\ker \phi = \{e_1\}\). Let us check that \(\phi\) is injective. Let \(a,b\in G_1\) such that \(\phi(a)=\phi(b)\). We want to show that \(a=b\). But, \[\phi(a)=\phi(b)\] \[\Rightarrow \phi(a)\phi(b^{-1}) = \phi(b)\phi(b^{-1})\Rightarrow \phi(ab^{-1}) = \phi(bb^{-1})\] \[\Rightarrow \phi(ab^{-1}) = \phi(bb^{-1}) = \phi(e_1) = (by (1)) = e_2\] \[\Rightarrow ab^{-1}\in \ker \phi = \{e_1\}\Rightarrow ab^{-1} = e_1 \Rightarrow (ab^{-1})b = (e_1)b\Rightarrow a=b\]
+<li>(4) Let \(a\in G_1\) such that \(|a|=n\) so that \(n\) is the smallest possitive integer \(a^n = e_1\). Then, \[\phi(a^n)=\phi(e_1)=(by (1)) e_2\] \[\stackrel{\text{by (3)}}{\Leftrightarrow} (by(3)) (\phi(a))^n = \phi(a^n) = e_2\] \[\implies |\phi(a)| \mid n =|a|\]</li>
+<li>(5) Let us verify that \(\ker \phi\) is a subgroup of \(G_1\) by checking that, \(\forall a,b\in \ker \phi, ab\in \phi\) and \(a^{-1}\in \ker \phi\). Since \(a,b\in \ker \phi = \{c\in G_1\mid \phi(c) = e_2\}\), we have that \[\phi(a) = \phi(b) = e_2\] Thus, \[\phi(ab)\stackrel{\phi\text{ is homomorphism}}{=} \phi(a)\phi(b)=e_2e_2 = e_2\implies ab\in \ker\phi\] and \[\phi(a^{-1}) \stackrel{\text{by (2)}}{=} (\phi(a))^{-1} = (e_2)^{-1} = e_2 \implies a^{-1} \in \ker\phi\] \(\implies \ker \phi\) is a subgroup of \(G_1\). Finally, let us prove that \(\phi\) is injective iff \(\ker\phi = \{e_1\}\). Suppose that \(\phi\) is injective. Then, \(\phi\) is a bijective homomorphism. By (1) we must have \(\phi(e_1) = e_2\). Also, since \(\phi\) is 1:1, \(e_1\) must be the only element of \(G_1\) that maps to \(e_2\) under \(\phi\). Therefore, \(\ker \phi=\{c\in G_1\mid \phi(c)=e_2\} = \{e_1\}\). Conversely, suppose that \(\ker \phi = \{e_1\}\). Let us check that \(\phi\) is injective. Let \(a,b\in G_1\) such that \(\phi(a)=\phi(b)\). We want to show that \(a=b\). But, \[\phi(a)=\phi(b)\] \[\implies \phi(a)\phi(b^{-1}) = \phi(b)\phi(b^{-1})\implies \phi(ab^{-1}) = \phi(bb^{-1})\] \[\implies \phi(ab^{-1}) = \phi(bb^{-1}) = \phi(e_1) = (by (1)) = e_2\] \[\implies ab^{-1}\in \ker \phi = \{e_1\}\implies ab^{-1} = e_1 \implies (ab^{-1})b = (e_1)b\implies a=b\]
 
 <ul>
-<li>Remark: If \(|G_1| = |G_2| = n &lt; \infty\) and \(\phi:G_1\rightarrow G_2\) is a homomorphism, then \(\phi\) is isomorphism iff \(\ker \phi = \{e_1\}\), where \(e_1\) is the identity in \(G_1\).
+<li>Remark: If \(|G_1| = |G_2| = n &lt; \infty\) and \(\phi:G_1\implies G_2\) is a homomorphism, then \(\phi\) is isomorphism iff \(\ker \phi = \{e_1\}\), where \(e_1\) is the identity in \(G_1\).
 
 <ul>
 <li>Proof: By (5) in the thm, \(\phi\) is injective iff \(\ker\phi = \{e_1\}\). Moreover since \(|G_1| = |G_2| = n, \phi\) is injective iff \(\phi\) is bijective.</li>
@@ -2204,20 +2204,20 @@ pre[class*="language-"] {
 <li>Further properties
 
 <ul>
-<li>Thm: Let \(G_1\) and \(G_2\) be 2 groups and \(\phi: G_1\rightarrow G_2\) be a homomorphism
+<li>Thm: Let \(G_1\) and \(G_2\) be 2 groups and \(\phi: G_1\implies G_2\) be a homomorphism
 
 <ul>
 <li>(6) If \(H\) is a subgroup of \(G_1\), then \(\phi(H)\) is subgroup of \(G_2\)</li>
 <li>(7) If \(K\) is a subgroup of \(G_2\), then \(\phi^{-1}(K)\) is subgroup of \(G_1\).</li>
-<li>(8) Let \(G_3\) be a and \(\psi: G_2\rightarrow G_3\). Then, \(\psi\circ\phi:  G_1\rightarrow G_3\) is homomorphism</li>
+<li>(8) Let \(G_3\) be a and \(\psi: G_2\implies G_3\). Then, \(\psi\circ\phi:  G_1\implies G_3\) is homomorphism</li>
 </ul></li>
 <li>Proof:
 
 <ul>
-<li>(6) Need to check \(\phi(H)\) is closed under the operation in \(G_2\) and under inverse. Let \(x,y\in \phi(H)\) so that \(x=\phi(a)\) and \(y=\phi(b)\) for some \(a,b\in H\). Note that since \(H\) is a subgroup of \(G_1\), we hav ethat \(ab\in H\) and \(a^{-1}\in H\). Thus, \[xy = \phi(a)\phi(b) \stackrel{\phi\text{ is homomorphism}}{=} \phi(ab) \in \phi(H)\text{ since } ab\in H\] and \[x^{-1} = [\phi(a)]^{-1} = (by (2)) \phi(a^{-1})\in \phi(H) \text{ since } a^{-1} \in H\] \(\Rightarrow \phi(H)\) is closed under the operation oin \(G_2\) and underinverse \(\Rightarrow \phi(H)\) is a subgroup of \(G_2\)</li>
+<li>(6) Need to check \(\phi(H)\) is closed under the operation in \(G_2\) and under inverse. Let \(x,y\in \phi(H)\) so that \(x=\phi(a)\) and \(y=\phi(b)\) for some \(a,b\in H\). Note that since \(H\) is a subgroup of \(G_1\), we hav ethat \(ab\in H\) and \(a^{-1}\in H\). Thus, \[xy = \phi(a)\phi(b) \stackrel{\phi\text{ is homomorphism}}{=} \phi(ab) \in \phi(H)\text{ since } ab\in H\] and \[x^{-1} = [\phi(a)]^{-1} = (by (2)) \phi(a^{-1})\in \phi(H) \text{ since } a^{-1} \in H\] \(\implies \phi(H)\) is closed under the operation oin \(G_2\) and underinverse \(\implies \phi(H)\) is a subgroup of \(G_2\)</li>
 <li>(7) and (8) exercise.</li>
 </ul></li>
-<li>Remark: Properties (6) and (7) tell us that if \(G_1 \simeq G_2\), so that \(\exists\) isomorphism \(\phi:G_1\rightarrow G_2\), then there is a 1-1correspondence between subgroups in \(G_1\) and subgroups in \(G_2\). I.e., For any subgroup \(H\) of \(G_1\), \(\phi(H)\) is a subgroup of \(G_2 \bigoplus\) any subgroup of \(G_2\) is of the form \(\phi(H)\) for some subgroup \(H\) of \(G_1\) (exercise, use inverse map). This means in particular that isomorphic groups must have the same subgroup lattice (so that if 2 groups don&#39;t have the same subgroup lattice, they cannot be isomorphic)</li>
+<li>Remark: Properties (6) and (7) tell us that if \(G_1 \simeq G_2\), so that \(\exists\) isomorphism \(\phi:G_1\implies G_2\), then there is a 1-1correspondence between subgroups in \(G_1\) and subgroups in \(G_2\). I.e., For any subgroup \(H\) of \(G_1\), \(\phi(H)\) is a subgroup of \(G_2 \bigoplus\) any subgroup of \(G_2\) is of the form \(\phi(H)\) for some subgroup \(H\) of \(G_1\) (exercise, use inverse map). This means in particular that isomorphic groups must have the same subgroup lattice (so that if 2 groups don&#39;t have the same subgroup lattice, they cannot be isomorphic)</li>
 </ul></li>
 <li>Prop: Let \(G_1\) and \(G_2\) be 2 groups such that \(G_1 \simeq G_2\). Then
 
@@ -2247,22 +2247,22 @@ pre[class*="language-"] {
 <li>Proof of Prop:
 
 <ul>
-<li>Since \(G_1 \simeq G_2\), exists an isoorphism \(\phi:G_1\rightarrow G_2\). In particular, \(\phi\) is not only a homomorphism, but it is also a bijection so that \(G_2 = \phi(G_1)\). Also, \(\phi^{-1}: G_2\rightarrow G_1\) is a bijective homomorphism and \(G_1 = \phi^{-1}(G_2)\)</li>
+<li>Since \(G_1 \simeq G_2\), exists an isoorphism \(\phi:G_1\implies G_2\). In particular, \(\phi\) is not only a homomorphism, but it is also a bijection so that \(G_2 = \phi(G_1)\). Also, \(\phi^{-1}: G_2\implies G_1\) is a bijective homomorphism and \(G_1 = \phi^{-1}(G_2)\)</li>
 <li>(1) Because \(\phi\) is a bijection, \(G_1\) is infinite iff \(G_2\) is infinite, and \(G_1\) is finite iff \(G_2\) is finite. And if \(G_1\) and \(G_2\) are finite, they must have the same number of elements. So, \(|G_1|=|G_2|\).</li>
 <li>(2) Suppose that \(G_1\) is abelian. Then, because \(\phi\) is a homomorphism \(\phi(G_1) = (G_2)\) is abelian. Similarly, if \(G_2\) is abelian, then \(G_1 = \phi^{-1}(G_2)\) is abelian because \(\phi^{-1}\) is a homomorphism</li>
 <li>(3) If \(G_1\) is cyclic, then \(G_2 = \phi(G_1)\) is cyclic. And if \(G_2\) is cyclic, then \(G_1 = \phi^{-1}(G_2)\) is cyclic.</li>
 </ul></li>
 <li>Some facts about homomorphisms from a cyclic group to another group, is between cyclic groups.</li>
-<li><strong>Lemma</strong>: Let \(G_1\) and \(G_2\) be groups, and \(\phi:G_1\rightarrow G_2\) is a homomorphism.
+<li><strong>Lemma</strong>: Let \(G_1\) and \(G_2\) be groups, and \(\phi:G_1\implies G_2\) is a homomorphism.
 
 <ul>
 <li>(1) If \(G_1\) is cyclic, then \(\phi\) is complitely determined by \(\phi(a)\) where \(a\) is any generator of \(G_1\). In other words, if \(G_1\) is a cyclic group generated by \(a\), i.e. \(G_1=\langle a\rangle\), then we need to specify \(\phi(a)\) to define \(\phi\).</li>
-<li>(2) If \(G_1\) and \(G_2\) are both cyclic of order \(n\), then \(\exists\) isomorphism \(\phi:G_1\rightarrow G_2\) with \(\phi(a)=b\) where \(a\) is any generator of \(G_1\) and \(b\) is any generator of \(G_2\).</li>
+<li>(2) If \(G_1\) and \(G_2\) are both cyclic of order \(n\), then \(\exists\) isomorphism \(\phi:G_1\implies G_2\) with \(\phi(a)=b\) where \(a\) is any generator of \(G_1\) and \(b\) is any generator of \(G_2\).</li>
 <li>Proof:
 
 <ul>
 <li>(1) If \(G_1=\langle a\rangle\). Then, \(G_1 = \{a^m\mid m\in \mathbb Z\}\) so that, \(\forall x \in G_1, x = a^m\) for some \(m\in \mathbb Z\), and \(\phi(x) = (\phi(a))^m \)</li>
-<li>(2) If \(G_1 = \langle a\rangle\) and \(G_2 = \langle b\rangle\). Set \(\phi(a) = b\) and define \[\phi:G_1=\{e, a,\cdots, a^{n-1}\}\rightarrow G_2 = \{e,b,\cdots,b^{n-1}\}\] \[a^m\mapsto b^m\] Then, \(\phi\) is clearly a bijection and also a homomorphism since \[\phi(a^m\cdot a^{m&#39;}) = \phi(a^{m+m&#39;}) = b^{m+m&#39;} = b^m\cdot b^{m&#39;} = \phi(a^m)\cdot \phi(a^{m&#39;})\] \(\Rightarrow\phi\) is an isomorphism</li>
+<li>(2) If \(G_1 = \langle a\rangle\) and \(G_2 = \langle b\rangle\). Set \(\phi(a) = b\) and define \[\phi:G_1=\{e, a,\cdots, a^{n-1}\}\implies G_2 = \{e,b,\cdots,b^{n-1}\}\] \[a^m\mapsto b^m\] Then, \(\phi\) is clearly a bijection and also a homomorphism since \[\phi(a^m\cdot a^{m&#39;}) = \phi(a^{m+m&#39;}) = b^{m+m&#39;} = b^m\cdot b^{m&#39;} = \phi(a^m)\cdot \phi(a^{m&#39;})\] \(\implies\phi\) is an isomorphism</li>
 </ul></li>
 </ul></li>
 <li><p>Prop: Let \(G = \langle a\rangle\) be a cyclic group.</p>
@@ -2273,13 +2273,13 @@ pre[class*="language-"] {
 <li><p>Pf:</p>
 
 <ul>
-<li><p>(1) The homorphism \[\phi: G\rightarrow \mathbb Z = \langle a\rangle\] \[a\mapsto 1\] is an isomorphism. Moreover, \[\psi:\mathbb Z = \langle 1 \rangle =\rightarrow G = \langle a\rangle\] \[1\mapsto a\] \(\leadsto \psi(m) = a^m\) because want \(\psi\) to be homomorphism. </p>
+<li><p>(1) The homorphism \[\phi: G\implies \mathbb Z = \langle a\rangle\] \[a\mapsto 1\] is an isomorphism. Moreover, \[\psi:\mathbb Z = \langle 1 \rangle =\implies G = \langle a\rangle\] \[1\mapsto a\] \(\leadsto \psi(m) = a^m\) because want \(\psi\) to be homomorphism. </p>
 
 <ul>
-<li><strong>\(\psi\) is 1 to 1</strong> Suppose that \(\psi(m) = \psi(m&#39;)\Leftrightarrow a^m = a^{m&#39;}\). But \(|a|\) is infinite because it generates G  which is inifinite. So, if \(a^m = a^{m&#39;}\), must have that \(m = m&#39;\Rightarrow \psi\) is 1:1</li>
-<li><strong>\(\psi\) is onto</strong> \(\forall x\in G, x=a^m\) for some \(m\in \mathbb Z\) so that \(x=\psi(a)\Rightarrow \psi\) is bijection homomorphism therefore \(\psi\) is an isomorphism</li>
+<li><strong>\(\psi\) is 1 to 1</strong> Suppose that \(\psi(m) = \psi(m&#39;)\Leftrightarrow a^m = a^{m&#39;}\). But \(|a|\) is infinite because it generates G  which is inifinite. So, if \(a^m = a^{m&#39;}\), must have that \(m = m&#39;\implies \psi\) is 1:1</li>
+<li><strong>\(\psi\) is onto</strong> \(\forall x\in G, x=a^m\) for some \(m\in \mathbb Z\) so that \(x=\psi(a)\implies \psi\) is bijection homomorphism therefore \(\psi\) is an isomorphism</li>
 </ul></li>
-<li><p>(2) The homorphism \[\phi: G\rightarrow \mathbb Z_n = \langle \overline a\rangle\] \[a\mapsto \overline 1\] is an isomorphism.</p>
+<li><p>(2) The homorphism \[\phi: G\implies \mathbb Z_n = \langle \overline a\rangle\] \[a\mapsto \overline 1\] is an isomorphism.</p>
 
 <ul>
 <li>To proof of (2) is similar.</li>
@@ -2302,19 +2302,19 @@ pre[class*="language-"] {
 <li>(2) \(G_1\) is abelian iff \(G_2\) is abelian</li>
 <li>(3) \(G_1\) is cyclic iff \(G_2\) is cyclic</li>
 </ul></li>
-<li>Note: If \(G_1\simeq G_2\), then \(\exists\) bijective homomorphism \(\phi:G_1\rightarrow G_2\). Since \(\phi\) is a bijection, then \(G_1\) and \(G_2\) must have the same cardinality:
+<li>Note: If \(G_1\simeq G_2\), then \(\exists\) bijective homomorphism \(\phi:G_1\implies G_2\). Since \(\phi\) is a bijection, then \(G_1\) and \(G_2\) must have the same cardinality:
 
 <ul>
 <li>Either they are both finite with the same number of elements</li>
 <li>Either they both countable, both uncountable etc.</li>
 </ul></li>
-<li>Also: If \(G_1\) and \(G_2\) are 2 groups and \(\exists\) homomorphism \(\phi:G_1\rightarrow G_2\)
+<li>Also: If \(G_1\) and \(G_2\) are 2 groups and \(\exists\) homomorphism \(\phi:G_1\implies G_2\)
 
 <ul>
 <li>(2&#39;) If \(H\) is an abelian subgroup of \(G_1\), then \(\phi(H)\) is abelian subgroup of \(G_2\)</li>
 <li>(3&#39;) If \(H\) is a cyclic subgroup of \(G_1\), then \(\phi(H)\) is cyclic subgroup of \(G_2\)</li>
 </ul></li>
-<li>Finally: If \(G_1 = \langle a\rangle\) is cycic, then \(\phi: G_1\rightarrow G_2\) is completely determined by \(\phi(a)\) (because then \(\phi(a^m) = (\phi(a))^m, \forall m\in \mathbb Z\), these are true for any group \(G_1\)
+<li>Finally: If \(G_1 = \langle a\rangle\) is cycic, then \(\phi: G_1\implies G_2\) is completely determined by \(\phi(a)\) (because then \(\phi(a^m) = (\phi(a))^m, \forall m\in \mathbb Z\), these are true for any group \(G_1\)
 
 <ul>
 <li>\(\phi(e_1) = e_2\)</li>
@@ -2328,8 +2328,8 @@ pre[class*="language-"] {
 
 <ul>
 <li>\(\exists\) isomorphism between \(G_1\) and \(G_2\)? \(G_1\) is countable, but \(G_2\) is uncontable, so <strong>NO</strong></li>
-<li>\(\exists\) homomorphism \(\phi: G_1=(\mathbb Z, +)\rightarrow G_2=(\mathbb R, +)\)? Yes, many!</li>
-<li>Here, \(\mathbb Z = \langle 1\rangle\) is cyclic, so any homomorphism \(\phi: \mathbb Z\rightarrow \mathbb R\) is completely determined by \(\phi(1)\). So, get a homomorphism for any \(a\in \mathbb R\) given by \(\phi(1) = a\) so that \(\phi(m) = \phi(a)\) so that \(\phi(m) \stackrel{(\mathbb R, +)\text{ additive}}{=} \phi(a) + \phi(a) + \stackrel{m \text{ times}}{\cdots} + \phi(a)\)
+<li>\(\exists\) homomorphism \(\phi: G_1=(\mathbb Z, +)\implies G_2=(\mathbb R, +)\)? Yes, many!</li>
+<li>Here, \(\mathbb Z = \langle 1\rangle\) is cyclic, so any homomorphism \(\phi: \mathbb Z\implies \mathbb R\) is completely determined by \(\phi(1)\). So, get a homomorphism for any \(a\in \mathbb R\) given by \(\phi(1) = a\) so that \(\phi(m) = \phi(a)\) so that \(\phi(m) \stackrel{(\mathbb R, +)\text{ additive}}{=} \phi(a) + \phi(a) + \stackrel{m \text{ times}}{\cdots} + \phi(a)\)
 
 <ul>
 <li>e.g. \(\phi(1) = 1\) gives the homomorphism \(\phi(m) = m\)</li>
@@ -2343,9 +2343,9 @@ pre[class*="language-"] {
 <ul>
 <li>\(|G_1| = 9\)</li>
 <li>\(|G_2| = 6\) because \(G_2 = \{\overline 1, \overline 3, \overline 5, \overline 9, \overline{11}, \overline{13}\}\)</li>
-<li>\(|G_1|\neq |G_2|\) so that \(G_1\not \simeq G_2\Rightarrow \not \exists\) isomorphism between \(G_1\) and \(G_2\)</li>
+<li>\(|G_1|\neq |G_2|\) so that \(G_1\not \simeq G_2\implies \not \exists\) isomorphism between \(G_1\) and \(G_2\)</li>
 </ul></li>
-<li>What are the possible homomorphisms \(\phi:\mathbb Z_4\rightarrow \mathbb Z_{14}^*\)?
+<li>What are the possible homomorphisms \(\phi:\mathbb Z_4\implies \mathbb Z_{14}^*\)?
 
 <ul>
 <li>Note that any such \(\phi\) must map the identity \(\overline 0\) in \(\mathbb Z_4\) to the identity \(\overline 1\) in \(\mathbb Z_{14}^*\): \(\phi(\overline 0) = \overline 1\)</li>
@@ -2357,8 +2357,8 @@ pre[class*="language-"] {
 <li>What are the possible homomorphisms?
 
 <ul>
-<li>\[\phi_0:\mathbb Z_4\rightarrow \mathbb Z_{14}^*\] \[\overline 1\mapsto \overline 1\] \(\Rightarrow\phi(\overline k) = \phi(k(\overline 1)) = (\phi(\overline 1))^k = \overline 1^k = \overline 1\). This is the trivial homomorphism whose kernal is \(\mathbb Z_4\)</li>
-<li>\[\phi_1:\mathbb Z_4\rightarrow \mathbb Z_{14}^*\] \[\overline 1\mapsto \overline 1\]
+<li>\[\phi_0:\mathbb Z_4\implies \mathbb Z_{14}^*\] \[\overline 1\mapsto \overline 1\] \(\implies\phi(\overline k) = \phi(k(\overline 1)) = (\phi(\overline 1))^k = \overline 1^k = \overline 1\). This is the trivial homomorphism whose kernal is \(\mathbb Z_4\)</li>
+<li>\[\phi_1:\mathbb Z_4\implies \mathbb Z_{14}^*\] \[\overline 1\mapsto \overline 1\]
 
 <ul>
 <li>\(\overline 1 \mapsto \overline 3\)</li>
@@ -2386,14 +2386,14 @@ pre[class*="language-"] {
 </ul></li>
 </ul></li>
 </ul></li>
-<li>In general, given 2 groups \(G_1\) and \(G_2\), if \(G_1 = \langle a\rangle\) is cyclic and one wants to determine <strong>all</strong> the possible homomorphism \(\phi:G_1\rightarrow G_2\), one has to determine the possible images of the generator \(a\) of \(G_1\). In particular, if \(|G_1|&lt;\infty\), then must have \[|\phi(a)| \mid |a|\]
+<li>In general, given 2 groups \(G_1\) and \(G_2\), if \(G_1 = \langle a\rangle\) is cyclic and one wants to determine <strong>all</strong> the possible homomorphism \(\phi:G_1\implies G_2\), one has to determine the possible images of the generator \(a\) of \(G_1\). In particular, if \(|G_1|&lt;\infty\), then must have \[|\phi(a)| \mid |a|\]
 
 <ul>
 <li>Ex. Consider \(G_1 = (\mathbb Z_{10},+), G_2 = (\mathbb Z_6, +)\) Both are cyclic, \(|\mathbb Z_{10}| = 10\) and \(\mathbb Z_{10} = \langle \overline 1\rangle\), \(|\mathbb Z_{6}| = 6\) and \(\mathbb Z_{10} = \langle \overline 1\rangle\)
 
 <ul>
 <li>Isomorphism? No, because \(|\mathbb Z_{10}|\neq |\mathbb Z_{6}|\)</li>
-<li>\(\exists\) subjective homomorphism \(\phi:\mathbb Z_{10}\rightarrow \mathbb Z_{6}\)?</li>
+<li>\(\exists\) subjective homomorphism \(\phi:\mathbb Z_{10}\implies \mathbb Z_{6}\)?</li>
 </ul></li>
 </ul></li>
 </ul>
@@ -2412,12 +2412,12 @@ pre[class*="language-"] {
 <li>e.g. 
 
 <ul>
-<li>2) \(\sigma:\mathbb Z_{10}\rightarrow \mathbb Z_6\)
+<li>2) \(\sigma:\mathbb Z_{10}\implies \mathbb Z_6\)
 
 <ul>
 <li>Isomorphism? No.</li>
 <li>Is there a subjective homomorphism? No</li>
-<li>How many homomorphism \(\sigma:\mathbb Z_{10}\rightarrow \mathbb Z_6\) exist? 2 (The <strong>trivial</strong> homomorphism \(\sigma: \mathbb Z_{10}=\langle \overline \rangle\rightarrow \mathbb Z_6, \overline 1\mapsto \overline 0 = \) (identity in \((\mathbb Z_6, +)\) and another.</li>
+<li>How many homomorphism \(\sigma:\mathbb Z_{10}\implies \mathbb Z_6\) exist? 2 (The <strong>trivial</strong> homomorphism \(\sigma: \mathbb Z_{10}=\langle \overline \rangle\implies \mathbb Z_6, \overline 1\mapsto \overline 0 = \) (identity in \((\mathbb Z_6, +)\) and another.</li>
 </ul></li>
 </ul></li>
 </ul>
@@ -2425,7 +2425,7 @@ pre[class*="language-"] {
 <h2 id="toc_9">2.2 Permutation Groups</h2>
 
 <ul>
-<li>Recall that <strong>a permutation of degree \(n\)</strong> is a bijection \[\sigma:\{1, \cdots, n\}\rightarrow \{1, \cdots, n\}\] Also, \(S_n = \{ \text{all permutations of degree } n\}\) is a group under composition.
+<li>Recall that <strong>a permutation of degree \(n\)</strong> is a bijection \[\sigma:\{1, \cdots, n\}\implies \{1, \cdots, n\}\] Also, \(S_n = \{ \text{all permutations of degree } n\}\) is a group under composition.
 
 <ul>
 <li>Notation: Since the group operation is composition, we will denote it by multiplication: \[\sigma \tau:= \sigma\circ \tau, \forall \sigma, \tau\in S_n\]</li>
@@ -2433,17 +2433,17 @@ pre[class*="language-"] {
 <li>\(\oplus S_n\) is <strong>NOT</strong> abelian if \(n\geq 3\)
 
 <ul>
-<li>\(S_2=\{\sigma:\{1,2\}\rightarrow \{1,2\}\mid \sigma \text{ is bijection}\}\)  and \(|S_2| = 2!\) \[\sigma_0:\sigma:\{1,2\}\rightarrow \{1,2\}\] \[1\mapsto 1\] \[2\mapsto 2\] where \(\sigma_0\) is the identity in \(S_2\) \[\sigma_1:\sigma:\{1,2\}\rightarrow \{1,2\}\] \[1\mapsto 2\] \[2\mapsto 1\]
+<li>\(S_2=\{\sigma:\{1,2\}\implies \{1,2\}\mid \sigma \text{ is bijection}\}\)  and \(|S_2| = 2!\) \[\sigma_0:\sigma:\{1,2\}\implies \{1,2\}\] \[1\mapsto 1\] \[2\mapsto 2\] where \(\sigma_0\) is the identity in \(S_2\) \[\sigma_1:\sigma:\{1,2\}\implies \{1,2\}\] \[1\mapsto 2\] \[2\mapsto 1\]
 
 <ul>
 <li>Note: 
 
 <ul>
-<li>\(\sigma_0\) is the identity in \(S_2\) <strong>and</strong> \(\sigma_1\sigma_1 = \sigma_0\Rightarrow \sigma_1^{-1} = \sigma_1\)</li>
+<li>\(\sigma_0\) is the identity in \(S_2\) <strong>and</strong> \(\sigma_1\sigma_1 = \sigma_0\implies \sigma_1^{-1} = \sigma_1\)</li>
 <li>\(S_2\) is abelian</li>
 </ul></li>
 </ul></li>
-<li>\(S_3=\{\sigma:\{1,2,3\}\rightarrow \{1,2,3\}\mid \sigma \text{ is bijection}\}\)  and \(|S_2| = 3! = 6\) \[\sigma_0 = \text{identity}, i\mapsto i\] \[\sigma_1: 1\mapsto 2, 2\mapsto 1, 3\mapsto 3 \leadsto (1\,2)\] \[\sigma_2: 1\mapsto 3, 2\mapsto 2, 3\mapsto 1 \leadsto (1\,3)\] \[\sigma_3: 1\mapsto 1, 2\mapsto 3, 3\mapsto 2 \leadsto (2\,3)\] \[\sigma_4: 1\mapsto 2, 2\mapsto 3, 3\mapsto 1 \leadsto (1\,2\,3)\] \[\sigma_1: 1\mapsto 3, 2\mapsto 1, 3\mapsto 2 \leadsto (1\,3\,2)\]</li>
+<li>\(S_3=\{\sigma:\{1,2,3\}\implies \{1,2,3\}\mid \sigma \text{ is bijection}\}\)  and \(|S_2| = 3! = 6\) \[\sigma_0 = \text{identity}, i\mapsto i\] \[\sigma_1: 1\mapsto 2, 2\mapsto 1, 3\mapsto 3 \leadsto (1\,2)\] \[\sigma_2: 1\mapsto 3, 2\mapsto 2, 3\mapsto 1 \leadsto (1\,3)\] \[\sigma_3: 1\mapsto 1, 2\mapsto 3, 3\mapsto 2 \leadsto (2\,3)\] \[\sigma_4: 1\mapsto 2, 2\mapsto 3, 3\mapsto 1 \leadsto (1\,2\,3)\] \[\sigma_1: 1\mapsto 3, 2\mapsto 1, 3\mapsto 2 \leadsto (1\,3\,2)\]</li>
 </ul></li>
 </ul></li>
 <li>Cycle notation:
@@ -2487,9 +2487,9 @@ pre[class*="language-"] {
 
 <ul>
 <li>Let \(\sigma = (a_1, \cdots, a_m)\) and \(\tau = (b_1, \cdots, b_{m&#39;})\) be disjoint cycles so that \(a_i\neq b_j, \forall i, j\)</li>
-<li>\(\rightarrow \sigma \) leaves \(b_1, \cdots, b_{m&#39;}\) fixed since \(b_1, \cdots, b_{m&#39;}\) does not appear in the expression of \(\sigma\)</li>
-<li>\(\rightarrow \tau\) leaves \(a_1, \cdots, a_m\) fixed since \(a_1, \cdots, a_m\) does not appear in the expression of \(\tau\)</li>
-<li>\(\rightarrow\) The remaining integers \(\{c_1, \cdots, c_r\} = \{1,\cdots, n\}\setminus \{a_1, \cdots, a_m,b_1, \cdots, b_{m&#39;}\} \) are fixed by both \(\sigma\) and \(\tau\)</li>
+<li>\(\implies \sigma \) leaves \(b_1, \cdots, b_{m&#39;}\) fixed since \(b_1, \cdots, b_{m&#39;}\) does not appear in the expression of \(\sigma\)</li>
+<li>\(\implies \tau\) leaves \(a_1, \cdots, a_m\) fixed since \(a_1, \cdots, a_m\) does not appear in the expression of \(\tau\)</li>
+<li>\(\implies\) The remaining integers \(\{c_1, \cdots, c_r\} = \{1,\cdots, n\}\setminus \{a_1, \cdots, a_m,b_1, \cdots, b_{m&#39;}\} \) are fixed by both \(\sigma\) and \(\tau\)</li>
 <li>Need to check that \(\sigma \tau(a_i)=\tau\sigma(a_i), \forall i\), \(\sigma \tau(b_j)=\tau\sigma(b_j), \forall j\), \(\sigma \tau(c_k)=\tau\sigma(c_k), \forall k\)</li>
 <li>So, \(\forall i, \sigma \tau(a_i)= \sigma (\tau(a_i))= \sigma(a_{i}) = a_{i+1}=\tau (a_{i+1}) = \tau(\sigma(a_i))=\tau\sigma(a_i)\)</li>
 <li>One proves the others similarly (Exercise)</li>
@@ -2515,7 +2515,7 @@ pre[class*="language-"] {
 <li>(1) \(\sigma\) is a cycle or the product of the product of disjoint cycles.</li>
 <li>(2) If \(\sigma\) and \(\tau\) are disjoint cycles, then \(\sigma\tau=\tau\sigma\)</li>
 <li>(3) \(\sigma\) is a product of 2-cycles.</li>
-<li>Note: \(\sigma\tau=\sigma\cdot\tau\) where \(\sigma,\tau:\{1,\cdots,n\}\rightarrow\{1,\cdots,n\}\)</li>
+<li>Note: \(\sigma\tau=\sigma\cdot\tau\) where \(\sigma,\tau:\{1,\cdots,n\}\implies\{1,\cdots,n\}\)</li>
 </ul></li>
 </ul></li>
 <li>Note:
@@ -2539,16 +2539,16 @@ pre[class*="language-"] {
 <li>Thm (<strong>Ruffini</strong>): Let \(\sigma\in S_n, n&gt;1\). Then, \(|\sigma|\) is equal to the least common multiple of the lengths of cycles appearing in its decomposition as a product of disjoint cycles.
 
 <ul>
-<li>Pf: If \(\sigma\) is a cycle, then \(|\sigma| = (\text{length }r)\), so we are done. Otherwise, \(\sigma\) can be written as a product of disjoint cycles. Let us assume that \(\sigma = \sigma_1\sigma_2\) with \(\sigma_1, \sigma_2\) disjoint cycles (the proof for a product of more than 2 disjoint cycles is similar) Suppose that \(|\sigma_1| = m_1, |\sigma_2|=m_2\). Set \(k = lcm(m_1, m_2)\) since \(m_1, m_2\mid k\) and \(\sigma_1^{m_1}=\sigma_2^{m_2}=\epsilon\), we have that \[\sigma_1^k = \sigma_2^k = \epsilon\] Moreover, since \(\sigma_1\) and \(\sigma_2\) are disjoint cycles, \(\sigma_1\sigma_2 = \sigma_2\sigma_1 \) and so \(\sigma^k = (\sigma_1\sigma_2)^k = \sigma_1^k\sigma_2^k = \epsilon\) Therefore, if \(t=|\sigma|\), we must ahve that \(t\mid k\). Let us show that \(k\mid t\), which give us that \(|\sigma|=t=k=lcm(m_1, m_2)\). It is enough to show that \(m_1, m_2\mid t\), which will force \(k = lcm(m_1, m_2)\mid t\). We do this by checking that \(\sigma_1^k = \sigma_2^k = \epsilon\) Now, \(t = |\sigma|\) so that \(\sigma^t = \epsilon\). But, \[\sigma^t = (\sigma_1\sigma_2)^t = \sigma_1^t\sigma_2^t\] \(\Rightarrow \sigma_1^t\sigma_2^t = \epsilon\Rightarrow to\sigma_1^t=(\sigma_2^{-1})^t\) But, \(\sigma_1\) and \(\sigma_2\) are disjoint cycles so that they don&#39;t contain common integers. The same is the of any power of \(\sigma_1\) and \(\sigma_2\) . Thus, the onlly way that we can have \(\sigma_1^t=(\sigma_2^{-1})^t\) is if \[\sigma_1^t=(\sigma_2^{-1})^t=\epsilon\] \(\Leftrightarrow \sigma_1^t=\sigma_2^t = \epsilon\Rightarrow m_1 = |\sigma_1|\mid t\) and \(m_2 = |\sigma_2|\mid t\)</li>
+<li>Pf: If \(\sigma\) is a cycle, then \(|\sigma| = (\text{length }r)\), so we are done. Otherwise, \(\sigma\) can be written as a product of disjoint cycles. Let us assume that \(\sigma = \sigma_1\sigma_2\) with \(\sigma_1, \sigma_2\) disjoint cycles (the proof for a product of more than 2 disjoint cycles is similar) Suppose that \(|\sigma_1| = m_1, |\sigma_2|=m_2\). Set \(k = lcm(m_1, m_2)\) since \(m_1, m_2\mid k\) and \(\sigma_1^{m_1}=\sigma_2^{m_2}=\epsilon\), we have that \[\sigma_1^k = \sigma_2^k = \epsilon\] Moreover, since \(\sigma_1\) and \(\sigma_2\) are disjoint cycles, \(\sigma_1\sigma_2 = \sigma_2\sigma_1 \) and so \(\sigma^k = (\sigma_1\sigma_2)^k = \sigma_1^k\sigma_2^k = \epsilon\) Therefore, if \(t=|\sigma|\), we must ahve that \(t\mid k\). Let us show that \(k\mid t\), which give us that \(|\sigma|=t=k=lcm(m_1, m_2)\). It is enough to show that \(m_1, m_2\mid t\), which will force \(k = lcm(m_1, m_2)\mid t\). We do this by checking that \(\sigma_1^k = \sigma_2^k = \epsilon\) Now, \(t = |\sigma|\) so that \(\sigma^t = \epsilon\). But, \[\sigma^t = (\sigma_1\sigma_2)^t = \sigma_1^t\sigma_2^t\] \(\implies \sigma_1^t\sigma_2^t = \epsilon\implies to\sigma_1^t=(\sigma_2^{-1})^t\) But, \(\sigma_1\) and \(\sigma_2\) are disjoint cycles so that they don&#39;t contain common integers. The same is the of any power of \(\sigma_1\) and \(\sigma_2\) . Thus, the onlly way that we can have \(\sigma_1^t=(\sigma_2^{-1})^t\) is if \[\sigma_1^t=(\sigma_2^{-1})^t=\epsilon\] \(\Leftrightarrow \sigma_1^t=\sigma_2^t = \epsilon\implies m_1 = |\sigma_1|\mid t\) and \(m_2 = |\sigma_2|\mid t\)</li>
 <li>Ex. 
 
 <ul>
-<li>1) \[\sigma=\begin{bmatrix}1&amp;2&amp;3&amp;4&amp;5&amp;6&amp;7&amp;8 \\ 2&amp;1&amp;3&amp;5&amp;4&amp;7&amp;6&amp;8\end{bmatrix}\] \[\sigma = (1\;2)(3)(4\;5)(6\;7)(8)=(1\;2)(4\;5)(6\;7)\] \(\leadsto\) product of disjoint cycles, each of length 2$\Rightarrow |\sigma| = lcm(2,2,2)=2
+<li>1) \[\sigma=\begin{bmatrix}1&amp;2&amp;3&amp;4&amp;5&amp;6&amp;7&amp;8 \\ 2&amp;1&amp;3&amp;5&amp;4&amp;7&amp;6&amp;8\end{bmatrix}\] \[\sigma = (1\;2)(3)(4\;5)(6\;7)(8)=(1\;2)(4\;5)(6\;7)\] \(\leadsto\) product of disjoint cycles, each of length 2$\implies |\sigma| = lcm(2,2,2)=2
 
 <ul>
 <li>Note: \(\sigma\) is an odd permutation because it is the product of odd number of 2-cycles)</li>
 </ul></li>
-<li>2) \[\tau=\begin{bmatrix}1&amp;2&amp;3&amp;4&amp;5&amp;6&amp;7&amp;8 \\ 1&amp;3&amp;8&amp;7&amp;6&amp;5&amp;2&amp;4\end{bmatrix}\] \[\tau= (2\;3\;8\;4\;7)(5\;6)\leadsto |\tau| = lcm(5,2)=10\] \[(2\;7)(2\;4)(2\;8)(2\;3)(5\;6)\Rightarrow \text{ odd}\]</li>
+<li>2) \[\tau=\begin{bmatrix}1&amp;2&amp;3&amp;4&amp;5&amp;6&amp;7&amp;8 \\ 1&amp;3&amp;8&amp;7&amp;6&amp;5&amp;2&amp;4\end{bmatrix}\] \[\tau= (2\;3\;8\;4\;7)(5\;6)\leadsto |\tau| = lcm(5,2)=10\] \[(2\;7)(2\;4)(2\;8)(2\;3)(5\;6)\implies \text{ odd}\]</li>
 </ul></li>
 </ul></li>
 </ul>
@@ -2559,12 +2559,12 @@ pre[class*="language-"] {
 <li>Thm: If \(\sigma\in S_n, n&gt;1\), can be expressed as a product of an even number of 2-cycles, then any decomposition of \(\sigma\) into products of 2-cycles must be an even number of 2-cycles. i.e. if \(\sigma = \beta_1\cdots\beta_s=\gamma_1\cdots\gamma_s\) with every \(\beta_i\) and every \(\gamma_j\) a 2-cycle, then \(r\) and \(s\) are either both even or both odd.
 
 <ul>
-<li>Pf: Since \(\sigma = \beta_1\cdots\beta_s=\gamma_1\cdots\gamma_s\Rightarrow (\beta_1\cdots\beta_s(\gamma_1\cdots\gamma_s)^{-1} = \epsilon (=\text{identity permutation}\Rightarrow \beta_1\cdots\beta_(\gamma_1^{-1}\cdots\gamma_s^{-1}=\epsilon\Rightarrow \beta_1\cdots\beta_s\gamma_s\cdots\gamma_1=\epsilon\) (since \(r^{-1}_j = r_j\forall j\), because they are 2-cycle) If can prove that a product of 2-cycles that is equal to \(\epsilon\) ust be a pruduct of an even number of 2-cycles, this will force \(r+s\) to even, implying that \(r\) and \(s\) are either both even or both odd. The only thing left to prove is that if \(\alpha_1, \cdots, \alpha_l\) are 2-cycles such that \(\alpha_1\cdots\alpha_l=\epsilon\), then \(l\) is even. Let us do it by induction on \(l\)
+<li>Pf: Since \(\sigma = \beta_1\cdots\beta_s=\gamma_1\cdots\gamma_s\implies (\beta_1\cdots\beta_s(\gamma_1\cdots\gamma_s)^{-1} = \epsilon (=\text{identity permutation}\implies \beta_1\cdots\beta_(\gamma_1^{-1}\cdots\gamma_s^{-1}=\epsilon\implies \beta_1\cdots\beta_s\gamma_s\cdots\gamma_1=\epsilon\) (since \(r^{-1}_j = r_j\forall j\), because they are 2-cycle) If can prove that a product of 2-cycles that is equal to \(\epsilon\) ust be a pruduct of an even number of 2-cycles, this will force \(r+s\) to even, implying that \(r\) and \(s\) are either both even or both odd. The only thing left to prove is that if \(\alpha_1, \cdots, \alpha_l\) are 2-cycles such that \(\alpha_1\cdots\alpha_l=\epsilon\), then \(l\) is even. Let us do it by induction on \(l\)
 
 <ul>
 <li>\(l=1\): then \(\alpha_1\neq \epsilon\) since an 2-cycle must permute 2 elements in \(\{1,\cdots, n\}\)</li>
 <li>\(l=2\): then \(\alpha_1\alpha_2 = \epsilon\) with \(l=2\) which is even.</li>
-<li>Assume that it is true for \(l&gt;2\). Let us prove it for \(l+1\). We have \[\alpha_1\cdots\alpha_l\alpha_{l+1}=\epsilon\] There are 4 possibilities for \(\alpha_l\alpha_{l+1}\): \[\alpha_l\alpha_{l+1} = (a b)(a b)=\epsilon\] \[\alpha_l\alpha_{l+1} = (a c)(a b)=(a b)(b c)\] \[\alpha_l\alpha_{l+1} = (b c)(a b)=(a c)(c b)\] \[\alpha_l\alpha_{l+1} = (c d)(a b)=(a b)(c d)\] \[\text{where }c,d\neq a,b\] For the first case, remove \(\alpha_l\alpha_{l+1}\) from product. For the other cases, replace \(\alpha_l\alpha_{l+1}\) in the pruduct by expression in the right hand side. \[ \] In the first case, we obtain \(\epsilon=\alpha_1\cdots\alpha_l\alpha_{l+1}\Rightarrow l-1 \) is even by the induction hypothesis \(\Rightarrow l+1\) is even. In the other cases, the integer &quot;\(a\)&quot; no longer appears in the expression of the last 2-cycle. One can repeat the process with \(\alpha_{l-1}\alpha_l\) so that &quot;\(a\)&quot; no longer appears in \(\alpha_l\), but rather in \(\alpha_{l-1}\). We obtain: \[\alpha_1\cdots\alpha_{l-1}\text{(with &quot;a&quot;)}\cdot\alpha_l\alpha_{l+1}\text{(no &quot;a&quot;)}=\epsilon\] The process must eventually give us that \(\alpha_{1}\cdots\alpha_{l-1}=\epsilon\), which will imply that \(l-1\) is even and therefore \(l+1\) is also even.</li>
+<li>Assume that it is true for \(l&gt;2\). Let us prove it for \(l+1\). We have \[\alpha_1\cdots\alpha_l\alpha_{l+1}=\epsilon\] There are 4 possibilities for \(\alpha_l\alpha_{l+1}\): \[\alpha_l\alpha_{l+1} = (a b)(a b)=\epsilon\] \[\alpha_l\alpha_{l+1} = (a c)(a b)=(a b)(b c)\] \[\alpha_l\alpha_{l+1} = (b c)(a b)=(a c)(c b)\] \[\alpha_l\alpha_{l+1} = (c d)(a b)=(a b)(c d)\] \[\text{where }c,d\neq a,b\] For the first case, remove \(\alpha_l\alpha_{l+1}\) from product. For the other cases, replace \(\alpha_l\alpha_{l+1}\) in the pruduct by expression in the right hand side. \[ \] In the first case, we obtain \(\epsilon=\alpha_1\cdots\alpha_l\alpha_{l+1}\implies l-1 \) is even by the induction hypothesis \(\implies l+1\) is even. In the other cases, the integer &quot;\(a\)&quot; no longer appears in the expression of the last 2-cycle. One can repeat the process with \(\alpha_{l-1}\alpha_l\) so that &quot;\(a\)&quot; no longer appears in \(\alpha_l\), but rather in \(\alpha_{l-1}\). We obtain: \[\alpha_1\cdots\alpha_{l-1}\text{(with &quot;a&quot;)}\cdot\alpha_l\alpha_{l+1}\text{(no &quot;a&quot;)}=\epsilon\] The process must eventually give us that \(\alpha_{1}\cdots\alpha_{l-1}=\epsilon\), which will imply that \(l-1\) is even and therefore \(l+1\) is also even.</li>
 </ul></li>
 </ul></li>
 <li>Def: Let \(\alpha\in S_n, n&gt;1\). If \(\sigma\) can be expressed as an even number of 2-cycles, then \(\sigma\) is called <strong>even</strong>. Otherwise, it is called <strong>odd</strong>.
@@ -2574,7 +2574,7 @@ pre[class*="language-"] {
 
 <ul>
 <li>1) Since any decomposition of \(\sigma\) as a product of 2-cycles either always has an even number of 2-cycles or always an odd number of 2-cycles, then notion of even or odd permutation is independent of the decomposition of \(\sigma\) as a product of 2-cycles, and is thus well-defined.</li>
-<li>2) The product of 2 odd permutation is even so that the set of all odd permutations is <strong>not</strong> closed under composition \(\Rightarrow\) teh set of all odd permutations is <strong>not</strong> a subgroup of \(S_n\). Nonetheless, we have:</li>
+<li>2) The product of 2 odd permutation is even so that the set of all odd permutations is <strong>not</strong> closed under composition \(\implies\) teh set of all odd permutations is <strong>not</strong> a subgroup of \(S_n\). Nonetheless, we have:</li>
 </ul></li>
 </ul></li>
 <li>Thm: The set of even permutations of \(S_n\) is a subgroup of \(S_n, n&gt;1\).
@@ -2586,10 +2586,10 @@ pre[class*="language-"] {
 <li>Prop: \(|A_n| = \frac{n!}{2}\)
 
 <ul>
-<li>Pf: We know that \(|S_n|=n!\). Also, the sets of even and odd permutaitons are disjoint and contain the same number of elements. Since we have the following bijection... (table)</li>
+<li>Pf: We know that \(|S_n|=n!\). Also, the sets of even and odd permutaitons are disjoint and contain the same number of elements. Since we have the following bijection: \[A_n=(\text{even permutation})\;\;\;\text{odd permutation}\] \[\sigma\mapsto (1\,2)\sigma\] \[(1\,2)\tau \leftarrow\!\shortmid \tau\]</li>
 </ul></li>
-<li>Ex: \[\sigma=\begin{bmatrix}1&amp;2&amp;3&amp;4&amp;5&amp;6 \\ 2&amp;1&amp;5&amp;4&amp;6&amp;3\end{bmatrix}\in S_6\] \(\leadsto \sigma =(1\;2)(3;5\;6)=(1\;2)(3\;6)(3;5)\leadsto\) odd</li>
-<li>Def: Let \(A\) be a set. A <strong>permutation of \(A\)</strong> is a bijection \(\mathbb{F}:A\rightarrow A\)
+<li>Ex: \[\sigma=\begin{bmatrix}1&amp;2&amp;3&amp;4&amp;5&amp;6 \\ 2&amp;1&amp;5&amp;4&amp;6&amp;3\end{bmatrix}\in S_6\] \(\leadsto \sigma =(1\,2)(3\,5\,6)=(1\,2)(3\,6)(3\,5)\leadsto\) odd</li>
+<li>Def: Let \(A\) be a set. A <strong>permutation of \(A\)</strong> is a bijection \(\mathbb{F}:A\implies A\)
 
 <ul>
 <li>Note: The set of <strong>all</strong> permutations of \(A\) is a group under compisition</li>
@@ -2597,10 +2597,10 @@ pre[class*="language-"] {
 <li>Thm (<strong>Cayley</strong>): Every group is isomorphic to a group of permutations.
 
 <ul>
-<li>Pf: Let \(G\) be a group, which may have an infinite order. We have to find a group of permutations \(\overline G\) such that \(\overline G\simeq G\). Let \(g\in G\), set \[T_g: G\rightarrow G\] \[x\mapsto gx\text{ (i.e. multiplication on the left by g)}\] Note that \(T_g\) is a bijection of \(G\) and therefore a permutation of \(G\)
+<li>Pf: Let \(G\) be a group, which may have an infinite order. We have to find a group of permutations \(\overline G\) such that \(\overline G\simeq G\). Let \(g\in G\), set \[T_g: G\implies G\] \[x\mapsto gx\text{ (i.e. multiplication on the left by g)}\] Note that \(T_g\) is a bijection of \(G\) and therefore a permutation of \(G\)
 
 <ul>
-<li>\(T_g\) is 1:1: \(T_g(x) = T_g(y)\Rightarrow gx=gy\Rightarrow(by cancellation property) x=y\) </li>
+<li>\(T_g\) is 1:1: \(T_g(x) = T_g(y)\implies gx=gy\implies(by cancellation property) x=y\) </li>
 <li>\(T_g\) is onto: \(\forall y\in G, y=g(g^{-1}y) = T_g(g^{-1}y)\)</li>
 </ul></li>
 <li>But, \(T_g\) is not a homomorphism if \(g\neq e\) since \(T_g(xy) = g(xy)\neq (gx)(gy) = T_g(x)T_g(y)\)</li>
@@ -2626,10 +2626,10 @@ pre[class*="language-"] {
 <li>Important in Chemistry: chemical formula of the form \(AB_4\) such as methane \((CH_4)\) have \(A_4\) a symmetry group. The following picture is a tetrahedral \(AB_4\) molecule: <img src="imgs/tetrahedral_AB4.png" alt="dihedral_d4"></li>
 </ul></li>
 </ul></li>
-<li>More generally, one can consider <strong>representations of the group \(G\)</strong>. Let \(V\) be a vector space (e.g. \(V=\mathbb R^n\)) and let \(GL(V)\) be the set of invertible linear transformation \(L:V\rightarrow V\) (e.g. \(GL(V)\simeq GL(n,\mathbb R)\)). Note that \(GL(V)\) is a group onder composition. A representation of \(G\) is homomorphism \[\zeta: G\rightarrow GL(V)\]
+<li>More generally, one can consider <strong>representations of the group \(G\)</strong>. Let \(V\) be a vector space (e.g. \(V=\mathbb R^n\)) and let \(GL(V)\) be the set of invertible linear transformation \(L:V\implies V\) (e.g. \(GL(V)\simeq GL(n,\mathbb R)\)). Note that \(GL(V)\) is a group onder composition. A representation of \(G\) is homomorphism \[\zeta: G\implies GL(V)\]
 
 <ul>
-<li>E.g. Rotations about the origin in \(\mathbb R^2:\{\mathbb R_\theta\mid \theta\in \mathbb R\}\simeq(\mathbb R, +)\) \[\zeta:G\rightarrow GL(\mathbb R^3)=GL(2,\mathbb R)\] \[R_\theta \leadsto \begin{pmatrix}cos(\theta)&amp;sin(\theta) \\ -sin(\theta)&amp;cos(\theta)\end{pmatrix}\]
+<li>E.g. Rotations about the origin in \(\mathbb R^2:\{\mathbb R_\theta\mid \theta\in \mathbb R\}\simeq(\mathbb R, +)\) \[\zeta:G\implies GL(\mathbb R^3)=GL(2,\mathbb R)\] \[R_\theta \leadsto \begin{pmatrix}cos(\theta)&amp;sin(\theta) \\ -sin(\theta)&amp;cos(\theta)\end{pmatrix}\]
 
 <ul>
 <li>Pf Need to check that \(\zeta\) is a homomorphism. Let \(R_{\theta_1}, R_{\theta_2}\in G\), then \(R_{\theta_1}\circ R_{\theta_2} = R_{\theta_{1+2}}\) and \[\zeta(R_{\theta_1}\circ R_{\theta_2}) = g(R_{\theta_1}) + g(R_{\theta_2})\]</li>
@@ -2644,21 +2644,21 @@ pre[class*="language-"] {
 <li>Ex:
 
 <ul>
-<li>1) \(\phi:(\mathbb C,+)\rightarrow (\mathbb C,+), z\mapsto az\) for some fixed \(0\neq a\in \mathbb C\) is automorphism of \((\mathbb C,+)\), or \(\phi:(\mathbb C,+)\rightarrow (\mathbb C,+), z\mapsto \overline z\) is automorphism of \((\mathbb C,+)\)</li>
-<li>2) \(\phi:(\mathbb R^n,+)\rightarrow (\mathbb R^n,+), \vec v \mapsto A\vec v\) for some fixed A\in GL(n,R) is an automorphism of (Rn,+)</li>
-<li>3) Not every bijection \(\phi: G\rightarrow G\) is automorphism
+<li>1) \(\phi:(\mathbb C,+)\implies (\mathbb C,+), z\mapsto az\) for some fixed \(0\neq a\in \mathbb C\) is automorphism of \((\mathbb C,+)\), or \(\phi:(\mathbb C,+)\implies (\mathbb C,+), z\mapsto \overline z\) is automorphism of \((\mathbb C,+)\)</li>
+<li>2) \(\phi:(\mathbb R^n,+)\implies (\mathbb R^n,+), \vec v \mapsto A\vec v\) for some fixed A\in GL(n,R) is an automorphism of (Rn,+)</li>
+<li>3) Not every bijection \(\phi: G\implies G\) is automorphism
 
 <ul>
-<li>e.g. \(T_g:G\rightarrow G, x\mapsto gx\) for fixed \(g\in G\) is a bijection but <strong>NOT</strong> an automorphism if \(g\neq e\) (since \(T_g\) is not a homomorphism) in general</li>
-<li>However, the following map is always an automorphism \[\phi_g:g\rightarrow G\] \[x\mapsto gx g^{-1}, \forall \text{ fixed } g\in G\]
+<li>e.g. \(T_g:G\implies G, x\mapsto gx\) for fixed \(g\in G\) is a bijection but <strong>NOT</strong> an automorphism if \(g\neq e\) (since \(T_g\) is not a homomorphism) in general</li>
+<li>However, the following map is always an automorphism \[\phi_g:g\implies G\] \[x\mapsto gx g^{-1}, \forall \text{ fixed } g\in G\]
 
 <ul>
 <li>Pf:
 
 <ul>
 <li><strong>homomorphism</strong>: \(\forall x, y \), we have: \[\phi_g(xy) = g(xy)g^{-1} = gx(g^{-1}g)yg^{-1}=\phi_g(x)\phi_g(y)\]</li>
-<li><strong>1:1</strong>: \(\forall x,y\in G\), if \(\phi_g(x)=\phi_g(y)\), then \(gxg^{-1}=gyg^{-1}\rightarrow xg^{-1}=yg^{-1}\rightarrow x=y\) (by cancellation property applied twice)</li>
-<li><strong>onto</strong>: \(\forall y \in G\), \(y=g(g^{-1}yg)^{-1}=\phi_g(g^{-1}yg)\) with \(g^{-1}yg\in G\rightarrow \phi_g\) is a bijective homomorphism \(\Rightarrow \phi_g \) is an isomorphism of \(G\) to itself \(\Rightarrow \phi_g\) is an automorphism</li>
+<li><strong>1:1</strong>: \(\forall x,y\in G\), if \(\phi_g(x)=\phi_g(y)\), then \(gxg^{-1}=gyg^{-1}\implies xg^{-1}=yg^{-1}\implies x=y\) (by cancellation property applied twice)</li>
+<li><strong>onto</strong>: \(\forall y \in G\), \(y=g(g^{-1}yg)^{-1}=\phi_g(g^{-1}yg)\) with \(g^{-1}yg\in G\implies \phi_g\) is a bijective homomorphism \(\implies \phi_g \) is an isomorphism of \(G\) to itself \(\implies \phi_g\) is an automorphism</li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -2669,7 +2669,7 @@ pre[class*="language-"] {
 <ul>
 <li>Note that \(Inn(G)\subset Aut(G)\)</li>
 </ul></li>
-<li>Thm: \(Aut(G)\) and \(Inn(G)\) are groups under composition (with identity the identity map Id \(G\rightarrow G, x\mapsto x\))
+<li>Thm: \(Aut(G)\) and \(Inn(G)\) are groups under composition (with identity the identity map Id \(G\implies G, x\mapsto x\))
 
 <ul>
 <li>Pf: exercise</li>
@@ -2678,7 +2678,7 @@ pre[class*="language-"] {
 <ul>
 <li>1) \(Inn(G)\) is a subgroup of \(Aut(G)\)</li>
 <li>2) If \(G\) and \(G&#39;\) are 2 groups such that \(G\simeq G&#39;\), then \(Aut(G)\simeq Aut(G)\) and \(Inn(G)\simeq Inn(G&#39;)\) (proof as exercise) This means in particular that if \(Aut(G)\not \simeq Aut(G&#39;)\) or \(Inn(G)\not \simeq Inn(G&#39;)\), then \(G\not \simeq G&#39;\).</li>
-<li>3) If \(G\) is abelian, \(\forall g\in G\), \(\phi_g=Id\) because \[\phi_g=gx g^{-1} = gg^{-1}x=ex=x,\forall x\in G\] \(\Rightarrow Inn(G)=\{Id\}\). So if \(Inn(G)\not \simeq \{Id\}\), then \(G\) is not abelian.</li>
+<li>3) If \(G\) is abelian, \(\forall g\in G\), \(\phi_g=Id\) because \[\phi_g=gx g^{-1} = gg^{-1}x=ex=x,\forall x\in G\] \(\implies Inn(G)=\{Id\}\). So if \(Inn(G)\not \simeq \{Id\}\), then \(G\) is not abelian.</li>
 </ul></li>
 </ul></li>
 <li>Ex.
@@ -2730,21 +2730,21 @@ pre[class*="language-"] {
 <li>Proof:
 
 <ul>
-<li>1. \(e\in H\) since \(H\) is a subgroup of \(G \Rightarrow a=ae\in aH\)</li>
-<li>2. suppose that \(aH=H\). By 1, \(a\in aH = H\Rightarrow a\in H\). Conversely, suppose that \(a\in H\). This means in particular that \(a^{-1}\in H\) because \(H\) is a subgroup of \(G\) (and thus closed under inverses)
+<li>1. \(e\in H\) since \(H\) is a subgroup of \(G \implies a=ae\in aH\)</li>
+<li>2. suppose that \(aH=H\). By 1, \(a\in aH = H\implies a\in H\). Conversely, suppose that \(a\in H\). This means in particular that \(a^{-1}\in H\) because \(H\) is a subgroup of \(G\) (and thus closed under inverses)
 
 <ul>
 <li>\(aH\subset H\): Since \(a\in H\), \(\forall h\in H, ah\in H,\) then \(aH=\{ah\mid h\in H\}\subset H\). </li>
 <li>\(H\in aH\): \(\forall h\in H\). Then \[h=a(a^{-1}h)\in aH\] because \(a^{-1}H\in H\) since \(a^{-1}, h\in H\) and \(H\) is a subgroup.</li>
 </ul></li>
-<li>3. If \(aH=bH\), then we are done. Suppose, otherwise, that \(aH\neq bH\), and let us show that \(aH\cap bH=\emptyset\). Assume instead that \(aH\in bH\neq \emptyset\). Then \(\exists g\in G\) such that \(g\in aH \cap bH\Rightarrow g=ah=bh&#39;\) for some \(h, h&#39; \in H\) \[\Rightarrow ah=bh&#39;\] \[\Rightarrow a=bh&#39;h^{-1}\in bH\] \[\Rightarrow aH\subset bH \text{ because } ah&#39;&#39;=(bh&#39;h^{-1})h&#39;&#39;=b(h&#39;h^{-1}h&#39;&#39;)\] since \(h, h&#39;, h&#39;&#39; \in H\). So, \(ah&#39;&#39;\in bH\). Similarly, since \(b=ah(h&#39;)^{-1}\), then \(bH\subset aH\). Thus, \(aH =bH\), contradicting the fact that \(aH\neq bH\). Hence, \(aH\cap bH=\emptyset\)</li>
+<li>3. If \(aH=bH\), then we are done. Suppose, otherwise, that \(aH\neq bH\), and let us show that \(aH\cap bH=\emptyset\). Assume instead that \(aH\in bH\neq \emptyset\). Then \(\exists g\in G\) such that \(g\in aH \cap bH\implies g=ah=bh&#39;\) for some \(h, h&#39; \in H\) \[\implies ah=bh&#39;\] \[\implies a=bh&#39;h^{-1}\in bH\] \[\implies aH\subset bH \text{ because } ah&#39;&#39;=(bh&#39;h^{-1})h&#39;&#39;=b(h&#39;h^{-1}h&#39;&#39;)\] since \(h, h&#39;, h&#39;&#39; \in H\). So, \(ah&#39;&#39;\in bH\). Similarly, since \(b=ah(h&#39;)^{-1}\), then \(bH\subset aH\). Thus, \(aH =bH\), contradicting the fact that \(aH\neq bH\). Hence, \(aH\cap bH=\emptyset\)</li>
 <li>4. Exercise</li>
-<li>5. \(\exists\) bijection: \(f: H\rightarrow aH, h\mapsto aH\)
+<li>5. \(\exists\) bijection: \(f: H\implies aH, h\mapsto aH\)
 
 <ul>
-<li>1:1: \(f(h) = f(h&#39;) \Rightarrow ah=ah&#39;\Rightarrow h=h&#39;\) (by cancellation rule)</li>
+<li>1:1: \(f(h) = f(h&#39;) \implies ah=ah&#39;\implies h=h&#39;\) (by cancellation rule)</li>
 <li>onto: \(\forall ah\in |aH|, ah=f(h)\)</li>
-<li>\(\Rightarrow f\) is a bijection\(\Rightarrow |H|=|aH|\)</li>
+<li>\(\implies f\) is a bijection\(\implies |H|=|aH|\)</li>
 </ul></li>
 <li>6. Exercise</li>
 <li>7. Exercise</li>
@@ -2752,7 +2752,7 @@ pre[class*="language-"] {
 <li>Thm: (<strong>Lagrange</strong>) Let \(G\) be a finite group, and \(H\) be a subgroup of \(G\). Then, \(|H| \mid |G|\)
 
 <ul>
-<li>Proof: Let \(a_1H, \cdots, a_rH\) be the distince left costs of \(H\) in \(G\). Therefore, \(\forall a\in G, aH = a_iH\) for some \(1\leq i\leq r \Rightarrow a\in  aH =a_iH\) (by (1) in lemma)\(\Rightarrow\) any element \(a\in G\) is contained in one of the left cosets \(a_1H, \cdots, a_rH \Rightarrow G=a_1H\cup \cdots\cup a_rH\). But by (3) in lemma, \(a_iH\cap a_jH=\emptyset\) if \(i\neq j\) since \(a_iH = a_jH\). So, \(G\) is the <strong>disjoint</strong> union of the left cosets \(a_1H, \cdots, a_rH \Rightarrow |G| = |a_1H|+ \cdots+ |a_rH| =\text{ (lemma (5)) } r|H| \Rightarrow |G| = r|H| \Rightarrow |H|\mid |G|\)</li>
+<li>Proof: Let \(a_1H, \cdots, a_rH\) be the distince left costs of \(H\) in \(G\). Therefore, \(\forall a\in G, aH = a_iH\) for some \(1\leq i\leq r \implies a\in  aH =a_iH\) (by (1) in lemma)\(\implies\) any element \(a\in G\) is contained in one of the left cosets \(a_1H, \cdots, a_rH \implies G=a_1H\cup \cdots\cup a_rH\). But by (3) in lemma, \(a_iH\cap a_jH=\emptyset\) if \(i\neq j\) since \(a_iH = a_jH\). So, \(G\) is the <strong>disjoint</strong> union of the left cosets \(a_1H, \cdots, a_rH \implies |G| = |a_1H|+ \cdots+ |a_rH| =\text{ (lemma (5)) } r|H| \implies |G| = r|H| \implies |H|\mid |G|\)</li>
 </ul></li>
 </ul>
 
@@ -2766,21 +2766,21 @@ pre[class*="language-"] {
         - \(\exists\) an alement \(a\in G\) such that \(|a| = k\)
         - (This is the content of the Fund Thm of Cyclic groups)
     - Remark: However, this is <strong>not</strong> true in general. That is, \(\exists\) finite groups \(G\) such that for some positvie divisors \(k\) of \(|G|\), \(\not \exists\) subgroup of order \(k\) or \(\not \exists\) an element of order \(k\).
-        - e.g. \(G=A_4=\) (even permutations on {1,2,3,4}) \(\mapsto |G|=\frac{4!}{2}=12\Rightarrow\) positive divisors of \(12: k=1,2,3,4,6,12\) BUT, \(\not \exists\) element in \(A_4\) of order \(4,6,12\), \(\not \exsits\) a subgroup of \(A_4\) of order \(6\). Nonetheless, \(A_4\) has \(1\) subgroup of order \(1\), \(3\) subgroups of order \(2\), \(8\) subgroups of order \(3\), \(1\) subgroups of order \(4\), \(1\) subgroups of order \(12\), that is, \(H=A_4\)
+        - e.g. \(G=A_4=\) (even permutations on {1,2,3,4}) \(\mapsto |G|=\frac{4!}{2}=12\implies\) positive divisors of \(12: k=1,2,3,4,6,12\) BUT, \(\not \exists\) element in \(A_4\) of order \(4,6,12\), \(\not \exsits\) a subgroup of \(A_4\) of order \(6\). Nonetheless, \(A_4\) has \(1\) subgroup of order \(1\), \(3\) subgroups of order \(2\), \(8\) subgroups of order \(3\), \(1\) subgroups of order \(4\), \(1\) subgroups of order \(12\), that is, \(H=A_4\)
             - Proof: \(A_4=\{\text{even permutations in }S_4\}\leadsto\) every element in \(A_4\) is a product of an even number of 2-cycles.
                 - \(\epsilon\)
                 - \((12)(34)\)
                 - \((13)(24)\)
                 - \((14)(23)\)
             - All above are disjoint and has order 2
-            - \((12)(13),(13)(12),(12)(14),(14)(12),(13)(14),(14)(13),(23)(24),(24,23)\Rightarrow\) subgroup of order \(3\)
+            - \((12)(13),(13)(12),(12)(14),(14)(12),(13)(14),(14)(13),(23)(24),(24,23)\implies\) subgroup of order \(3\)
             - Subgroup of order 1: \(\{\epsilon\}\) 
             - Subgroup of order 2: \(\langle(12)(34)\rangle,\langle(13)(24)\rangle,\langle(14)(23)\rangle\) (because the subgroup can contain only one element other than \(\epsilon\), forcing that element to be order \(2\))
             - Subgroup fo order 3: \(\langle(\sigma)\rangle\) with \(\sigma\in A_4\) of order 3 (There are no other possiblilies because \(3\) is prime and so any subgroup of order \(3\) must be cyclic and thus generated by an element of order \(3\))
             - Subgroups of order 4: \(\{\epsilon,(12)(34),(13)(24), (14)(23)\}\)
             - [This clime, if \(H\) is a subgroup of \(A_4\) of order \(4\), then it can only contain element  of order \(1,2,4\) (because \(1,2,4\) are the only positive divisors of \(4\)). So, it can only contain \(\epsilon,(12)(34),(13)(24), (14)(23)\). Also, it must contain more than \(\epsilon\) and just are of \((12)(34),(13)(24), (14)(23)\), otherwise it would be cyclic of order \(2\). Finally, if it contains \(2\) of the permutations \((12)(34),(13)(24), (14)(23)\), it must contain the third (because the third is the product of the other 2)]
             - Subgroups of order 12: \(A_4\)
-            - Let us now prove that \(\not \exists\) subgroup of order 6. We do it by contradiction. Suppose instead that \(\exists\) subgroup \(H\) of order 6. Let \(\sigma\in A_4\) be order \(3\). Consider the left cosets: \(H = \epsilon H=\sigma H=\sigma^2 H\). Note taht, be Lagrange&#39;s Thm, the number of left cosets of \(H\) is \(|A_4:H|=\frac{|A_4|}{|H|}=\frac{12}{6}=2\Rightarrow \exists\) at most \(2\) distinct left cosets amongst \(H, \sigma H, \sigma^2H\) So \(H=\sigma H\Rightarrow \sigma\in H\), or \(H=\sigma^2H\Rightarrow \sigma^2\in H\Rightarrow (\sigma^2)^{-1}\in H\) (Since \(H\) is a subgroup) but \((\sigma^2)^{-1}=\sigma\) since \(\sigma^3=\epsilon\Rightarrow \sigma\in H\), or \(\sigma H = \sigma^2 H\Rightarrow H=\sigma H\Rightarrow \sigma \in H\) Thus, \(\sigma \in H,\forall \sigma \in A_4\) of order \(3\). But \(\exists 8\) elements of order \(3\) in \(A_4\) and \(|H|=6\), leading to a countradiction.</p>
+            - Let us now prove that \(\not \exists\) subgroup of order 6. We do it by contradiction. Suppose instead that \(\exists\) subgroup \(H\) of order 6. Let \(\sigma\in A_4\) be order \(3\). Consider the left cosets: \(H = \epsilon H=\sigma H=\sigma^2 H\). Note taht, be Lagrange&#39;s Thm, the number of left cosets of \(H\) is \(|A_4:H|=\frac{|A_4|}{|H|}=\frac{12}{6}=2\implies \exists\) at most \(2\) distinct left cosets amongst \(H, \sigma H, \sigma^2H\) So \(H=\sigma H\implies \sigma\in H\), or \(H=\sigma^2H\implies \sigma^2\in H\implies (\sigma^2)^{-1}\in H\) (Since \(H\) is a subgroup) but \((\sigma^2)^{-1}=\sigma\) since \(\sigma^3=\epsilon\implies \sigma\in H\), or \(\sigma H = \sigma^2 H\implies H=\sigma H\implies \sigma \in H\) Thus, \(\sigma \in H,\forall \sigma \in A_4\) of order \(3\). But \(\exists 8\) elements of order \(3\) in \(A_4\) and \(|H|=6\), leading to a countradiction.</p>
 
 <p><em>2016/07/04</em></p>
 
@@ -2800,7 +2800,7 @@ pre[class*="language-"] {
 <li>Thm (<strong>Fermat&#39;s Little Theorem</strong>): Let \(m\in \mathbb Z\). The, for any prime number \(p\), \[m^p\mod p = m\mod p\] 
 
 <ul>
-<li>Proof: Using the division algorithm, we can write \(m=sp+r\) for some \(s\in \mathbb Z\) and \(0\le r&lt;p\). So, \(m\mod p=r\mod p\) and \[m^p\mod p = r^p \mod p\] So it is enough to prove that \[r^p \mod p = r^p\mod p\] for \(0\le r&lt;p\). If \(r=0\), the certainly \(0^p\mod p = 0 \mod p\). And if \(0&lt;r&lt;p\), then \(F=r\mod p\in \mathbb Z^*_p = \{\overline 1, \overline 2, \cdots, \overline{p-1}\}\) Then, because \(|\mathbb Z^*_p|=p-1\) and \(F\in \mathbb Z^*_p\), by (2) of COR, \[F^{p-1}=\overline 1=(\text{identity of }\mathbb Z_p^*)\] \[\Rightarrow F(F^{p-1})=F\Rightarrow F^p=F \Leftrightarrow r^p \mod p = r\mod p\]</li>
+<li>Proof: Using the division algorithm, we can write \(m=sp+r\) for some \(s\in \mathbb Z\) and \(0\le r&lt;p\). So, \(m\mod p=r\mod p\) and \[m^p\mod p = r^p \mod p\] So it is enough to prove that \[r^p \mod p = r^p\mod p\] for \(0\le r&lt;p\). If \(r=0\), the certainly \(0^p\mod p = 0 \mod p\). And if \(0&lt;r&lt;p\), then \(F=r\mod p\in \mathbb Z^*_p = \{\overline 1, \overline 2, \cdots, \overline{p-1}\}\) Then, because \(|\mathbb Z^*_p|=p-1\) and \(F\in \mathbb Z^*_p\), by (2) of COR, \[F^{p-1}=\overline 1=(\text{identity of }\mathbb Z_p^*)\] \[\implies F(F^{p-1})=F\implies F^p=F \Leftrightarrow r^p \mod p = r\mod p\]</li>
 </ul></li>
 <li>Thm: If \(G\) is finite an of order \(2p\) with \(p\) prime, then \(G\simeq \mathbb Z_{2p}\) or \(sD_p\)</li>
 </ul>
@@ -2810,8 +2810,8 @@ pre[class*="language-"] {
 <h2 id="toc_13">3.2 Group Actions</h2>
 
 <ul>
-<li>Let \(G\) be a group and \(X\) be a set. We have seen that a <strong>permutation</strong> of \(X\) is a bijection \(f:X\rightarrow X\). Also the set of <strong>all</strong> permutationsof \(X\) is a group under composition, which we denote \(Sym(X)\). Note that if \(X=\{1,\cdots, n\}\), then \(Sym(X) = S_n, \forall n\in \mathbb N\)</li>
-<li>Def: a <strong>group action</strong> of \(G\) on \(X\) is a choice , \(\forall g\in G\), of a permutation \(\pi_g:X\rightarrow X\) such that:
+<li>Let \(G\) be a group and \(X\) be a set. We have seen that a <strong>permutation</strong> of \(X\) is a bijection \(f:X\implies X\). Also the set of <strong>all</strong> permutationsof \(X\) is a group under composition, which we denote \(Sym(X)\). Note that if \(X=\{1,\cdots, n\}\), then \(Sym(X) = S_n, \forall n\in \mathbb N\)</li>
+<li>Def: a <strong>group action</strong> of \(G\) on \(X\) is a choice , \(\forall g\in G\), of a permutation \(\pi_g:X\implies X\) such that:
 
 <ul>
 <li>(i) \(\pi_e = id_X\)</li>
@@ -2821,24 +2821,24 @@ pre[class*="language-"] {
 <li>Ex:
 
 <ul>
-<li>1) \(G=S_n\) and \(X=\{1,\cdots, n\}\) Then, \(S_n\) acts on \(X\) in the natural way: \(\forall \sigma \in S_n\), then \(\sigma: X\rightarrow X\) is a permutaiton by definition. So we can define: \[\pi:Sn\rightarrow Sym(X)=S_n\] \[\sigma\mapsto \pi_{\sigma} =\sigma\] Then: (i) \(\pi_{\epsilon} = \epsilon = id_X:X\rightarrow X\); (ii) \(\pi_{\sigma_1\sigma_2} = \pi_{\sigma_1}\circ\pi_{\sigma_2}\) Therefore, the choice \(\pi_\sigma:=\sigma, \forall \sigma \in S_n\), gives an action of \(S_n \in X\).</li>
-<li>2) Let G be a group and let \(X=G\). Then, \(Sym(X) = Sym(G)\), which contains \(Aut(G)\), but is much bigger. From the proof of Cayley&#39;s Thm, we have seen the following action: \[\pi:G\rightarrow Sym(X)=Sym(G)\] \[g\mapsto\pi_g=(T_g:G\rightarrow G, x\mapsto gx\text{(left multiplication by g)})\] Note that \(T_g\in Sym(G)\) but \(T_g\not \in Aut(G)\) if \(g\neq e\) (because \(T_g\) is not a homomorphism when \(g\neq e\)). We checked, when proving Cayley&#39;s Thm, that:
+<li>1) \(G=S_n\) and \(X=\{1,\cdots, n\}\) Then, \(S_n\) acts on \(X\) in the natural way: \(\forall \sigma \in S_n\), then \(\sigma: X\implies X\) is a permutaiton by definition. So we can define: \[\pi:Sn\implies Sym(X)=S_n\] \[\sigma\mapsto \pi_{\sigma} =\sigma\] Then: (i) \(\pi_{\epsilon} = \epsilon = id_X:X\implies X\); (ii) \(\pi_{\sigma_1\sigma_2} = \pi_{\sigma_1}\circ\pi_{\sigma_2}\) Therefore, the choice \(\pi_\sigma:=\sigma, \forall \sigma \in S_n\), gives an action of \(S_n \in X\).</li>
+<li>2) Let G be a group and let \(X=G\). Then, \(Sym(X) = Sym(G)\), which contains \(Aut(G)\), but is much bigger. From the proof of Cayley&#39;s Thm, we have seen the following action: \[\pi:G\implies Sym(X)=Sym(G)\] \[g\mapsto\pi_g=(T_g:G\implies G, x\mapsto gx\text{(left multiplication by g)})\] Note that \(T_g\in Sym(G)\) but \(T_g\not \in Aut(G)\) if \(g\neq e\) (because \(T_g\) is not a homomorphism when \(g\neq e\)). We checked, when proving Cayley&#39;s Thm, that:
 
 <ul>
-<li>(i) \(T_e=id_G \Rightarrow \pi_e=id_X\)</li>
-<li>(ii) \(T_{g_1}\circ T_{g_2} = T_{g_1g_2}\Rightarrow \pi_{g_1}\circ \pi_{g_2} = \pi_{g_1g_2}\Rightarrow \pi\) is a group action of \(G\) on itself called <strong>left multiplication</strong> (one defines similarly the action of \(G\) on itself by <strong>right multiplication</strong>)</li>
+<li>(i) \(T_e=id_G \implies \pi_e=id_X\)</li>
+<li>(ii) \(T_{g_1}\circ T_{g_2} = T_{g_1g_2}\implies \pi_{g_1}\circ \pi_{g_2} = \pi_{g_1g_2}\implies \pi\) is a group action of \(G\) on itself called <strong>left multiplication</strong> (one defines similarly the action of \(G\) on itself by <strong>right multiplication</strong>)</li>
 </ul></li>
-<li>3) Let \(G\) be a group and \(X=G\). We can define the action of \(G\) on itself by <strong>conjugation</strong> as follows: \[\pi: G\rightarrow Sym(X)=Sym(G)\] \[g\mapsto \pi_g=(\phi_g:G\rightarrow G, x\mapsto gxg^{-1})\] where \(\phi_g\) is inner automorphism of \(G\) induced by \(g\). Then, \(\pi_g\in Inn(G)\subset Aut(G)\subset Sym(G)\leadsto \pi_g \) is an automorphism \(\forall g\in G\). Then \(\pi\) is a group action (check that (i) (ii) hold!)</li>
-<li>Note that if \(g\in \mathcal Z(G)\), then \(gx=xg, \forall x\in G\Leftrightarrow gxg^{-1}=x,\forall x\in G\). So \(\phi_g=id_X\Rightarrow \pi_g=id_X\) if \(g\in \mathcal Z(G) \Rightarrow \forall g\in Z(G)\), \(g\) acts trivially on \(X\) by conjugation.</li>
+<li>3) Let \(G\) be a group and \(X=G\). We can define the action of \(G\) on itself by <strong>conjugation</strong> as follows: \[\pi: G\implies Sym(X)=Sym(G)\] \[g\mapsto \pi_g=(\phi_g:G\implies G, x\mapsto gxg^{-1})\] where \(\phi_g\) is inner automorphism of \(G\) induced by \(g\). Then, \(\pi_g\in Inn(G)\subset Aut(G)\subset Sym(G)\leadsto \pi_g \) is an automorphism \(\forall g\in G\). Then \(\pi\) is a group action (check that (i) (ii) hold!)</li>
+<li>Note that if \(g\in \mathcal Z(G)\), then \(gx=xg, \forall x\in G\Leftrightarrow gxg^{-1}=x,\forall x\in G\). So \(\phi_g=id_X\implies \pi_g=id_X\) if \(g\in \mathcal Z(G) \implies \forall g\in Z(G)\), \(g\) acts trivially on \(X\) by conjugation.</li>
 <li>In particular, if \(G\) is abelian (so that \(G=\mathcal Z(G)\)), then every element in \(G\) act trivially on \(G\) by conjugation. In this case, the action of \(G\) on \(G\) by conjugation is <strong>trivial</strong>.</li>
 </ul></li>
-<li>Remark: A group action of \(G\) on \(X\) corresponse to a homomorphism \[\pi:G\rightarrow Sym(X)\] \[g\mapsto \pi_g\] [Indeed, condition (i) and (ii) in the definition tell us that \(\pi\) is a homomorphism] This homomorphism is called the <strong>permutation of representation of the action of \(G\) on \(X\)</strong> Then:
+<li>Remark: A group action of \(G\) on \(X\) corresponse to a homomorphism \[\pi:G\implies Sym(X)\] \[g\mapsto \pi_g\] [Indeed, condition (i) and (ii) in the definition tell us that \(\pi\) is a homomorphism] This homomorphism is called the <strong>permutation of representation of the action of \(G\) on \(X\)</strong> Then:
 
 <ul>
 <li>\(\ker\pi=\{g\in G \mid \pi_g=id_X\} = \{g\in G\mid \text{ g acts trivially on X}\}\)</li>
 <li>\(\text{Im }\pi = \{\text{the set of all permutations of X specified by the action is a subgroup of }Sym(X)\}\)</li>
 </ul></li>
-<li>Def: A group action \(\pi: G\rightarrow Sym(X)\) of a group \(G\) on a set \(X\) is called <strong>faithful</strong> if \(\ker \pi=\{e\}\)</li>
+<li>Def: A group action \(\pi: G\implies Sym(X)\) of a group \(G\) on a set \(X\) is called <strong>faithful</strong> if \(\ker \pi=\{e\}\)</li>
 </ul>
 
 <p><em>2016/07/06</em></p>
@@ -2848,12 +2848,12 @@ pre[class*="language-"] {
 
 <ul>
 <li>Let \(G\) be a group and \(X\) be a set</li>
-<li>Group action of \(X\) on \(G\): \(\forall g\in G\), have a choice of permutaion \(\pi_g\in Sym(X) = \{f:X\rightarrow X\mid f\text{ is a bijection}\}\) such that 
+<li>Group action of \(X\) on \(G\): \(\forall g\in G\), have a choice of permutaion \(\pi_g\in Sym(X) = \{f:X\implies X\mid f\text{ is a bijection}\}\) such that 
 
 <ul>
-<li>\(\pi_e = id_x :X\rightarrow X, x\mapsto x\) </li>
+<li>\(\pi_e = id_x :X\implies X, x\mapsto x\) </li>
 <li>\(\pi_{g_1}\circ \pi_{g_2} = \pi_{g_1g_2}, \forall g_1,g_2\in G\)</li>
-<li>\(\leadsto\) It corresponsds to homomorphism: \[\pi:G\rightarrow Sym(X)\] \[g\mapsto \pi_g\]</li>
+<li>\(\leadsto\) It corresponsds to homomorphism: \[\pi:G\implies Sym(X)\] \[g\mapsto \pi_g\]</li>
 </ul></li>
 <li>Note:
 
@@ -2868,20 +2868,20 @@ pre[class*="language-"] {
 <li>E.g.
 
 <ul>
-<li>1) If \(G = S_n\) and \(X=\{1, \cdots, n\}\) with \(S_n\) acts on \(\{1, \cdots, n\}\) in the natural way: \[\pi: S_n\rightarrow Sym(\{1, \cdots, n\})=S_n\] \[\sigma\mapsto \sigma\] \(\Rightarrow \ker \pi = \{\epsilon\}\Rightarrow\) This action is faithful.</li>
-<li>2) Let \(G\) be a group and \(X = G\), and \(G\) acts on itself by conjugation: \[\pi \rightarrow Sym(G)\] \[g\mapsto (\phi_g:G\rightarrow G, x\mapsto gxg^{-1})\] Then, \(\ker \pi = \mathcal Z(G)\) (because \(\phi_g = id_G\Leftrightarrow gxg^{-1}=x, \forall x\in G\Leftrightarrow gx=xg\forall x\in G\Leftrightarrow g\in \mathcal Z(G)\)) \(\Rightarrow\) This action is faithful \(\iff \mathcal Z(G) = \{e\}\). In particular, if \(G\) is abelian, then \(\mathcal Z(G) = G\), implying that the action is not faithful if \(G\neq \{e\}\) (i.e. \(G\) is not the trivial group)</li>
-<li>3) \(G = S_n\) and \(X = \mathbb R[x_1, \cdots, x_n] = \{\text{set of polynomial in the }n\text{ variables x_1, \cdots, x_n}\}\) (e.g. \(p(x_1, \cdots, x_n)=2x_1^2x_n - 3x_3x_{n-1}^4\)). Define the following action of \(S_n\) on X: \[\pi: S_n\rightarrow Sym(X)\] \[\sigma \mapsto (\pi_\sigma: X\rightarrow X, p(x_1, \cdots, x_n)\mapsto p(x_{\sigma(1)}, \cdots, x_{\sigma(n)}))\]
+<li>1) If \(G = S_n\) and \(X=\{1, \cdots, n\}\) with \(S_n\) acts on \(\{1, \cdots, n\}\) in the natural way: \[\pi: S_n\implies Sym(\{1, \cdots, n\})=S_n\] \[\sigma\mapsto \sigma\] \(\implies \ker \pi = \{\epsilon\}\implies\) This action is faithful.</li>
+<li>2) Let \(G\) be a group and \(X = G\), and \(G\) acts on itself by conjugation: \[\pi \implies Sym(G)\] \[g\mapsto (\phi_g:G\implies G, x\mapsto gxg^{-1})\] Then, \(\ker \pi = \mathcal Z(G)\) (because \(\phi_g = id_G\Leftrightarrow gxg^{-1}=x, \forall x\in G\Leftrightarrow gx=xg\forall x\in G\Leftrightarrow g\in \mathcal Z(G)\)) \(\implies\) This action is faithful \(\iff \mathcal Z(G) = \{e\}\). In particular, if \(G\) is abelian, then \(\mathcal Z(G) = G\), implying that the action is not faithful if \(G\neq \{e\}\) (i.e. \(G\) is not the trivial group)</li>
+<li>3) \(G = S_n\) and \(X = \mathbb R[x_1, \cdots, x_n] = \{\text{set of polynomial in the }n\text{ variables x_1, \cdots, x_n}\}\) (e.g. \(p(x_1, \cdots, x_n)=2x_1^2x_n - 3x_3x_{n-1}^4\)). Define the following action of \(S_n\) on X: \[\pi: S_n\implies Sym(X)\] \[\sigma \mapsto (\pi_\sigma: X\implies X, p(x_1, \cdots, x_n)\mapsto p(x_{\sigma(1)}, \cdots, x_{\sigma(n)}))\]
 
 <ul>
-<li>e.g. \(\sigma  = (1,2,\cdots, n) \leadsto \sigma(i) = i+1\) if \(1\le i\le n-1\) and \(\sigma(n) = 1\). \(\pi_\sigma: X\rightarrow X, p(x_1, x_2, \cdots, x_{n-1}, x_n) \mapsto p(x_2, x_3, \cdots, x_n, x_1)\). (as in last example, \((2x_1^2x_n - 3x_3x_{n-1}^4 \mapsto 2x_2^2x_1 - 3x_4x_{n}^4)\)).</li>
+<li>e.g. \(\sigma  = (1,2,\cdots, n) \leadsto \sigma(i) = i+1\) if \(1\le i\le n-1\) and \(\sigma(n) = 1\). \(\pi_\sigma: X\implies X, p(x_1, x_2, \cdots, x_{n-1}, x_n) \mapsto p(x_2, x_3, \cdots, x_n, x_1)\). (as in last example, \((2x_1^2x_n - 3x_3x_{n-1}^4 \mapsto 2x_2^2x_1 - 3x_4x_{n}^4)\)).</li>
 <li>This is an action (exercise). [CHECK that \(\pi_\epsilon = id_X, \pi_{\sigma\tau}=\pi_\sigma\circ\pi_\tau\)]</li>
 <li>Is this action faithful? Yes! Let us verify that \(\ker \pi = \{\epsilon\}\). Let \(\sigma\in \ker \pi\) so that \(\pi_\tau = id_X\) \(\Leftrightarrow \pi_\sigma(p(x_1, \cdots, x_n) = p(x_1, \cdots, x_n)), \forall p(x_1, \cdots, x_n)\in X\) \(\Leftrightarrow p(x_\sigma(1), \cdots, x_\sigma(n)) = p(x_1, \cdots, x_n), \forall p(x_1, \cdots, x_n) \in X\).</li>
 <li>In particular, if \(p(x_1, \cdots, x_n) = x_i, \forall i = 1, \cdots, n,\) we have that \(\pi_\tau(x_i) = x_i, \forall i = 1,\cdots,n\) \(\Leftrightarrow x_{\sigma(i)} = x_i \forall i=1,\cdots,n\) \(\Leftrightarrow \sigma(i)=i, \forall i=1,\cdots,n\) \(\Leftrightarrow \sigma = \epsilon\)</li>
-<li>So: \(\ker \pi=\{\epsilon\}\) where \(\pi:S_n \rightarrow Sym(X)\) (with \(X = \mathbb R[x1,..., xn]\Rightarrow \operatorname{Im} \pi \simeq Sn\)</li>
+<li>So: \(\ker \pi=\{\epsilon\}\) where \(\pi:S_n \implies Sym(X)\) (with \(X = \mathbb R[x1,..., xn]\implies \operatorname{Im} \pi \simeq Sn\)</li>
 </ul></li>
 </ul></li>
 </ul></li>
-<li>Definition: Let \(G\) be a group, and \(X\) be a set. Suppose that \(G\) acts on \(X\). Then, \(X\) is called a <strong>\(G\)-set</strong>. If the action is given by the homomorphism \[\pi: G\rightarrow Sym(X)\] we write, \(\forall g\in G\), if \(\pi_g = \pi(g) \in Sym(X)\), \[x\cdot x:=\pi_g(x) \text{ (where the }\cdot\text{ is } g\text{ acts on the element }x\in X, \forall x\in X\text{)}\] Using this notation, the definition of a group action becomes: \(\forall g\in G, \exists\) a choice of a permutaiton \(\pi_g: X\rightarrow X, x\mapsto g\cdot x\)  such that:
+<li>Definition: Let \(G\) be a group, and \(X\) be a set. Suppose that \(G\) acts on \(X\). Then, \(X\) is called a <strong>\(G\)-set</strong>. If the action is given by the homomorphism \[\pi: G\implies Sym(X)\] we write, \(\forall g\in G\), if \(\pi_g = \pi(g) \in Sym(X)\), \[x\cdot x:=\pi_g(x) \text{ (where the }\cdot\text{ is } g\text{ acts on the element }x\in X, \forall x\in X\text{)}\] Using this notation, the definition of a group action becomes: \(\forall g\in G, \exists\) a choice of a permutaiton \(\pi_g: X\implies X, x\mapsto g\cdot x\)  such that:
 
 <ul>
 <li>(i) \(e\cdot x = x, \forall x\in X\)</li>
@@ -2901,7 +2901,7 @@ pre[class*="language-"] {
 
 <ul>
 <li>Note: \(e\in G_X\) because, by def of any action of \(G\) on \(X\), \(e\cdot x =x,\forall x\in X\).</li>
-<li>Ex: \(G = D_3\), and \(X = \{\text{ verticies of an equilateval trianble}\} = \{1,2,3\}\). Consider the natural action of \(D_3\) on \(X\): \[\pi: D_3\rightarrow Sym(X)\] \[g\mapsto g\] Let \(x = 1\). What is \(stab(1) = G_1\)? \(G_1 = \{id_X, \text{ reflection with respect to the line going throught }1\}\)</li>
+<li>Ex: \(G = D_3\), and \(X = \{\text{ verticies of an equilateval trianble}\} = \{1,2,3\}\). Consider the natural action of \(D_3\) on \(X\): \[\pi: D_3\implies Sym(X)\] \[g\mapsto g\] Let \(x = 1\). What is \(stab(1) = G_1\)? \(G_1 = \{id_X, \text{ reflection with respect to the line going throught }1\}\)</li>
 <li><img src="https://www.math.usm.edu/lee/mathphysarchive/wp-content/uploads/2014/09/D3.gif" alt="dd3"></li>
 <li>(In above image, \(\mu_1 = G_1\))</li>
 </ul></li>
@@ -2909,6 +2909,61 @@ pre[class*="language-"] {
 
 <ul>
 <li>Pf: exercise </li>
+</ul></li>
+</ul>
+
+<p><em>2016/07/08</em></p>
+
+<ul>
+<li>Review: (pic)</li>
+</ul>
+
+<p>...</p>
+
+<p>... (2 pics)</p>
+
+<ul>
+<li>Recall that an equivalence relation \(\sim\) on a set X is a subset \[R=\{(a,b)\in X\times X\mid a\sim b\}\subset X\times X\] such that:
+
+<ul>
+<li>\(a\sim a, \forall a \in X\) (reflexivity)</li>
+<li>\(a\sim b\iff b\sim a\) (symmetry)</li>
+<li>\(a\sim b\) and \(b\sim c \implies a\sim c\) (transitivity)</li>
+<li>Also, \(\forall a\in X, [a]_\sim = \{b\in X\mid a\sim b\} = (\text{equivalence class of }a\text{ in }X)\)</li>
+<li>e.g. \(X=\mathbb Z\) and \(m\sim m&#39;\iff m=m&#39;+pn\) for some \(p\in \mathbb Z\), with a fixed, is an equivalence relation. \[\leadsto R = {(m,m&#39;)\in \mathbb Z\times \mathbb Z\mid m=m&#39;\mod (n)} \] \[[m]_\sim  = \overline m = {m&#39;\in\mathbb Z\mid m&#39; = m \mod(n)}\]</li>
+</ul></li>
+<li>Given a \(G\)-set \(X\), the action of \(G\) on acts induces an equivalence relation on X:</li>
+<li>Prop: Define, \(\forall a,b\in X, a\sim b \iff b=g\dot a\) for some \(g\in G\). Then, \(\sim \) is an equialence relation on the set.
+
+<ul>
+<li>Pf:
+
+<ul>
+<li>\(a\sim a\) because \(a=e\cdot a\) by the (i) in def of group action.</li>
+<li>\(a\sim b\Leftrightarrow b=g\cdot a\) for some \(g\in G\Leftrightarrow a = g^{-1}\cdot b\) for some \(g^{-1} \in G\) (because \(G\) is a group) \(\Leftrightarrow b\sim a\)</li>
+<li>\(a\sim b\) and \(b\sim c \iff b = g\cdot a\) and \(c = g&#39;\cdot b\) for some \(g,g&#39;\in G\implies c=g&#39;\cdot(g\cdot a)=(g&#39;g)\cdot a\) with \(g&#39;g\in G\) (since \(G\) is a group)</li>
+</ul></li>
+</ul></li>
+<li>Def: \(\forall a\in X\), define \[O_a:=\{b\in X\mid a\sim b\}\] \[=(\text{orbit of }G\text{ in } X \text{ containing }a)\]</li>
+<li>Note:
+
+<ul>
+<li>(i) \(O_a = (\text{equivalence class of }a\text{ with respect to the equivalence relation of }\) \(\sim \text{ on }X\text{ induced by the action of }G\text{ on }X)\)</li>
+<li>(ii) \(O_a = O_{a&#39;} \iff a\sim a&#39;\)
+
+<ul>
+<li>Pf: If \(O_a = O_a&#39;\), then \(a\in O_a = O_{a&#39;}\implies a\sim a&#39;\) (by def of \(O_a\)). Conversely, if \(a\sim a&#39;\) then, \(\forall b\in O_a, a\sim b\) and \(a\sim a&#39;\iff b\sim a\) and \(a\sim a&#39;\iff b\sim a&#39;\iff a&#39;\sim b\implies b\in O_a&#39;\implies O_a\subset O_a&#39;\). Similarly, since \(a\sim a&#39;\iff a&#39;\sim a\), we get \(O_a&#39;\subset O_a\), giving \(O_a = O_a&#39;\) if \(a\sim a&#39;\)</li>
+</ul></li>
+</ul></li>
+<li>Ex.
+
+<ul>
+<li>1) \(G= \{\text{Rotations about z-axis in }\mathbb R^3\}\) \( = \{R_\theta\mid \theta\in \mathbb R\text{ is the angular rotation counterclockwise in the xy-plane}\}\) (pic...) \(X = S^2\). Define the action of \(G\) on \(S^2\) by: \(\forall R_\theta\in G, R_\theta\cdot p = R_\theta(p), \forall p \in S^2\). If \(p=(x0,y0,z0)\), then \(R_\theta(p)\) has z-cond \(z_0\). So, \(R_\theta(p)\) is a point on the circle of intersection of \(S^2\) with the plane \(z=z_0\).
+
+<ul>
+<li>If \(p\neq(0,0,\pm 1)\), then \(O_p = (\text{circle }S^2 \cap \{z=z_0\}) = S^1\)</li>
+<li>If \(p=(0,0,\pm 1)\), then \(O_p = \{p\} = \{\text{point}\}\)</li>
+</ul></li>
 </ul></li>
 </ul>
 
