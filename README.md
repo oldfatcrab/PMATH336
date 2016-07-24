@@ -1155,7 +1155,7 @@ _2016/07/04_
 	- In particular, if $G$ is abelian (so that $G=\mathcal Z(G)$), then every element in $G$ act trivially on $G$ by conjugation. In this case, the action of $G$ on $G$ by conjugation is **trivial**.
 - Remark: A group action of $G$ on $X$ corresponse to a homomorphism $$\pi:G\implies Sym(X)$$ $$g\mapsto \pi_g$$ [Indeed, condition (i) and (ii) in the definition tell us that $\pi$ is a homomorphism] This homomorphism is called the **permutation of representation of the action of $G$ on $X$** Then:
 	- $\ker\pi=\{g\in G \mid \pi_g=id_X\} = \{g\in G\mid \text{ g acts trivially on X}\}$
-	- $\text{Im }\pi = \{\text{the set of all permutations of X specified by the action is a subgroup of }Sym(X)\}$
+	- $\operatorname{Im}\pi = \{\text{the set of all permutations of X specified by the action is a subgroup of }Sym(X)\}$
 - Def: A group action $\pi: G\implies Sym(X)$ of a group $G$ on a set $X$ is called **faithful** if $\ker \pi=\{e\}$
 
 _2016/07/06_
@@ -1196,35 +1196,56 @@ _2016/07/06_
 
 _2016/07/08_
 
-- Review: (pic)
-
-...
-
-... (2 pics)
-
-- Recall that an equivalence relation $\sim$ on a set X is a subset $$R=\{(a,b)\in X\times X\mid a\sim b\}\subset X\times X$$ such that:
-	- $a\sim a, \forall a \in X$ (reflexivity)
-	- $a\sim b\iff b\sim a$ (symmetry)
-	- $a\sim b$ and $b\sim c \implies a\sim c$ (transitivity)
-	- Also, $\forall a\in X, [a]_\sim = \{b\in X\mid a\sim b\} = (\text{equivalence class of }a\text{ in }X)$
-	- e.g. $X=\mathbb Z$ and $m\sim m'\iff m=m'+pn$ for some $p\in \mathbb Z$, with a fixed, is an equivalence relation. $$\leadsto R = {(m,m')\in \mathbb Z\times \mathbb Z\mid m=m'\mod (n)} $$ $$[m]_\sim  = \overline m = {m'\in\mathbb Z\mid m' = m \mod(n)}$$
-- Given a $G$-set $X$, the action of $G$ on acts induces an equivalence relation on X:
-- Prop: Define, $\forall a,b\in X, a\sim b \iff b=g\dot a$ for some $g\in G$. Then, $\sim $ is an equialence relation on the set.
-	- Pf:
-		- $a\sim a$ because $a=e\cdot a$ by the (i) in def of group action.
-		- $a\sim b\Leftrightarrow b=g\cdot a$ for some $g\in G\Leftrightarrow a = g^{-1}\cdot b$ for some $g^{-1} \in G$ (because $G$ is a group) $\Leftrightarrow b\sim a$
-		- $a\sim b$ and $b\sim c \iff b = g\cdot a$ and $c = g'\cdot b$ for some $g,g'\in G\implies c=g'\cdot(g\cdot a)=(g'g)\cdot a$ with $g'g\in G$ (since $G$ is a group)
-- Def: $\forall a\in X$, define $$O_a:=\{b\in X\mid a\sim b\}$$ $$=(\text{orbit of }G\text{ in } X \text{ containing }a)$$
+- Review
+    - Let G be a group and X be a G-set.
+    - $\forall x \in X$, then:
+        - $G_X = \operatorname{stab}(x) = \{g\in G\mid g\cdot x = x\}$ $=(\text{stabilizer of } x \text{ in }G)$ $\leadsto$ subgroup of $G$
+        - $O_X = \{y\in X\mid x\sim y\}$ $= \{y\in X\mid y = g\cdot x \text{ for some } g\in G\}$ $=(\text{orbit of } x \text{ in } X)\subset X$
+    - Note:
+        - (1) $\forall a,a'\in X$, then $O_a = O_{a'}$, or $O_a \cap O_{a'}$
+        - (2) If $G$ is finite, $|O_a| = \frac{|G|}{G_a}, \forall a \in X$
+        - (3) If $X$ is finite, then $|X| = |O_{a_1}|+\cdots +|O_{a_N}|$ where $O_{a_1},\cdots,O_{a_N}$ are the distinct orbits
+- missing...
+- Prop: Let $X$ be a G-set. Moreover, let $a\in X$ and $b\in O_a$ so that $b = g\cdot a$ for some $g\in G$. Then, $G_b\simeq G_a$. In fact, $G_b = gG_ag^{-1} = \{ghg^{-1}\mid h\in G_a\}$ and $|G_b| = |G_a|$
 - Note:
-	- (i) $O_a = (\text{equivalence class of }a\text{ with respect to the equivalence relation of }$ $\sim \text{ on }X\text{ induced by the action of }G\text{ on }X)$
-	- (ii) $O_a = O_{a'} \iff a\sim a'$
-		- Pf: If $O_a = O_a'$, then $a\in O_a = O_{a'}\implies a\sim a'$ (by def of $O_a$). Conversely, if $a\sim a'$ then, $\forall b\in O_a, a\sim b$ and $a\sim a'\iff b\sim a$ and $a\sim a'\iff b\sim a'\iff a'\sim b\implies b\in O_a'\implies O_a\subset O_a'$. Similarly, since $a\sim a'\iff a'\sim a$, we get $O_a'\subset O_a$, giving $O_a = O_a'$ if $a\sim a'$
-- Ex.
-	- 1) $G= \{\text{Rotations about z-axis in }\mathbb R^3\}$ $ = \{R_\theta\mid \theta\in \mathbb R\text{ is the angular rotation counterclockwise in the xy-plane}\}$ (pic...) $X = S^2$. Define the action of $G$ on $S^2$ by: $\forall R_\theta\in G, R_\theta\cdot p = R_\theta(p), \forall p \in S^2$. If $p=(x0,y0,z0)$, then $R_\theta(p)$ has z-cond $z_0$. So, $R_\theta(p)$ is a point on the circle of intersection of $S^2$ with the plane $z=z_0$.
-	    -![rotate_z](rotate_z.jpg)
-        -![s2_plane](s2_plane.jpg)
-		- If $p\neq(0,0,\pm 1)$, then $O_p = (\text{circle }S^2 \cap \{z=z_0\}) = S^1$
-		- If $p=(0,0,\pm 1)$, then $O_p = \{p\} = \{\text{point}\}$
+    - 1) If $G$ is abelian, then $gG_ag^{-1}=G_a$ so that $G_b=G_a$ for any $b\in O_a$
+    - 2) If the action is transitive so that, by definition, there is onl one orbit, say $O_a$ with $a\in X$, then $\forall b\in X, G_b=gG_ag^{-1}$ where $g\in G$ is such that $b=g\cdot a$
+
+- Proof:
+    - missing...
+    - $\iff g\cdot((h\cdot g^{-1})\cdot (g\cdot a)) = g\cdot a$
+    - $\iff (g\cdot h\cdot g^{-1})\cdot (g\cdot a) = g\cdot a$
+    - $\iff (g\cdot h\cdot g^{-1})\cdot b = b$
+    - $\iff g\cdot h\cdot g^{-1}\in G_b$
+    - ..., since $G_b\simeq G_a$, we have that $|G_b|=|G_a|$
+
+- Ex:
+    - 1) $G = \{\text{rotation in }R^3 \text{ about the z-axis}\}$ $= \{R_\theta | \theta\in \mathbb R\text{ is the angle of rotation ccw wrt xy-plane}\}$. $$ $$ $X = S^2=\{(x,y,z)\in \mathbb R^3 \mid x^2+y^2+z^2 = 1\}$ $\forall R_\theta \in G, R_\theta \cdot p = R_\theta(p
+), \forall p \in X$
+-![orbit](imgs/orbit.png)
+        - Orbits:
+            - if $p = (0,0,\pm 1)$, then $O_p = {p}$;
+            - if $p = (x_0,y_0,z_0)\neq (0,0,\pm 1)$, then $O_{p_n}=S^2\cap \{z=z_0\}$
+        - Stablisers:
+            - if $p = (0,0,\pm 1)$, then $\operatorname{stab}(p) = G$
+            - if $p_0 = (x_0, y_0, z_0)\neq (0,0,\pm 1)$, then $\operatorname{stab}(p_0) = \{R_\theta \mid \theta = 2\pi k, k\in \mathbb Z\}$. Also, $\forall q\in O_{p_0}, \operatorname{stab}(q) = \{R_\theta | \theta = 2\pi k, k\in Z\} = \operatorname{stab}(p_0)$
+        - Note that $G$ is abelian so that the stabilisers of any 2 points in a fixed orbit are equal.
+    - 2) $G = S_4, X = \{1,2,3,4\}$ and $\sigma \cdot i = \sigma(i), \forall \sigma \in G$ and $\forall i\in X$. $\operatorname{stab}(i) = \{\sigma \in S_4 | \sigma(i) = i\} \simeq S_3$ $$O_i = {1,2,3,4} = X\leadsto \text{ the action is t
+ransitive}$$ The proposition tells us that, $\forall i,j\in X$, the stablisers are conjugate. Suppose $i\ne j$, then $j=\sigma_0(i)$ with $\sigma_0 = (i\,j)$ $$\implies j=\sigma_0\cdot i$$ $$\implies \operatorname{stab}(j) = \sigma_0 \operatorname{s
+tab}(i) \sigma_0^{-1} = (i\,j) \operatorname{stab}(i) (i\,j)^{-1}$$ $$\implies \text{ all stabilisers are conjugates of each other}$$
+
+## 3.4 Barnside's Lemma
+
+- Motivation: Finding a way of counting the number of orbits of an action of a group G on a set X $$ $$ $\leadsto$ In applications, number patterns or numbers of objects with contain properties can be made to co
+rrespond to the number of orbits of an action of a group on a set.
+- E.g. Consider a square:
+    - Question: How many ways are there of colouring two vertices white and two vertices black: since choosing 2 vertices out of 4 to colour white forces the remaining two be black, there are $4 \choose 2$ = 6 ways.
+    -![square_color](imgs/square_color.png)
+    - What if we rephrase the problem as follows: how many square tiles are there with 2 white corners and 2 black corners? $$ $$ There are only 2 possiblilities: either the corners are adjacent, or they are opp
+osite
+        - can obtain these two possibilities from the previous one by considering the orbits of the action of the rotations in $D_4$ on set of 6 squares $\{1,2,3,4,5,6\}$. We see that there are 2 orbits
+        - ![square_color_orbit_1](imgs/square_color_orbit_1.jpg)
+        - ![square_color_orbit_2](imgs/square_color_orbit_2.jpg)
 
 _2016/07/11_
 
@@ -1254,3 +1275,20 @@ _2016/07/13_
 	- Question: How many ways are there of colouring two vertices white and two vertices black: since choosing 2 vertices out of 4 to colour white forces the remaining two be black, there are (4 choose 2) = 6 ways. (pic)
 	- What if we rephrase the problem as follows: how many square tiles are there with 2 white corners and 2 black corners? $$ $$ There are only 2 possiblilities: either the corners are adjacent, or they are opposite
 		- can obtain these two possibilities from the previous one by considering the orbits of the action of the rotations in D_4 on set of 6 squares {1,2,3,4,5,6}. We see that there are 2 orbits (pic)
+
+_2016/07/15_
+
+... (missing)
+
+_2016/07/18_
+
+... (missing)
+
+_2016/07/20_
+
+... (missing)
+
+_2016/07/22_
+
+... (missing)
+
