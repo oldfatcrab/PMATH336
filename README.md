@@ -1225,3 +1225,32 @@ _2016/07/08_
         -![s2_plane](s2_plane.jpg)
 		- If $p\neq(0,0,\pm 1)$, then $O_p = (\text{circle }S^2 \cap \{z=z_0\}) = S^1$
 		- If $p=(0,0,\pm 1)$, then $O_p = \{p\} = \{\text{point}\}$
+
+_2016/07/11_
+
+... (missing)
+
+_2016/07/13_
+
+... (missing)
+
+3 pics...
+
+- Ex:
+	- 1) G = {rotation in R^3 about the z-axis} = {R_\theta | \theta\in R is the angle of rotation ccw wrt xy-plane}. X = S^2={(x,y,z)\in R^3 | x2+y2+z2 = 1} \forall R_\thata \in G, R_\theta \cdot p = R_\theta(p), \forall p \in X (pic...)
+		- Orbits: 
+			- if p = (0,0,\pm 1), then O_p = {p}; 
+			- if p\neq (0,0,\pm 1), then O_p_n=S^2\cap {z=z0}
+		- Stablisers:0
+			- if p = (0,0,\pm 1), then stab(p) = G
+			- if p_0 = (x0, y0, z0)\neq (0,0,\pm 1), then stab(p_0) = {R_\theta | \theta = 2\pi k, k\in \mathbb Z}. Also, \forall q\in O_p_0, stab(q) = \{R_\theta | \theta = 2\pi k, k\in Z\} = stab(p_0)
+		- Note that G is abelian so that the stabilisers of any 2 points in a fixed orbit are equal.
+	- 2) G = S_4, X = {1,2,3,4} and \sigma \cdot i = \sigma(i), \forall \sigma \in G and \forall i\in X. Stab(i) = {\sigma \in S_4 | \sigma(i) = i} \simeq S_3 $$O_i = {1,2,3,4} = X\leadsto \text{ the action is transitive}$$ The proposition tells us that, \forall i,j\in X, the stablisers are conjugate. Suppose i\ne j, then j=\sigma_0(i) with \sigma_0 = (i j) $$\implies j=\sigma_0\cdot i$$ $$\implies stab(j) = \sigma_0 stab(i) \sigma_0^{-1} = (i j) stab(i) (i j)^{-1}$$ $$\implies \text{ all stabilisers are conjugates of each other}$$
+
+## 3.4 Barnside's Lemma
+
+- Motivation: Finding a way of counting the number of orbits of an action of a group G on a set X $$ $$ $\leadsto$ In applications, number patterns or numbers of objects with contain properties can be made to correspond to the number of orbits of an action of a group on a set. 
+- E.g. Consider a square:
+	- Question: How many ways are there of colouring two vertices white and two vertices black: since choosing 2 vertices out of 4 to colour white forces the remaining two be black, there are (4 choose 2) = 6 ways. (pic)
+	- What if we rephrase the problem as follows: how many square tiles are there with 2 white corners and 2 black corners? $$ $$ There are only 2 possiblilities: either the corners are adjacent, or they are opposite
+		- can obtain these two possibilities from the previous one by considering the orbits of the action of the rotations in D_4 on set of 6 squares {1,2,3,4,5,6}. We see that there are 2 orbits (pic)
