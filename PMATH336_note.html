@@ -2627,9 +2627,10 @@ pre[class*="language-"] {
 <li>... (missing)</li>
 <li>4) Rotation in \(\mathbb R^2\): \(G=\{R_\theta\mid \theta\in \mathbb R\}\simeq \mathbb R\); \(\overline G = \{T_{\theta_0}(R_\theta) = R_{\theta_0+\theta}\mid \theta_0\in \mathbb R\}\)</li>
 <li>5) Rotations of equilateral triangle in \(\mathbb R^2\): \(G=\{Id, R_{\frac{2\pi}{3}},R_{\frac{4\pi}{3}}\}\) subgroup of \(D_3\). Identification with \(A_3=(\text{even permutations in }S_3)\): \[Id\leftrightarrow \epsilon\] \[R_{\frac{2\pi}{3}}\leftrightarrow (1~2~3) = (1~3)(1~2)\] \[R_{\frac{4\pi}{3}}\leftrightarrow (1~3~2) = (1~2)(1~3)\] \(\overline G = \{T_{\theta_0}(R_\theta) = R_{\theta_0}\cdot R_\theta = R_{\theta_0+\theta}\mid \theta_0=0, \frac{2\pi}{3}, \frac{4\pi}{3}\}\)</li>
-<li>6) Rotations of the regular tetrahedron in \(\mathbb R^3\) can be identified with \(A_4 = (\text{even permutation in }S_4)\), which has \(\frac{4!}{2}=12\) elements (see Gallian, Ch5.1, Ex.8, for details) <img src="imgs/rotation_tetrahedron.png" alt="rotation_tetrahedron">
+<li>6) Rotations of the regular tetrahedron in \(\mathbb R^3\) can be identified with \(A_4 = (\text{even permutation in }S_4)\), which has \(\frac{4!}{2}=12\) elements (see Gallian, Ch5.1, Ex.8, for details)
 
 <ul>
+<li><img src="imgs/rotation_tetrahedron.png" alt="rotation_tetrahedron"></li>
 <li>Important in Chemistry: chemical formula of the form \(AB_4\) such as methane \((CH_4)\) have \(A_4\) a symmetry group. The following picture is a tetrahedral \(AB_4\) molecule: <img src="imgs/tetrahedral_AB4.png" alt="dihedral_d4"></li>
 </ul></li>
 </ul></li>
@@ -2697,16 +2698,32 @@ pre[class*="language-"] {
 
 <p><em>2016/06/27</em></p>
 
-<p>...</p>
+<p>... (missing)</p>
 
 <h1 id="toc_11">Chapter 3: Lagrange Theorem and Group Actions</h1>
 
 <h2 id="toc_12">3.1 Langrange Theorem and Cosets</h2>
 
 <ul>
-<li>...
+<li>Theorem (<strong>Lagrange</strong>): If \(G\) is a <strong>finite</strong> group and \(H\) is a subgroup of \(G\), then \(|H|\mid|G|\)</li>
+<li>Def: Let \(G\) be a group, \(H\) is a subgroup of \(G\) and \(a\in G\)
 
 <ul>
+<li>\(aH:=\{ah\mid h\in H\} = (\text{left cost containing }a)\)</li>
+<li>\(Ha:=\{ha\mid h\in H\} = (\text{right cost containing }a)\)</li>
+<li>\(a = (\text{coset representative of } aH\text{ (or } Ha\text{)})\)</li>
+<li>\(|aH| = \text{number of elements in coset} = |Ha|\)</li>
+</ul></li>
+<li>E.x.
+
+<ul>
+<li>1) ... (missing) \(\implies 3+2m_0\) is a representative of \(3+H, \forall m_0\in \mathbb Z\). Also, \(H+3 = \{2m+3\mid m\in \mathbb Z\}\) \(= (\text{right coset containing }3)\) \(\stackrel{  \text{since }G\text{ (and }H\text{) are abelian}}{=}3+H\) </li>
+<li>2) \(G=\mathbb Z_6=\{\overline 0, \overline 1, \overline 2, \overline 3, \overline 4, \overline 5\}, H=\langle \overline 2\rangle=\{\overline 0, \overline 2, \overline 4\}, a=\overline 5\). Then, since \(G\) is abelian \[\overline 5 + \mathbb Z_6 = \mathbb Z_6 + \overline 5 = \{\overline 5 + \overline 0, \overline 5 + \overline 2, \overline 5 + \overline 4\} = \{\overline 1, \overline 3, \overline 5\}\]
+
+<ul>
+<li>Rmk: \(\overline 5 + \mathbb Z_6\) is not a subgroup of \(G\) (since \(\overline 0\not \in \overline 5+\mathbb Z_6)\)</li>
+<li>Important: cosets may not be subgroups (even though \(H\) is a subgroup)!</li>
+</ul></li>
 <li>3) \(G=S_3\) (which is not abelian), \(H=\langle(1\, 2)\rangle=\{\epsilon, (1\,2)\}\). Let us find all the left coset of \(H\):
 
 <ul>
@@ -2764,7 +2781,15 @@ pre[class*="language-"] {
 </ul>
 
 <p><em>2016/06/29</em>
-- Corraries...
+- ...(missing)
+- Corraries: Let \(G\) be a finite group and \(H\) be a subgroup of \(G\). then:
+    - 1) \(|G:H| = \frac{|G|}{|H|}\)
+    - 2) \(\forall a\in G, |a|\mid |G|\). Moreover, \(a^{|G|}=e\)
+    - 3) A group of prime order is cyclic.
+- Proof:
+    - 1) Done
+    - 2) \(\forall a\in G, |a| = |\langle a\rangle |\) with \(\langle a\rangle\) a subgroup of \(G\). So, by Lagrange&#39;s Theorem... (missing)
+    - 3) ... (missing)
     - Remark: Lagrange&#39;s Thm tells us that if \(G\) is a finite group, then
         - If \(H\) is any subgroup, then \(|H|\mid |G| \)
         - If \(a\in G\), then \(|a|\mid |G|\)
@@ -2843,7 +2868,7 @@ pre[class*="language-"] {
 
 <ul>
 <li>\(\ker\pi=\{g\in G \mid \pi_g=id_X\} = \{g\in G\mid \text{ g acts trivially on X}\}\)</li>
-<li>\(\text{Im }\pi = \{\text{the set of all permutations of X specified by the action is a subgroup of }Sym(X)\}\)</li>
+<li>\(\operatorname{Im}\pi = \{\text{the set of all permutations of X specified by the action is a subgroup of }Sym(X)\}\)</li>
 </ul></li>
 <li>Def: A group action \(\pi: G\implies Sym(X)\) of a group \(G\) on a set \(X\) is called <strong>faithful</strong> if \(\ker \pi=\{e\}\)</li>
 </ul>
@@ -2922,57 +2947,157 @@ pre[class*="language-"] {
 <p><em>2016/07/08</em></p>
 
 <ul>
-<li>Review: (pic)</li>
-</ul>
-
-<p>...</p>
-
-<p>... (2 pics)</p>
+<li>Review
 
 <ul>
-<li>Recall that an equivalence relation \(\sim\) on a set X is a subset \[R=\{(a,b)\in X\times X\mid a\sim b\}\subset X\times X\] such that:
+<li>Let G be a group and X be a G-set.</li>
+<li>\(\forall x \in X\), then:
 
 <ul>
-<li>\(a\sim a, \forall a \in X\) (reflexivity)</li>
-<li>\(a\sim b\iff b\sim a\) (symmetry)</li>
-<li>\(a\sim b\) and \(b\sim c \implies a\sim c\) (transitivity)</li>
-<li>Also, \(\forall a\in X, [a]_\sim = \{b\in X\mid a\sim b\} = (\text{equivalence class of }a\text{ in }X)\)</li>
-<li>e.g. \(X=\mathbb Z\) and \(m\sim m&#39;\iff m=m&#39;+pn\) for some \(p\in \mathbb Z\), with a fixed, is an equivalence relation. \[\leadsto R = {(m,m&#39;)\in \mathbb Z\times \mathbb Z\mid m=m&#39;\mod (n)} \] \[[m]_\sim  = \overline m = {m&#39;\in\mathbb Z\mid m&#39; = m \mod(n)}\]</li>
+<li>\(G_X = \operatorname{stab}(x) = \{g\in G\mid g\cdot x = x\}\) \(=(\text{stabilizer of } x \text{ in }G)\) \(\leadsto\) subgroup of \(G\)</li>
+<li>\(O_X = \{y\in X\mid x\sim y\}\) \(= \{y\in X\mid y = g\cdot x \text{ for some } g\in G\}\) \(=(\text{orbit of } x \text{ in } X)\subset X\)</li>
 </ul></li>
-<li>Given a \(G\)-set \(X\), the action of \(G\) on acts induces an equivalence relation on X:</li>
-<li>Prop: Define, \(\forall a,b\in X, a\sim b \iff b=g\dot a\) for some \(g\in G\). Then, \(\sim \) is an equialence relation on the set.
-
-<ul>
-<li>Pf:
-
-<ul>
-<li>\(a\sim a\) because \(a=e\cdot a\) by the (i) in def of group action.</li>
-<li>\(a\sim b\Leftrightarrow b=g\cdot a\) for some \(g\in G\Leftrightarrow a = g^{-1}\cdot b\) for some \(g^{-1} \in G\) (because \(G\) is a group) \(\Leftrightarrow b\sim a\)</li>
-<li>\(a\sim b\) and \(b\sim c \iff b = g\cdot a\) and \(c = g&#39;\cdot b\) for some \(g,g&#39;\in G\implies c=g&#39;\cdot(g\cdot a)=(g&#39;g)\cdot a\) with \(g&#39;g\in G\) (since \(G\) is a group)</li>
-</ul></li>
-</ul></li>
-<li>Def: \(\forall a\in X\), define \[O_a:=\{b\in X\mid a\sim b\}\] \[=(\text{orbit of }G\text{ in } X \text{ containing }a)\]</li>
 <li>Note:
 
 <ul>
-<li>(i) \(O_a = (\text{equivalence class of }a\text{ with respect to the equivalence relation of }\) \(\sim \text{ on }X\text{ induced by the action of }G\text{ on }X)\)</li>
-<li>(ii) \(O_a = O_{a&#39;} \iff a\sim a&#39;\)
-
-<ul>
-<li>Pf: If \(O_a = O_a&#39;\), then \(a\in O_a = O_{a&#39;}\implies a\sim a&#39;\) (by def of \(O_a\)). Conversely, if \(a\sim a&#39;\) then, \(\forall b\in O_a, a\sim b\) and \(a\sim a&#39;\iff b\sim a\) and \(a\sim a&#39;\iff b\sim a&#39;\iff a&#39;\sim b\implies b\in O_a&#39;\implies O_a\subset O_a&#39;\). Similarly, since \(a\sim a&#39;\iff a&#39;\sim a\), we get \(O_a&#39;\subset O_a\), giving \(O_a = O_a&#39;\) if \(a\sim a&#39;\)</li>
+<li>(1) \(\forall a,a&#39;\in X\), then \(O_a = O_{a&#39;}\), or \(O_a \cap O_{a&#39;}\)</li>
+<li>(2) If \(G\) is finite, \(|O_a| = \frac{|G|}{G_a}, \forall a \in X\)</li>
+<li>(3) If \(X\) is finite, then \(|X| = |O_{a_1}|+\cdots +|O_{a_N}|\) where \(O_{a_1},\cdots,O_{a_N}\) are the distinct orbits</li>
 </ul></li>
 </ul></li>
-<li>Ex.
+<li>missing...</li>
+<li>Prop: Let \(X\) be a G-set. Moreover, let \(a\in X\) and \(b\in O_a\) so that \(b = g\cdot a\) for some \(g\in G\). Then, \(G_b\simeq G_a\). In fact, \(G_b = gG_ag^{-1} = \{ghg^{-1}\mid h\in G_a\}\) and \(|G_b| = |G_a|\)</li>
+<li><p>Note:</p>
 
 <ul>
-<li>1) \(G= \{\text{Rotations about z-axis in }\mathbb R^3\}\) \( = \{R_\theta\mid \theta\in \mathbb R\text{ is the angular rotation counterclockwise in the xy-plane}\}\) (pic...) \(X = S^2\). Define the action of \(G\) on \(S^2\) by: \(\forall R_\theta\in G, R_\theta\cdot p = R_\theta(p), \forall p \in S^2\). If \(p=(x0,y0,z0)\), then \(R_\theta(p)\) has z-cond \(z_0\). So, \(R_\theta(p)\) is a point on the circle of intersection of \(S^2\) with the plane \(z=z_0\).
+<li>1) If \(G\) is abelian, then \(gG_ag^{-1}=G_a\) so that \(G_b=G_a\) for any \(b\in O_a\)</li>
+<li>2) If the action is transitive so that, by definition, there is onl one orbit, say \(O_a\) with \(a\in X\), then \(\forall b\in X, G_b=gG_ag^{-1}\) where \(g\in G\) is such that \(b=g\cdot a\)</li>
+</ul></li>
+<li><p>Proof:</p>
 
 <ul>
-<li>If \(p\neq(0,0,\pm 1)\), then \(O_p = (\text{circle }S^2 \cap \{z=z_0\}) = S^1\)</li>
-<li>If \(p=(0,0,\pm 1)\), then \(O_p = \{p\} = \{\text{point}\}\)</li>
+<li>missing...</li>
+<li>\(\iff g\cdot((h\cdot g^{-1})\cdot (g\cdot a)) = g\cdot a\)</li>
+<li>\(\iff (g\cdot h\cdot g^{-1})\cdot (g\cdot a) = g\cdot a\)</li>
+<li>\(\iff (g\cdot h\cdot g^{-1})\cdot b = b\)</li>
+<li>\(\iff g\cdot h\cdot g^{-1}\in G_b\)</li>
+<li>..., since \(G_b\simeq G_a\), we have that \(|G_b|=|G_a|\)</li>
+</ul></li>
+<li><p>Ex:</p>
+
+<ul>
+<li>1) \(G = \{\text{rotation in }R^3 \text{ about the z-axis}\}\) \(= \{R_\theta | \theta\in \mathbb R\text{ is the angle of rotation ccw wrt xy-plane}\}\). \[ \] \(X = S^2=\{(x,y,z)\in \mathbb R^3 \mid x^2+y^2+z^2 = 1\}\) \(\forall R_\theta \in G, R_\theta \cdot p = R_\theta(p
+), \forall p \in X\)
+-<img src="imgs/orbit.png" alt="orbit">
+
+<ul>
+<li>Orbits:
+
+<ul>
+<li>if \(p = (0,0,\pm 1)\), then \(O_p = {p}\);</li>
+<li>if \(p = (x_0,y_0,z_0)\neq (0,0,\pm 1)\), then \(O_{p_n}=S^2\cap \{z=z_0\}\)</li>
+</ul></li>
+<li>Stablisers:
+
+<ul>
+<li>if \(p = (0,0,\pm 1)\), then \(\operatorname{stab}(p) = G\)</li>
+<li>if \(p_0 = (x_0, y_0, z_0)\neq (0,0,\pm 1)\), then \(\operatorname{stab}(p_0) = \{R_\theta \mid \theta = 2\pi k, k\in \mathbb Z\}\). Also, \(\forall q\in O_{p_0}, \operatorname{stab}(q) = \{R_\theta | \theta = 2\pi k, k\in Z\} = \operatorname{stab}(p_0)\)</li>
+</ul></li>
+<li>Note that \(G\) is abelian so that the stabilisers of any 2 points in a fixed orbit are equal.</li>
+</ul></li>
+<li>2) \(G = S_4, X = \{1,2,3,4\}\) and \(\sigma \cdot i = \sigma(i), \forall \sigma \in G\) and \(\forall i\in X\). \(\operatorname{stab}(i) = \{\sigma \in S_4 | \sigma(i) = i\} \simeq S_3\) \[O_i = {1,2,3,4} = X\leadsto \text{ the action is t
+ransitive}\] The proposition tells us that, \(\forall i,j\in X\), the stablisers are conjugate. Suppose \(i\ne j\), then \(j=\sigma_0(i)\) with \(\sigma_0 = (i\,j)\) \[\implies j=\sigma_0\cdot i\] \[\implies \operatorname{stab}(j) = \sigma_0 \operatorname{s
+tab}(i) \sigma_0^{-1} = (i\,j) \operatorname{stab}(i) (i\,j)^{-1}\] \[\implies \text{ all stabilisers are conjugates of each other}\]</li>
+</ul></li>
+</ul>
+
+<h2 id="toc_15">3.4 Barnside&#39;s Lemma</h2>
+
+<ul>
+<li>Motivation: Finding a way of counting the number of orbits of an action of a group G on a set X \[ \] \(\leadsto\) In applications, number patterns or numbers of objects with contain properties can be made to co
+rrespond to the number of orbits of an action of a group on a set.</li>
+<li>E.g. Consider a square:
+
+<ul>
+<li>Question: How many ways are there of colouring two vertices white and two vertices black: since choosing 2 vertices out of 4 to colour white forces the remaining two be black, there are \(4 \choose 2\) = 6 ways.
+-<img src="imgs/square_color.png" alt="square_color"></li>
+<li>What if we rephrase the problem as follows: how many square tiles are there with 2 white corners and 2 black corners? \[ \] There are only 2 possiblilities: either the corners are adjacent, or they are opp
+osite
+
+<ul>
+<li>can obtain these two possibilities from the previous one by considering the orbits of the action of the rotations in \(D_4\) on set of 6 squares \(\{1,2,3,4,5,6\}\). We see that there are 2 orbits</li>
+<li><img src="imgs/square_color_orbit_1.jpg" alt="square_color_orbit_1"></li>
+<li><img src="imgs/square_color_orbit_2.jpg" alt="square_color_orbit_2"></li>
 </ul></li>
 </ul></li>
 </ul>
+
+<p><em>2016/07/11</em></p>
+
+<p>... (missing)</p>
+
+<p><em>2016/07/13</em></p>
+
+<p>... (missing)</p>
+
+<p>3 pics...</p>
+
+<ul>
+<li>Ex:
+
+<ul>
+<li>1) G = {rotation in R^3 about the z-axis} = {R<em>\theta | \theta\in R is the angle of rotation ccw wrt xy-plane}. X = S^2={(x,y,z)\in R^3 | x2+y2+z2 = 1} \forall R</em>\thata \in G, R<em>\theta \cdot p = R</em>\theta(p), \forall p \in X (pic...)
+
+<ul>
+<li>Orbits: 
+
+<ul>
+<li>if p = (0,0,\pm 1), then O_p = {p}; </li>
+<li>if p\neq (0,0,\pm 1), then O<em>p</em>n=S^2\cap {z=z0}</li>
+</ul></li>
+<li>Stablisers:0
+
+<ul>
+<li>if p = (0,0,\pm 1), then stab(p) = G</li>
+<li>if p<em>0 = (x0, y0, z0)\neq (0,0,\pm 1), then stab(p</em>0) = {R<em>\theta | \theta = 2\pi k, k\in \mathbb Z}. Also, \forall q\in O</em>p<em>0, stab(q) = {R</em>\theta | \theta = 2\pi k, k\in Z} = stab(p_0)</li>
+</ul></li>
+<li>Note that G is abelian so that the stabilisers of any 2 points in a fixed orbit are equal.</li>
+</ul></li>
+<li>2) G = S<em>4, X = {1,2,3,4} and \sigma \cdot i = \sigma(i), \forall \sigma \in G and \forall i\in X. Stab(i) = {\sigma \in S</em>4 | \sigma(i) = i} \simeq S<em>3 $$O</em>i = {1,2,3,4} = X\leadsto \text{ the action is transitive}\[ The proposition tells us that, \forall i,j\in X, the stablisers are conjugate. Suppose i\ne j, then j=\sigma_0(i) with \sigma_0 = (i j) \]\implies j=\sigma<em>0\cdot i\[ \]\implies stab(j) = \sigma</em>0 stab(i) \sigma_0^{-1} = (i j) stab(i) (i j)^{-1}\[ \]\implies \text{ all stabilisers are conjugates of each other}$$</li>
+</ul></li>
+</ul>
+
+<h2 id="toc_16">3.4 Barnside&#39;s Lemma</h2>
+
+<ul>
+<li>Motivation: Finding a way of counting the number of orbits of an action of a group G on a set X \[ \] \(\leadsto\) In applications, number patterns or numbers of objects with contain properties can be made to correspond to the number of orbits of an action of a group on a set. </li>
+<li>E.g. Consider a square:
+
+<ul>
+<li>Question: How many ways are there of colouring two vertices white and two vertices black: since choosing 2 vertices out of 4 to colour white forces the remaining two be black, there are (4 choose 2) = 6 ways. (pic)</li>
+<li>What if we rephrase the problem as follows: how many square tiles are there with 2 white corners and 2 black corners? \[ \] There are only 2 possiblilities: either the corners are adjacent, or they are opposite
+
+<ul>
+<li>can obtain these two possibilities from the previous one by considering the orbits of the action of the rotations in D_4 on set of 6 squares {1,2,3,4,5,6}. We see that there are 2 orbits (pic)</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p><em>2016/07/15</em></p>
+
+<p>... (missing)</p>
+
+<p><em>2016/07/18</em></p>
+
+<p>... (missing)</p>
+
+<p><em>2016/07/20</em></p>
+
+<p>... (missing)</p>
+
+<p><em>2016/07/22</em></p>
+
+<p>... (missing)</p>
 
 
 
