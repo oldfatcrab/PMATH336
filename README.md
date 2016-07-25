@@ -1292,3 +1292,50 @@ _2016/07/22_
 
 ... (missing)
 
+_2016/07/25_
+
+# 3.4 Direct Products
+
+- Def: Let $G_1, \cdots, G_n$ be groups. Define: $$G_1\oplus \cdots \oplus G_n$$ $$= \{(g_1,\cdots , g_n)\mid g_i\in G_i, \forall i=1,\cdots n\}$$ $$=(\text{(external) direct product of}G_1,\cdots, G_n)$$
+- Prop: $G_1\oplus\cdots\oplus G_n$ is a group under the operation. $$(g_1,\cdots, g_n)\cdot(g_1',\cdots, g_n') = (g_1\cdot g_1',\cdots, g_n\cdot g_n')$$ $$ \forall (g_1,\cdots, g_n)(g_1',\cdots, g_n')\in G_1\oplus \cdots \oplus G_n$$
+	- Pf: The operation is certainly associative since the operation in each $G_i$ is associative. Also, the identity is $(e_1,\cdots, e_n)$ with $e_i$ the identity in each $G_i$. Finally, $\forall (g_1,\cdots, g_n)\in G_1\oplus \cdots \oplus G_n, (g_1,\cdots, g_n)^{-1}$ exists as is equal to $(g_1^{-1},\cdots, g_n^{-1})$
+- E.x.
+    - 1) If $V,W$ are vector spaces, then they are abelian groups under vector addition. Then $V\oplus W$ corresponds to the direct sum of the vector spaces, where the vector space structure has addition the group operation on $V\oplus W$
+	    - E.g. $\mathbb R\oplus \mathbb R\oplus \mathbb R = \mathbb R^3 \leftrightsquigarrow (\mathbb R, +) \oplus (\mathbb R, +) \oplus (\mathbb R, +) = (\mathbb R^3, +)$
+    - 2) $G_1 = (\mathbb Z_2, +)$ and $G_2 = (mathbb Z_3, +)$, $G_1 \oplus G_2 = \{(\overline{m_1},\overline{m_2})\mid \overline{m_1}\in G_1 = \{\overline 0, \overline 1\}\text{ and }\overline{m_2} \in G_2 = \{\overline 0, \overline 1, \overline 2\}\}$ $= \{(\overline 0,\overline 0), (\overline 0,\overline 1), (\overline 0,\overline 2), (\overline 1,\overline 0), (\overline 1,\overline 1), (\overline 1,\overline 2)\}$ Note that:
+	    - $G_1\oplus G_2$ is abelian because $G_1$ and $G_2$ are abelian
+	    - $G_1\oplus G_2  = \langle(\overline 1,\overline 1)\rangle$:
+	    - Here $\mathbb Z_2=\langle 1\rangle$ and $\mathbb Z_3 = \langle 1\rangle$
+	    - Then: $(\overline 1,\overline 1) + (\overline 1,\overline 1) = (\overline 2,\overline 2) = (\overline  0,\overline 2) = 2(\overline 1,\overline 1)$
+	    - $(\overline 1,\overline 1) + (\overline 1,\overline 1) + (\overline 1,\overline 1) = (\overline 3,\overline 3) = (\overline 1,\overline 0) = 3(\overline 1,\overline 1)$
+	    - $4(\overline 1,\overline 1) = (\overline 4,\overline 4) = (\overline 0,\overline 1)$
+	    - $5(\overline 1,\overline 1) = (\overline 5,\overline 5) = (\overline 1,\overline 2)$
+	    - $6(\overline 1,\overline 1) = (\overline 6,\overline 6) = (\overline 0,\overline 0)$
+	    - $\implies G_1\oplus G_2 = \langle (\overline 1,\overline 1)\rangle$ is cyclic
+    - 3) $G_1 = (\mathbb Z_2,+)$, and $G_2 = (\mathbb Z_2, +)$, then 
+	    - $G_1\oplus G_2$ is abelian because $G_1$ and $G_2$ are
+	    - $G_1\oplus G_2$ is not cyclic even though $G_1$ and $G_2$ are
+	    - Here: $G_1\oplus G_2$ $= \{(\overline{m_1}, \overline{m_2})\mid \overline{m_1}, \overline{m_2} \in \mathbb Z_2= \{\overline 0, \overline 1\}\}$ $= \{(\overline 0,\overline 0), (\overline 0,\overline 1), (\overline 1,\overline 0), (\overline 1,\overline 1)\}$ $\leadsto |G_1\oplus G_2| = 4$
+	    - But no element in $G_1\oplus G_2$ has order $4$. Indeed, $|(\overline 0,\overline 0)| = 1$ and $|(\overline 0,\overline 1)| = |(\overline 1,\overline 0)| = |(\overline 1,\overline 1)| = 2$ since:
+		    - $2(\overline 0,\overline 1) = (\overline 0,\overline 2) = (\overline 0,\overline 0)$
+		    - $2(\overline 1,\overline 0) = (\overline 2,\overline 0) = (\overline 0,\overline 0)$
+		    - $2(\overline 1,\overline 1) = (\overline 2,\overline 2) = (\overline 0,\overline 0)$
+	    - Note: Even if $G_1, \cdots, G_n$ are cyclic, the direct product $G_1\oplus \cdots \oplus G_n$ may not be cyclic.
+    - 4) $G_1 = (\mathbb Z_3^*,\cdot)$ and $G_2=(\mathbb Z_5^*,\cdot)$. Then, $\mathbb Z_3^* = \{\overline 1,\overline 2\}, \mathbb Z_5^* = \{\overline 1,\overline 2,\overline 3,\overline 4\}$ $\leadsto G_1\oplus G_2 = \{(\overline{m_1},\overline{m_2})\mid \overline{m_1}\in \mathbb Z_3^*, \overline{m_2}\in \mathbb Z_5^*\}$ $= \{(\overline 1,\overline 1),(\overline 1,\overline 2),(\overline 1,\overline 3),(\overline 1,\overline 4),(\overline 2,\overline 1),(\overline 2,\overline 2),(\overline 2,\overline 3),(\overline 2,\overline 4)\}$ $\implies |G_1\oplus G_2| = 8$. Then:
+	    - $G_1\oplus G_2$ is abelian because $G_1, G_2$ are abelian
+	    - $G_1\oplus G_2$ is cyclic because $\operatorname{gcd}(|G_1|, |G_2|) = 1$ and $G_1, G_2$ are cyclic (upcoming theorem)
+	    - **Group Str**: $(\overline 2,\overline 3)\cdot(\overline 1,\overline 4) = (\overline 2\cdot\overline 1, \overline 3\cdot \overline 4) = (\overline 2,\overline{12}) = (\overline 2,\overline 2)$ etc.
+- Thm: Let $G_1, \cdots, G_n$ be groups and $(g_1,\cdots, g_n)\in G_1\oplus \cdots \oplus G_n$. Then $$|(g_1,\cdots, g_n)|=\operatorname{lcm}(|g_1|,\cdots, |g_n|)$$
+	- Pf: (only do case $n=2$):
+		- $G_1\oplus G_2$. Let $(g_1,g_2)\in G_1\oplus G_2$. Set $s = \operatorname{lcm}(|g_1|, |g_2|), t = |(g_1,g_2)|$.
+		- Let us show that $s=t$.
+		- We have: $(g_1,g_2)^s = (g_1^s,g_2^s) = (e_1, e_2)$ because $|g1|, |g2| \mid s$
+		- $\implies |(g_1,g_2)|\mid s\implies t\mid s\implies t\le s$
+		- But we also have that $s\le t$ because: since $t = |(g_1,g_2)|$, we have $(g_1,g_2)^t = (e_1,e_2)$. But $(g_1,g_2)^t = (g_1^t, g_2^t)$ $\implies (g_1^t,g_2^t) = (e_1,e_2)$ $\implies g_1^t = e_1 and g_2^t = e_2$ $\implies |g_1|\mid t$ and $|g_2|\mid t$ $ \implies \operatorname{lcm}(|g_1|,|g_2|)\mid t$ $\implies s\mid t\implies s\le t\implies s=t$
+- Thm: Let $G_1, \cdots, G_n$ be finite cyclic groups. Then, $G_1\oplus\cdots\oplus G_n$ is cyclic iff $\operatorname{gcd}(|G_i|,|G_j|)=1, \forall i,j=1,\cdots, n\text{ with }i\neq j$
+	- Pf: Let's proof $n=2$: Suppose that $G_1 = \langle a_1\rangle , and G_2 = \langle a_2\rangle$. Then, $|G_1\oplus G_2|$ $= \{(g_1,g_2)| g_1\in G_1, g_2\in G_2\}$ $= |G_1|\cdot |G_2|$. Note that $|G_1|\cdot |G_2| = \operatorname{lcm}(|G_1|,|G_2|)$ iff $\operatorname{gcd}(|G_1|, |G_2|) = 1$. But $|G_1| = |a_1| and |G_2| = |a_2|$. So $|(a_1,a_2)| = \operatorname{lcm}(|a_1|,|a_2|)\implies |(a_1,a_2)| = |G_1\oplus G_2|$ iff $\operatorname{lcm}(|G_1|,|G_2|) = |G_1\oplus G_2|$ iff $\operatorname{gcd}(|G_1|,|G_2|)$
+	- Note: If $G_i = \langle a_i\rangle$ and $gcd(|a_i|,|a_j|) = 1,\forall i\neq j$, then $$G_1\oplus \cdots\oplus G_2 = \langle(a_1,\cdots, a_n)\rangle$$
+- Thm: 
+	- 1) $\mathbb Z_{n_1}\oplus\cdots\oplus \mathbb Z_{n_s}\simeq \mathbb Z_{n_1\cdots n_s}$ iff $gcd(n_i,n_j) = 1,\forall i\neq j$
+	- 2) $\mathbb Z_{s_1}^*\oplus \cdots \oplus Z_{s_1}^* \simeq Z_{s_1\cdots s_n}^*$ iff $gcd(s_i, s_j) = 1, \forall i \neq j$
+- Thm: (**fundamental thm of finite abelian groups**) every finite abelian group is a direct product of cyclic groups of prime power order: $G=\mathbb Z_{p_1^{n_1}}\oplus \cdots\oplus Z_{p_m^{n_m}}$ with $p_i =$ prime
